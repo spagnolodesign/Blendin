@@ -1,0 +1,142 @@
+@import 'global';
+
+.sign-up{
+  h1{
+    font-family: $berry_font;
+    color: $berry_color;
+  }
+  h2{
+    margin-left: 1.5rem;
+    span{
+      font-size: 2.5rem;
+    }
+  }
+  .sign-up-image{
+    width: 70%;
+    margin:0 auto;
+    display: block;
+  }
+}
+.berry-color{
+  color: $berry_color;
+}
+
+.logo{
+	width: 110px;
+}
+.bg-grey {
+    background-color: #efefef;
+    padding: 1rem;
+    border-radius: .3rem;
+}
+.bg-white {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .3rem;
+}
+body{
+  padding-top:64px;
+  background-color: #f8f8f8;
+
+}
+body.vanilla-modal .modal-hider {
+  position: absolute;
+  left: -99999em;
+}
+header{
+    position: fixed;
+    transition: top 0.2s ease-in-out;
+    width: 960px;
+    height: 64px;
+    top:20px;
+    z-index: 2;
+}
+
+.fixedsticky {top: 40px;}
+.fixedsticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+  position: static;
+}
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+  position: fixed;
+}
+.fixedsticky-dummy {
+  display: none;
+}
+.fixedsticky-on + .fixedsticky-dummy {
+  display: block;
+}
+.avatar .avatar-icon.with-berry{
+  background:#e51314 ;
+}
+.nav-up {
+    top: -64px;
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: #e51314;
+}
+.cards{
+  margin: 0 0 0 -5px;
+}
+.card {
+  width: 478px;
+  margin:0;
+}
+
+.btn.btn-berry {
+  background:#e51314;
+  color: #FFF;
+  border: .1rem solid #b60001;
+}
+.btn.btn-berry:hover{
+	  background:#f61e1f;
+	  border: .1rem solid #f61e1f;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    right: 0;
+    z-index: 2;
+    top: 65px;
+    margin:-1rem;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius:.3rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #fafafa}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

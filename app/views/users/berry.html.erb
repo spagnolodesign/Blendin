@@ -1,0 +1,32 @@
+<div class="columns">
+	<div class="column col-9 centered">
+		<h4>Hi <%= current_user.name %>, add some <b>berries</b> to your profile , the berries are tags that identify you for who you are and what you enjoy <br>doing in life. They will help you to connect with others people.<br> <div class="berry-tag chip-sm">Surf</div> for example <div class="berry-tag chip-sm">Code</div> or <div class="berry-tag chip-sm">Food</div> and even <div class="berry-tag chip-sm">Startup</div>.</h4>
+		<div class="divider"></div>
+		
+		<%= form_for(@user, :html => {:class => 'form-add-berries' } )do |f| %>
+      <div class="form-group">
+		    <%= f.text_field :tag_list, class: "select-berry", placeholder: "Now type yours..." %>
+		  </div>
+      <div class="form-group">
+		    <%= f.submit "Add", :class => 'btn btn-primary btn-lg float-right' %>
+		  </div>
+		<% end %>
+
+	</div>
+</div>
+
+
+<script>
+	$(function() {
+		// values = $('#user_tag_list').val().split(' ');
+		// console.log(values)
+    $('#user_tag_list').selectize({
+					persist: false,
+					createOnBlur: true,
+					maxItems: 10,
+					create: true,
+					openOnFocus:false,
+					delimiter: ' '
+				});
+	});
+</script>

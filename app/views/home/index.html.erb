@@ -1,0 +1,55 @@
+
+<div class="columns">
+	<div class="column col-10">
+	  	<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
+			  <%= text_field_tag :berries, params[:berries], :id => 'berries-filter', :placeholder => "Search by berries..." %>
+			<% end %>
+	</div>
+
+	<div class="column col-2">
+		<div class="bg-grey"><%= current_user.full_street_address %></div>
+	</div>
+</div>
+
+<div class="columns">
+	<div class="column cards">
+		<% @users.each do |user| %>
+			<div class="card mb-5">
+		      
+		      <div class="card-header">
+		      		<div class="chip">
+		              <div class="chip-icon">
+		                  <img src="<%= user.picture %>" class="avatar">
+		              </div>
+		              <div class="chip-content">
+		                <h4 class="card-title"><%= user.name %></h4>
+		                <h6 class="card-meta">Software and hardware</h6>
+		              </div>
+		          </div>
+		      </div>
+		      
+		      <div class="card-body">
+		         <%= user.about %>
+		      </div>
+		      
+		      <div class="card-footer clearfix">
+		      		<div class="float-right">
+		      		  <% if !current_user.likes(user) %>
+					  
+					    			 <%= link_to like_knok_path(user), class: 'btn btn-sm btn-berry', method: :put, remote: true do %>
+	                    <span class="icon icon-berry"></span> berry
+	                  <% end %>
+
+					    			
+								<% end %>
+		      		</div>
+
+		      		<div class="float-left">
+		              <%= render partial: "tags/list", locals: {tags: user.tag_list} %>
+		      		</div>
+			    </div>
+		  </div>
+		<% end %>
+	</div>
+</div>
+

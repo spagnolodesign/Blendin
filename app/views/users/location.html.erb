@@ -1,0 +1,28 @@
+<%= form_for(@user) do |f| %>
+ 
+  <div class="field">
+    <%= f.text_field :full_street_address, placeholder: "In which city do you live?", class: "select-city" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+
+
+<script>
+(function() {
+  var placesAutocomplete = places({
+    container: document.querySelector('.select-city'),
+    type: 'city',
+    aroundLatLngViaIP: false,
+    templates: {
+      value: function(suggestion) {
+        return suggestion.name;
+      }
+    }
+  });
+})();
+</script>

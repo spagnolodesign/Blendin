@@ -1,0 +1,15 @@
+
+<%= form_for(@user) do |f| %>
+ 
+  <div class="field">
+    <%= f.text_field :tag_list %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<div class="float-left">
+    <%= render partial: "tags/list", locals: {tags: @user.tag_list} %>
+</div>

@@ -1,0 +1,22 @@
+<li class="menu-item">                  
+    <%= active_link_to chat_room_path(chat_room.token) do %>
+    		<div class="chip">
+            <div class="chip-icon">
+        	<% chat_room.users.each do |user| %>
+			  		<% if  user != current_user %>
+			  			<figure class="avatar avatar-lg">
+						  <img src="<%= user.picture %>">
+                          <%= image_tag("btn-berry.png", :class => "avatar-icon with-berry") %>
+						</figure>
+			  		<% end %>
+			  <% end %>					
+            </div>
+            <div class="chip-content">
+            	<% if  !chat_room.messages.empty? %>
+					<h5><%= chat_room.messages.last.user.name %></h5>
+					<%= chat_room.messages.last.body %>
+			     <% end %>
+            </div>
+        </div>
+    <% end %>
+</li>
