@@ -30,6 +30,7 @@ gem 'omniauth-facebook'
 gem 'geocoder'
 gem 'has_secure_token'
 
+gem 'redis', '~> 3.0'
 
 gem 'acts-as-taggable-on', :git => 'https://github.com/F3pix/acts-as-taggable-on'
 
@@ -60,7 +61,6 @@ end
 
 group :production do
 	gem 'pg'
-	gem 'redis', '~> 3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
