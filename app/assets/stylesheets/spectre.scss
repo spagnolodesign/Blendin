@@ -1306,10 +1306,9 @@ textarea.form-input {
   vertical-align: middle;
 }
 .empty {
-  background: #f8f8f8;
+  background: #fff;
   border-radius: .3rem;
-  padding: 4rem;
-  text-align: center;
+  padding:  4rem;
 }
 .empty .empty-title {
   font-size: 1.8rem;
@@ -2014,6 +2013,9 @@ textarea.form-input {
 }
 .mt-5 {
   margin-top: .5rem;
+}
+.mt-0 {
+  margin-top: 0;
 }
 .mr-5 {
   margin-right: .5rem;
