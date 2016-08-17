@@ -2,17 +2,17 @@ class ChatRoomsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    if !current_user.messages.empty?
-      last_room = current_user.messages.last.chat_room
-      redirect_to chat_room_path(last_room.token)
-    else
+    # if !current_user.messages.empty?
+    #   last_room = current_user.messages.last.chat_room
+    #   redirect_to chat_room_path(last_room.token)
+    # else
       if current_user.chat_rooms.empty?
-        redirect_to root_path
+        render :no_rooms
       else
         last_room_applied = current_user.chat_rooms.last
         redirect_to chat_room_path(last_room_applied.token)
       end
-    end
+    # end
   end
 
   def new

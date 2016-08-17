@@ -1,5 +1,6 @@
 $(document).on('turbolinks:load', function() {
   init();
+  update();
 });
 
   var grid;
@@ -9,14 +10,21 @@ $(document).on('turbolinks:load', function() {
     grid = new Minigrid({
       container: '.cards',
       item: '.card',
-      gutter: 5
+      gutter: 8
     });
     grid.mount();
   }
   
   // mount
-  function update() {
+  function update(e) {
   	if ($('.cards').length != 1) return;
+    var width = window.innerWidth;
+    console.log(width)
+    if (width <= '480') {
+      grid.props.gutter = 4
+    }else if(width >= '700'){
+      grid.props.gutter = 8
+    }
     grid.mount();
   }
 

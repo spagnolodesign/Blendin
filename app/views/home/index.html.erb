@@ -26,6 +26,7 @@
 		                <h6 class="card-meta">Software and hardware</h6>
 		              </div>
 		          </div>
+
 		      </div>
 		      
 		      <div class="card-body">
@@ -33,19 +34,13 @@
 		      </div>
 		      
 		      <div class="card-footer clearfix">
-		      		<div class="float-right">
-		      		  <% if !current_user.likes(user) %>
-					  
+            <%= render partial: "tags/list", locals: {tags: user.tag_list} %>
+            <div class="float-right">
+		      		  <% if !current_user.likes(user) %>					  
 					    			 <%= link_to like_knok_path(user), class: 'btn btn-sm btn-berry', method: :put, remote: true do %>
 	                    <span class="icon icon-berry"></span> berry
-	                  <% end %>
-
-					    			
+	                  <% end %>	
 								<% end %>
-		      		</div>
-
-		      		<div class="float-left">
-		              <%= render partial: "tags/list", locals: {tags: user.tag_list} %>
 		      		</div>
 			    </div>
 		  </div>

@@ -25,20 +25,33 @@ function initAjaxFormRequest (){
 function initAjaxBerryRequest (){
     $(".btn-berry").on("ajax:success", function(e, data, status, xhr) {
         var event = xhr.responseJSON.event;
-        console.log(event)
         $(e.currentTarget).remove();
-
         if (event == "is_match"){
-            alert("You got a berry go to message and start to chat!")
+            showMatchModal(data.data.token);
         }else{
             return;
         }
-
     }).on("ajax:error", function(e, xhr, status, error) {
-
         alert("Umm, seems you alredy nocced.");
-
     });
+}
+
+function showMatchModal(token){
+        var t = token;
+        swal({
+          title: 'Sweet!<br>You just got a beery',
+          text: 'Start text now.',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, go!',
+          imageUrl: '/assets/berry-match.png',
+          imageWidth: 124,
+          imageHeight: 128,
+        }).then(function() {
+          Turbolinks.visit('/rooms/'+t);
+        })
+
 }
 
 function initFilterBerrisHome () {

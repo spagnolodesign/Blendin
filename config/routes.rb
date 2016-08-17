@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end 
   end
 
-  resources :chat_rooms, path: 'rooms', only: [:show, :index], param: :token
+  resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms], param: :token
 
   resources :knoks, only: [:like, :dislike] do
 	    member do
