@@ -29,6 +29,18 @@
   margin:-10px auto 20px  auto;
   display: block;
 }
+.avatar-modal{
+  cursor: pointer;
+}
+.swal2-modal.modal-image.show-swal2.visible {
+    padding: 0 !important;
+    .swal2-image{
+      margin:0 auto !important; 
+    }
+    h2{
+      display: none !important;
+    }
+}
 .bg-grey {
     background-color: #efefef;
     padding: 1rem;
@@ -160,3 +172,20 @@ header{
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+
+#error_explanation{
+  h2{display:none;}
+  ul{padding: 0; margin: 0;margin-bottom: 20px; list-style: none;}
+  li{    padding: 10px;
+    padding-left: 20px;
+    border-radius: 3px;
+    margin: 0;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;}
+}

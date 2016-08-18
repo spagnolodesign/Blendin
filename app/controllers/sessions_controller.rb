@@ -1,5 +1,17 @@
 class SessionsController < Devise::SessionsController
 	layout 'login', only: [:new]
 
+	# POST /resource/sign_in
+  def create
+    super
+    flash.delete(:notice)
+  end
+
+  # DELETE /resource/sign_out
+  def destroy
+    super
+    flash.delete(:notice)
+  end
+
 
 end

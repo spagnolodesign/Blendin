@@ -34,6 +34,12 @@ gem 'redis', '~> 3.0'
 
 gem 'acts-as-taggable-on', :git => 'https://github.com/F3pix/acts-as-taggable-on'
 
+# for aws cloud storage
+gem 'fog'
+# photo resizing
+gem "mini_magick"
+# file upload solution
+gem 'carrierwave'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

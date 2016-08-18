@@ -4,7 +4,10 @@ $(document).on('turbolinks:load', function() {
     // initAjaxFormRequest ();
     scrollHeader();
     closeOverlay();
+    showModalAvatar();
+
     $('#chat-list').fixedsticky();
+
 
 });
 
@@ -36,6 +39,19 @@ function initAjaxBerryRequest (){
     });
 }
 
+function showModalAvatar(){
+   
+    $(".avatar-modal").on("click", function(e) {
+        var imgPath = e.currentTarget.dataset.image;
+        
+        swal({
+          imageUrl: imgPath,
+          showConfirmButton: false,
+          customClass: "modal-image"
+        });
+    });
+}
+
 function showMatchModal(token){
         var t = token;
         swal({
@@ -62,10 +78,16 @@ function initFilterBerrisHome () {
         persist: false,
         createOnBlur: true,
         maxItems: 10,
-        create: true,
-        openOnFocus:false,
+        create: false,
+        openOnFocus:true,
+        maxOptions:2000,
         delimiter: ',',
+        closeAfterSelect:true,
         plugins: ['remove_button'],
+        valueField: 'name',
+        labelField: 'name',
+        searchField: ['name'],
+        options: available_tags,
         onItemAdd: function(value, data) {
             filterValue(this)
         },

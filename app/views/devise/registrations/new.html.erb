@@ -1,34 +1,13 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: false) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions"  data-no-turbolink>
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="container grid-960">
+  <section class="sign-up columns">
+    <div class="column col-7">
+      <h1 class="mb-0">Beeries are in town.</h1>
+      <h4 class="mt-10">Berry helps you to connect with people that share your same interests.</h4>
+      <%=  image_tag("berry-sign-up.png", class: "sign-up-image")  %> 
+    </div>
+    <div class="column col-5">
+      <h2 class="text-bold">Create a new account <span>It's free!</span></h2>
+      <%= render "form" %>
+    </div>
+  </section>
+</div>

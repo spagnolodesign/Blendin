@@ -1,15 +1,9 @@
-
-<div class="columns">
-	<div class="column col-10">
-	  	<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
-			  <%= text_field_tag :berries, params[:berries], :id => 'berries-filter', :placeholder => "Search by berries..." %>
+<% content_for :search do %>
+    	<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
+			  <%= text_field_tag :berries, params[:berries], :id => 'berries-filter', :placeholder => "Search by berries...",  :autofocus => true %>
 			<% end %>
-	</div>
-
-	<div class="column col-2">
-		<div class="bg-grey"><%= current_user.full_street_address %></div>
-	</div>
-</div>
+<% end %>
+ 
 
 <div class="columns">
 	<div class="column cards">
@@ -19,7 +13,7 @@
 		      <div class="card-header">
 		      		<div class="chip">
 		              <div class="chip-icon">
-		                  <img src="<%= user.picture %>" class="avatar">
+		                  <img src="<%= user.picture.medium_avatar %>" class="avatar avatar-modal" data-image="<%= user.picture %>">
 		              </div>
 		              <div class="chip-content">
 		                <h4 class="card-title"><%= user.name %></h4>
@@ -34,7 +28,7 @@
 		      </div>
 		      
 		      <div class="card-footer clearfix">
-            <%= render partial: "tags/list", locals: {tags: user.tag_list} %>
+            <%= render partial: "tags/list", locals: {tags: user.cached_tag_list} %>
             <div class="float-right">
 		      		  <% if !current_user.likes(user) %>					  
 					    			 <%= link_to like_knok_path(user), class: 'btn btn-sm btn-berry', method: :put, remote: true do %>
@@ -48,3 +42,6 @@
 	</div>
 </div>
 
+<script>
+	var available_tags = <%= @tags %>
+</script>

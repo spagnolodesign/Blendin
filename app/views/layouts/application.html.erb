@@ -18,9 +18,12 @@
               <%=  image_tag("berryhoop.png", class: "logo")  %> 
             <% end %>
           </section>
+          <section class="navbar-section search-section">
+            <%= yield :search %>
+          </section>
           <section class="navbar-section">          
-              <%= active_link_to 'Messages', chat_rooms_path, :active => :exclusive, class: "btn btn-link" %>      
                 <% if user_signed_in? %>
+                    <%= active_link_to 'Messages', chat_rooms_path, :active => :exclusive, class: "btn btn-link" %>      
                     <div class="dropdown">
                         <figure class="avatar ml-10 mr-10">
                           <img onclick="myFunction()" src="<%= current_user.picture %>" class="dropbtn avatar">
