@@ -1,2 +1,24 @@
-$berry_font: 'kitten_swashregular'; 
-$berry_color: #e51314;
+$font: 'kitten_swashregular'; 
+$main_color: #74ccd1;
+$main_over: #0faeb7;
+$border-color: #3d8184;
+
+//Errors
+.field_with_errors{
+	width: 100%;
+}
+
+#error_explanation{
+  h2{display:none;}
+  ul{padding: 0; margin: 0;margin-bottom: 20px; list-style: none;}
+  li{    padding: 10px;
+    padding-left: 20px;
+    border-radius: 3px;
+    margin: 0;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;}
+}

@@ -1,8 +1,5 @@
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
- */
+@import 'global';
+
 html {
   font-family: sans-serif;
   /* 1 */
@@ -220,6 +217,7 @@ optgroup,
 select,
 textarea {
   font: inherit;
+  border: 0px;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -378,12 +376,11 @@ html {
 }
 body {
   color: #333;
-  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", sans-serif;
   font-size: 1.4rem;
   overflow-x: hidden;
 }
 a {
-  color: #5764c6;
+  color: $main_color;
   text-decoration: underline;
 }
 a:hover,
@@ -495,7 +492,7 @@ mark,
 }
 pre {
   background: #f9f9f9;
-  border-left: .2rem solid #5764c6;
+  border-left: .2rem solid $main_color;
   line-height: 1.8rem;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -575,9 +572,9 @@ pre code {
 .btn {
   -webkit-appearance: none;
   background: transparent;
-  border: .1rem solid #5764c6;
+  border: .1rem solid $main_color;
   border-radius: .3rem;
-  color: #5764c6;
+  color: $main_color;
   cursor: pointer;
   display: inline-block;
   font-size: 1.4rem;
@@ -598,32 +595,32 @@ pre code {
   background: #f3f4fb;
 }
 .btn:hover {
-  background: #5764c6;
-  border-color: #4452c0;
+  background: $main_color;
+  border-color: $main_over;
   color: #fff;
 }
 .btn:active,
 .btn.active {
-  background: #4452c0;
-  border-color: #3b49af;
+  background: $main_over;
+  border-color: $border-color;
   color: #fff;
 }
 .btn.btn-primary {
-  background: #5764c6;
-  border-color: #4452c0;
+  background: $main_color;
+  border-color: $main_over;
   color: #fff;
 }
 .btn.btn-primary:focus {
   background: #4f5dc3;
 }
 .btn.btn-primary:hover {
-  background: #4452c0;
-  border-color: #3b49af;
+  background: $main_over;
+  border-color: $border-color;
   color: #fff;
 }
 .btn.btn-primary:active,
 .btn.btn-primary.active {
-  background: #3b49af;
+  background: $border-color;
   border-color: #35419c;
   color: #fff;
 }
@@ -635,7 +632,7 @@ pre code {
 .btn.btn-link {
   background: transparent;
   border-color: transparent;
-  color: #5764c6;
+  color: $main_color;
 }
 .btn.btn-link:hover,
 .btn.btn-link:focus {
@@ -721,13 +718,13 @@ pre code {
   -webkit-appearance: none;
   background: #fff;
   background-image: none;
-  border: .1rem solid #c5c5c5;
+  border: .2rem solid #c5c5c5;
   border-radius: .3rem;
   color: #333;
   display: block;
-  font-size: 1.4rem;
-  height: 3.2rem;
-  line-height: 1.6rem;
+  font-size: 1.8rem;
+  height: 4.2rem;
+  line-height: 1.8rem;
   max-width: 100%;
   outline: 0;
   padding: .7rem .8rem;
@@ -735,7 +732,7 @@ pre code {
   width: 100%;
 }
 .form-input:focus {
-  border-color: #5764c6;
+  border-color: $main_color;
 }
 .form-input[disabled] {
   background: #eeeff2;
@@ -793,7 +790,7 @@ textarea.form-input {
   padding-right: 2.4rem;
 }
 .form-select:focus {
-  border-color: #5764c6;
+  border-color: $main_color;
 }
 .form-select::-ms-expand {
   display: none;
@@ -819,6 +816,35 @@ textarea.form-input {
   overflow: hidden;
   position: absolute;
   width: 1px;
+}
+.form-radio-btn{
+  input[type=radio] {
+    display: none;
+  }
+  label{
+    width: 50%;
+    display: block;
+    border: .2rem solid #c5c5c5;
+  }
+  input[type=radio] + label {
+    color: $main_color;
+    height: 4.2rem;
+    line-height: 2.1em;
+    font-size: 1.8rem;
+    text-align: center;
+  } 
+  input[type=radio]:checked  + label {
+    color:#FFF;
+    background: #c5c5c5;
+  }
+  label.left{
+     border-top-left-radius: 0.3rem;
+     border-bottom-left-radius: 0.3rem;
+  }
+  label.right{
+     border-top-right-radius: 0.3rem;
+     border-bottom-right-radius: 0.3rem;
+  }
 }
 .form-checkbox input:focus + .form-icon,
 .form-radio input:focus + .form-icon,
@@ -855,8 +881,8 @@ textarea.form-input {
 }
 .form-checkbox input:checked + .form-icon,
 .form-radio input:checked + .form-icon {
-  background: #5764c6;
-  border-color: #5764c6;
+  background: $main_color;
+  border-color: $main_color;
 }
 .form-checkbox .form-icon {
   border-radius: .2rem;
@@ -928,8 +954,8 @@ textarea.form-input {
   width: 1.4rem;
 }
 .form-switch input:checked + .form-icon {
-  background: #5764c6;
-  border-color: #5764c6;
+  background: $main_color;
+  border-color: $main_color;
 }
 .form-switch input:checked + .form-icon::after {
   left: 1rem;
@@ -1325,12 +1351,12 @@ textarea.form-input {
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 300;
-  height: 3.5rem;
+  height: 5rem;
   line-height: 1;
   margin: 0;
   position: relative;
   vertical-align: middle;
-  width: 3.5rem;
+  width: 5rem;
 }
 .avatar.avatar-xs {
   font-size: .8rem;
@@ -1477,7 +1503,7 @@ textarea.form-input {
   position: relative;
 }
 .badge[data-badge]::after {
-  background: #5764c6;
+  background: $main_color;
   background-clip: padding-box;
   border: .1rem solid #fff;
   border-radius: 1rem;
@@ -1608,11 +1634,11 @@ textarea.form-input {
   margin-top: -.2rem;
 }
 .chip-sm .btn-clear::before {
-  color: #3b49af;
+  color: $border-color;
   font-size: 1.6rem;
 }
 .chip-sm.selected {
-  background: #5764c6;
+  background: $main_color;
   color: #fff;
 }
 .chip-sm.selected .btn-clear::before {
@@ -1640,7 +1666,7 @@ textarea.form-input {
   white-space: nowrap;
 }
 .label.label-primary {
-  background: #5764c6;
+  background: $main_color;
   border-color: #4f5dc3;
   color: #fff;
 }
@@ -1675,12 +1701,12 @@ textarea.form-input {
 }
 .menu .menu-item a:hover,
 .menu .menu-item a:focus {
-  color: #5764c6;
+  color: $main_color;
 }
 .menu .menu-item a:active,
 .menu .menu-item a.active {
   background: #eff1fa;
-  color: #4452c0;
+  color: $main_over;
 }
 .menu .menu-header {
   color: #ccc;
@@ -1828,12 +1854,12 @@ textarea.form-input {
 }
 .tab .tab-item a:hover,
 .tab .tab-item a:focus {
-  border-bottom-color: #5764c6;
-  color: #5764c6;
+  border-bottom-color: $main_color;
+  color: $main_color;
 }
 .tab .tab-item.active a {
-  border-bottom-color: #3b49af;
-  color: #3b49af;
+  border-bottom-color: $border-color;
+  color: $border-color;
 }
 .tab.tab-block .tab-item {
   -webkit-flex: 1 0 auto;
@@ -1871,7 +1897,7 @@ textarea.form-input {
   background: #eff1fa;
 }
 .pagination .page-item.active a {
-  background: #5764c6;
+  background: $main_color;
   color: #fff;
 }
 .toast {
@@ -1884,7 +1910,7 @@ textarea.form-input {
   width: 100%;
 }
 .toast.toast-primary {
-  background: #5764c6;
+  background: $main_color;
   border-color: #4f5dc3;
   color: #fff;
 }
@@ -2161,7 +2187,7 @@ textarea.form-input {
 .loading::after {
   -webkit-animation: loading 500ms infinite linear;
   animation: loading 500ms infinite linear;
-  border: .2rem solid #5764c6;
+  border: .2rem solid $main_color;
   border-radius: .8rem;
   border-right-color: transparent;
   border-top-color: transparent;

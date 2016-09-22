@@ -1,3 +1,5 @@
+  require 'tag_tinter'
+
 class User < ApplicationRecord
 
 
@@ -27,6 +29,8 @@ class User < ApplicationRecord
   after_validation :geocode      
     
   mount_uploader :avatar, AvatarUploader
+
+  after_save :update_tints
 
   def name
     username.capitalize
@@ -61,6 +65,11 @@ class User < ApplicationRecord
       self.cached_tag_list = cached_tag_list.split(' ')
       byebug
     end
+  end
+  
+  private
+  def update_tints
+    TagTinter.new('#74CED2', 'white').update_tints
   end
 
 end

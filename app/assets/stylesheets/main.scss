@@ -1,24 +1,19 @@
 @import 'global';
 
-.sign-up{
-  h1{
-    font-family: $berry_font;
-    color: $berry_color;
-  }
-  h2{
-    margin-left: 1.5rem;
-    span{
-      font-size: 2.5rem;
-    }
-  }
-  .sign-up-image{
-    width: 70%;
-    margin:0 auto;
-    display: block;
-  }
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+    -moz-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+    -ms-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+    -o-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+    transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+    -webkit-font-smoothing: antialiased;
 }
+
 .berry-color{
-  color: $berry_color;
+  color: $main_color;
 }
 
 .logo{
@@ -173,19 +168,3 @@ header{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-
-
-#error_explanation{
-  h2{display:none;}
-  ul{padding: 0; margin: 0;margin-bottom: 20px; list-style: none;}
-  li{    padding: 10px;
-    padding-left: 20px;
-    border-radius: 3px;
-    margin: 0;
-    background-color: #ff0000;
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 5px;
-    margin-top: 5px;}
-}

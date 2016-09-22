@@ -1,0 +1,33 @@
+#filter-column{
+  width: 15em;
+  float: left;
+  min-height: 100vh;
+  background: #FFF;
+  margin-top: -5em;
+  padding-top: 5em;
+  border-right: 1px solid #f2f2f2;
+  overflow: hidden;
+  ul{
+    margin: 0;
+    padding: 1em;
+    overflow: scroll;
+    height: 85vh;
+    li{
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding:0.5em 0.7em;
+      color:#2d2d2d;
+      font-size: 15px;
+      border-radius:0.3rem;
+      cursor: pointer;
+      border:2px solid transparent;
+      &:hover{
+        border:2px solid #74CED2;
+      }
+      &.active{
+        border:2px solid #74CED2;
+      }
+    }
+  }
+}

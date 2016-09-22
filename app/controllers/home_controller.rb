@@ -8,12 +8,12 @@ class HomeController < ApplicationController
 				@users = User.all.where.not(id: current_user.id)
 			end
 			@tags = User.all.tag_counts_on(:tags).as_json(only: [:name]).to_json.html_safe
-			
+	    @tag_list = User.tag_counts_on(:tags).order('count desc')
+
 		else
-			render "welcome"
+			render "devise/registrations/new"
 		end
 	end
-
 
 
 end

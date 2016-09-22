@@ -1,9 +1,20 @@
-<% content_for :search do %>
-    	<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
-			  <%= text_field_tag :berries, params[:berries], :id => 'berries-filter', :placeholder => "Search by berries...",  :autofocus => true %>
+	<% content_for :search do %>
+		<div id="search-bar">
+	  	<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
+			  <%= text_field_tag :berries, params[:berries], :id => 'berries-filter', :placeholder => "Search in blendin",  :autofocus => true %>
 			<% end %>
-<% end %>
- 
+		</div>
+	<% end %>
+
+<div id="filter-column" data-selected="<%= params[:berries] %>">
+	<ul>
+	  <% @tag_list.each do |tag| %>
+	    <li style="background-color: <%= tag.tint %>; display: inline-block;">
+	      <%= tag.name %>
+	    </li>
+	  <% end %>
+	</ul>
+</div>
 
 <div class="columns">
 	<div class="column cards">

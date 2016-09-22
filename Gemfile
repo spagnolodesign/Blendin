@@ -40,7 +40,7 @@ gem 'fog'
 gem "mini_magick"
 # file upload solution
 gem 'carrierwave'
-
+gem 'compass'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
