@@ -10,9 +10,6 @@ function submitNewMessage(){
   });
 }
 
-document.addEventListener('DOMContentLoaded', init);
-window.addEventListener('resize', update);
-
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {

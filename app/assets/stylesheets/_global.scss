@@ -4,11 +4,11 @@ $main_over: #0faeb7;
 $border-color: #3d8184;
 
 //Errors
-.field_with_errors{
+.field_with_errors {
 	width: 100%;
 }
 
-#error_explanation{
+#error_explanation {
   h2{display:none;}
   ul{padding: 0; margin: 0;margin-bottom: 20px; list-style: none;}
   li{    padding: 10px;
@@ -21,4 +21,12 @@ $border-color: #3d8184;
     font-size: 15px;
     margin-bottom: 5px;
     margin-top: 5px;}
+}
+
+.notice-layout {
+  position: fixed;
+  overflow: hidden;
+  top:0;
+  left:0;
+  width: 100%;
 }

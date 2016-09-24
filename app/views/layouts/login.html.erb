@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Berry Hoop</title>
+    <title>Blendin</title>
     <meta name="description" content="Berry helps you to connect with people that share your same interests :)">
+    <meta name="viewport" content="width=device-width">
     <%= csrf_meta_tags %>    
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    
+        
+      
         <% if notice || alert %>
-          <div class="container">
-          <div class="columns">
-            <div class="column col-5">
-                <% if notice %>
-                  <div class="toast">
-                    <button class="btn btn-clear float-right close-btn"></button>
-                    <%= notice %>
-                  </div>
-                <% end %>
-                <% if alert %>
-                  <div class="toast toast-danger">
-                    <button class="btn btn-clear float-right close-btn"></button>
-                    <%= alert %>
-                  </div>
-                <% end %>
+          <div class="notice-layout show">
+          <% if notice %>
+            <div class="toast">
+              <button class="btn btn-clear float-right close-btn"></button>
+              <%= notice %>
             </div>
-          </div>
+          <% end %>
+          <% if alert %>
+            <div class="toast toast-danger">
+              <button class="btn btn-clear float-right close-btn"></button>
+              <%= alert %>
+            </div>
+          <% end %>
           </div>
         <% end %>
 

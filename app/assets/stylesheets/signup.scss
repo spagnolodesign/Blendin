@@ -1,10 +1,24 @@
+@import 'global';
+
 .sign-up{
   margin-top: 3.5em;
-  h1{
-    
+  .headline{
+    text-align: center;
+    h2{
+      margin-left: 1.5rem;
+      font-weight: bold;
+      color: $main_color;
+      margin-left: 0;
+    }
+    p{
+      color: #FFF;
+      font-size: 1.4em;
+    }
   }
   h2{
     margin-left: 1.5rem;
+    font-weight: bold;
+    color: $main_color;
     span{
       font-size: 2.5rem;
     }
@@ -13,6 +27,10 @@
     width: 70%;
     margin:0 auto;
     display: block;
+  }
+  .terms-text{
+    font-size: 0.7em; 
+    margin-bottom: 2em; 
   }
 }
 
@@ -26,4 +44,19 @@
 .sign-box{
   background-color:#fff;
   border-radius:0.3rem;
+}
+
+@media screen and (min-width: 480px) {
+  .sign-up{
+    .headline{
+      margin-top: 20em;
+      padding-right: 8em;
+      h2{
+        font-size: 3em;
+      }
+      p{
+        font-size: 1.8em;
+      }
+    }
+  }
 }
