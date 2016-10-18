@@ -1,0 +1,5179 @@
+@font-face {
+  font-family: 'kitten_swashregular';
+  src: url(/assets/kittenswashtrial-webfont-9ab1861a915ee141804bbbb27de3ffe6c28782c58b8103153015eeb4e7f86699.woff2) format("woff2"), url(/assets/kittenswashtrial-webfont-35bb80875ef05feda24943195f94805a9ec5ffa1c749db3cccea175ae7618993.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 7, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.field_with_errors {
+  width: 100%;
+}
+
+/* line 12, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation h2 {
+  display: none;
+}
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation li {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*LAYOUT*/
+/* line 27, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#center-side {
+  margin-left: 15em;
+  width: 65%;
+  margin-top: 1em;
+  float: left;
+  margin-bottom: 4em;
+}
+
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#right-side {
+  float: left;
+  width: 30%;
+  background: red;
+  min-height: 3em;
+}
+
+/*NOTIFICATION*/
+/* line 41, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notice-layout {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 49, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+}
+/* line 1, /vagrant/noc/noc/app/assets/stylesheets/berry-select.scss */
+.selectize-control.multi .selectize-input > div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 14px 10px !important;
+  background: #e51314 !important;
+  color: #fff5f5 !important;
+  border: 2px solid #c03737 !important;
+  font-size: 16px;
+}
+
+/* line 10, /vagrant/noc/noc/app/assets/stylesheets/berry-select.scss */
+.selectize-control.multi .selectize-input > div.active {
+  background: #c03737 !important;
+}
+
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/berry-select.scss */
+.berry-tag {
+  cursor: pointer;
+  margin: 5px 3px 3px 0;
+  padding: 14px 10px !important;
+  background: #e51314 !important;
+  color: #fff5f5 !important;
+  border: 2px solid #c03737 !important;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: normal;
+  -webkit-font-smoothing: inherit;
+}
+
+/* line 25, /vagrant/noc/noc/app/assets/stylesheets/berry-select.scss */
+.selectize-control.multi.plugin-remove_button .selectize-input > div {
+  padding-right: 22px !important;
+}
+
+/* line 28, /vagrant/noc/noc/app/assets/stylesheets/berry-select.scss */
+.selectize-control.plugin-remove_button [data-value] .remove {
+  padding: 4px 0 0 0 !important;
+}
+
+/* line 31, /vagrant/noc/noc/app/assets/stylesheets/berry-select.scss */
+.form-add-berries {
+  margin: 2rem 0;
+}
+/* line 1, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#chat-list {
+  min-height: 100vh;
+  background: #FFF;
+  position: fixed;
+}
+/* line 5, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#chat-list h5 {
+  margin: 0.4rem 0 0rem 0rem;
+}
+/* line 8, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#chat-list .menu-item {
+  line-height: 3.2rem;
+}
+
+/* line 12, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#new_message {
+  width: 66.9%;
+  padding: 10px;
+  margin: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: #f3f3f3;
+  margin-left: 0;
+  right: 0;
+  border-radius-top-right: .3rem;
+  border-radius-top-left: .3rem;
+}
+
+/* line 25, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.right-col-messages {
+  position: absolute;
+  right: 0;
+  min-height: 100vh;
+}
+
+/* line 30, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#text-input .new {
+  width: 83%;
+}
+
+/* line 33, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#messages {
+  margin-bottom: 62px;
+  padding-right: 1rem;
+}
+
+/* line 37, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#message_body {
+  line-height: 1.3rem;
+}
+
+/* line 40, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#text-input .new, #text-input .send {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 44, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+#text-input .send {
+  width: 14%;
+  margin-left: 2rem;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Messages */
+/* line 55, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message {
+  clear: both;
+  line-height: 18px;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: -1;
+}
+
+/* line 66, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* line 74, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata {
+  display: inline-block;
+  float: right;
+  padding: 0 0 0 7px;
+  position: relative;
+  bottom: -4px;
+}
+
+/* line 82, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .time {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 11px;
+  display: inline-block;
+}
+
+/* line 88, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .tick {
+  display: inline-block;
+  margin-left: 2px;
+  position: relative;
+  top: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+/* line 97, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .tick svg {
+  position: absolute;
+  transition: .5s ease-in-out;
+}
+
+/* line 102, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .tick svg:first-child {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: perspective(800px) rotateY(180deg);
+  transform: perspective(800px) rotateY(180deg);
+}
+
+/* line 109, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .tick svg:last-child {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+}
+
+/* line 116, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .tick-animation svg:first-child {
+  -webkit-transform: perspective(800px) rotateY(0);
+  transform: perspective(800px) rotateY(0);
+}
+
+/* line 121, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.metadata .tick-animation svg:last-child {
+  -webkit-transform: perspective(800px) rotateY(-179.9deg);
+  transform: perspective(800px) rotateY(-179.9deg);
+}
+
+/* line 126, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message:first-child {
+  margin: 16px 0 8px;
+}
+
+/* line 130, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message.received {
+  background: #efefef;
+  border-radius: 0px 5px 5px 5px;
+  float: left;
+}
+
+/* line 136, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message.received .metadata {
+  padding: 0 0 0 16px;
+}
+
+/* line 140, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message.received:after {
+  border-width: 0px 10px 10px 0;
+  border-color: transparent #efefef transparent transparent;
+  top: 0;
+  left: -10px;
+}
+
+/* line 147, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message.sent {
+  background: #e1ffc7;
+  border-radius: 5px 0px 5px 5px;
+  float: right;
+}
+
+/* line 153, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.message.sent:after {
+  border-width: 0px 0 10px 10px;
+  border-color: transparent transparent transparent #e1ffc7;
+  top: 0;
+  right: -10px;
+}
+
+/* line 160, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.cell {
+  border-bottom: .1rem solid #efefef;
+}
+/* line 162, /vagrant/noc/noc/app/assets/stylesheets/chat.scss */
+.cell a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Small Screens */
+/* line 1, /vagrant/noc/noc/app/assets/stylesheets/icon.scss */
+.icon-berry {
+  background: url(/assets/btn-berry-bc4384f02d15388bd2a75d338b4c90594a96dda8564e24cdb53b8609839a7dcc.png) no-repeat center center;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-size: 100%;
+}
+/* line 7, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.field_with_errors {
+  width: 100%;
+}
+
+/* line 12, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation h2 {
+  display: none;
+}
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation li {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*LAYOUT*/
+/* line 27, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#center-side {
+  margin-left: 15em;
+  width: 65%;
+  margin-top: 1em;
+  float: left;
+  margin-bottom: 4em;
+}
+
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#right-side {
+  float: left;
+  width: 30%;
+  background: red;
+  min-height: 3em;
+}
+
+/*NOTIFICATION*/
+/* line 41, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notice-layout {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 49, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+}
+
+/* line 3, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -ms-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 15, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.berry-color {
+  color: #74ccd1;
+}
+
+/* line 19, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.logo {
+  width: 110px;
+}
+
+/* line 22, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.logo-login {
+  width: 150px;
+  margin: -10px auto 20px  auto;
+  display: block;
+}
+
+/* line 27, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.avatar-modal {
+  cursor: pointer;
+}
+
+/* line 30, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.swal2-modal.modal-image.show-swal2.visible {
+  padding: 0 !important;
+}
+/* line 32, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.swal2-modal.modal-image.show-swal2.visible .swal2-image {
+  margin: 0 auto !important;
+}
+/* line 35, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.swal2-modal.modal-image.show-swal2.visible h2 {
+  display: none !important;
+}
+
+/* line 39, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.bg-grey {
+  background-color: #efefef;
+  padding: 1rem;
+  border-radius: .3rem;
+}
+
+/* line 44, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.bg-white {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: .3rem;
+}
+
+/* line 49, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+body {
+  padding-top: 70px;
+  background-color: #f8f8f8;
+}
+
+/* line 54, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+body.vanilla-modal .modal-hider {
+  position: absolute;
+  left: -99999em;
+}
+
+/* line 58, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+main {
+  margin: 0 0.5em;
+}
+
+/* line 61, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+header {
+  position: fixed;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+  height: 64px;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* line 73, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.fixedsticky {
+  top: 40px;
+}
+
+/* line 74, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.fixedsticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+
+/* When position: sticky is supported but native behavior is ignored */
+/* line 82, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+  position: static;
+}
+
+/* line 86, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+  position: fixed;
+}
+
+/* line 90, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.fixedsticky-dummy {
+  display: none;
+}
+
+/* line 93, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.fixedsticky-on + .fixedsticky-dummy {
+  display: block;
+}
+
+/* line 96, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.avatar .avatar-icon.with-berry {
+  background: #e51314;
+}
+
+/* line 99, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.nav-up {
+  top: -64px;
+}
+
+/* line 103, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: #e51314;
+}
+
+/* line 108, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.white-box {
+  background: #FFF;
+  border-radius: 0.3rem;
+}
+
+/* line 112, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.sad-berry {
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* line 116, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 120, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.shape {
+  width: 104%;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 126, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.shape::after {
+  transform: rotate(-10deg);
+  z-index: 0;
+  overflow: hidden;
+  content: " ";
+  display: block;
+  left: 0;
+  background: #FFF;
+  height: 57px;
+}
+
+/* line 137, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.btn.btn-berry {
+  background: #e51314;
+  color: #FFF;
+  border: .1rem solid #b60001;
+}
+
+/* line 142, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.btn.btn-berry:hover {
+  background: #f61e1f;
+  border: .1rem solid #f61e1f;
+}
+
+/* Dropdown button on hover & focus */
+/* line 148, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+/* line 153, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+/* line 159, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  right: 10px;
+  z-index: 2;
+  top: 65px;
+  margin: -1rem;
+}
+
+/* Links inside the dropdown */
+/* line 170, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: .3rem;
+}
+
+/* Change color of dropdown links on hover */
+/* line 179, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.dropdown-content a:hover {
+  background-color: #fafafa;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/* line 182, /vagrant/noc/noc/app/assets/stylesheets/main.scss */
+.show {
+  display: block;
+}
+/* line 7, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.field_with_errors {
+  width: 100%;
+}
+
+/* line 12, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation h2 {
+  display: none;
+}
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation li {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*LAYOUT*/
+/* line 27, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#center-side {
+  margin-left: 15em;
+  width: 65%;
+  margin-top: 1em;
+  float: left;
+  margin-bottom: 4em;
+}
+
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#right-side {
+  float: left;
+  width: 30%;
+  background: red;
+  min-height: 3em;
+}
+
+/*NOTIFICATION*/
+/* line 41, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notice-layout {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 49, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+}
+
+/* line 3, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+nav#overlord {
+  display: block;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 98;
+}
+
+/* line 11, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#main-login {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+/* line 19, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#logo_top {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  width: 140px;
+  height: 31px;
+  text-indent: -9999px;
+  margin-top: 26px;
+  margin-left: 25px;
+  background-repeat: no-repeat;
+  background-image: url("logo-app.png");
+  background-size: 100%;
+}
+
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#logo_top a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: initial;
+  text-indent: -9999px;
+}
+
+/* line 41, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#message {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999px;
+  margin-top: 25px;
+  margin-right: 107px;
+  z-index: 101;
+  border: 3px solid transparent;
+  outline: none;
+  box-sizing: initial;
+  background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3MyA0NzMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3MyA0NzM7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDAzLjU4MSw2OS4zYy00NC43LTQ0LjctMTA0LTY5LjMtMTY3LjItNjkuM3MtMTIyLjUsMjQuNi0xNjcuMiw2OS4zYy04Ni40LDg2LjQtOTIuNCwyMjQuNy0xNC45LDMxOCAgICBjLTcuNiwxNS4zLTE5LjgsMzMuMS0zNy45LDQyYy04LjcsNC4zLTEzLjYsMTMuNi0xMi4xLDIzLjJzOC45LDE3LjEsMTguNSwxOC42YzQuNSwwLjcsMTAuOSwxLjQsMTguNywxLjQgICAgYzIwLjksMCw1MS43LTQuOSw4My4yLTI3LjZjMzUuMSwxOC45LDczLjUsMjguMSwxMTEuNiwyOC4xYzYxLjIsMCwxMjEuOC0yMy43LDE2Ny40LTY5LjNjNDQuNy00NC43LDY5LjMtMTA0LDY5LjMtMTY3LjIgICAgUzQ0OC4yODEsMTE0LDQwMy41ODEsNjkuM3ogTTM4NC40ODEsMzg0LjZjLTY3LjUsNjcuNS0xNzIsODAuOS0yNTQuMiwzMi42Yy01LjQtMy4yLTEyLjEtMi4yLTE2LjQsMi4xYy0wLjQsMC4yLTAuOCwwLjUtMS4xLDAuOCAgICBjLTI3LjEsMjEtNTMuNywyNS40LTcxLjMsMjUuNGgtMC4xYzIwLjMtMTQuOCwzMy4xLTM2LjgsNDAuNi01My45YzEuMi0yLjksMS40LTUuOSwwLjctOC43Yy0wLjMtMi43LTEuNC01LjQtMy4zLTcuNiAgICBjLTczLjItODIuNy02OS40LTIwOC43LDguOC0yODYuOWM4MS43LTgxLjcsMjE0LjYtODEuNywyOTYuMiwwQzQ2Ni4xODEsMTcwLjEsNDY2LjE4MSwzMDIuOSwzODQuNDgxLDM4NC42eiIgZmlsbD0iIzc0Y2NkMSIvPgoJCTxjaXJjbGUgY3g9IjIzNi4zODEiIGN5PSIyMzYuNSIgcj0iMTYuNiIgZmlsbD0iIzc0Y2NkMSIvPgoJCTxjaXJjbGUgY3g9IjMyMS45ODEiIGN5PSIyMzYuNSIgcj0iMTYuNiIgZmlsbD0iIzc0Y2NkMSIvPgoJCTxjaXJjbGUgY3g9IjE1MC43ODEiIGN5PSIyMzYuNSIgcj0iMTYuNiIgZmlsbD0iIzc0Y2NkMSIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) no-repeat center center;
+  cursor: pointer;
+  background-size: 105%;
+}
+
+/* line 59, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#avatar {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  width: 33px;
+  height: 33px;
+  margin-top: 25px;
+  margin-right: 65px;
+  background-color: transparent;
+  border-radius: 100%;
+  z-index: 101;
+  border: 3px solid transparent;
+  outline: none;
+  box-sizing: initial;
+}
+/* line 74, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#avatar img {
+  width: 100%;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+
+/* line 80, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#hamburger {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999px;
+  border-radius: 100%;
+  margin-top: 25px;
+  margin-right: 25px;
+  background-color: #74ccd1;
+  z-index: 101;
+  border: 3px solid transparent;
+  outline: none;
+  box-sizing: initial;
+}
+
+/* line 98, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+figure#hamburger a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  text-indent: -9999px;
+  outline: none;
+  background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAVCAYAAADID4fUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo5NjQ1NjhiMS01MTU3LTRhNGMtYjVjNS1mNTM4M2ZmYjIwMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjE5RDdBNzQwMDU3MTFFNDhCOTVDQTM2NTY4QTQ5RDYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjE5RDdBNzMwMDU3MTFFNDhCOTVDQTM2NTY4QTQ5RDYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1YmJmMWEyZC0yMTk1LTQwN2MtODFjYS1jZTMzYjAwNThmYmMiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDplMmU2NTc0MC00ODcwLTExNzctOWQwZi1lYTRlZTViZTc1NDMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz57tFh6AAAAQklEQVR42mL8DwQMAwyYGAYBGBSOYAFioYF2BOMgSBKjaWLUEVhzx2hhNVpYjRZWo44glDAFB0PCHC2sBo0jAAIMAMLXD1V9r1XiAAAAAElFTkSuQmCC") no-repeat;
+  background-size: 15px 11px;
+  background-position: center center;
+  transition-property: all;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -ms-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+}
+
+/* line 116, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+nav#overlord ul#dropdown {
+  transform: translate3d(350px, 0, 0);
+  -moz-transform: translate3d(350px, 0, 0);
+  -webkit-transform: translate3d(350px, 0, 0);
+  position: fixed;
+  margin: 0;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  text-align: right;
+  display: none;
+  list-style-type: none;
+  background-color: #fff;
+  border-left: 1px solid #f0f0f0;
+  padding-right: 30px;
+  padding-top: 70px;
+  padding-left: 10px;
+  z-index: 100;
+  margin-right: 0px;
+  max-width: 300px;
+  display: block;
+  transition-property: all;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.155, 0.605, 0.18, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.155, 0.605, 0.18, 1.055);
+  -moz-transition-timing-function: cubic-bezier(0.155, 0.605, 0.18, 1.055);
+  -o-transition-timing-function: cubic-bezier(0.155, 0.605, 0.18, 1.055);
+  transition-timing-function: cubic-bezier(0.155, 0.605, 0.18, 1.055);
+}
+
+/* line 145, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+nav#overlord ul#dropdown li a.logoize {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 10px;
+  font-family: 'freight-sans-pro', sans-serif;
+  color: #000;
+}
+
+/* line 154, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+nav#overlord ul#dropdown li a {
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 300;
+  color: #777;
+  display: block;
+  padding-left: 30px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -ms-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+}
+
+/* line 169, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+nav#overlord a {
+  text-decoration: none;
+}
+
+/* line 172, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+body.overlord_active figure#hamburger a {
+  background-image: url(https://d298ocwvey67dw.cloudfront.net/assets/icons/push_to_close_white-398e50659080d5b390f4ab4d7b3f32fa49b3753c642c1f5bc00062c91c32c4c3.png);
+  background-size: 10px 10px;
+}
+
+/* line 176, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+body.overlord_active nav#overlord ul#dropdown {
+  display: block;
+  margin-right: 0px;
+  transform: translate3d(0px, 0, 0);
+  -moz-transform: translate3d(0px, 0, 0);
+  -webkit-transform: translate3d(0px, 0, 0);
+}
+
+/* line 183, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+div#whiteout {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: transparent;
+  z-index: 10;
+  display: none;
+}
+
+/* line 193, /vagrant/noc/noc/app/assets/stylesheets/nav.scss */
+body.overlord_active div#whiteout {
+  z-index: 90;
+  display: block;
+}
+/* line 1, /vagrant/noc/noc/app/assets/stylesheets/search-bar.scss */
+#search-bar {
+  background: #FFF;
+  position: absolute;
+  top: 25px;
+  left: 16.3em;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  max-width: 720px;
+  position: relative;
+  -webkit-transition: background 100ms ease-in,width 100ms ease-out;
+  transition: background 100ms ease-in,width 100ms ease-out;
+}
+/* line 15, /vagrant/noc/noc/app/assets/stylesheets/search-bar.scss */
+#search-bar .selectize-input {
+  padding: 10px 0 2px 7px;
+}
+/* line 18, /vagrant/noc/noc/app/assets/stylesheets/search-bar.scss */
+#search-bar .selectize-input > input {
+  font-size: 15px !important;
+}
+/* line 21, /vagrant/noc/noc/app/assets/stylesheets/search-bar.scss */
+#search-bar .selectize-control.multi .selectize-input > div {
+  cursor: pointer;
+  margin: -3px 3px 0px 0;
+}
+/* line 25, /vagrant/noc/noc/app/assets/stylesheets/search-bar.scss */
+#search-bar .selectize-control.multi .selectize-input > div {
+  font-size: 15px;
+  border: 2px solid #c03737 !important;
+  color: #fff !important;
+  padding: 12px 27px 12px 10px !important;
+}
+/* line 3, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #f2f2f2 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border: 0 none !important;
+}
+
+/* line 9, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
+  content: '!';
+  visibility: hidden;
+}
+
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown-header {
+  position: relative;
+  padding: 5px 8px;
+  border-bottom: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 23, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown-header-close {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  color: #303030;
+  opacity: 0.4;
+  margin-top: -12px;
+  line-height: 20px;
+  font-size: 20px !important;
+}
+
+/* line 33, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown-header-close:hover {
+  color: #000000;
+}
+
+/* line 36, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown.plugin-optgroup_columns .optgroup {
+  border-right: 1px solid #f2f2f2;
+  border-top: 0 none;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 44, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown.plugin-optgroup_columns .optgroup:last-child {
+  border-right: 0 none;
+}
+
+/* line 47, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown.plugin-optgroup_columns .optgroup:before {
+  display: none;
+}
+
+/* line 50, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown.plugin-optgroup_columns .optgroup-header {
+  border-top: 0 none;
+}
+
+/* line 53, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button [data-value] {
+  position: relative;
+  padding-right: 24px !important;
+}
+
+/* line 57, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button [data-value] .remove {
+  z-index: 1;
+  /* fixes ie bug (see #392) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 17px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 2px 0 0 0;
+  border-left: 1px solid #b60001;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 81, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button [data-value] .remove:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* line 84, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button [data-value].active .remove {
+  border-left-color: #cacaca;
+}
+
+/* line 87, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button .disabled [data-value] .remove:hover {
+  background: none;
+}
+
+/* line 90, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button .disabled [data-value] .remove {
+  border-left-color: #ffffff;
+}
+
+/* line 93, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.plugin-remove_button .remove-single {
+  position: absolute;
+  right: 28px;
+  top: 6px;
+  font-size: 23px;
+}
+
+/* line 99, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control {
+  position: relative;
+}
+
+/* line 102, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: #303030;
+  font-size: 20px;
+  line-height: 18px;
+  -webkit-font-smoothing: inherit;
+}
+
+/* line 110, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  cursor: text;
+  display: inline-block;
+}
+
+/* line 116, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input {
+  padding: 8px 8px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+/* line 125, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.multi .selectize-input.has-items {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 132, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input.disabled,
+.selectize-input.disabled * {
+  cursor: default !important;
+}
+
+/* line 137, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input.dropdown-active {
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 142, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input > * {
+  vertical-align: baseline;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 149, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.multi .selectize-input > div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: #f2f2f2;
+  color: #303030;
+  border: 0 solid #d0d0d0;
+}
+
+/* line 157, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.multi .selectize-input > div.active {
+  background: #e8e8e8;
+  color: #303030;
+  border: 0 solid #cacaca;
+}
+
+/* line 162, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.multi .selectize-input.disabled > div,
+.selectize-control.multi .selectize-input.disabled > div.active {
+  color: #7d7d7d;
+  background: #ffffff;
+  border: 0 solid #ffffff;
+}
+
+/* line 168, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input > input {
+  display: inline-block !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 2px 0 0 !important;
+  text-indent: 0 !important;
+  border: 0 none !important;
+  background: none !important;
+  line-height: inherit !important;
+  -webkit-user-select: auto !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* line 183, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input > input::-ms-clear {
+  display: none;
+}
+
+/* line 186, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input > input:focus {
+  outline: none !important;
+}
+
+/* line 189, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input::after {
+  content: ' ';
+  display: block;
+  clear: left;
+}
+
+/* line 194, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-input.dropdown-active::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: #f0f0f0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 204, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown {
+  position: absolute;
+  z-index: 10;
+  background: #ffffff;
+  margin: -1px 0 0 0;
+  border-top: 0 none;
+}
+
+/* line 211, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 215, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown [data-selectable] .highlight {
+  background: rgba(125, 168, 208, 0.2);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 221, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header {
+  padding: 5px 8px;
+}
+
+/* line 225, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+  border-top: 0 none;
+}
+
+/* line 228, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown .optgroup-header {
+  color: #303030;
+  background: #ffffff;
+  cursor: default;
+}
+
+/* line 233, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown .active {
+  background-color: #f5fafd;
+  color: #495c68;
+}
+
+/* line 237, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown .active.create {
+  color: #495c68;
+}
+
+/* line 240, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown .create {
+  color: rgba(48, 48, 48, 0.5);
+}
+
+/* line 243, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px;
+}
+
+/* line 248, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+  cursor: pointer;
+}
+
+/* line 252, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.single .selectize-input.input-active,
+.selectize-control.single .selectize-input.input-active input {
+  cursor: text;
+}
+
+/* line 256, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.single .selectize-input:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #808080 transparent transparent transparent;
+}
+
+/* line 269, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.single .selectize-input.dropdown-active:after {
+  margin-top: -4px;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #808080 transparent;
+}
+
+/* line 274, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.rtl.single .selectize-input:after {
+  left: 15px;
+  right: auto;
+}
+
+/* line 278, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control.rtl .selectize-input > input {
+  margin: 0 4px 0 -2px !important;
+}
+
+/* line 281, /vagrant/noc/noc/app/assets/stylesheets/selectizes.scss */
+.selectize-control .selectize-input.disabled {
+  opacity: 0.5;
+  background-color: #fafafa;
+}
+/* line 7, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.field_with_errors {
+  width: 100%;
+}
+
+/* line 12, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation h2 {
+  display: none;
+}
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation li {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*LAYOUT*/
+/* line 27, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#center-side {
+  margin-left: 15em;
+  width: 65%;
+  margin-top: 1em;
+  float: left;
+  margin-bottom: 4em;
+}
+
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#right-side {
+  float: left;
+  width: 30%;
+  background: red;
+  min-height: 3em;
+}
+
+/*NOTIFICATION*/
+/* line 41, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notice-layout {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 49, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+}
+
+/* line 3, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up {
+  margin-top: 3.5em;
+}
+/* line 5, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up .headline {
+  text-align: center;
+}
+/* line 7, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up .headline h2 {
+  margin-left: 1.5rem;
+  font-weight: bold;
+  color: #74ccd1;
+  margin-left: 0;
+}
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up .headline p {
+  color: #FFF;
+  font-size: 1.4em;
+}
+/* line 18, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up h2 {
+  margin-left: 1.5rem;
+  font-weight: bold;
+  color: #74ccd1;
+}
+/* line 22, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up h2 span {
+  font-size: 2.5rem;
+}
+/* line 26, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up .sign-up-image {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+/* line 31, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-up .terms-text {
+  font-size: 0.7em;
+  margin-bottom: 2em;
+}
+
+/* line 37, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.welcome {
+  background: url(/assets/login-bg-11dc8b2098b5f1b88b40335e9a2dc66df671aa2ca20bf2fee8ca4bbf35c1004c.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 44, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+.sign-box {
+  background-color: #fff;
+  border-radius: 0.3rem;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 51, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+  .sign-up .headline {
+    margin-top: 20em;
+    padding-right: 8em;
+  }
+  /* line 54, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+  .sign-up .headline h2 {
+    font-size: 3em;
+  }
+  /* line 57, /vagrant/noc/noc/app/assets/stylesheets/signup.scss */
+  .sign-up .headline p {
+    font-size: 1.8em;
+  }
+}
+/* line 7, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.field_with_errors {
+  width: 100%;
+}
+
+/* line 12, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation h2 {
+  display: none;
+}
+/* line 13, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#error_explanation li {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*LAYOUT*/
+/* line 27, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#center-side {
+  margin-left: 15em;
+  width: 65%;
+  margin-top: 1em;
+  float: left;
+  margin-bottom: 4em;
+}
+
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+#right-side {
+  float: left;
+  width: 30%;
+  background: red;
+  min-height: 3em;
+}
+
+/*NOTIFICATION*/
+/* line 41, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notice-layout {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 49, /vagrant/noc/noc/app/assets/stylesheets/_global.scss */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+}
+
+/* line 3, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 14, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 24, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 42, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 51, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 58, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 65, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 75, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 85, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 95, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 2 */
+  text-decoration: underline;
+  /* 1 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 106, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 113, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 120, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 127, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 134, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 141, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 148, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 155, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+sub {
+  bottom: -.25em;
+}
+
+/* line 158, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+sup {
+  top: -.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 166, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 172, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 181, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 193, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 200, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 214, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  border: 0px;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 228, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 235, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 244, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 254, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 264, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 274, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 283, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 294, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 311, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 318, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 328, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 336, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 345, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 352, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 360, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* line 366, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* line 371, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  line-height: 1.42857143;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 377, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+body {
+  color: #333;
+  font-size: 1.4rem;
+  overflow-x: hidden;
+}
+
+/* line 382, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+a {
+  color: #74ccd1;
+  text-decoration: underline;
+}
+
+/* line 386, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+a:hover,
+a:focus {
+  color: #283176;
+}
+
+/* line 390, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+[disabled],
+.disabled {
+  cursor: default;
+  opacity: .75;
+  pointer-events: none;
+}
+
+/* line 396, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn .icon,
+.toast .icon,
+.menu .icon {
+  font-size: 1.3333em;
+  line-height: .8em;
+  margin-right: .2rem;
+  vertical-align: -20%;
+}
+
+/* line 404, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* line 416, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h1 {
+  font-size: 5rem;
+}
+
+/* line 419, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h2 {
+  font-size: 4rem;
+}
+
+/* line 422, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h3 {
+  font-size: 3rem;
+}
+
+/* line 425, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h4 {
+  font-size: 2.4rem;
+}
+
+/* line 428, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h5 {
+  font-size: 2rem;
+}
+
+/* line 431, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+h6 {
+  font-size: 1.6rem;
+}
+
+/* line 434, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+p {
+  margin: 0 0 1rem;
+}
+
+/* line 437, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+blockquote {
+  border-left: .2rem solid #ddd;
+  margin-left: 0;
+  padding: 1rem 2rem;
+}
+
+/* line 442, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 445, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+blockquote cite {
+  color: #b3b3b3;
+}
+
+/* line 448, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ul,
+ol {
+  margin: 2rem 0 2rem 2rem;
+  padding: 0;
+}
+
+/* line 453, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 1.5rem 0 1.5rem 2rem;
+}
+
+/* line 459, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ul li,
+ol li {
+  margin-top: 1rem;
+}
+
+/* line 463, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ul {
+  list-style: disc inside;
+}
+
+/* line 466, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ul ul {
+  list-style-type: circle;
+}
+
+/* line 469, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ol {
+  list-style: decimal inside;
+}
+
+/* line 472, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 475, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+dl dt {
+  font-weight: bold;
+}
+
+/* line 478, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+dl dd {
+  margin: .5rem 0 1.5rem 0;
+}
+
+/* line 481, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.lead {
+  font-size: 120%;
+}
+
+/* line 484, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+mark,
+.highlight {
+  background: #ffe5a3;
+  border-radius: .2rem;
+  display: inline;
+  font-size: 1em;
+  padding: .1em .3em;
+  vertical-align: baseline;
+}
+
+/* line 493, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+pre {
+  background: #f9f9f9;
+  border-left: 0.2rem solid #74ccd1;
+  line-height: 1.8rem;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  overflow: auto;
+  padding: 1.5rem;
+}
+
+/* line 502, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+code {
+  background: #efefef;
+  border-radius: .2rem;
+  display: inline;
+  font-size: 1em;
+  padding: .1em .3em;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+/* line 511, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+pre code {
+  background: transparent;
+  border-left: 0;
+  line-height: 1.8rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* line 518, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 523, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.video-responsive {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /* Default 16:9, you can calculate this value by dividing 9 by 16 */
+  padding-top: 3rem;
+  position: relative;
+}
+
+/* line 531, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 540, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.video-responsive video {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* line 545, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.video-responsive-4-3 {
+  padding-bottom: 75%;
+  /* 4:3 */
+}
+
+/* line 549, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* line 554, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background: #fcfcfc;
+}
+
+/* line 557, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.table.table-hover tbody tr:hover {
+  background: #f4f4f4;
+}
+
+/* line 560, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.table.table-hover tbody tr.selected {
+  background: #f2f2f2;
+}
+
+/* line 563, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.table th,
+.table td {
+  border-bottom: .1rem solid #efefef;
+  padding: 1.5rem 1rem;
+  text-align: left;
+}
+
+/* line 569, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.table th {
+  border-color: #c9c9c9;
+}
+
+/* line 572, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0.1rem solid #74ccd1;
+  border-radius: .3rem;
+  color: #74ccd1;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 3.2rem;
+  line-height: 1.6rem;
+  outline: 0;
+  padding: .7rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 594, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn:focus {
+  background: #f3f4fb;
+}
+
+/* line 597, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn:hover {
+  background: #74ccd1;
+  border-color: #0faeb7;
+  color: #fff;
+}
+
+/* line 602, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn:active,
+.btn.active {
+  background: #0faeb7;
+  border-color: #3d8184;
+  color: #fff;
+}
+
+/* line 608, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-primary {
+  background: #74ccd1;
+  border-color: #0faeb7;
+  color: #fff;
+}
+
+/* line 613, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-primary:focus {
+  background: #4f5dc3;
+}
+
+/* line 616, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-primary:hover {
+  background: #0faeb7;
+  border-color: #3d8184;
+  color: #fff;
+}
+
+/* line 621, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-primary:active,
+.btn.btn-primary.active {
+  background: #3d8184;
+  border-color: #35419c;
+  color: #fff;
+}
+
+/* line 627, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-primary.loading::after {
+  border-color: #fff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+/* line 632, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-link {
+  background: transparent;
+  border-color: transparent;
+  color: #74ccd1;
+}
+
+/* line 637, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-link:hover,
+.btn.btn-link:focus {
+  color: #35419c;
+}
+
+/* line 641, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-link:active,
+.btn.btn-link.active {
+  color: #283176;
+}
+
+/* line 645, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-sm {
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  height: 2.4rem;
+  line-height: 1.4rem;
+  padding: .4rem 1rem;
+}
+
+/* line 652, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-lg {
+  border-radius: .4rem;
+  font-size: 1.8rem;
+  height: 4.2rem;
+  line-height: 2rem;
+  padding: 1rem 1.8rem;
+}
+
+/* line 659, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* line 663, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-clear {
+  background: transparent;
+  border: 0;
+  color: #666;
+  height: 2rem;
+  margin-left: .3rem;
+  opacity: .45;
+  padding: 0;
+}
+
+/* line 672, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-clear:hover {
+  opacity: .85;
+}
+
+/* line 675, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn.btn-clear::before {
+  content: "\00d7";
+  font-size: 2rem;
+}
+
+/* line 679, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group {
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 687, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group .btn {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+/* line 692, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group .btn:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 696, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-left: -.1rem;
+}
+
+/* line 700, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: -.1rem;
+}
+
+/* line 705, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group .btn:hover,
+.btn-group .btn:focus {
+  z-index: 99;
+}
+
+/* line 709, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.btn-group.btn-group-block {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+/* line 714, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* line 717, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-input {
+  -webkit-appearance: none;
+  background: #fff;
+  background-image: none;
+  border: .2rem solid #c5c5c5;
+  border-radius: .3rem;
+  color: #333;
+  display: block;
+  font-size: 1.8rem;
+  height: 4.2rem;
+  line-height: 1.8rem;
+  max-width: 100%;
+  outline: 0;
+  padding: .7rem .8rem;
+  position: relative;
+  width: 100%;
+}
+
+/* line 734, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-input:focus {
+  border-color: #74ccd1;
+}
+
+/* line 737, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-input[disabled] {
+  background: #eeeff2;
+}
+
+/* line 740, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-input.input-sm {
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  height: 2.4rem;
+  padding: .3rem .6rem;
+}
+
+/* line 746, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-input.input-lg {
+  border-radius: .4rem;
+  font-size: 1.6rem;
+  height: 4.2rem;
+  line-height: 2rem;
+  padding: 1rem .8rem;
+}
+
+/* line 753, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-input.input-inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+
+/* line 758, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+textarea.form-input {
+  height: auto;
+  line-height: 2rem;
+}
+
+/* line 762, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.has-success .form-input,
+.form-input.is-success {
+  border-color: #32b643;
+}
+
+/* line 766, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.has-danger .form-input,
+.form-input.is-danger {
+  border-color: #e85600;
+}
+
+/* line 770, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-label {
+  display: block;
+  line-height: 1.6rem;
+  margin-bottom: .5rem;
+}
+
+/* line 775, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: .1rem solid #c5c5c5;
+  border-radius: .3rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  outline: 0;
+  padding: .5rem .8rem;
+  vertical-align: middle;
+}
+
+/* line 787, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-select:not([multiple]) {
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 0.75rem center/0.8rem 1rem;
+  height: 3.2rem;
+  padding-right: 2.4rem;
+}
+
+/* line 792, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-select:focus {
+  border-color: #74ccd1;
+}
+
+/* line 795, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-select::-ms-expand {
+  display: none;
+}
+
+/* line 798, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-select.select-sm {
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  height: 2.4rem;
+  padding: .4rem 2rem .4rem .6rem;
+}
+
+/* line 804, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-select.select-lg {
+  font-size: 1.6rem;
+  height: 4.2rem;
+  line-height: 2rem;
+  padding: 1rem 2.4rem 1rem .8rem;
+}
+
+/* line 810, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox input,
+.form-radio input,
+.form-switch input {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 821, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio-btn input[type=radio] {
+  display: none;
+}
+/* line 824, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio-btn label {
+  width: 50%;
+  display: block;
+  border: .2rem solid #c5c5c5;
+}
+/* line 829, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio-btn input[type=radio] + label {
+  color: #74ccd1;
+  height: 4.2rem;
+  line-height: 2.1em;
+  font-size: 1.8rem;
+  text-align: center;
+}
+/* line 836, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio-btn input[type=radio]:checked + label {
+  color: #FFF;
+  background: #c5c5c5;
+}
+/* line 840, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio-btn label.left {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+/* line 844, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio-btn label.right {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-left: 0;
+}
+
+/* line 850, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox input:focus + .form-icon,
+.form-radio input:focus + .form-icon,
+.form-switch input:focus + .form-icon {
+  box-shadow: 0 0 .3rem .1rem #efefef;
+}
+
+/* line 855, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox,
+.form-radio {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.8rem;
+  padding: .3rem 2rem;
+  position: relative;
+}
+
+/* line 863, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox .form-icon,
+.form-radio .form-icon {
+  border: .1rem solid #c5c5c5;
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 1.4rem;
+  left: 0;
+  line-height: 2.4rem;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: .5rem;
+  transition: all .15s ease;
+  vertical-align: top;
+  width: 1.4rem;
+}
+
+/* line 879, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox:hover .form-icon,
+.form-radio:hover .form-icon {
+  border-color: #9f9f9f;
+}
+
+/* line 883, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox input:checked + .form-icon,
+.form-radio input:checked + .form-icon {
+  background: #74ccd1;
+  border-color: #74ccd1;
+}
+
+/* line 888, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox .form-icon {
+  border-radius: .2rem;
+}
+
+/* line 891, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-checkbox input:checked + .form-icon::after {
+  background-clip: padding-box;
+  border: .2rem solid #fff;
+  border-left-width: 0;
+  border-top-width: 0;
+  content: "";
+  height: 1rem;
+  left: 50%;
+  margin-left: -.3rem;
+  margin-top: -.6rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: .6rem;
+}
+
+/* line 907, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio .form-icon {
+  border-radius: .7rem;
+}
+
+/* line 910, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-radio input:checked + .form-icon::after {
+  background: #fff;
+  border-radius: .2rem;
+  content: "";
+  height: .4rem;
+  left: 50%;
+  margin-left: -.2rem;
+  margin-top: -.2rem;
+  position: absolute;
+  top: 50%;
+  width: .4rem;
+}
+
+/* line 922, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-switch {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.8rem;
+  padding: .3rem 2rem .3rem 3.6rem;
+  position: relative;
+}
+
+/* line 929, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-switch .form-icon {
+  background: #c5c5c5;
+  background-clip: padding-box;
+  border: .1rem solid #c5c5c5;
+  border-radius: .9rem;
+  display: inline-block;
+  height: 1.6rem;
+  left: 0;
+  line-height: 2.4rem;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: .4rem;
+  vertical-align: top;
+  width: 2.6rem;
+}
+
+/* line 945, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-switch .form-icon::after {
+  background: #fff;
+  border-radius: .8rem;
+  content: "";
+  display: block;
+  height: 1.4rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: left .15s ease;
+  width: 1.4rem;
+}
+
+/* line 957, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-switch input:checked + .form-icon {
+  background: #74ccd1;
+  border-color: #74ccd1;
+}
+
+/* line 961, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-switch input:checked + .form-icon::after {
+  left: 1rem;
+}
+
+/* line 964, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+/* line 969, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .input-group-addon {
+  background: #f9f9f9;
+  border: .1rem solid #c5c5c5;
+  border-radius: .3rem;
+  line-height: 1.6rem;
+  padding: .7rem .8rem;
+}
+
+/* line 976, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .input-group-addon.addon-sm {
+  font-size: 1.2rem;
+  padding: .3rem .6rem;
+}
+
+/* line 980, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .input-group-addon.addon-lg {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1rem .8rem;
+}
+
+/* line 985, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .input-group-addon,
+.input-group .input-group-btn {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+/* line 991, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .form-input:first-child:not(:last-child),
+.input-group .input-group-addon:first-child:not(:last-child),
+.input-group .input-group-btn:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 997, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .form-input:not(:first-child):not(:last-child),
+.input-group .input-group-addon:not(:first-child):not(:last-child),
+.input-group .input-group-btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-left: -.1rem;
+}
+
+/* line 1003, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .form-input:last-child:not(:first-child),
+.input-group .input-group-addon:last-child:not(:first-child),
+.input-group .input-group-btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: -.1rem;
+}
+
+/* line 1010, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.input-group .form-input:focus,
+.input-group .input-group-addon:focus,
+.input-group .input-group-btn:focus {
+  z-index: 99;
+}
+
+/* line 1015, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 980px) {
+  /* line 1023, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .grid-960 {
+    width: 98rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 1028, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .grid-480 {
+    width: 50rem;
+  }
+}
+/* line 1032, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.columns {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+/* line 1039, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.columns.col-gapless {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 1043, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.columns.col-gapless .column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 1047, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1rem;
+}
+
+/* line 1053, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.column.col-12,
+.column.col-11,
+.column.col-10,
+.column.col-9,
+.column.col-8,
+.column.col-7,
+.column.col-6,
+.column.col-5,
+.column.col-4,
+.column.col-3,
+.column.col-2,
+.column.col-1 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+/* line 1069, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-12 {
+  width: 100%;
+}
+
+/* line 1072, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-11 {
+  width: 91.66666667%;
+}
+
+/* line 1075, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-10 {
+  width: 83.33333333%;
+}
+
+/* line 1078, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 1081, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-8 {
+  width: 66.66666667%;
+}
+
+/* line 1084, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-7 {
+  width: 58.33333333%;
+}
+
+/* line 1087, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 1090, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-5 {
+  width: 41.66666667%;
+}
+
+/* line 1093, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-4 {
+  width: 33.33333333%;
+}
+
+/* line 1096, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 1099, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-2 {
+  width: 16.66666667%;
+}
+
+/* line 1102, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.col-1 {
+  width: 8.33333333%;
+}
+
+@media screen and (min-width: 481px) {
+  /* line 1106, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-12,
+  .col-xs-11,
+  .col-xs-10,
+  .col-xs-9,
+  .col-xs-8,
+  .col-xs-7,
+  .col-xs-6,
+  .col-xs-5,
+  .col-xs-4,
+  .col-xs-3,
+  .col-xs-2,
+  .col-xs-1 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  /* line 1122, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-12 {
+    width: 100%;
+  }
+
+  /* line 1125, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-11 {
+    width: 91.66666667%;
+  }
+
+  /* line 1128, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-10 {
+    width: 83.33333333%;
+  }
+
+  /* line 1131, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-9 {
+    width: 75%;
+  }
+
+  /* line 1134, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-8 {
+    width: 66.66666667%;
+  }
+
+  /* line 1137, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-7 {
+    width: 58.33333333%;
+  }
+
+  /* line 1140, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-6 {
+    width: 50%;
+  }
+
+  /* line 1143, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-5 {
+    width: 41.66666667%;
+  }
+
+  /* line 1146, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-4 {
+    width: 33.33333333%;
+  }
+
+  /* line 1149, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-3 {
+    width: 25%;
+  }
+
+  /* line 1152, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-2 {
+    width: 16.66666667%;
+  }
+
+  /* line 1155, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-xs-1 {
+    width: 8.33333333%;
+  }
+}
+@media screen and (min-width: 601px) {
+  /* line 1160, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-12,
+  .col-sm-11,
+  .col-sm-10,
+  .col-sm-9,
+  .col-sm-8,
+  .col-sm-7,
+  .col-sm-6,
+  .col-sm-5,
+  .col-sm-4,
+  .col-sm-3,
+  .col-sm-2,
+  .col-sm-1 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  /* line 1176, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  /* line 1179, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+
+  /* line 1182, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+
+  /* line 1185, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  /* line 1188, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+
+  /* line 1191, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+
+  /* line 1194, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  /* line 1197, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+
+  /* line 1200, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+
+  /* line 1203, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  /* line 1206, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+
+  /* line 1209, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+}
+@media screen and (min-width: 841px) {
+  /* line 1214, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-12,
+  .col-md-11,
+  .col-md-10,
+  .col-md-9,
+  .col-md-8,
+  .col-md-7,
+  .col-md-6,
+  .col-md-5,
+  .col-md-4,
+  .col-md-3,
+  .col-md-2,
+  .col-md-1 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  /* line 1230, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-12 {
+    width: 100%;
+  }
+
+  /* line 1233, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+
+  /* line 1236, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+
+  /* line 1239, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-9 {
+    width: 75%;
+  }
+
+  /* line 1242, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+
+  /* line 1245, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+
+  /* line 1248, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-6 {
+    width: 50%;
+  }
+
+  /* line 1251, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+
+  /* line 1254, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+
+  /* line 1257, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-3 {
+    width: 25%;
+  }
+
+  /* line 1260, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+
+  /* line 1263, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+}
+@media screen and (min-width: 841px) {
+  /* line 1268, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .form-horizontal {
+    padding: 1rem;
+  }
+
+  /* line 1271, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .form-horizontal .form-group {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+  }
+
+  /* line 1276, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .form-horizontal .form-label {
+    margin-bottom: 0;
+    padding: .8rem .4rem;
+  }
+
+  /* line 1280, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .form-horizontal .form-checkbox,
+  .form-horizontal .form-radio {
+    margin: .5rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 1286, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .columns {
+    display: block;
+  }
+
+  /* line 1289, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .columns .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 1294, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .hide-xs {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 1299, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .hide-sm {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 840px) {
+  /* line 1304, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .hide-md {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 1309, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .hide-lg {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  /* line 1314, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .hide-xl {
+    display: none !important;
+  }
+}
+/* line 1318, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.navbar {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+}
+
+/* line 1330, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.navbar .navbar-brand {
+  font-size: 2rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+/* line 1335, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.empty {
+  background: #fff;
+  border-radius: .3rem;
+  padding: 4rem;
+}
+
+/* line 1340, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.empty .empty-title {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 .5rem 0;
+}
+
+/* line 1344, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.empty .empty-meta {
+  color: #888;
+}
+
+/* line 1347, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.empty .empty-action {
+  margin-top: 1.5rem;
+}
+
+/* line 1350, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar {
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  height: 5rem;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 5rem;
+}
+
+/* line 1362, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar.avatar-xs {
+  font-size: .8rem;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+/* line 1367, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar.avatar-sm {
+  font-size: 1rem;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+/* line 1372, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar.avatar-lg {
+  font-size: 2rem;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+/* line 1377, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar.avatar-xl {
+  font-size: 2.6rem;
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+/* line 1382, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1387, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar .avatar-icon {
+  background: #fff;
+  bottom: -.2em;
+  height: 50%;
+  padding: 5%;
+  position: absolute;
+  right: -.2em;
+  width: 50%;
+}
+
+/* line 1396, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.avatar[data-initial]::after {
+  color: #fff;
+  content: attr(data-initial);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes slide-down {
+  0% {
+    margin-top: -3rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  0% {
+    margin-top: -3rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+/* line 1445, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete {
+  position: relative;
+}
+
+/* line 1448, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-input {
+  background: #fff;
+  border: .1rem solid #c5c5c5;
+  border-radius: .3rem;
+  color: #333;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  max-width: 100%;
+  min-height: 3.2rem;
+  outline: 0;
+  padding: .3rem .3rem 0 .3rem;
+  width: 100%;
+}
+
+/* line 1462, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-input .chip-sm {
+  margin-bottom: .3rem;
+}
+
+/* line 1465, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-input .form-input {
+  background: #fff;
+  border-color: transparent;
+  display: inline-block;
+  height: 2.4rem;
+  margin-bottom: .3rem;
+  padding: .3rem;
+  vertical-align: top;
+  width: auto;
+}
+
+/* line 1475, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-list {
+  background: #fff;
+  border: .1rem solid #d2d2d2;
+  border-radius: .3rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.15);
+  display: block;
+  height: auto;
+  left: 0;
+  margin: .3rem 0 0 0;
+  padding: .5rem;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1988;
+}
+
+/* line 1490, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-item {
+  border-radius: .3rem;
+  display: block;
+  margin-top: .1rem;
+  padding: .2rem 1rem;
+}
+
+/* line 1496, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-item:hover,
+.form-autocomplete .form-autocomplete-item:focus {
+  background: #fff;
+}
+
+/* line 1500, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.form-autocomplete .form-autocomplete-item.active {
+  background: #eff1fa;
+}
+
+/* line 1503, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.badge {
+  position: relative;
+}
+
+/* line 1506, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.badge[data-badge]::after {
+  background: #74ccd1;
+  background-clip: padding-box;
+  border: .1rem solid #fff;
+  border-radius: 1rem;
+  color: #fff;
+  content: attr(data-badge);
+  display: inline-block;
+  font-size: 1.1rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  min-width: 1.8rem;
+  padding: .2rem .5rem;
+  text-align: center;
+  -webkit-transform: translate(-0.2rem, -0.8rem);
+  transform: translate(-0.2rem, -0.8rem);
+  white-space: nowrap;
+}
+
+/* line 1524, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card {
+  background: #fff;
+  border: .1rem solid #efefef;
+  border-radius: .3rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  z-index: 0;
+  vertical-align: top;
+  position: relative;
+}
+
+/* line 1536, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-header,
+.card .card-body,
+.card .card-footer {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+/* line 1541, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-header:last-child,
+.card .card-body:last-child,
+.card .card-footer:last-child {
+  padding-bottom: 1.5rem;
+}
+
+/* line 1546, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-image {
+  padding-top: 1.5rem;
+}
+
+/* line 1549, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-image img {
+  width: 100%;
+}
+
+/* line 1552, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-image:first-child {
+  padding-top: 0;
+}
+
+/* line 1555, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-image:first-child img {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+/* line 1559, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-image:last-child img {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+/* line 1563, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-title {
+  font-size: 1.4em;
+  line-height: 1;
+  margin-bottom: .5rem;
+  margin-top: 0;
+}
+
+/* line 1569, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.card .card-meta {
+  color: #b3b3b3;
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 1576, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .card {
+    width: 24%;
+    display: inline-block;
+    min-height: 29.2rem;
+    margin: 0 0.2rem 0.5rem 0.2rem;
+  }
+}
+/* line 1583, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip {
+  -webkit-align-content: space-around;
+  align-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  border: .1rem solid transparent;
+  border-radius: .3rem;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -ms-flex-align: center;
+  -ms-flex-line-pack: distribute;
+  list-style: none;
+  margin: 0;
+  padding: .5rem 0;
+}
+
+/* line 1599, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip .chip-icon {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+/* line 1604, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip .chip-content {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 1613, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip .chip-action {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+/* line 1618, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip .chip-title {
+  font-size: 1.4rem;
+}
+
+/* line 1621, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip .chip-meta {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+}
+
+/* line 1625, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm {
+  -webkit-align-items: center;
+  align-items: center;
+  background: #eff1fa;
+  border-radius: .3rem;
+  color: #666;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  -ms-flex-align: center;
+  font-size: 1.3rem;
+  height: 2.4rem;
+  max-width: 100%;
+  padding: .3rem .6rem;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-bottom: .3em;
+}
+
+/* line 1643, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm:hover,
+.chip-sm:focus {
+  background: #e8eaf7;
+}
+
+/* line 1647, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm .btn-clear {
+  margin-top: -.2rem;
+}
+
+/* line 1650, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm .btn-clear::before {
+  color: #3d8184;
+  font-size: 1.6rem;
+}
+
+/* line 1654, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm.selected {
+  background: #74ccd1;
+  color: #fff;
+}
+
+/* line 1658, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm.selected .btn-clear::before {
+  color: #eff1fa;
+}
+
+/* line 1661, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm .chip-name {
+  margin-left: .4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 1667, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.chip-sm .avatar {
+  font-size: .8rem;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+/* line 1672, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.label {
+  background: #efefef;
+  border-radius: .2rem;
+  color: #666;
+  display: inline;
+  font-size: 1em;
+  padding: .1em .3em;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+/* line 1682, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.label.label-primary {
+  background: #74ccd1;
+  border-color: #4f5dc3;
+  color: #fff;
+}
+
+/* line 1687, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu {
+  background: #fff;
+  border-radius: .3rem;
+  display: block;
+  margin: 0;
+  padding: .5rem;
+  text-align: left;
+}
+
+/* line 1695, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-item {
+  border-radius: .3rem;
+  color: #333;
+  display: block;
+  line-height: 2.4rem;
+  margin-top: .1rem;
+  padding: .2rem 1rem;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 1708, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-item a {
+  border-radius: .3rem;
+  color: inherit;
+  display: block;
+  margin: -.2rem -1rem;
+  padding: .2rem 1rem;
+  text-decoration: none;
+}
+
+/* line 1716, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-item a:hover,
+.menu .menu-item a:focus {
+  color: #74ccd1;
+}
+
+/* line 1720, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-item a:active,
+.menu .menu-item a.active {
+  background: #eff1fa;
+  color: #0faeb7;
+}
+
+/* line 1725, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-header {
+  color: #ccc;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 0;
+  padding: .2rem 1rem;
+}
+
+/* line 1733, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-header .menu-header-text {
+  background: #fff;
+  display: inline-block;
+  margin-left: -.6rem;
+  padding: 0 .6rem;
+  position: relative;
+  z-index: 99;
+}
+
+/* line 1741, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.menu .menu-header::after {
+  border-bottom: .1rem solid #efefef;
+  content: "";
+  display: block;
+  height: .1rem;
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+  width: 100%;
+}
+
+/* line 1750, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal {
+  -webkit-align-items: center;
+  align-items: center;
+  bottom: 0;
+  display: none;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -ms-grid-row-align: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/* line 1767, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal.active {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  opacity: 1;
+  z-index: 1988;
+}
+
+/* line 1774, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal.active .modal-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 1783, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal.active .modal-container {
+  -webkit-animation: slide-down .216s;
+  animation: slide-down .216s;
+}
+
+/* line 1787, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal-container {
+  -webkit-animation: slide-up .216s;
+  animation: slide-up .216s;
+  background: #fff;
+  border-radius: .3rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  z-index: 1988;
+}
+
+/* line 1799, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal-container .modal-header {
+  padding: 1.5rem;
+}
+
+/* line 1802, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal-container .modal-header .modal-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* line 1806, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal-container .modal-body {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* line 1812, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.modal-container .modal-footer {
+  padding: 1.5rem;
+  text-align: right;
+}
+
+@media screen and (min-width: 640px) {
+  /* line 1817, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .modal-container {
+    width: 64rem;
+  }
+}
+@media screen and (min-width: 320px) {
+  /* line 1822, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+  .modal-sm .modal-container {
+    width: 32rem;
+  }
+}
+/* line 1826, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.breadcrumb,
+.tab,
+.pagination {
+  list-style: none;
+  margin: .5rem 0;
+}
+
+/* line 1832, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.breadcrumb {
+  padding: 1.2rem;
+}
+
+/* line 1835, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.breadcrumb .breadcrumb-item {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 1839, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+}
+
+/* line 1842, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.breadcrumb .breadcrumb-item:last-child,
+.breadcrumb .breadcrumb-item:last-child a {
+  color: #666;
+  pointer-events: none;
+}
+
+/* line 1847, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.breadcrumb .breadcrumb-item:not(:last-child)::after {
+  color: #c5c5c5;
+  content: "/";
+  padding: 0 .4rem;
+}
+
+/* line 1852, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab {
+  border-bottom: .1rem solid #c5c5c5;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+/* line 1858, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab .tab-item {
+  margin-bottom: -.1rem;
+  margin-top: 0;
+}
+
+/* line 1862, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab .tab-item a {
+  border-bottom: .2rem solid transparent;
+  color: #333;
+  display: block;
+  padding: .5rem 1.5rem;
+  text-decoration: none;
+}
+
+/* line 1869, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab .tab-item a:hover,
+.tab .tab-item a:focus {
+  border-bottom-color: #74ccd1;
+  color: #74ccd1;
+}
+
+/* line 1874, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab .tab-item.active a {
+  border-bottom-color: #3d8184;
+  color: #3d8184;
+}
+
+/* line 1878, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab.tab-block .tab-item {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+/* line 1884, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tab.tab-block .tab-item .badge[data-badge]::after {
+  position: absolute;
+  right: 1.5rem;
+  top: .6rem;
+  -webkit-transform: translate(50%, -0.8rem);
+  transform: translate(50%, -0.8rem);
+}
+
+/* line 1891, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pagination {
+  display: inline-block;
+  padding: 1.2rem;
+}
+
+/* line 1895, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pagination .page-item {
+  display: inline-block;
+}
+
+/* line 1898, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pagination .page-item span {
+  display: inline-block;
+  padding: .6rem .5rem;
+}
+
+/* line 1902, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pagination .page-item a {
+  border-radius: .3rem;
+  display: inline-block;
+  margin: 0 .1rem;
+  padding: .6rem 1.2rem;
+  text-decoration: none;
+}
+
+/* line 1909, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pagination .page-item a:hover,
+.pagination .page-item a:focus {
+  background: #eff1fa;
+}
+
+/* line 1913, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pagination .page-item.active a {
+  background: #74ccd1;
+  color: #fff;
+}
+
+/* line 1917, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.toast {
+  background: #74ccd1;
+  border: .1rem solid #eaeaea;
+  border-radius: .3rem;
+  color: #fff;
+  display: block;
+  padding: 1.4rem;
+  width: 100%;
+}
+
+/* line 1926, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.toast.toast-primary {
+  background: #74ccd1;
+  border-color: #4f5dc3;
+  color: #fff;
+}
+
+/* line 1931, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.toast.toast-success {
+  background: #32b643;
+  border-color: #30ae40;
+  color: #fff;
+}
+
+/* line 1936, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.toast.toast-danger {
+  background: #ff0000;
+  color: #fff;
+}
+
+/* line 1940, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.toast.toast-primary .btn-clear,
+.toast.toast-success .btn-clear,
+.toast.toast-danger .btn-clear {
+  color: #fff;
+}
+
+/* line 1945, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip {
+  position: relative;
+}
+
+/* line 1948, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip::after {
+  background: rgba(51, 51, 51, 0.9);
+  border-radius: .3rem;
+  bottom: 100%;
+  color: #fff;
+  content: attr(data-tooltip);
+  display: block;
+  font-size: 1.2rem;
+  left: 50%;
+  line-height: 1.6rem;
+  max-width: 32rem;
+  opacity: 0;
+  overflow: hidden;
+  padding: .6rem 1rem;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  transition: all .216s ease;
+  z-index: 99;
+}
+
+/* line 1970, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip:hover::after,
+.tooltip:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -0.5rem);
+  transform: translate(-50%, -0.5rem);
+}
+
+/* line 1976, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip[disabled],
+.tooltip.disabled {
+  pointer-events: auto;
+}
+
+/* line 1980, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip.tooltip-right::after {
+  bottom: 50%;
+  left: 100%;
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+/* line 1986, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip.tooltip-right:hover::after,
+.tooltip.tooltip-right:focus::after {
+  -webkit-transform: translate(0.5rem, 50%);
+  transform: translate(0.5rem, 50%);
+}
+
+/* line 1991, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip.tooltip-bottom::after {
+  bottom: auto;
+  top: 100%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* line 1997, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip.tooltip-bottom:hover::after,
+.tooltip.tooltip-bottom:focus::after {
+  -webkit-transform: translate(-50%, 0.5rem);
+  transform: translate(-50%, 0.5rem);
+}
+
+/* line 2002, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip.tooltip-left::after {
+  bottom: 50%;
+  left: auto;
+  right: 100%;
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+/* line 2009, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.tooltip.tooltip-left:hover::after,
+.tooltip.tooltip-left:focus::after {
+  -webkit-transform: translate(-0.5rem, 50%);
+  transform: translate(-0.5rem, 50%);
+}
+
+/* line 2014, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.clearfix::after,
+.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 2020, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.float-left {
+  float: left !important;
+}
+
+/* line 2023, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.float-right {
+  float: right !important;
+}
+
+/* line 2026, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.rel {
+  position: relative;
+}
+
+/* line 2029, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.abs {
+  position: absolute;
+}
+
+/* line 2032, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 2035, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.centered {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 2041, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mt-10 {
+  margin-top: 1rem;
+}
+
+/* line 2044, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mr-10 {
+  margin-right: 1rem;
+}
+
+/* line 2047, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mb-10 {
+  margin-bottom: 1rem;
+}
+
+/* line 2050, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.ml-10 {
+  margin-left: 1rem;
+}
+
+/* line 2053, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mt-5 {
+  margin-top: .5rem;
+}
+
+/* line 2056, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mt-0 {
+  margin-top: 0;
+}
+
+/* line 2059, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mr-5 {
+  margin-right: .5rem;
+}
+
+/* line 2062, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.mb-5 {
+  margin-bottom: .5rem;
+}
+
+/* line 2065, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.ml-5 {
+  margin-left: .5rem;
+}
+
+/* line 2068, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pt-10 {
+  padding-top: 1rem;
+}
+
+/* line 2071, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pr-10 {
+  padding-right: 1rem;
+}
+
+/* line 2074, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pb-10 {
+  padding-bottom: 1rem;
+}
+
+/* line 2077, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pl-10 {
+  padding-left: 1rem;
+}
+
+/* line 2080, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pt-5 {
+  padding-top: .5rem;
+}
+
+/* line 2083, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pr-5 {
+  padding-right: .5rem;
+}
+
+/* line 2086, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pb-5 {
+  padding-bottom: .5rem;
+}
+
+/* line 2089, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.pl-5 {
+  padding-left: .5rem;
+}
+
+/* line 2092, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.block {
+  display: block;
+}
+
+/* line 2095, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.inline {
+  display: inline;
+}
+
+/* line 2098, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 2101, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.flex {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+/* line 2106, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.inline-flex {
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+}
+
+/* line 2111, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 2114, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.visible {
+  visibility: visible;
+}
+
+/* line 2117, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 2120, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-hide {
+  background: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+/* line 2127, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 2130, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 2133, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 2136, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 2139, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 2142, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 2145, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* line 2148, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-normal {
+  font-weight: normal;
+}
+
+/* line 2151, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-bold {
+  font-weight: bold;
+}
+
+/* line 2154, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-italic {
+  font-style: italic;
+}
+
+/* line 2157, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 2162, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-clip {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+/* line 2167, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.text-break {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+/* line 2174, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.hand {
+  cursor: pointer;
+}
+
+/* line 2177, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.shadow {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 2180, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.light-shadow {
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.15);
+}
+
+/* line 2183, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.rounded {
+  border-radius: .3rem;
+}
+
+/* line 2186, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.circle {
+  border-radius: 50%;
+}
+
+/* line 2189, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.divider {
+  border-bottom: .1rem solid #efefef;
+  display: block;
+  margin: .5rem;
+}
+
+/* line 2194, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.loading {
+  color: transparent !important;
+  min-height: 1.6rem;
+  pointer-events: none;
+  position: relative;
+}
+
+/* line 2200, /vagrant/noc/noc/app/assets/stylesheets/spectre.scss */
+.loading::after {
+  -webkit-animation: loading 500ms infinite linear;
+  animation: loading 500ms infinite linear;
+  border: 0.2rem solid #74ccd1;
+  border-radius: .8rem;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1.6rem;
+  left: 50%;
+  margin-left: -.8rem;
+  margin-top: -.8rem;
+  position: absolute;
+  top: 50%;
+  width: 1.6rem;
+}
+.swal2-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: 1000; }
+
+.swal2-modal {
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -200px;
+  max-height: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  z-index: 2000; }
+  .swal2-modal:focus {
+    outline: none; }
+  .swal2-modal.loading {
+    overflow-y: hidden; }
+  .swal2-modal h2 {
+    display: block; }
+  .swal2-modal hr {
+    height: 10px;
+    color: transparent;
+    border: 0; }
+  .swal2-modal button.styled {
+    color: #fff;
+    border: 0;
+    box-shadow: none;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 10px 32px;
+    margin: 0 5px;
+    cursor: pointer; }
+    .swal2-modal button.styled:not(.loading)[disabled] {
+      opacity: .4;
+      cursor: no-drop; }
+    .swal2-modal button.styled.loading {
+      box-sizing: border-box;
+      border: 4px solid transparent;
+      border-color: transparent;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: -2px 30px;
+      vertical-align: top;
+      background-color: transparent !important;
+      color: transparent;
+      cursor: default;
+      border-radius: 100%;
+      -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+              animation: rotate-loading 1.5s linear 0s infinite normal; }
+  .swal2-modal button:not(.styled).loading:after {
+    display: inline-block;
+    content: "";
+    margin-left: 5px;
+    vertical-align: -1px;
+    height: 6px;
+    width: 6px;
+    border: 3px solid #999;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+            animation: rotate-loading 1.5s linear 0s infinite normal; }
+  .swal2-modal .swal2-image {
+    margin: 20px auto;
+    max-width: 100%; }
+  .swal2-modal .swal2-close {
+    font-size: 36px;
+    line-height: 36px;
+    font-family: serif;
+    position: absolute;
+    top: 5px;
+    right: 13px;
+    cursor: pointer;
+    color: #cfcfcf;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease; }
+    .swal2-modal .swal2-close:hover {
+      color: #d55; }
+  .swal2-modal > .swal2-input,
+  .swal2-modal > .swal2-textarea,
+  .swal2-modal > .swal2-select,
+  .swal2-modal > .swal2-radio,
+  .swal2-modal > .swal2-checkbox {
+    display: none; }
+
+.swal2-content {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  float: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: #555; }
+
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid #808080;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+  cursor: default;
+  /* http://stackoverflow.com/a/4407335/1331425 */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .swal2-icon.swal2-error {
+    border-color: #f27474; }
+    .swal2-icon.swal2-error .x-mark {
+      position: relative;
+      display: block; }
+    .swal2-icon.swal2-error .line {
+      position: absolute;
+      height: 5px;
+      width: 47px;
+      background-color: #f27474;
+      display: block;
+      top: 37px;
+      border-radius: 2px; }
+      .swal2-icon.swal2-error .line.left {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        left: 17px; }
+      .swal2-icon.swal2-error .line.right {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        right: 16px; }
+  .swal2-icon.swal2-warning {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f8bb86;
+    border-color: #f8bb86;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-info {
+    font-family: "Open Sans", sans-serif;
+    color: #3fc3ee;
+    border-color: #3fc3ee;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-question {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #c9dae1;
+    border-color: #c9dae1;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-success {
+    border-color: #a5dc86; }
+    .swal2-icon.swal2-success::before, .swal2-icon.swal2-success::after {
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      width: 60px;
+      height: 120px;
+      background: #fff;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .swal2-icon.swal2-success::before {
+      border-radius: 120px 0 0 120px;
+      top: -7px;
+      left: -33px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transform-origin: 60px 60px;
+              transform-origin: 60px 60px; }
+    .swal2-icon.swal2-success::after {
+      border-radius: 0 120px 120px 0;
+      top: -11px;
+      left: 30px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transform-origin: 0 60px;
+              transform-origin: 0 60px; }
+    .swal2-icon.swal2-success .placeholder {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(165, 220, 134, 0.2);
+      border-radius: 50%;
+      box-sizing: content-box;
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      z-index: 2; }
+    .swal2-icon.swal2-success .fix {
+      width: 7px;
+      height: 90px;
+      background-color: #fff;
+      position: absolute;
+      left: 28px;
+      top: 8px;
+      z-index: 1;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .swal2-icon.swal2-success .line {
+      height: 5px;
+      background-color: #a5dc86;
+      display: block;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 2; }
+      .swal2-icon.swal2-success .line.tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .swal2-icon.swal2-success .line.long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+
+.swal2-input,
+.swal2-textarea,
+.swal2-select,
+.swal2-radio,
+.swal2-checkbox {
+  margin: 20px auto; }
+
+.swal2-input:not([type="file"]), .swal2-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #d7d7d7;
+  font-size: 18px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .swal2-input:not([type="file"]).error, .swal2-textarea.error {
+    border-color: #f06e57 !important; }
+  .swal2-input:not([type="file"]):focus, .swal2-textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 3px #c4e6f5;
+    border: 1px solid #b4dbed; }
+    .swal2-input:not([type="file"]):focus::-moz-placeholder, .swal2-textarea:focus::-moz-placeholder {
+      -webkit-transition: opacity 0.3s 0.03s ease;
+      transition: opacity 0.3s 0.03s ease;
+      opacity: 0.8; }
+    .swal2-input:not([type="file"]):focus:-ms-input-placeholder, .swal2-textarea:focus:-ms-input-placeholder {
+      -webkit-transition: opacity 0.3s 0.03s ease;
+      transition: opacity 0.3s 0.03s ease;
+      opacity: 0.8; }
+    .swal2-input:not([type="file"]):focus::-webkit-input-placeholder, .swal2-textarea:focus::-webkit-input-placeholder {
+      -webkit-transition: opacity 0.3s 0.03s ease;
+      transition: opacity 0.3s 0.03s ease;
+      opacity: 0.8; }
+  .swal2-input:not([type="file"])::-moz-placeholder, .swal2-textarea::-moz-placeholder {
+    color: #bdbdbd; }
+  .swal2-input:not([type="file"]):-ms-input-placeholder, .swal2-textarea:-ms-input-placeholder {
+    color: #bdbdbd; }
+  .swal2-input:not([type="file"])::-webkit-input-placeholder, .swal2-textarea::-webkit-input-placeholder {
+    color: #bdbdbd; }
+
+.swal2-input:not([type="file"]) {
+  height: 43px;
+  padding: 0 12px; }
+
+.swal2-input[type="file"] {
+  font-size: 20px; }
+
+.swal2-textarea {
+  height: 108px;
+  padding: 12px; }
+
+.swal2-select {
+  color: #555;
+  font-size: inherit;
+  padding: 5px 10px;
+  min-width: 40%;
+  max-width: 100%; }
+
+.swal2-radio {
+  border: 0; }
+  .swal2-radio label:not(:first-child) {
+    margin-left: 20px; }
+  .swal2-radio input, .swal2-radio span {
+    vertical-align: middle; }
+  .swal2-radio input {
+    margin: 0 3px 0 0; }
+
+.swal2-checkbox {
+  color: #555; }
+  .swal2-checkbox input, .swal2-checkbox span {
+    vertical-align: middle; }
+
+.swal2-validationerror {
+  background-color: #f1f1f1;
+  margin: 0 -20px;
+  overflow: hidden;
+  padding: 10px;
+  color: #797979;
+  font-size: 16px;
+  font-weight: 300;
+  display: none; }
+  .swal2-validationerror::before {
+    content: "!";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ea7d7d;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+    margin-right: 10px; }
+
+@-webkit-keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@-webkit-keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; } }
+
+@keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; } }
+
+.show-swal2 {
+  -webkit-animation: showSweetAlert 0.3s;
+          animation: showSweetAlert 0.3s; }
+  .show-swal2.no-animation {
+    -webkit-animation: none;
+            animation: none; }
+
+.hide-swal2 {
+  -webkit-animation: hideSweetAlert 0.15s forwards;
+          animation: hideSweetAlert 0.15s forwards; }
+  .hide-swal2.no-animation {
+    -webkit-animation: none;
+            animation: none; }
+
+@-webkit-keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@-webkit-keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); } }
+
+@keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); } }
+
+.animate-success-tip {
+  -webkit-animation: animate-success-tip 0.75s;
+          animation: animate-success-tip 0.75s; }
+
+.animate-success-long {
+  -webkit-animation: animate-success-long 0.75s;
+          animation: animate-success-long 0.75s; }
+
+.swal2-icon.swal2-success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+          animation: rotatePlaceholder 4.25s ease-in; }
+
+@-webkit-keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1; } }
+
+@keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1; } }
+
+.animate-error-icon {
+  -webkit-animation: animate-error-icon 0.5s;
+          animation: animate-error-icon 0.5s; }
+
+@-webkit-keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+.animate-x-mark {
+  -webkit-animation: animate-x-mark 0.5s;
+          animation: animate-x-mark 0.5s; }
+
+@-webkit-keyframes pulse-warning {
+  0% {
+    border-color: #f8d486; }
+  100% {
+    border-color: #f8bb86; } }
+
+@keyframes pulse-warning {
+  0% {
+    border-color: #f8d486; }
+  100% {
+    border-color: #f8bb86; } }
+
+.pulse-warning {
+  -webkit-animation: pulse-warning 0.75s infinite alternate;
+          animation: pulse-warning 0.75s infinite alternate; }
+
+@-webkit-keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+/* line 1, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column {
+  position: fixed;
+  width: 15em;
+  min-height: 100%;
+  background: #FFF;
+  top: 0;
+  padding-top: 5em;
+  border-right: 1px solid #f2f2f2;
+  overflow: hidden;
+}
+/* line 10, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul {
+  margin: 0;
+  padding: 1em;
+  overflow: scroll;
+  height: 85vh;
+}
+/* line 15, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul li {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5em 0.7em;
+  color: #2d2d2d;
+  font-size: 15px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+/* line 25, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul li:first-child {
+  margin-top: 0;
+}
+/* line 28, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul li:hover {
+  border: 2px solid #74CED2;
+}
+/* line 31, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul li.active {
+  border: 2px solid #74CED2;
+}
+/* line 34, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul li p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+/* line 38, /vagrant/noc/noc/app/assets/stylesheets/tags.scss */
+#filter-column ul li span {
+  float: right;
+  border-radius: 0.3rem;
+  background: #FFF;
+  border: 1px solid #cecece;
+  font-size: 12px;
+  padding: 0.2rem 0.5rem;
+  line-height: 14px;
+  margin-top: 0.1rem;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
