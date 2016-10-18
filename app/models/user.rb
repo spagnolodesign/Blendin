@@ -31,7 +31,7 @@ class User < ApplicationRecord
 
   #after_update :update_tints
 
-  validates :local, :presence => true
+  #validates :local, :presence => true
 
   def name
     username.capitalize
