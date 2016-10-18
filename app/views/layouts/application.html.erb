@@ -17,23 +17,19 @@
           <%= render partial: "nav/main_nav" %>
 
           <% if notice || alert %>
-            <div class="container grid-960">
-            <div class="columns">
-              <div class="column col-5">
-                  <% if notice %>
-                    <div class="toast">
-                      <button class="btn btn-clear float-right close-btn"></button>
-                      <%= notice %>
-                    </div>
-                  <% end %>
-                  <% if alert %>
-                    <div class="toast toast-danger">
-                      <button class="btn btn-clear float-right close-btn"></button>
-                      <%= alert %>
-                    </div>
-                  <% end %>
+            <div class="notification">
+            <% if notice %>
+              <div class="toast">
+                <button class="btn btn-clear float-right close-btn"></button>
+                <%= notice %>
               </div>
-            </div>
+            <% end %>
+            <% if alert %>
+              <div class="toast toast-danger">
+                <button class="btn btn-clear float-right close-btn"></button>
+                <%= alert %>
+              </div>
+            <% end %>
             </div>
           <% end %>
 

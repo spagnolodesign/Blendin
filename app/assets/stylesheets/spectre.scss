@@ -844,6 +844,7 @@ textarea.form-input {
   label.right{
      border-top-right-radius: 0.3rem;
      border-bottom-right-radius: 0.3rem;
+     border-left:0;
   }
 }
 .form-checkbox input:focus + .form-icon,
@@ -1529,6 +1530,8 @@ textarea.form-input {
   padding: 0;
   text-align: left;
   z-index: 0;
+  vertical-align: top;
+  position:relative;
 }
 .card .card-header,
 .card .card-body,
@@ -1542,6 +1545,9 @@ textarea.form-input {
 }
 .card .card-image {
   padding-top: 1.5rem;
+}
+.card .card-image img{
+  width: 100%;
 }
 .card .card-image:first-child {
   padding-top: 0;
@@ -1565,6 +1571,14 @@ textarea.form-input {
   font-size: 1em;
   margin-bottom: 0;
   margin-top: 0;
+}
+@media screen and (min-width: 800px) {
+  .card {
+    width: 24%;
+    display: inline-block;
+    min-height: 29.2rem;
+    margin: 0 0.2rem 0.5rem 0.2rem;
+  }
 }
 .chip {
   -webkit-align-content: space-around;
@@ -1901,10 +1915,10 @@ textarea.form-input {
   color: #fff;
 }
 .toast {
-  background: #efefef;
+  background: $main_color;
   border: .1rem solid #eaeaea;
   border-radius: .3rem;
-  color: #666;
+  color: #fff;
   display: block;
   padding: 1.4rem;
   width: 100%;

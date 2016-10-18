@@ -23,10 +23,32 @@ $border-color: #3d8184;
     margin-top: 5px;}
 }
 
+/*LAYOUT*/
+#center-side{
+  margin-left: 15em;
+  width: 65%;
+  margin-top: 1em;
+  float: left;
+  margin-bottom: 4em;
+}
+#right-side{
+  float: left;
+  width: 30%;
+  background: red;
+  min-height: 3em;
+}
+/*NOTIFICATION*/
 .notice-layout {
   position: fixed;
   overflow: hidden;
   top:0;
   left:0;
   width: 100%;
+}
+
+.notification{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
 }

@@ -104,9 +104,7 @@ header{
   height: 5px;
   background-color: #e51314;
 }
-.card {
-  width:95%;
-}
+
 .white-box{
   background:#FFF;
   border-radius:0.3rem;
@@ -115,10 +113,25 @@ header{
   width: 200px;
   margin:0 auto;
 }
-@media screen and (min-width: 800px) {
-  .card {
-    width: 32%;
-  }
+.card-image{
+  position:relative;
+  overflow: hidden;
+}
+.shape {
+  width: 104%;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+}
+.shape::after{
+  transform: rotate(-10deg);
+  z-index: 0;
+  overflow: hidden;
+  content: " ";
+  display: block;
+  left: 0;
+  background: #FFF;
+  height: 57px;
 }
 
 .btn.btn-berry {

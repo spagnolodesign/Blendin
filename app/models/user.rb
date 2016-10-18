@@ -1,12 +1,11 @@
-  require 'tag_tinter'
+#require 'tag_tinter'
 
 class User < ApplicationRecord
-
 
   #Authentication
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
@@ -30,7 +29,9 @@ class User < ApplicationRecord
     
   mount_uploader :avatar, AvatarUploader
 
-  after_save :update_tints
+  #after_update :update_tints
+
+  validates :local, :presence => true
 
   def name
     username.capitalize

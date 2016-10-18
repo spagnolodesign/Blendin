@@ -10,7 +10,7 @@
         <%= link_to 'Messages', chat_rooms_path %>
       </figure>
       <figure id="avatar">
-        <img src="<%= current_user.picture %>">
+        <img src="<%= current_user.picture.small_avatar %>">
       </figure>
       <figure id="hamburger">
           <a href="#menu" id="hamburger_button">Menu</a>
@@ -31,9 +31,9 @@
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete)%></li>
       <% else %>
       <% end %>
-          <li>
-            <a href="http://wenoc.com" target="_blank"><br>@wenoc</a>
-          </li>
+      <li>
+        <a href="http://wenoc.com" target="_blank"><br>@wenoc</a>
+      </li>
   </ul>
 
 </nav>

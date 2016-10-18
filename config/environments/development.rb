@@ -51,7 +51,8 @@ Rails.application.configure do
 
   # Devise
   config.action_mailer.default_url_options = { host: '0.0.0.0', port: 3000 }
-
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "0.0.0.0", :port => 1025 }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
@@ -59,5 +60,9 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.file_watcher = ActiveSupport::FileUpdateChecker
+  
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+    html_tag.html_safe
+  end
 
 end
