@@ -4,8 +4,8 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  config.web_socket_server_url = "wss://polar-mountain-16285.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://polar-mountain-16285.herokuapp.com', 'http://polar-mountain-16285.herokuapp.com','http://www.berryhoop.com']
+  config.web_socket_server_url = "wss://blendinme.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://blendinme.herokuapp.com', 'http://blendinme.herokuapp.com','http://www.berryhoop.com']
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
