@@ -29,10 +29,22 @@ class ChatRoomsController < ApplicationController
     end
   end
 
+  def destroy
+      @chat_room = ChatRoom.where(token: params[:token]).first
+      @subscriptions = Subscription.where(chat_room_id: @chat_room.id)
+      @chat_room.destroy
+      @subscriptions.delete_all
+      respond_to do |format|
+          format.html { redirect_to chat_rooms_path, notice: 'Deleted.' }
+      end
+  end
+
+
   def show
     joined_rooms = current_user.subscriptions.pluck(:chat_room_id)
-    @chat_rooms = ChatRoom.find(joined_rooms)
-    @chat_room = ChatRoom.includes(:messages).find_by(token: params[:token])
+    @chat_rooms = ChatRoom.all.order('created_at DESC').find(joined_rooms)
+    @chat_room = ChatRoom.where(token: params[:token]).first
+    @messages = Message.where(chat_room_id: @chat_room).order('created_at DESC').paginate(:page => params[:page])
     @message = Message.new
   end
 

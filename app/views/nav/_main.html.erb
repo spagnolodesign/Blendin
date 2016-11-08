@@ -1,0 +1,32 @@
+
+<div class="column col-xs-6">
+		<div class="nav float-right">
+			<li>
+  			<%= link_to t('nav.chat'), chat_rooms_path, class: "chat-link" %>
+		  </li>
+		  <li>
+		    <button id="drop-account" class="button button-clear btn-account">
+		      <span class="avatar">
+		        <img src="<%= current_user.picture.small_avatar %>">
+		      </span>
+		      <%= current_user.username  %>
+		    </button>
+		  </li>
+		</div>
+</div>
+
+<div id="main-sub-nav">
+	<div class="profile-block">
+		<img class="avatar" src="<%= current_user.picture.medium_avatar %>" alt="<%= current_user.username  %>" />
+		<div class="info">
+			<p><%= current_user.short_name  %></p>
+			<%= link_to t('nav.edit_photo'), edit_user_path(current_user) %>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<ul>
+	  	<li><%= link_to t('nav.settings'), edit_user_path(current_user) %></li>
+			<li><%= link_to t('nav.edit_tags'), tag_users_path(current_user) %></li>
+	  	<li><%= link_to t('nav.signout'), destroy_user_session_path, :method => :delete %></li>
+ 	</ul>
+</div>

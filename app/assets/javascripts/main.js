@@ -1,19 +1,88 @@
 $(document).on('turbolinks:load', function() {
     initAjaxBerryRequest();
     initSearchFilter();
-    initFilterList();
+    // initFilterList();
     // initAjaxFormRequest ();
     //scrollHeader();
     closeOverlay();
-    showModalAvatar();
-    nav();
+    //showModalAvatar();
+    // nav();
     // initGrid();
     // updateGrid();
-    
-    $('#chat-list').fixedsticky();
+    dropdown();
+    initTagSelection();
+    paginate();
+    paginateMessages();
+    animCards();
+    slidePanel();
 
+    var filterEl = $('#filter-column');
+    var tmp = generateColor('#FFFFFF','#74CED2', filterEl.find('li').length);
 
+    filterEl.find('li span').filter(function( index, el ) {
+       var el = $(el);
+       el.css("background-color","#"+tmp[index]);
+    });
 });
+
+function slidePanel() {
+    $('#close-overlay').click(function(event) {
+       $('#panel-overlay').hide().find('.content').toggleClass('slide-in-bounce');
+    });
+}
+
+function animCards(){
+    var cards = $('.cards-list .card').not('.spin-up');
+    var time = 100;
+
+    cards.each(function() {
+      setTimeout( function(){ $(this).addClass('spin-up') }.bind(this), time)
+      time += 140;
+    });
+}
+function paginate(){
+    if ($('.users-layout').find('.pagination').length) {
+        $(window).scroll(function() {
+          var url = $('.pagination .next_page').attr('href');
+          if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 20) {
+            $('.pagination').text("Please Wait...");
+            return $.getScript(url);
+          }
+          animCards();
+          initAjaxBerryRequest();
+        });
+        return $(window).scroll();
+      }
+}
+function paginateMessages(){
+    if ($('.chat-messages-layout .pagination').length) {
+        $('#messages').scroll(function() {
+          var url = $('.pagination .next_page').attr('href');
+          if (url && $('#messages').scrollTop() <= 0) {
+            $('.pagination').text("Please Wait...");
+            return $.getScript(url);
+          }
+          animCards();
+          initAjaxBerryRequest();
+        });
+        return $(window).scroll();
+      }
+}
+function dropdown() {
+    
+    var dropAccount;
+    dropAccount = new Drop({
+      target: document.getElementById("drop-account"),
+      content: $('#main-sub-nav').html(),
+      position: 'bottom left',
+      openOn: 'click',
+      classes: 'drop-theme-arrows',
+      constrainToWindow: false,
+      constrainToScrollParent: false,
+      classPrefix: "my-dop"
+    });
+}
+
 function hex (c) {
   var s = "0123456789abcdef";
   var i = parseInt (c);
@@ -86,16 +155,24 @@ function initAjaxFormRequest (){
 }
 
 function initAjaxBerryRequest (){
-    $(".btn-berry").on("ajax:success", function(e, data, status, xhr) {
+    $(".noc-btn").on("ajax:success", function(e, data, status, xhr) {
         var event = xhr.responseJSON.event;
-        $(e.currentTarget).remove();
+        console.log(event)
+        $(e.currentTarget).hide();
         if (event == "is_match"){
             showMatchModal(data.data.token);
         }else{
             return;
         }
     }).on("ajax:error", function(e, xhr, status, error) {
-        alert("Umm, seems you alredy nocced.");
+        swal({
+            title: 'You alredy blend it!',
+            text: 'Start blend other people.',
+            confirmButtonText: 'Ok!',
+            confirmButtonClass: 'btn btn-lg btn-primary btn-success',
+            cancelButtonClass: 'btn btn-lg btn-primary btn-danger',
+            buttonsStyling: false
+        });
     });
 }
 
@@ -113,26 +190,27 @@ function showModalAvatar(){
 }
 
 function showMatchModal(token){
-        var t = token;
-        swal({
-          title: 'Sweet!<br>You just got a beery',
-          text: 'Start text now.',
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, go!',
-          imageUrl: '/assets/berry-match.png',
-          imageWidth: 124,
-          imageHeight: 128,
-        }).then(function() {
-          Turbolinks.visit('/rooms/'+t);
-        })
-
+    var t = token;
+    swal({
+        title: 'You have a new a match!',
+        text: 'Start chat now',
+        showCancelButton: true,
+        padding:'2.5em 0',
+        confirmButtonText: 'Yes, go!',
+        imageUrl: '/assets/ico-chat.svg',
+        imageWidth: 150,
+        imageHeight: 150,
+        confirmButtonClass: 'btn btn-lg btn-primary btn-success',
+        cancelButtonClass: 'btn btn-lg btn-primary btn-danger',
+        buttonsStyling: false
+    }).then(function() {
+      Turbolinks.visit('/rooms/'+t);
+    })
 }
 
 function initSearchFilter() {
     Turbolinks.clearCache();
-    var search = $('#berries-filter');
+    var search = $('#tags-filter');
     if (search.length < 1 ) return;
 
     search.selectize({
@@ -159,7 +237,7 @@ function initSearchFilter() {
 
     function filterValue(data) {
         var tags = data.items.toString();
-        Turbolinks.visit("?berries="+tags);
+        Turbolinks.visit("?t="+tags);
     }
 
 }
@@ -178,7 +256,7 @@ function initFilterList () {
     }
     var tmp = generateColor('#FFFFFF','#74CED2',filterEl.find('li').length);
 
-    filterEl.find('li').filter(function( index, el ) {
+    filterEl.find('li span').filter(function( index, el ) {
        var el = $(el);
        var text = el.find('p').text().replace(/\s/g, '');
 
@@ -196,7 +274,7 @@ function initFilterList () {
         if (el.hasClass('active')) return;
         el.addClass('active');
         selected.push(tag);
-        Turbolinks.visit("?berries="+selected);
+        // Turbolinks.visit("?berries="+selected);
     }
 }
 
@@ -294,4 +372,64 @@ function nav() {
         }), !1
 }
 
+
+function initTagSelection() {
+    var tagList,input,submit,userTagList;
+
+    tagList = $('#select-tag-list');
+    if (tagList.length == 0) return;
+    
+    tagList.on( "click", "li", storeValue);
+
+    input = $('#user_tag_list');
+    submit = $('#btn-add-tag');
+    
+    userTagList = usertags.replace(/\s/g, '').split(',');
+
+    init();
+    validate(userTagList);
+
+    function init() {
+
+        tagList.find('li').filter(function( index, el ) {
+            var el = $(el);
+            var text = el.text().replace(/\s/g, '');
+            $.each(userTagList, function(i,v){
+                if (text == v) {
+                    el.addClass('active');
+                }
+            });
+        });
+    }
+    function storeValue(e) {
+        var el = $(e.currentTarget);
+        var tag = el.text().replace(/\s/g, '');
+        el.toggleClass('active');
+            toggleArrayItem(userTagList, tag);
+            setValueInput(userTagList);
+            validate(userTagList)
+    }
+
+    function toggleArrayItem(a, v) {
+        var i = a.indexOf(v);
+        if (i === -1)
+            a.push(v);
+        else
+            a.splice(i,1);
+    }
+
+    function setValueInput(v) {
+        input.val(v);
+    }
+
+    function validate(v) {
+        if(userTagList.length > 3 ){
+            submit.addClass('anim-next');
+        }
+        if(userTagList.length < 3 ){
+            submit.removeClass('anim-next');
+        }
+
+    }
+}
 

@@ -1,5 +1,5 @@
 class SessionsController < Devise::SessionsController
-	layout 'login', only: [:new]
+	layout 'auth', only: [:new]
 
 	# POST /resource/sign_in
   def create

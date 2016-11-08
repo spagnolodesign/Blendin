@@ -8,6 +8,8 @@ class Message < ApplicationRecord
 
   after_create_commit { MessageBroadcastJob.perform_later(self) }
 
+  self.per_page = 15
+
   def timestamp
    time_ago_in_words(created_at)
   end

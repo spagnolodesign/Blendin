@@ -1,6 +1,21 @@
-<% tags.each do |tag| %>
-	<div class="chip-sm">
-	    <span class="chip-name"><%= tag %></span>
-	    <button class="btn btn-clear"></button>
-	</div>
+<ul id="select-tag-list">
+		<% tags.each do |tag| %>
+			<li class="tag-bubble">
+			    <span><%= tag %></span>
+			</li>
+		<% end %>
+    <div class="clearfix"></div>
+</ul>
+
+<%= form_for(@user, :html => {:class => 'form-add-berries' } )do |f| %>
+  <div class="form-group">
+    <%= f.text_field :tag_list, hidden:true, class: "select-berry" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit t('btn.next'), :class => 'btn-next float-right', :id => "btn-add-tag" %>
+  </div>
 <% end %>
+
+<script>
+  var usertags = "<%= @usertags %>";
+</script>

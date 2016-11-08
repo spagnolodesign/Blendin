@@ -1,3 +1,6 @@
+Rails.application.config.to_prepare do
+  Devise::RegistrationsController.layout proc { |controller| user_signed_in? ? "application" : "auth" }
+end
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -12,7 +15,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'support@blendinme.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -203,7 +206,7 @@ Devise.setup do |config|
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
-  config.reset_password_within = 6.hours
+  config.reset_password_within = 24.hours
 
   # When set to false, does not sign a user in automatically after their password is
   # reset. Defaults to true, so a user is signed in automatically after a reset.
@@ -251,8 +254,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-    config.omniauth :facebook, "1633133673635521", "b4f345e7e22458ca55a4ead6d6df3c3e",
-                    callback_url: "http://localhost:3000/users/auth/facebook/callback", :scope => 'email,public_profile,user_birthday', info_fields:'id,email,name,birthday,first_name,about,age_range,last_name,picture,gender', :image_size => 'large'
+  
+  # config.omniauth :facebook, "1633133673635521", "b4f345e7e22458ca55a4ead6d6df3c3e", callback_url: "http://localhost:3000/users/auth/facebook/callback", :scope => 'email,public_profile,user_birthday', info_fields:'id,email,name,birthday,first_name,about,age_range,last_name,picture,gender', :image_size => 'large'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

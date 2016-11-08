@@ -1,7 +1,7 @@
 class KnokController < ApplicationController
 
 	def like
-		
+		# Knok.create! from_id: 11, to_id: 5, liked: true
 		@noc = Knok.create! from_id: current_user.id, to_id: params[:id], liked: true
 		@isAlredyLike = Knok.all.where(from_id: params[:id], to_id: current_user.id)
     

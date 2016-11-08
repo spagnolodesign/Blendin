@@ -1,23 +1,37 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  sign:
+    info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it."
+    policy: 'By clicking Sign Up, you agree to our <a href="/legal/terms" target="_blank" rel="nofollow">Terms</a> and that you have read our <a href="/about/privacy" id="privacy-link" target="_blank" rel="nofollow">Data Policy</a>, including our <a href="/policies/cookies/" target="_blank" rel="nofollow">Cookie Use</a>.'
+    areyou: "Are you?"
+  default:
+    interests: "Interests"
+    mostused: "MOST USED"
+    openchat: "Open chat"
+  nav:
+    settings: "Settings"
+    edit_interest: "Update Interest"
+    messages: "Messages"
+    signout: "Sign out"
+    chat: "Chat"
+    signin: "Sign in"
+    edit_photo: "Add photo account"
+  btn:
+    confirm: "Confirm"
+    next: "Next"
+    btn: "Edit"
+    noc: "Blend"
+  match:
+    no_title: "No match available."
+    no_sub: "Start to blend "
+  activerecord:
+    attributes:
+      user:
+        email: "Email Address"
+        username: "Username"
+        full_street_address: "City of residence"
+        about: "About"
+        occupation: "Occupation"
+        languages: "Languages"
+        birthday: "Birthday"
+        country: "Country"
+        gender: "Gender"

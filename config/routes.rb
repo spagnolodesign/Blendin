@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   #match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
 
   resources :users, only: [:show, :update, :edit] do
-    member do
-      get "berries", to: "users#berry"
-      get "location", to: "users#location", path: 'get-location'
-    end 
+    collection do
+      get :tag, action: 'update_tags'
+      get :location, action: 'update_location' 
+    end
   end
 
-  resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms], param: :token
+  resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms, :destroy], param: :token
 
   resources :knoks, only: [:like, :dislike] do
 	    member do

@@ -7,6 +7,7 @@ Rails.application.configure do
   config.web_socket_server_url = "wss://blendinme.herokuapp.com/cable" 
   config.action_cable.allowed_request_origins = ['https://blendinme.herokuapp.com', 'http://blendinme.herokuapp.com','http://www.berryhoop.com']
   config.action_mailer.default_url_options = { :host => 'https://blendinme.herokuapp.com' }
+  config.action_mailer.asset_host = 'https://blendinme.herokuapp.com'
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

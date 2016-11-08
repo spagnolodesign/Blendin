@@ -1,8 +1,5 @@
-<div class="message" data-user="<%= message.user.id %>">
-  <%= message.body %>
-  <span class="metadata">
-      <span class="time"><%= message.timestamp %></span><span class="tick"></span>
-  </span>
+<div class="message clearfix" data-user="<%= message.user.id %>">
+  <p><%= message.body %><span class="time"><%= message.timestamp %></span></p>
 </div>
 
 

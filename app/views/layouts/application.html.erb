@@ -3,7 +3,6 @@
   <head>
     <title>Blendin</title>
     <meta name="description" content="Berry helps you to connect with people that share your same interests :)">
-    <meta name="viewport" content="width=device-width">
  
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -12,30 +11,38 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="overlord loaded <%= yield (:body_class) %>">
+  <body class="<%=  yield (:body_class) %>">
           
-          <%= render partial: "nav/main_nav" %>
+  <div class="wrapper container grid-960">
 
-          <% if notice || alert %>
-            <div class="notification">
-            <% if notice %>
-              <div class="toast">
-                <button class="btn btn-clear float-right close-btn"></button>
-                <%= notice %>
-              </div>
+    <header class="header">
+      <div class="columns">
+          <div class="column col-xs-6 col-3">
+            <%= link_to root_path do %>
+                <%= image_tag("logo-app.png", class: "logo-app") %>
             <% end %>
-            <% if alert %>
-              <div class="toast toast-danger">
-                <button class="btn btn-clear float-right close-btn"></button>
-                <%= alert %>
-              </div>
-            <% end %>
-            </div>
+          </div>
+          
+          <%= yield :search %>
+          <% if user_signed_in? %>
+            <%= render partial: "nav/main" %>
           <% end %>
+      </div>
+    </header>
 
-      <main content>
-        <%= yield %>
-      </main>
+    <%= yield :aside_left %>
+    <%= yield %>
+    <%= yield :aside_right %>
+
+    <footer class="footer">Footer</footer>
+  </div>
+
+  <div id="panel-overlay">
+    <button id="close-overlay">CLOSE</button>
+    <div class="content">
+    </div>
+  </div>
 
   </body>
+
 </html>

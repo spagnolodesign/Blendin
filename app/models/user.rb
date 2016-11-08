@@ -5,7 +5,7 @@ class User < ApplicationRecord
   #Authentication
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
@@ -31,10 +31,19 @@ class User < ApplicationRecord
 
   #after_update :update_tints
 
-  validates :local, :presence => true
+  validates :username, length: { maximum: 25 }, presence: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, length: { maximum: 35 }
+  validates :job, length: { maximum: 25 }
+  validates :languages, length: { maximum: 255 }
+
+  self.per_page = 9
 
   def name
-    username.capitalize
+    username.capitalize.split(",")[0]
+  end
+
+  def short_name
+    username.capitalize.split(" ")[0]
   end
 
   def picture
@@ -64,8 +73,22 @@ class User < ApplicationRecord
       return
     else
       self.cached_tag_list = cached_tag_list.split(' ')
-      byebug
     end
+  end
+
+  def country_name
+    if (country.nil?) 
+      return
+    end
+    cname = ISO3166::Country[country]
+    cname.translations[I18n.locale.to_s] || cname.name
+  end
+
+  def age
+    (birthday.nil?)
+    return
+    now = Time.now.utc.to_date
+    now.year - birthday.year - ((now.month > birthday.month || (now.month == birthday.month && now.day >= birthday.day)) ? 0 : 1)
   end
   
   private

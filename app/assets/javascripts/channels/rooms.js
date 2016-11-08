@@ -11,7 +11,7 @@ jQuery(document).on('turbolinks:load', function() {
   if (!init) return;
 
   messages_to_bottom = function() {
-    $(window).scrollTop(messages.prop("scrollHeight"));
+    messages.scrollTop(messages.prop("scrollHeight"));
   };
 
   setMessage = function(){
@@ -24,7 +24,7 @@ jQuery(document).on('turbolinks:load', function() {
           $(this).addClass('received');
         }
       });
-
+      message.last().addClass('bubble-in');
 
   };
 
@@ -45,6 +45,7 @@ jQuery(document).on('turbolinks:load', function() {
     received: function(data) {
       var action = data['action'];
       var isTyping = data['action'] === "TYPING";
+      console.log(isTyping)
       if (!isTyping) {
         messages.append(data['message']);
         typing.hide();
@@ -80,8 +81,16 @@ jQuery(document).on('turbolinks:load', function() {
     return false;
   });
 
-  $('#new_message').keypress(function(e) {
-    App.global_chat.send_typing(messages.data('chat-room-id'));
+  $('#new_message').keyup(function(e) {
+    var $this, $input, $length;
+    $this = $(this);
+    $input = $this.find('#message_body');
+    $length = $input.val().length;
+
+    if($length > 0 &&  $length <= 1){
+      App.global_chat.send_typing(messages.data('chat-room-id'));
+    }
+    
   });
 
 });

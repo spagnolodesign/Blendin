@@ -1,44 +1,36 @@
-	<% content_for :search do %>
-		<div id="search-bar">
-	  	<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
-			  <%= text_field_tag :berries, params[:berries], :id => 'berries-filter', :placeholder => "Search in blendin",  :autofocus => true %>
-			<% end %>
+<% content_for :search do %>
+		<div class="column">
+			<div id="search-bar" data-turbolinks-permanent>
+	      <%= form_tag '', :method => :get, :"data-turboform" => :true do %>
+	        <%= text_field_tag :tags, params[:t], :id => 'tags-filter', :placeholder => "Search in blendin",  :autofocus => true %>
+	      <% end %>
+	      <script>
+	        var available_tags = <%= @tags %>
+	      </script>
+	    </div>
+    </div>
+<% end %>
+
+<section class="main">
+	<div id="center-side" class="users-layout">
+		<div class="cards-list" id="users-list" data-turbolinks-partial="users">
+			<%= render @users %>
 		</div>
-	<% end %>
+		<%= will_paginate @users %>
+	</div>
+</section>
 
-<div id="filter-column" data-selected="<%= params[:berries] %>">
-	<ul>
-	  <% @tag_list.each do |tag| %>
-	    <li><p><%= truncate(tag.name, length: 15) %></p><span><%= tag.count %></span></li>
-	  <% end %>
-	</ul>
-</div>
 
-<div id="center-side" class="container">
-		<% @users.each do |user| %>
-	        <div class="card">
-	            <div class="card-image">
-	                <img class="img-responsive" src="<%= user.avatar.large_avatar %>">
-	            		<div class="shape"></div>
-	            </div>
-	            <div class="card-header">
-	                <h4 class="card-title"><%= user.name %></h4>
-	                <h6 class="card-meta">Software and hardware</h6>
-	            </div>
-		          <div class="card-footer">		
-		          	<% if !current_user.likes(user) %>		
-					    			 <%= link_to "Blend", like_knok_path(user), class: 'btn btn-sm', method: :put, remote: true %>
-								<% else %>
-										<%= link_to "Blend", like_knok_path(user), class: 'btn btn-sm', method: :put, remote: true %>
-								<% end %>
-  	          </div>
-	        </div>
-		<% end %>
-</div>
-<div id="right-side" class="container">
+<%= content_for :aside_left do %>
+  	<aside class="aside aside-1" data-turbolinks-permanent>
+  	<p class="title-line no-line"><%= t('default.mostused') %></p>
+  	<div id="filter-column" data-selected="<%= params[:t] %>">
+			<ul>
+			  <% @tag_list.each do |tag| %>
+			  	<li><%= link_to tag.name, root_path(t: tag.name) %><span><%= tag.count %></span></li>
+			  <% end %>
+			</ul>
+		</div>
+  	</aside>
+<% end %>
 
-</div>
-
-<script>
-	var available_tags = <%= @tags %>
-</script>

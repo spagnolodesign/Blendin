@@ -1,0 +1,2 @@
+$('#messages').prepend('<%= escape_javascript render(@messages.reverse) %>');
+$('.pagination').replaceWith('<%= escape_javascript will_paginate(@messages) %>');

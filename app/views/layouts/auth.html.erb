@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blendin</title>
+    <meta name="viewport" content="width=device-width">
+    <%= csrf_meta_tags %>    
+    <%= stylesheet_link_tag 'auth', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="bg-auth">
+  
+    <% if notice || alert %>
+      <div class="notice-layout show">
+      <% if notice %>
+        <div class="toast">
+          <button class="btn btn-clear float-right close-btn"></button>
+          <%= notice %>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="toast toast-danger">
+          <button class="btn btn-clear float-right close-btn"></button>
+          <%= alert %>
+        </div>
+      <% end %>
+      </div>
+    <% end %>
+
+    <main>
+      <% if (params[:controller] == "registrations") %>
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-link btn-link-auth" %>
+      <% else %>
+        <%= link_to "Register", new_user_registration_path, class: "btn btn-link float-right btn-link-auth" %>
+      <% end %>
+      <div class="aligner">
+        <div class="auth-box">
+          <%= link_to root_path do %>
+              <%= image_tag("logo-app.png", class: "logo-app") %>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" charset="utf-8" async>
+    
+    // closeOverlay();
+
+    // function closeOverlay(){
+    //   $('.close-btn').click(function(){
+    //       $(this).parent().fadeOut(300);
+    //   });
+    // }
+  
+    </script>
+  </body>
+</html>
