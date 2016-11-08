@@ -62,7 +62,7 @@
 	    </div>    
 	    <div class="form-group">
 	        <%= f.label :birthday, class: "form-label" %>
-          <%= f.date_select :birthday, {}, {start_year: 1995, required: 'true', autofocus: 'true', class: 'form-select select-lg'} %>
+          <%= f.date_select :birthday, {start_year: 1930, end_year: 2000}, { class: 'form-select select-lg'} %>
 	    </div>    
 	    <div class="form-group">
           <%= f.label :country, class: "form-label" %>

@@ -134,6 +134,15 @@
         border-radius: 1rem;
         border-bottom-left-radius:0;
         float: left;
+        position: relative;
+        .time{
+            position: absolute;
+            top: -12px;
+            font-size: 0.8rem;
+            text-align: left;
+            width: auto;
+            left: 0;
+        }
     }
     &.sent{
         p{
@@ -141,6 +150,10 @@
             margin: 0 1em 0 0;
             border-bottom-right-radius:0;
             border-bottom-left-radius:1rem;
+            .time{
+                text-align: right;
+                right: 0;
+            }
 
         }
     }

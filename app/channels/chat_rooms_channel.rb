@@ -13,7 +13,6 @@ class ChatRoomsChannel < ApplicationCable::Channel
   end
 
   def send_typing(data)
-
   	ActionCable.server.broadcast "chat_rooms_#{data['chat_room_id']}_channel", message: "IM typing", action: "TYPING"
   end
 

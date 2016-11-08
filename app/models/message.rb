@@ -11,7 +11,7 @@ class Message < ApplicationRecord
   self.per_page = 15
 
   def timestamp
-   time_ago_in_words(created_at)
+   created_at.to_s(:time) 
   end
 
 end

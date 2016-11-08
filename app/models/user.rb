@@ -85,8 +85,9 @@ class User < ApplicationRecord
   end
 
   def age
-    (birthday.nil?)
-    return
+    if (birthday.nil?)
+      return
+    end
     now = Time.now.utc.to_date
     now.year - birthday.year - ((now.month > birthday.month || (now.month == birthday.month && now.day >= birthday.day)) ? 0 : 1)
   end
