@@ -6,7 +6,8 @@ class HomeController < ApplicationController
 		@tags = (params[:t].to_s.blank?) ? current_user.tag_list : params[:t].split(",")
 		@users = User.near([current_user.latitude, current_user.longitude], 20)
 									.tagged_with(@tags, :any => true)
-									.where.not(id: current_user.id, local: !current_user.local)
+									.where(local: !current_user.local)
+									.where.not(id: current_user.id)
 									.paginate(:page => params[:page]).uniq
 		
 
