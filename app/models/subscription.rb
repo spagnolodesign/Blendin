@@ -6,7 +6,7 @@ class Subscription < ApplicationRecord
 
 
   def match
-    UserMailer.new_berry_email(self.user_id, self.chat_room_id).deliver_later
+    UserMailer.match_email(self.user, self.chat_room.token).deliver_later
   end
 
 end

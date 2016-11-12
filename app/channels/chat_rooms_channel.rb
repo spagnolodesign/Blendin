@@ -9,7 +9,8 @@ class ChatRoomsChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
-    current_user.messages.create!(body: data['message'], chat_room_id: data['chat_room_id'])
+    @message = current_user.messages.create!(body: data['message'], chat_room_id: data['chat_room_id'])
+    @message.mark_as_read! :for => current_user
   end
 
   def send_typing(data)

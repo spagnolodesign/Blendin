@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 	
 	def update_tags
 		@usertags = @user.tag_list
-		@mostused = ActsAsTaggableOn::Tag.most_used(10)
+		@mostused = ActsAsTaggableOn::Tag.all
 	end
 
 	# GET /events/1/edit

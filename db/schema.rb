@@ -10,20 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025115249) do
+ActiveRecord::Schema.define(version: 20161110163918) do
 
-  create_table "approvals", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.integer  "event_id"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "chat_rooms", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "token"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.string   "topic"
+    t.string   "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -43,8 +46,8 @@ ActiveRecord::Schema.define(version: 20161025115249) do
     t.boolean  "liked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["from_id"], name: "index_knoks_on_from_id"
-    t.index ["to_id"], name: "index_knoks_on_to_id"
+    t.index ["from_id"], name: "index_knoks_on_from_id", using: :btree
+    t.index ["to_id"], name: "index_knoks_on_to_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
@@ -53,15 +56,24 @@ ActiveRecord::Schema.define(version: 20161025115249) do
     t.integer  "chat_room_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id", using: :btree
+    t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
+  create_table "read_marks", force: :cascade do |t|
+    t.string   "readable_type", null: false
+    t.integer  "readable_id"
+    t.string   "reader_type",   null: false
+    t.integer  "reader_id"
+    t.datetime "timestamp"
+    t.index ["reader_id", "reader_type", "readable_type", "readable_id"], name: "read_marks_reader_readable_index", unique: true, using: :btree
   end
 
   create_table "subscriptions", force: :cascade do |t|
     t.integer "user_id"
     t.integer "chat_room_id"
-    t.index ["chat_room_id"], name: "index_subscriptions_on_chat_room_id"
-    t.index ["user_id"], name: "index_subscriptions_on_user_id"
+    t.index ["chat_room_id"], name: "index_subscriptions_on_chat_room_id", using: :btree
+    t.index ["user_id"], name: "index_subscriptions_on_user_id", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -72,28 +84,28 @@ ActiveRecord::Schema.define(version: 20161025115249) do
     t.integer  "tagger_id"
     t.string   "context",       limit: 128
     t.datetime "created_at"
-    t.index ["context"], name: "index_taggings_on_context"
-    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
-    t.index ["tag_id"], name: "index_taggings_on_tag_id"
-    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
-    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
-    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
-    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
-    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
-    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+    t.index ["context"], name: "index_taggings_on_context", using: :btree
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy", using: :btree
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id", using: :btree
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type", using: :btree
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type", using: :btree
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
     t.string  "tint"
-    t.index ["name"], name: "index_tags_on_name", unique: true
+    t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                              default: "",    null: false, limit: 20
+    t.string   "email",                              default: "",    null: false
     t.string   "encrypted_password",                 default: "",    null: false
-    t.string   "username",                           default: "",    null: false, limit: 20
+    t.string   "username",                           default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -113,23 +125,25 @@ ActiveRecord::Schema.define(version: 20161025115249) do
     t.datetime "updated_at",                                         null: false
     t.string   "provider"
     t.string   "uid"
-    t.string   "full_street_address",              limit: 255
-    t.float    "latitude",              limit: 20
-    t.float    "longitude",              limit: 20
+    t.string   "full_street_address"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "avatar"
-    t.string   "gender",                             default: "",              limit: 255
-    t.string   "about",              limit: 255
-    t.string   "job",              limit: 255
+    t.string   "gender",                             default: ""
+    t.string   "about"
+    t.string   "job"
     t.string   "cached_tag_list"
     t.boolean  "local",                              default: false
     t.string   "languages"
-    t.date     "birthday",  default: "",    null: false, limit: 255
+    t.date     "birthday"
     t.string   "country"
-    t.string   "education",  limit: 255
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+    t.string   "education",              limit: 255
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
   end
 
+  add_foreign_key "messages", "chat_rooms"
+  add_foreign_key "messages", "users"
 end

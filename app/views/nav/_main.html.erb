@@ -3,6 +3,9 @@
 		<div class="nav float-right">
 			<li>
   			<%= link_to t('nav.chat'), chat_rooms_path, class: "chat-link" %>
+  			<% if  unread_messages != "0" %>
+  				<p class="unread"><%= unread_messages %></p>
+  			<% end %>
 		  </li>
 		  <li>
 		    <button id="drop-account" class="button button-clear btn-account">

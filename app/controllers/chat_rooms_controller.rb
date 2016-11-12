@@ -45,6 +45,13 @@ class ChatRoomsController < ApplicationController
     @chat_rooms = ChatRoom.all.order('created_at DESC').find(joined_rooms)
     @chat_room = ChatRoom.where(token: params[:token]).first
     @messages = Message.where(chat_room_id: @chat_room).order('created_at DESC').paginate(:page => params[:page])
+    
+    #Mark as read
+    @messages.each do |message|
+      message.mark_as_read! :for => current_user
+    end
+    
+    #New message for form
     @message = Message.new
   end
 

@@ -21,7 +21,11 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  #mount ActionCable.server => '/cable'
   mount ActionCable.server => '/cable'
+
+  ##ADMINISTRATION
+  namespace :admin do
+    root 'dashboard#index'
+  end
 
 end

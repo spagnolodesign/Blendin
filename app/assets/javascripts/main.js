@@ -242,41 +242,7 @@ function initSearchFilter() {
 
 }
 
-function initFilterList () {
-    Turbolinks.clearCache();
-    var filterEl = $('#filter-column');
-    var selected = [];
 
-    if (filterEl.length < 1) return;
-    
-    filterEl.on( "click", "li", storeValue);
-    selected = filterEl.attr('data-selected').split(',');
-    if (selected[0].length == 0){
-        selected = [];
-    }
-    var tmp = generateColor('#FFFFFF','#74CED2',filterEl.find('li').length);
-
-    filterEl.find('li span').filter(function( index, el ) {
-       var el = $(el);
-       var text = el.find('p').text().replace(/\s/g, '');
-
-       el.css("background-color","#"+tmp[index]);
-       $.each(selected, function(i,v){
-            if (text == v) {
-                el.addClass('active');
-            }
-       });
-    });
-
-    function storeValue(e) {
-        var el = $(e.currentTarget);
-        var tag = el.find('p').text().replace(/\s/g, '');
-        if (el.hasClass('active')) return;
-        el.addClass('active');
-        selected.push(tag);
-        // Turbolinks.visit("?berries="+selected);
-    }
-}
 
 var grid;
 
@@ -374,12 +340,16 @@ function nav() {
 
 
 function initTagSelection() {
-    var tagList,input,submit,userTagList;
+    var tagList,input,submit,userTagList, btnAdd;
 
     tagList = $('#select-tag-list');
+    btnAdd = $('#add-new-tag');
     if (tagList.length == 0) return;
     
-    tagList.on( "click", "li", storeValue);
+    tagList.on( "click", "li:not('.insert')", storeValue);
+    // tagList.on( "click", "button", addBubble);
+    // tagList.on("keyup", "#new-tag-value", setBubble);
+
 
     input = $('#user_tag_list');
     submit = $('#btn-add-tag');
@@ -401,6 +371,7 @@ function initTagSelection() {
             });
         });
     }
+
     function storeValue(e) {
         var el = $(e.currentTarget);
         var tag = el.text().replace(/\s/g, '');
@@ -429,7 +400,22 @@ function initTagSelection() {
         if(userTagList.length < 3 ){
             submit.removeClass('anim-next');
         }
+    }
 
+    function addBubble(e) {
+        e.preventDefault();
+        tagList.prepend('<li class="tag-bubble insert"><textarea id="new-tag-value"></textarea></li>');
+    }
+    function setBubble(e){
+        if(e.keyCode == 13)
+        {
+           var el = $(e.currentTarget).parent();
+           var value = $(e.currentTarget).val().replace(/\s+/g, '');
+            el.append('<span>'+value+'</span>');
+            $(e.currentTarget).remove();
+            el.toggleClass('insert');
+            el.toggleClass('active');
+        }
     }
 }
 

@@ -1,6 +1,20 @@
 .aside.aside-1.open-chat{
     border-right: 0.1rem solid #f2f2f2;
 }
+.unread{
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    border-radius: 0.3rem;
+    background: $main-color;
+    height: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    padding: 0.2rem 0.2rem;
+    line-height: 0.8rem;
+}
 .open-chat{
     height: 80vh;
     overflow: hidden;

@@ -23,6 +23,7 @@ class User < ApplicationRecord
   has_many :liked, :class_name=>'Knok', :foreign_key=>'to_id'
 
   acts_as_taggable
+  acts_as_reader
 
   geocoded_by :full_street_address   # can also be an IP address
   after_validation :geocode      

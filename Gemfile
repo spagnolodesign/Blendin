@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 ruby "2.2.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
-# Use sqlite3 as the database for Active Record
+
+# Use pg as the database for Active Record
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -29,6 +31,10 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'geocoder'
 gem 'has_secure_token'
+gem 'unread'
+gem 'chartkick'
+gem 'groupdate'
+
 
 gem 'redis', '~> 3.0'
 
@@ -50,8 +56,7 @@ gem 'will_paginate'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-	gem 'sqlite3'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+	#gem 'sqlite3'
   gem 'byebug', platform: :mri
   gem 'faker'
 end

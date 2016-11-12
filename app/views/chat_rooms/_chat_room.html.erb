@@ -1,19 +1,18 @@
 <li>                  
     <%= active_link_to chat_room_path(chat_room.token), class:"clearfix" do %>
         <% chat_room.users.each do |user| %>
-	  		<% if  user != current_user %>
-	  			<figure class="avatar avatar-lg">
-				  <img src="<%= user.picture %>">
-				</figure>
-	  		<% end %>
+		  		<% if  user != current_user %>
+		  			<figure class="avatar avatar-lg">
+					  	<img src="<%= user.picture %>">
+						</figure>
+						<div class="info">
+							<h5><%= user.name %></h5>
+		        	<% if  !chat_room.messages.empty? %>
+									<%= truncate(chat_room.messages.last.body, length: 15) %>
+				     	<% end %>
+		        </div>
+		  		<% end %>
     	<% end %>					
-        <div class="info">
-        	<% if  !chat_room.messages.empty? %>
-				<h5><%= chat_room.messages.last.user.name %></h5>
-				<%= truncate(chat_room.messages.last.body, length: 15) %>
-		     <% end %>
-        </div>
        	<%= link_to 'Delete', chat_room_path(chat_room.token), method: :delete, data: { confirm: 'Are you sure?' },class:" delete-chat-btn" %>
-
     <% end %>
 </li>

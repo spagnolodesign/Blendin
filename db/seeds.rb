@@ -36,11 +36,12 @@
 				full_street_address: Faker::Address.street_address,
 				gender: ["m","f"].sample,
 				about: Faker::Lorem.sentences,
-				local: true,
+				local: [true, false].sample,
 				latitude: 45.4654219,
 				longitude: 9.1859243,
 				job: Faker::Lorem.word,
-				birthday: Faker::Date.between(30.years.ago, Date.today)
+				birthday: Faker::Date.between(30.years.ago, Date.today),
+				created_at: (rand*10).days.ago
 		)
 
 		user.tag_list.add("Tecno,Crazy,Vidaloca,Calcio", parse:true)
