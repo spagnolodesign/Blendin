@@ -2,9 +2,9 @@
  * beagle v1.1.1 (http://foxythemes.net/themes/beagle)
  * Copyright 2014-2016 Foxy Themes all rights reserved 
  */
+
 var App = (function () {
   'use strict';
-
   //Basic Config
   var config = {
     assetsPath: 'assets',
