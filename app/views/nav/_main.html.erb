@@ -30,6 +30,9 @@
 	<ul>
 	  	<li><%= link_to t('nav.settings'), edit_user_path(current_user) %></li>
 			<li><%= link_to t('nav.edit_tags'), tag_users_path(current_user) %></li>
+			<% if current_user.admin? %>
+	  		<li><%= link_to "Admin", admin_dashboard_index_path %></li>
+			<% end %>
 	  	<li><%= link_to t('nav.signout'), destroy_user_session_path, :method => :delete %></li>
  	</ul>
 </div>

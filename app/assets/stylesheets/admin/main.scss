@@ -336,6 +336,9 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+.order{
+  float: right;
+}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('/fonts/glyphicons-halflings-regular.eot');
@@ -5435,7 +5438,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #3d3d3d;
 }
 .pagination {
-  display: inline-block;
+  text-align:center;
   padding-left: 0;
   margin: 18px 0;
   border-radius: 2px;

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!
- 	before_action :set_user, only: [:show]
+ 	before_action :set_user, only: [:show, :destroy]
  	before_action :set_current, only: [:update_tags, :update_location, :update, :edit]
 
 
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
 	# GET /events/1/edit
   def edit
+
   end
 
   def show
@@ -51,6 +52,25 @@ class UsersController < ApplicationController
 
 	def create
 		
+	end
+
+	def destroy
+		@subscriptions = Subscription.where(user_id: @user.id)
+		
+		#Delete Open ChatRoom
+		@subscriptions.each do |sub|
+			@room_id = sub.chat_room_id	
+			@all_users_subs = Subscription.where(chat_room_id:@room_id)
+			@all_users_subs.delete_all
+		end
+
+		#Delete User
+		@user.destroy
+
+		respond_to do |format|
+      format.html { redirect_to :back, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
 	end
 
   private

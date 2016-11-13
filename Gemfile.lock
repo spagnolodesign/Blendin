@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/bogdan/datagrid.git
+  revision: 82fb14c5d6f078b5578032099564551b8e8f9818
+  specs:
+    datagrid (1.5.1)
+      rails (>= 3.2.22.2)
+
+GIT
   remote: https://github.com/F3pix/acts-as-taggable-on
   revision: 7570774835cb9e391d0efb0c0dcbb971a55132c1
   specs:
@@ -389,6 +396,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   compass
   country_select
+  datagrid!
   devise
   faker
   fog

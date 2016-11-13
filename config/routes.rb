@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'sessions'}
   #match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
 
-  resources :users, only: [:show, :update, :edit] do
+  resources :users, only: [:show, :update, :edit, :destroy] do
     collection do
       get :tag, action: 'update_tags'
       get :location, action: 'update_location' 
@@ -23,9 +23,10 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
-  ##ADMINISTRATION
+  ##ADMIN
   namespace :admin do
-    root 'dashboard#index'
+    resources :dashboard, only: [:index]
+    resources :account, only: [:index]
   end
 
 end

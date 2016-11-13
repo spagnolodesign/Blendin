@@ -3,4 +3,4 @@
 //= require Chart.bundle
 //= require chartkick
 //= require admin/main
-//= require admin/lib/bootstrap/dist/js/bootstrap.min.js
+//= require admin/lib/bootstrap/dist/js/bootstrap.js

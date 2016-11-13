@@ -10,8 +10,8 @@ class User < ApplicationRecord
          :omniauthable, :omniauth_providers => [:facebook]
 
   #Events and Subscriptions
-  has_many :approvals, dependent: :destroy
-  has_many :events, -> { uniq }, through: :approvals
+  #has_many :approvals, dependent: :destroy
+  #has_many :events, -> { uniq }, through: :approvals
   
   #Messages and Chatroom
   has_many :messages, dependent: :destroy
