@@ -4,7 +4,6 @@ class Admin::AccountController < Admin::AdminController
 		@users_grid = UsersGrid.new(params[:users_grid]) do |scope|
       scope.page(params[:page])
     end
-
 	end
 
 end

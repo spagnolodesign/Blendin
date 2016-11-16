@@ -37,20 +37,23 @@
           <%= link_to root_path do %>
               <%= image_tag("logo-app.png", class: "logo-app") %>
           <% end %>
+          <span class="btn-link tooltip info-app" data-tooltip="<%= raw t ('sign.general') %>"></span>
+
+
           <%= yield %>
         </div>
       </div>
     </main>
-    <script type="text/javascript" charset="utf-8" async>
-    
-    // closeOverlay();
-
-    // function closeOverlay(){
-    //   $('.close-btn').click(function(){
-    //       $(this).parent().fadeOut(300);
-    //   });
-    // }
-  
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        cookiePolicyId: 7951305,
+        siteId: 647263,
+        lang: "nl",
+        priorConsent: false
+      };
     </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script>
+
   </body>
 </html>

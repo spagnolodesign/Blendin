@@ -143,7 +143,7 @@
     margin-bottom: 1em;
     p{
         margin: 0 0 0 1em;
-        background:$main-color;
+        background: #eaeaea;
         padding:0.5rem 1rem;
         border-radius: 1rem;
         border-bottom-left-radius:0;
@@ -160,6 +160,7 @@
     }
     &.sent{
         p{
+            background:$main-color;
             float: right;
             margin: 0 1em 0 0;
             border-bottom-right-radius:0;

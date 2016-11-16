@@ -20,9 +20,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
     # For Rails 3.1+ asset pipeline compatibility:
     # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
     if self.model.gender == "m"
-      'https://picturepan2.github.io/spectre/demo/img/avatar-4.png'
+      '/assets/avatar-male-blendin.jpg'
     else
-      'https://picturepan2.github.io/spectre/demo/img/avatar-5.png'
+      '/assets/avatar-female-blendin.jpg'
     end
   end
 

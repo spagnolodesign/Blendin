@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blendin</title>
-    <meta name="description" content="Berry helps you to connect with people that share your same interests :)">
+    <title><%= t('seo.title') %></title>
+    <meta name="description" content="<%= t('seo.description') %>">
  
     <%= csrf_meta_tags %>
     
@@ -17,7 +17,7 @@
 
     <header class="header">
       <div class="columns">
-          <div class="column col-xs-6 col-2">
+          <div class="column col-xs-6 col-3">
             <%= link_to root_path do %>
                 <%= image_tag("logo-app.png", class: "logo-app") %>
             <% end %>
@@ -34,7 +34,19 @@
     <%= yield %>
     <%= yield :aside_right %>
 
-    <footer class="footer">Footer</footer>
+    <footer class="footer">
+      <button id="drop-footer">Open</button>
+
+      <div id="content-drop-footer" class="sub-nav">
+        <ul>
+            <li><a href="http://info.blendinnow.nl" target="_blank">About Blendin</a></li>
+            <li><a href="" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.iubenda.com/privacy-policy/7951305/cookie-policy" target="_blank">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </footer>
+
   </div>
 
   <div id="panel-overlay">

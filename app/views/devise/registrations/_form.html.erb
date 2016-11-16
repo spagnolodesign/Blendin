@@ -14,8 +14,8 @@
     <%= f.password_field :password, autocomplete: "off",placeholder: "Password", class: "form-input input-lg" %>
   </div>
 
-  <span class="btn-link tooltip" data-tooltip="<%= t ('sign.info') %>"><%= raw t ('sign.areyou') %></span>
-
+  <span class="btn-link tooltip" data-tooltip="<%= raw t ('sign.info') %>"><%= raw t ('sign.areyou') %></span>
+  
   <div class="form-group form-radio-btn clearfix">
     <%= f.radio_button :local, true, :checked => false, :class => "for_local" %>
     <%= f.label :local, 'Local', :value => true, class: "left" %>
@@ -23,8 +23,9 @@
     <%= f.label :local, 'New comer', :value => false, class: "right" %>
   </div>
 
-  <p class="terms-text"><%= raw t ('sign.policy') %></p>
-
+  <p class="terms-text">
+    <%= raw t("sign.policy", :href_cookie => link_to(t("sign.cookie_href"), 'https://www.iubenda.com/privacy-policy/7951305/cookie-policy'), :href_policy => link_to(t("sign.data_href"), 'https://www.iubenda.com/privacy-policy/7951305/cookie-policy')) %>
+  </p>
   <div class="form-group" data-no-turbolink>
       <%= f.submit "Sign up", class: "btn btn-primary btn-lg" %>
   </div>

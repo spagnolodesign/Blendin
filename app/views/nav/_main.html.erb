@@ -1,5 +1,5 @@
 
-<div class="column col-xs-6">
+<div class="column col-xs-4">
 		<div class="nav float-right">
 			<li>
   			<%= link_to t('nav.chat'), chat_rooms_path, class: "chat-link" %>
@@ -18,7 +18,7 @@
 		</div>
 </div>
 
-<div id="main-sub-nav">
+<div id="content-drop-account" class="sub-nav">
 	<div class="profile-block">
 		<img class="avatar" src="<%= current_user.picture.medium_avatar %>" alt="<%= current_user.username  %>" />
 		<div class="info">

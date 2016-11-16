@@ -16,8 +16,10 @@ $(document).on('turbolinks:load', function() {
     // nav();
     // initGrid();
     // updateGrid();
-    dropdown();
-    initTagSelection();
+    dropdownAccount();
+    dropdownFooter();
+    //initTagSelection();
+    tagSelection();
     paginate();
     paginateMessages();
     animCards();
@@ -74,13 +76,29 @@ function paginateMessages(){
         return $(window).scroll();
       }
 }
-function dropdown() {
+
+function dropdownAccount() {
     
     var dropAccount;
     dropAccount = new Drop({
       target: document.getElementById("drop-account"),
-      content: $('#main-sub-nav').html(),
+      content: $('#content-drop-account').html(),
       position: 'bottom left',
+      openOn: 'click',
+      classes: 'drop-theme-arrows',
+      constrainToWindow: false,
+      constrainToScrollParent: false,
+      classPrefix: "my-dop"
+    });
+}
+
+function dropdownFooter() {
+    
+    var dropAccount;
+    dropAccount = new Drop({
+      target: document.getElementById("drop-footer"),
+      content: $('#content-drop-footer').html(),
+      position: 'top center',
       openOn: 'click',
       classes: 'drop-theme-arrows',
       constrainToWindow: false,
@@ -344,6 +362,77 @@ function nav() {
         }), !1
 }
 
+function tagSelection(){
+
+    var tagList, selectedList, addCustomTagBtn;
+
+    tagList = $('#select-tag-list');
+    addCustomTagBtn = $('#add-new-tag');
+    userTagsInput = $('#user_tag_list');
+    submitBtn = $('#submit-user-tags');
+
+    if (tagList.length != 1) return;
+
+    selectedList = usertags.split(',').map(function(item) {
+                      return item.trim();
+                    });
+
+    tagList.on( "click", "li", getVal);
+    addCustomTagBtn.on( "click", createNewTag);
+    selectMyTags();
+
+    function getVal(e){
+        var el = $(e.currentTarget);
+        var tag = el.text().trim();
+        console.log(tag)
+        el.toggleClass('active');
+        addToList(selectedList, tag);
+    }   
+
+    function addToList(a, v) {
+        var i = a.indexOf(v);
+        if (i === -1)
+            a.push(v);
+        else
+            a.splice(i,1);
+
+        insertIntoInput();
+    }
+
+    function createNewTag(){
+        var customTag = $('#custom-tag-input');
+        var newTag = customTag.val().trim();
+        if (newTag.length < 20 && newTag.length > 0){
+            tagList.append('<li class="tag-bubble insert"><span>'+ newTag +'</span></li>');
+            customTag.val("");
+        }else{
+            alert('A tag can only contains less then 20char');
+        }
+    }
+
+    function insertIntoInput(){
+        userTagsInput.val(selectedList);
+        if (selectedList.length >= 3){
+            submitBtn.addClass('anim-next');
+        }
+    }
+    
+    function selectMyTags() {
+
+        tagList.find('li').filter(function( index, el ) {
+            var el = $(el);
+            var text = el.text().trim();
+            //console.log(text)
+            $.each(selectedList, function(i,v){
+                console.log(v)
+                if (text == v) {
+                    el.addClass('active');
+                }
+            });
+        });
+    }
+
+}
 
 function initTagSelection() {
     var tagList,input,submit,userTagList, btnAdd;

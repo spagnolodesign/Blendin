@@ -22,6 +22,11 @@ main {
 	margin: 0 auto;
 	color:#bfbfbf;
 	text-align:center;
+  position: relative;
+  .info-app{
+    position:absolute;
+    right:50px;
+  } 
 	.logo-app{
 		width: 180px;
     margin-bottom: 1.5em;

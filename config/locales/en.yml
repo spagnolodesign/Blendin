@@ -1,20 +1,31 @@
 en:
+  seo:
+    title: "Blendin"
+    description: "We have seen a growing gap between newcomers and locals in Dutch society and we wish to bridge this gap. That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!"
   sign:
-    info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it."
-    policy: 'By clicking Sign Up, you agree to our <a href="/legal/terms" target="_blank" rel="nofollow">Terms</a> and that you have read our <a href="/about/privacy" id="privacy-link" target="_blank" rel="nofollow">Data Policy</a>, including our <a href="/policies/cookies/" target="_blank" rel="nofollow">Cookie Use</a>.'
-    areyou: "Are you?"
+    info: "Newcomers in Dutch society are people who recently arrived here because they had to leave their country of origin for safety and/or other personal reasons. Locals are Dutch people (or other nationalities) who have lived in the Netherlands for a long time and who want to welcome newcomers into Dutch society."
+    policy: "By clicking Sign Up, you agree to our Terms and that you have read our %{href_policy}, including our %{href_cookie}."
+    areyou: "Who are you?"
+    cookie_href: "Cookie Use"
+    data_href: "Data Policy"
+    general: "Blendin is about bringing people together. We have seen a growing gap between newcomers and locals in Dutch society and we wish to bridge this gap. That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!"
   default:
     interests: "Interests"
     mostused: "MOST USED"
     openchat: "Open chat"
+  tag_selection:
+    title: "Tell us what inspires you!"
+    subtitle: "Choose at least three of these main interests."
+    maketitle: "Don’t stop there!"
+    makeyours: "Please name any kind of interest you like.<br />Make sure it is written correctly in English so we can suggest people based on your interests and you location."
   nav:
-    settings: "Settings"
-    edit_interest: "Update Interest"
+    settings: "Profile"
+    edit_interest: "Edit tags"
     messages: "Messages"
     signout: "Sign out"
     chat: "Chat"
     signin: "Sign in"
-    edit_photo: "Add photo account"
+    edit_photo: "Edit profile picture"
   btn:
     confirm: "Confirm"
     next: "Next"
@@ -22,16 +33,16 @@ en:
     noc: "Blend"
   match:
     no_title: "No match available."
-    no_sub: "Start to blend "
+    no_sub: "Start blendin'"
   activerecord:
     attributes:
       user:
-        email: "Email Address"
+        email: "Email address"
         username: "Username"
         full_street_address: "City of residence"
         about: "About"
         occupation: "Occupation"
         languages: "Languages"
         birthday: "Birthday"
-        country: "Country"
+        country: "Country of origin"
         gender: "Gender"
