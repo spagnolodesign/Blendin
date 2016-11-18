@@ -1,9 +1,9 @@
+<p><%= @resource.name %> Welcome to Blendin!</p>
 
-<%= render "header" %>
-
-<p>Welcome <%= @resource.name %>!</p>
-
-<p>You can confirm your account email through the link below:</p>
+<p>We hope you meet new people and friends nearby with similar interests, passions and hobbies.<br>You can confirm your email account through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
 
+<p>Happy blendin!!!</p>
+
+<%= render "header" %>

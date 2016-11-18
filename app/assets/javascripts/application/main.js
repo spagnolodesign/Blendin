@@ -6,7 +6,7 @@
 
 
 $(document).on('turbolinks:load', function() {
-    initAjaxBerryRequest();
+    initNocAjaxRequest();
     initSearchFilter();
     // initFilterList();
     // initAjaxFormRequest ();
@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function() {
 });
 
 function slidePanel() {
-    $('#close-overlay').click(function(event) {
+    $('.shadow-element, #close-overlay').click(function(event) {
        $('#panel-overlay').hide().find('.content').toggleClass('slide-in-bounce');
     });
 }
@@ -57,7 +57,7 @@ function paginate(){
             return $.getScript(url);
           }
           animCards();
-          initAjaxBerryRequest();
+          initNocAjaxRequest();
         });
         return $(window).scroll();
       }
@@ -71,7 +71,7 @@ function paginateMessages(){
             return $.getScript(url);
           }
           animCards();
-          initAjaxBerryRequest();
+          initNocAjaxRequest();
         });
         return $(window).scroll();
       }
@@ -178,7 +178,7 @@ function initAjaxFormRequest (){
     });
 }
 
-function initAjaxBerryRequest (){
+function initNocAjaxRequest (){
     $(".noc-btn").on("ajax:success", function(e, data, status, xhr) {
         var event = xhr.responseJSON.event;
         console.log(event)

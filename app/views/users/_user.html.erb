@@ -5,9 +5,9 @@
       <% end %>
     </div>
     <div class="card-header">
-    		<%if (!current_user.likes(user)) %>
-    			<%= link_to t('btn.noc'), like_knok_path(user), remote:true, method: :put, class:"noc-btn btn btn-sm float-right" %>
-    		<% end %>
+    	<%if (!current_user.likes(user)) %>
+    		<%= link_to t('btn.noc'), like_knok_path(user), remote:true, method: :put, class:"noc-btn btn btn-sm float-right" %>
+    	<% end %>
         <h4 class="card-title"><%= truncate(user.name, length: 12) %></h4>
         <h6 class="card-meta"><%= user.country_name %></h6>
     </div>
