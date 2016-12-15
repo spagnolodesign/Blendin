@@ -24,6 +24,8 @@ $(document).on('turbolinks:load', function() {
     paginateMessages();
     animCards();
     slidePanel();
+    openPanelAside();
+    
     var filterEl = $('#filter-column');
     var tmp = generateColor('#FFFFFF','#74CED2', filterEl.find('li').length);
 
@@ -36,6 +38,12 @@ $(document).on('turbolinks:load', function() {
 function slidePanel() {
     $('.shadow-element, #close-overlay').click(function(event) {
        $('#panel-overlay').hide().find('.content').toggleClass('slide-in-bounce');
+    });
+}
+
+function openPanelAside(){
+    $('.toggle-aside-panel').click(function(event) {
+       $('#aside-panel').toggleClass('slide-in-out');
     });
 }
 

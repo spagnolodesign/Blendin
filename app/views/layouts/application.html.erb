@@ -3,7 +3,9 @@
   <head>
     <title><%= t('seo.title') %></title>
     <meta name="description" content="<%= t('seo.description') %>">
- 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= csrf_meta_tags %>
     
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +19,7 @@
 
     <header class="header">
       <div class="columns">
-          <div class="column col-xs-6 col-3">
+          <div class="column col-xs-5 col-3 logo-column">
             <%= link_to root_path do %>
                 <%= image_tag("logo-app.png", class: "logo-app") %>
             <% end %>
@@ -29,8 +31,9 @@
           <% end %>
       </div>
     </header>
-
+    
     <%= yield :aside_left %>
+
     <%= yield %>
     <%= yield :aside_right %>
 

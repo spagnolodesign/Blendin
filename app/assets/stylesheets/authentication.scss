@@ -13,12 +13,14 @@ main {
   -o-background-size: cover;
   background-size: cover;
 }
-.btn-link-auth{
-  position:absolute;
-  right: 20px; top:20px;
+
+header{
+ padding:1em;
+ width:100%;
+ text-align:right;
 }
 .auth-box{
-	width: 320px;
+	max-width: 320px;
 	margin: 0 auto;
 	color:#bfbfbf;
 	text-align:center;
@@ -100,3 +102,18 @@ main {
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .bg-auth {
+    background: #000 url(/assets/login-bg-f68737c739efcf52511001fe60bb74a297111a81874c3ba799b5ccbc8f7d0c03.jpg) no-repeat 0 0 fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  .auth-box .info-app{
+    display: none;
+  }
+}
+
+

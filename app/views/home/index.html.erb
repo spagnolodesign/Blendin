@@ -1,5 +1,5 @@
 <% content_for :search do %>
-		<div class="column col-5">
+		<div class="column col-5 search-column">
 			<div id="search-bar" data-turbolinks-permanent>
 	      <%= form_tag '', :method => :get, :"data-turboform" => :true do %>
 	        <%= text_field_tag :tags, params[:t], :id => 'tags-filter', :placeholder => "Search in blendin",  :autofocus => true %>
@@ -22,7 +22,7 @@
 
 
 <%= content_for :aside_left do %>
-  	<aside class="aside aside-1" data-turbolinks-permanent>
+  	<aside class="aside aside-1"data-turbolinks-permanent>
   	<p class="title-line no-line"><%= t('default.mostused') %></p>
   	<div id="filter-column" data-selected="<%= params[:t] %>">
 			<ul>

@@ -1,13 +1,18 @@
 <%= content_for :body_class, "chat-view" %>
 
 <%= content_for :aside_left do %>
-  	<aside class="aside aside-1 open-chat">
-			<h6 class="title-line title"><%= t('default.openchat') %></h6>
+  	<aside class="aside aside-1 open-chat" id="aside-panel" >
+			<h6 class="title-line title">
+				<%= t('default.openchat') %> 
+				<button class="toggle-aside-panel cs-btn">Close</button>
+			</h6>
 			<ul class="list">
 	 	 		<%= render @chat_rooms %>
 			</ul>
   	</aside>
 <% end %>
+
+<button class="toggle-aside-panel on-btn">Open rooms ></button>
 
 <section class="main message-layout">
 	<div id="center-side" class="chat-messages-layout">

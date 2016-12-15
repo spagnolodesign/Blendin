@@ -10,5 +10,18 @@
 }
 
 @media screen and (max-width: 480px) {
-
+	.header{
+		padding:0.5em 0;
+	}
+	.logo-column{
+		img{
+			width: 100%;
+		}
+	}
+	.search-column{
+		display: none;
+	}
+	.nav-column{
+		text-align:right; 
+	}
 }
