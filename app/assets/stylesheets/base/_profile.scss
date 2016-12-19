@@ -83,3 +83,11 @@
 		width:auto;
 	}
 }
+@media screen and (max-width: 400px) {
+    .edit-image{
+        width: 160px;
+        .user-avatar{
+            width: 100%;
+        }
+    }
+}

@@ -103,6 +103,30 @@
 	}
 }
 @media screen and (max-width: 480px) {
+  .aside.aside-1 {
+    overflow: scroll;
+  }
+  .title-line{
+    margin-bottom: 0;
+  }
+  #filter-column{
+    ul{
+        padding:0; margin:0;
+        list-style: none;
+        white-space: nowrap;
+        overflow-x: scroll;
+        li{
+              display: inline-block;
+              margin: 0 1rem 0 0;
+              a{
+                font-size: 2em;
+              }
+              span{
+                display: none;
+              }
+        }
+      }
+  }
 	
 }
 

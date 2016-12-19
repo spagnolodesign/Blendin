@@ -227,7 +227,7 @@
 
 @media (max-width: 640px) { 
     #messages{
-        height: 75vh;
+        height: 65vh;
         overflow-y: scroll;
         padding:0;
     }
@@ -259,6 +259,20 @@
         footer {
             order: 4;
         }
+    }
+    .inline{
+        float: none;
+        width: auto;
+        margin-right: 0;
+    }
+    .inline.right{
+        width: auto;
+    }
+    .form-input{
+        margin-bottom: 1rem;
+    }
+    .form-select.select-lg{
+        padding:0;
     }
 }
 
