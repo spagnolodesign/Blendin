@@ -10,7 +10,6 @@ class UserMailer < ApplicationMailer
   def message_unread(user)
     @user = user
     mail(to: @user.email, subject: "You have a new message")
-    byebug
   end
 
 end
