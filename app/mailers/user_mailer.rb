@@ -7,4 +7,10 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: "You have a blend-message")
   end
 
+  def message_unread(user)
+    @user = user
+    mail(to: @user.email, subject: "You have a new message")
+    byebug
+  end
+
 end
