@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'support@bleninme.nl'
+  default from: 'support@blendinnow.nl'
   layout 'mailer'
 end
