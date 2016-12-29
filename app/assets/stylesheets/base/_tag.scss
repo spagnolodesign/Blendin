@@ -97,8 +97,11 @@
 				text-decoration:none;
         font-size: 1.3em;
 				&:hover{
-					text-decoration: underline;
+					text-decoration: none;
 				}
+        &.active{
+          color:#7c74d1;
+        }
 			}
 		}
 	}
@@ -110,7 +113,7 @@
     overflow: scroll;
   }
   .title-line{
-    margin-bottom: 0;
+    margin-bottom: 0em;
   }
   #filter-column{
     ul{

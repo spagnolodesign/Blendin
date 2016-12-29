@@ -13,7 +13,7 @@ en:
     
   default:
     interests: "Interests"
-    mostused: "MOST USED"
+    mostused: "Filter by most used:"
     openchat: "Open chat"
   tag_selection:
     title: "Tell us what inspires you!"

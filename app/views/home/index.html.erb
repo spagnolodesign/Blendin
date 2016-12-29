@@ -22,12 +22,12 @@
 
 
 <%= content_for :aside_left do %>
-  	<aside class="aside aside-1"data-turbolinks-permanent>
+  	<aside class="aside aside-1" data-turbolinks-permanent>
   	<p class="title-line no-line"><%= t('default.mostused') %></p>
-  	<div id="filter-column" data-selected="<%= params[:t] %>">
+  	<div id="filter-column">
 			<ul>
 			  <% @tag_list.each do |tag| %>
-			  	<li><%= link_to tag.name, root_path(t: tag.name) %><span><%= tag.count %></span></li>
+			  	<li><%= active_link_to(tag.name, root_path(t: tag.name), :active => :exact, data: { turbolinks: true }) %><span><%= tag.count %></span></li>
 			  <% end %>
 			</ul>
 		</div>

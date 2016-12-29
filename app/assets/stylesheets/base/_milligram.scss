@@ -393,9 +393,12 @@ a {
   color: #70cdd2;
   text-decoration: underline;
 }
+a.active {
+  color: #7c74d1;
+}
 a:focus,
 a:hover {
-  color: #283176;
+  color: #7c74d1;
 }
 [disabled],
 .disabled {

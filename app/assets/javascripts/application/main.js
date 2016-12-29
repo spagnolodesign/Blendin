@@ -4,7 +4,6 @@
 //= require application/drop.min
 //= require application/chatrooms
 
-
 $(document).on('turbolinks:load', function() {
     initNocAjaxRequest();
     initSearchFilter();
@@ -25,15 +24,28 @@ $(document).on('turbolinks:load', function() {
     animCards();
     slidePanel();
     openPanelAside();
+    sideFilterJS();
     
+    
+});
+
+function sideFilterJS(){
+    if ($('#filter-column').length != 1) return;
     var filterEl = $('#filter-column');
+
     var tmp = generateColor('#FFFFFF','#74CED2', filterEl.find('li').length);
 
     filterEl.find('li span').filter(function( index, el ) {
        var el = $(el);
        el.css("background-color","#"+tmp[index]);
     });
-});
+
+    //scroll to|mobile
+    var active = filterEl.find('li a.active');
+    if(active.length != 0 ){
+        filterEl.find('ul').animate({scrollLeft: active.position().left - 30}, 20);
+    }
+}
 
 function slidePanel() {
     $('.shadow-element, #close-overlay').click(function(event) {
@@ -91,11 +103,11 @@ function dropdownAccount() {
     dropAccount = new Drop({
       target: document.getElementById("drop-account"),
       content: $('#content-drop-account').html(),
-      position: 'bottom left',
+      position: 'bottom right',
       openOn: 'click',
       classes: 'drop-theme-arrows',
-      constrainToWindow: false,
-      constrainToScrollParent: false,
+      constrainToWindow: true,
+      constrainToScrollParent: true,
       classPrefix: "my-dop"
     });
 }
@@ -106,11 +118,11 @@ function dropdownFooter() {
     dropAccount = new Drop({
       target: document.getElementById("drop-footer"),
       content: $('#content-drop-footer').html(),
-      position: 'top center',
+      position: 'top left',
       openOn: 'click',
       classes: 'drop-theme-arrows',
-      constrainToWindow: false,
-      constrainToScrollParent: false,
+      constrainToWindow: true,
+      constrainToScrollParent: true,
       classPrefix: "my-dop"
     });
 }
