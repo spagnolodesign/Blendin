@@ -5,8 +5,8 @@ Rails.application.configure do
   config.cache_classes = true
 
   config.web_socket_server_url = "wss://blendinme.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://blendinme.herokuapp.com', 'http://blendinme.herokuapp.com','http://www.berryhoop.com']
-  config.action_mailer.default_url_options = { :host => 'https://blendinme.herokuapp.com' }
+  config.action_cable.allowed_request_origins = ['https://blendinme.herokuapp.com', 'http://blendinme.herokuapp.com','http://www.blendinnow.nl']
+  config.action_mailer.default_url_options = { :host => 'http://www.blendinnow.nl' }
   config.action_mailer.asset_host = 'https://blendinme.herokuapp.com'
 
   # Eager load code on boot. This eager loads most of Rails and
