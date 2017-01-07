@@ -1,8 +1,8 @@
 <%= form_for(@user, :html => {:class => 'columns profile' }) do |f| %>
 		<div class="column col-3 col-lg-12">
 			<div class="edit-image">
-	    	<img class="rounded user-avatar" src="<%= @user.avatar.large_avatar %>">
-	    	<%= f.file_field :avatar, class: "form-input input-lg" %>
+	    	<img class="rounded user-avatar" id="preview" src="<%= @user.avatar.large_avatar %>">
+	    	<%= f.file_field :avatar, class: "form-input input-lg", id: "photo-file" %>
 	    	<button class="btn btn-sm">Upload</button>
 	    </div>
 	    <p class="title-line">Interests <%= link_to t('btn.edit'), tag_users_path, class: 'float-right'%></p>
@@ -46,6 +46,19 @@
               }
             }
           });
+
+          document.getElementById("photo-file").onchange = function () {
+					    var reader = new FileReader();
+
+					    reader.onload = function (e) {
+					        // get loaded data and render thumbnail.
+					        document.getElementById("preview").src = e.target.result;
+					    };
+
+					    // read the image file as a data URL.
+					    reader.readAsDataURL(this.files[0]);
+					};
+
         })();
       </script>
 	    <div class="form-group">

@@ -9,8 +9,6 @@ namespace :messages do
   		end	
   	end
 
-  	Message.cleanup_read_marks!
-
   end
 
 end

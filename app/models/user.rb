@@ -89,8 +89,9 @@ class User < ApplicationRecord
     if (birthday.nil?)
       return
     end
+    dob = self.birthday
     now = Time.now.utc.to_date
-    now.year - birthday.year - ((now.month > birthday.month || (now.month == birthday.month && now.day >= birthday.day)) ? 0 : 1)
+    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
   
   private
