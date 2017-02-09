@@ -12,10 +12,9 @@ Rails.application.routes.draw do
 
   resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms, :destroy], param: :token
 
-  resources :knoks, only: [:like, :dislike] do
+  resources :knoks, only: [:like] do
 	    member do
-	        put "like", to: "knok#like"
-	        put "dislike", to: "knok#dislike"
+	        get "like", to: "knok#like"
 	    end
 	end
 

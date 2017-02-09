@@ -5,6 +5,7 @@
 	    	<%= f.file_field :avatar, class: "form-input input-lg", id: "photo-file" %>
 	    	<button class="btn btn-sm">Upload</button>
 	    </div>
+	    <p><i style="font-size: 12px;">We highly recommend you to upload a profile picture in order to make your profile more personal and legitimate.</i></p>
 	    <p class="title-line">Interests <%= link_to t('btn.edit'), tag_users_path, class: 'float-right'%></p>
 	    <%= render partial: "tags/list", locals: {tags: @user.tag_list} %>
 		</div>
@@ -93,7 +94,16 @@
 					<i class="form-icon"></i>
 					<%= f.label :gender, 'Female', :value => 'f' %>
 				</label>
-	    </div>   
+	    </div>
+     	<%= f.label "Are you?" %> 
+     	<br>
+     	<div class="form-group form-radio-btn clearfix">
+		    <%= f.radio_button :local, true, :class => "for_local" %>
+		    <%= f.label :local, 'Local', :value => true, class: "left" %>
+		    <%= f.radio_button :local, false, :class => "for_new" %> 
+		    <%= f.label :local, 'New in NL', :value => false, class: "right" %>
+	  	</div>
+	  	<br>
 			<%= f.submit t('btn.confirm'), class: "btn btn-primary btn-lg float-right" %>
 		</div>
 <% end %>

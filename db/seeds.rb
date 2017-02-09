@@ -26,25 +26,33 @@
 
 # end
 
-10.times do |i|
-		user = User.create(
-				email: Faker::Internet.email, 
-				username: Faker::Name.name, 
-				avatar:nil,
-				#remote_avatar_url: Faker::Avatar.image, 
-				password: Devise.friendly_token[0,20], 
-				full_street_address: Faker::Address.street_address,
-				gender: ["m","f"].sample,
-				about: Faker::Lorem.sentences,
-				local: [true, false].sample,
-				latitude: 45.4654219,
-				longitude: 9.1859243,
-				job: Faker::Lorem.word,
-				birthday: Faker::Date.between(30.years.ago, Date.today),
-				created_at: (rand*10).days.ago
-		)
+# 10.times do |i|
+# 		user = User.create(
+# 				email: Faker::Internet.email, 
+# 				username: Faker::Name.name, 
+# 				avatar:nil,
+# 				#remote_avatar_url: Faker::Avatar.image, 
+# 				password: Devise.friendly_token[0,20], 
+# 				full_street_address: Faker::Address.street_address,
+# 				gender: ["m","f"].sample,
+# 				about: Faker::Lorem.sentences,
+# 				local: [true, false].sample,
+# 				latitude: 45.4654219,
+# 				longitude: 9.1859243,
+# 				job: Faker::Lorem.word,
+# 				birthday: Faker::Date.between(30.years.ago, Date.today),
+# 				created_at: (rand*10).days.ago
+# 		)
 
-		user.tag_list.add("Tecno,Crazy,Vidaloca,Calcio", parse:true)
-		user.save
-end
+# 		user.tag_list.add("Tecno,Crazy,Vidaloca,Calcio", parse:true)
+# 		user.save
+# end
+
+
+ChatRoom.destroy_all
+Subscription.destroy_all
+Knok.destroy_all
+Message.destroy_all
+ReadMark.destroy_all
+
 

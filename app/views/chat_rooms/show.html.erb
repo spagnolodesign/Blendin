@@ -7,7 +7,25 @@
 				<button class="toggle-aside-panel cs-btn">Close</button>
 			</h6>
 			<ul class="list">
-	 	 		<%= render @chat_rooms %>
+	 	 		<li>
+		 	 		<% @subscriptions.each do |subscription| %>
+			 	 		<%= active_link_to chat_room_path(subscription.chat_room.token), class:"clearfix" do %>
+			 	 			<% subscription.members.each do |user| %>
+			 	 				<% user = User.find(user) %>
+				 	 				<% if  user != current_user %>
+						  			<figure class="avatar avatar-lg">
+									  	<img src="<%= user.picture.small_avatar %>">
+										</figure>
+										<div class="info">
+											<h5><%= user.name %></h5>
+						        </div>
+						  		<% end %>
+				  		<% end %>
+				  		<%= link_to 'Delete', chat_room_path(subscription.chat_room.token), method: :delete, data: { confirm: 'Are you sure?' },class:" delete-chat-btn" %>
+				  	<% end %>
+		  		<% end %>
+
+	  		</li>
 			</ul>
   	</aside>
 <% end %>

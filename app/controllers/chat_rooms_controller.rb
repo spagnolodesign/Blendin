@@ -1,18 +1,17 @@
 class ChatRoomsController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    # if !current_user.messages.empty?
-    #   last_room = current_user.messages.last.chat_room
-    #   redirect_to chat_room_path(last_room.token)
-    # else
-      if current_user.chat_rooms.empty?
-        render :no_rooms
-      else
-        last_room_applied = current_user.chat_rooms.last
-        redirect_to chat_room_path(last_room_applied.token)
-      end
-    # end
+  def index  
+    if params[:user]
+      user_to_chat_with = User.find(params[:user]) 
+      token = generate_subscription(current_user, user_to_chat_with)
+      @chat_rooms = current_user.chat_rooms
+      redirect_to chat_room_path(token)
+    else
+      subscription = Subscription.where("members @> ?::text[]", '{'"#{current_user.id}"'}').last
+      token = ChatRoom.find(subscription.chat_room_id).token
+      redirect_to chat_room_path(token)
+    end
   end
 
   def new
@@ -20,7 +19,7 @@ class ChatRoomsController < ApplicationController
   end
 
   def create
-    @chat_room = User.first.chat_rooms.build(chat_room_params)
+    # @chat_room = User.first.chat_rooms.build(chat_room_params)
     if @chat_room.save
       flash[:success] = 'Chat room added!'
       redirect_to chat_rooms_path
@@ -41,18 +40,41 @@ class ChatRoomsController < ApplicationController
 
 
   def show
-    joined_rooms = current_user.subscriptions.pluck(:chat_room_id)
-    @chat_rooms = ChatRoom.all.order('created_at DESC').find(joined_rooms)
+    @subscriptions = Subscription.where("members @> ?::text[]", '{'"#{current_user.id}"'}')
     @chat_room = ChatRoom.where(token: params[:token]).first
     @messages = Message.where(chat_room_id: @chat_room).order('created_at DESC').paginate(:page => params[:page])
-    
-    Message.mark_as_read! :all, :for => current_user
-    
+        
     #New message for form
     @message = Message.new
+
+    #Mark all messages as read!
+    Message.mark_as_read! :all, :for => current_user
   end
 
   private
+
+  def generate_subscription(a, b) 
+
+    old_subscription = Subscription.where("members @> ?::text[]", '{'"#{a.id},#{b.id}"'}').first
+    
+    if !old_subscription.nil? 
+      token = ChatRoom.find(old_subscription.chat_room_id).token
+      return token
+    else
+      subscribe_users(a, b)
+    end
+    #Subscription.where("members @> ?", '{33,35}')
+
+  end
+
+  def subscribe_users(user_one, user_two)
+    new_chat_room_token = ChatRoom.create
+    new_chat_room_token.save
+    Subscription.create! chat_room_id: new_chat_room_token.id, members: [user_one.id,user_two.id].to_a
+    return new_chat_room_token.token
+  end
+
+#Subscription.where("members @> ?", '{35}')
 
   def chat_room_params
     params.require(:chat_room).permit(:title)

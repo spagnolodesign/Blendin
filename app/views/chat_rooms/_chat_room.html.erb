@@ -3,7 +3,7 @@
         <% chat_room.users.each do |user| %>
 		  		<% if  user != current_user %>
 		  			<figure class="avatar avatar-lg">
-					  	<img src="<%= user.picture %>">
+					  	<img src="<%= user.picture.large_avatar %>">
 						</figure>
 						<div class="info">
 							<h5><%= user.name %></h5>

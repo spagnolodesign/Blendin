@@ -19,8 +19,7 @@
 		<p><%= @user.languages %></p>
 		<b>Country:</b>
 		<p><%= @user.country_name %></p>
-		<%if (!current_user.likes(@user)) %>
-			<%= link_to t('btn.noc'), like_knok_path(@user), remote:true, method: :put, class:"noc-btn btn btn-primary btn-lg block" %>
-		<% end %>
+		<%= link_to t('btn.noc'), chat_rooms_path(user: @user.id), class:"btn btn-primary btn-lg block" %>
+
 	</div>
 </div>

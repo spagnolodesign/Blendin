@@ -3,9 +3,9 @@ en:
     title: "Blendin"
     description: "We have seen a growing gap between newcomers and locals in Dutch society and we wish to bridge this gap. That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!"
   sign:
-    info: "Newcomers in Dutch society are people who recently arrived here because they had to leave their country of origin for safety and/or other personal reasons. Locals are Dutch people (or other nationalities) who have lived in the Netherlands for a long time and who want to welcome newcomers into Dutch society."
+    info: "New in NL society are people who recently arrived here because they had to leave their country of origin for safety and/or other personal reasons. Locals are Dutch people (or other nationalities) who have lived in the Netherlands for a long time and who want to welcome newcomers into Dutch society."
     policy: "By clicking Sign Up, you agree to our %{href_terms} and that you have read our %{href_policy}, including our %{href_cookie}."
-    areyou: "Who are you?"
+    areyou: "Are you?"
     cookie_href: "Cookie Use"
     data_href: "Data Policy"
     data_terms: "Terms"
