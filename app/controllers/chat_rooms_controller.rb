@@ -9,8 +9,13 @@ class ChatRoomsController < ApplicationController
       redirect_to chat_room_path(token)
     else
       subscription = Subscription.where("members @> ?::text[]", '{'"#{current_user.id}"'}').last
-      token = ChatRoom.find(subscription.chat_room_id).token
-      redirect_to chat_room_path(token)
+      
+      if !subscription.nil?
+        token = ChatRoom.find(subscription.chat_room_id).token
+        redirect_to chat_room_path(token)
+      else
+        redirect_to root_path
+      end
     end
   end
 
