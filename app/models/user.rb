@@ -9,9 +9,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
-  #Events and Subscriptions
-  #has_many :approvals, dependent: :destroy
-  #has_many :events, -> { uniq }, through: :approvals
   
   #Messages and Chatroom
   has_many :messages, dependent: :destroy
@@ -29,8 +26,6 @@ class User < ApplicationRecord
   after_validation :geocode      
     
   mount_uploader :avatar, AvatarUploader
-
-  #after_update :update_tints
 
   validates :username, length: { maximum: 25 }, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, length: { maximum: 35 }
@@ -78,7 +73,7 @@ class User < ApplicationRecord
   end
 
   def country_name
-    if (country.nil?) 
+    if (country.blank?) 
       return
     end
     cname = ISO3166::Country[country]
@@ -86,7 +81,7 @@ class User < ApplicationRecord
   end
 
   def age
-    if (birthday.nil?)
+    if (birthday.blank?)
       return
     end
     dob = self.birthday
@@ -94,9 +89,4 @@ class User < ApplicationRecord
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
   
-  private
-  def update_tints
-    TagTinter.new('#74CED2', 'white').update_tints
-  end
-
 end

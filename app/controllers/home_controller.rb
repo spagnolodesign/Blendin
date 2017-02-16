@@ -8,7 +8,8 @@ class HomeController < ApplicationController
 									.tagged_with(@tags, :any => true)
 									.where(local: !current_user.local)
 									.where.not(id: current_user.id)
-									.paginate(:page => params[:page]).uniq
+									.order("updated_at desc")
+									.paginate(:page => params[:page])
 		
 
 		@tags = User.all.tag_counts_on(:tags).as_json(only: [:name]).to_json.html_safe
