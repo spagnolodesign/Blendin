@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hi <%= @revicer.short_name %>,</p>
+    <p><%= @from.short_name %> says: <%= @message %></p>
+    <p>
+      check it here: <%= link_to "See message!", chat_room_url(@room.token) %>
+
+    </p>
+    <br />
+    <p>Blendin Team</p>
+  </body>
+</html>

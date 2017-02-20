@@ -66,6 +66,10 @@
 	        <%= f.label :about, class: "form-label" %>
 					<%= f.text_area :about, :maxlength => 512, :size => 100, placeholder: "Write here something you would like to do in your life.", class:"form-input input-text-area" %>
 			</div>
+			<div class="form-group">
+          <%= f.label :phone, class: "form-label" %>
+          <%= f.text_field :phone, class: "form-input input-lg" %>
+	    </div>    
 	    <div class="form-group">
 	        <%= f.label :job, class: "form-label" %>
 	        <%= f.text_field :job, class: "form-input input-lg" %>
