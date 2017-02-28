@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-image">
+    	<%= link_to user, remote: true do %>
+        <img class="img-responsive" src="<%= user.avatar.large_avatar %>">
+      <% end %>
+    </div>
+    <div class="card-header">
+        <%= link_to t('btn.noc'), chat_rooms_path(user: user), class:"btn btn-sm float-right" %>
+        <h4 class="card-title"><%= truncate(user.name, length: 12) %></h4>
+        <h6 class="card-meta"><%= user.country_name %></h6>
+    </div>
+</div>

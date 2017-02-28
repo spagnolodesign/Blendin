@@ -68,6 +68,7 @@ function animCards(){
       time += 140;
     });
 }
+
 function paginate(){
     if ($('.users-layout').find('.pagination').length) {
         $(window).scroll(function() {
@@ -400,7 +401,7 @@ function tagSelection(){
     tagList.on( "click", "li", getVal);
     addCustomTagBtn.on( "click", createNewTag);
     selectMyTags();
-
+    
     function getVal(e){
         var el = $(e.currentTarget);
         var tag = el.text().trim();

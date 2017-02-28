@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 	
 	def update_tags
 		@usertags = @user.tag_list
-		@mostused = ActsAsTaggableOn::Tag.most_used(32)
+		@mostused = User.tag_counts_on(:tags).limit(32)
 	end
 
 	# GET /events/1/edit
@@ -39,6 +39,9 @@ class UsersController < ApplicationController
 	        	format.html { redirect_to edit_user_path, notice: 'User was successfully updated.' }
 	        	format.json { render :show, status: :ok, location: @user }
 	        else
+	        	if current_user.available_list.empty?
+	        		format.html { redirect_to me_availabilities_path }
+      			end
 	        	format.html { redirect_to path, notice: 'User was successfully updated.' }
 	        	format.json { render :show, status: :ok, location: @user }
 	      	end

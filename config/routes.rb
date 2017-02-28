@@ -9,6 +9,13 @@ Rails.application.routes.draw do
       get :location, action: 'update_location' 
     end
   end
+  
+  resources :availabilities, only: [:index, :add] do
+      collection do
+          get 'me', action: 'index' 
+          post "update", action: 'add'
+      end
+  end
 
   resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms, :destroy], param: :token
 

@@ -53,7 +53,7 @@ class ChatRoomsController < ApplicationController
     @message = Message.new
 
     #Mark all messages as read!
-    Message.mark_as_read! :all, :for => current_user
+    #Message.mark_as_read! :all, :for => current_user
   end
 
   private

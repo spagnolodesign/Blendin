@@ -35,7 +35,15 @@
     animation: spinup 3000ms linear both;
 }
 
-
+.best_matches_block{
+  margin-bottom: 2em;
+}
+.title-line-hp {
+    font-weight: bold;
+    color: #b6b6b6;
+    display: inline-block;
+    border-bottom: 3px solid #b6b6b6;
+}
 
 @media screen and (max-width: 480px) {
   .cards-list{

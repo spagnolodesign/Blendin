@@ -48,9 +48,21 @@
       </div>
       <footer>
         <a href="http://blendinnow.info" target="_blank">About Blendin</a>
+        <span class="info-overlay" onclick="openNav()">?</span>
       </footer>
     </main>
-   
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <p><b>Blendin</b> is about bringing people together.<br /> We have seen a growing gap between <b>newcomers</b> and <b>locals</b> in Dutch society and we wish to bridge this gap. <br />That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!</p>
+        <ul>
+        <li><span>1.</span>Make a profile</li>
+        <li><span>2.</span>Tell us when you are available to meet up</li>
+        <li><span>3.</span>Choose one of the best matches we generate for you</li>
+        <li><span>4.</span>Chat and suggest a meet up location to start Blendin!</li>
+        </ul>
+      </div>
+    </div>
     <script type="text/javascript">
         var _iub = _iub || [];
           _iub.csConfiguration = {
@@ -66,6 +78,16 @@
           }
       };
     </script>
+    <script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+     
     <script type="text/javascript" src="//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script>
 
   </body>

@@ -4,7 +4,7 @@ class Message < ApplicationRecord
   belongs_to :user
   belongs_to :chat_room
   
-  acts_as_readable :on => :created_at
+  #acts_as_readable :on => :created_at
 
   validates :body, presence: true, length: {minimum: 2, maximum: 1000}
 

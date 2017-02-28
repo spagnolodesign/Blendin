@@ -22,7 +22,8 @@ en:
     makeyours: "Please name any kind of interest you like.<br />Make sure it is written correctly in English so we can suggest people based on your interests and you location."
   nav:
     settings: "Profile"
-    edit_interest: "Edit tags"
+    edit_availability: "Set availability"
+    edit_interest: "Change interests"
     messages: "Messages"
     signout: "Sign out"
     chat: "Chat"
