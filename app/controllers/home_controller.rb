@@ -10,6 +10,12 @@ class HomeController < ApplicationController
 		# 							.where.not(id: current_user.id)
 		# 							.order("updated_at desc")
 		# 							.paginate(:page => params[:page])
+		if current_user.available_list.empty?
+			respond_to do |format|
+  			format.html { redirect_to me_availabilities_path, notice: 'Please update your availability before go further and meet with awesome people.' }
+  		end
+		end
+
 		@tags = User.all.tag_counts_on(:tags).as_json(only: [:name]).to_json.html_safe
     #@tag_list = User.tag_counts_on(:tags).order('count desc')
 
