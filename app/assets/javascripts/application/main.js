@@ -26,8 +26,13 @@ $(document).on('turbolinks:load', function() {
     openPanelAside();
     sideFilterJS();
     
-    
+    openNav();
+    closeNav();
+
 });
+function openNav() { document.getElementById("myNav").style.height = "100%"; }
+function closeNav() { document.getElementById("myNav").style.height = "0%"; }
+    
 
 function sideFilterJS(){
     if ($('#filter-column').length != 1) return;
