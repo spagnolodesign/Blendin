@@ -14,7 +14,9 @@
 	    
 	    <div class="panel-heading">
 	    	Accounts
-	      <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+	      <div class="tools">
+		  <%= link_to('', params.merge(format: 'xlsx').permit!, class:"icon mdi mdi-download") %>
+	      </span><span class="icon mdi mdi-more-vert"></span></div>
 	      	    	<span class="panel-subtitle">tot: <%= @users_grid.assets.count %></span>
 
 	    </div>

@@ -30,6 +30,9 @@ gem 'carrierwave'
 gem 'compass'
 gem 'will_paginate'
 
+gem 'axlsx', '2.1.0.pre'
+gem 'axlsx_rails'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'faker'

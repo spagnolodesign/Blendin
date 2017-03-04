@@ -1,0 +1,7 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Accounts") do |sheet|
+  sheet.add_row ["Email", "name"]
+  @users_grid_excel.rows.each do |user|
+    sheet.add_row user
+  end
+end

@@ -12,12 +12,15 @@ class HomeController < ApplicationController
 		# 							.paginate(:page => params[:page])
 		if current_user.available_list.empty?
 			respond_to do |format|
-  			format.html { redirect_to me_availabilities_path, notice: 'Please update your availability before go further and meet with awesome people.' }
-  		end
+	  			format.html { 
+	  				redirect_to me_availabilities_path, 
+	  				notice: 'Please update your availability before go further and meet with awesome people.' 
+	  			}
+  			end
 		end
 
 		@tags = User.all.tag_counts_on(:tags).as_json(only: [:name]).to_json.html_safe
-    #@tag_list = User.tag_counts_on(:tags).order('count desc')
+    	#@tag_list = User.tag_counts_on(:tags).order('count desc')
 
 		@best_matches = current_user.find_related_available
 						 .near([current_user.latitude, current_user.longitude], 20)
@@ -27,19 +30,17 @@ class HomeController < ApplicationController
 									.where(local: !current_user.local)
 									.where.not(id: current_user.id).order("RANDOM()")
 									.paginate(:page => params[:page])
-
-		
 	end
 
-  def auth_user
-    redirect_to new_user_registration_url unless user_signed_in?
-  end
+	def auth_user
+		redirect_to new_user_registration_url unless user_signed_in?
+	end
 
-  def allow
-  	if (current_user.latitude.nil? || current_user.latitude.nil?)
-  		redirect_to edit_user_path(current_user)
-  	end
-  end
+	def allow
+		if (current_user.latitude.nil? || current_user.latitude.nil?)
+			redirect_to edit_user_path(current_user)
+		end
+	end
 
 
 end
