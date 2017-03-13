@@ -24,11 +24,11 @@ class HomeController < ApplicationController
 
 		@best_matches = current_user.find_related_available
 						 .near([current_user.latitude, current_user.longitude], 20)
-						 .where(local: !current_user.local)
+						 .where(local: !current_user.local).order("created_at")
 
 		@users = User.near([current_user.latitude, current_user.longitude], 20)
 									.where(local: !current_user.local)
-									.where.not(id: current_user.id).order("RANDOM()")
+									.where.not(id: current_user.id).order("created_at")
 									.paginate(:page => params[:page])
 	end
 
