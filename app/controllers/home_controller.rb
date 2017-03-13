@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 
 		@best_matches = current_user.find_related_available
 						 .near([current_user.latitude, current_user.longitude], 20)
-						 .where(local: !current_user.local).order("created_at").limit(5)
+						 .where(local: !current_user.local).order("created_at").order("RANDOM()").limit(3)
 
 		@users = User.near([current_user.latitude, current_user.longitude], 20)
 									.where(local: !current_user.local)
