@@ -11,10 +11,10 @@ Rails.application.routes.draw do
   end
   
   resources :availabilities, only: [:index, :add] do
-      collection do
-          get 'me', action: 'index' 
-          post "update", action: 'add'
-      end
+    collection do
+        get 'me', action: 'index' 
+        post "update", action: 'add'
+    end
   end
 
   resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms, :destroy], param: :token

@@ -2,67 +2,93 @@
 <html>
   <head>
     <title>Blendin</title>
-
+    
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />
     <%= csrf_meta_tags %>    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic%7CMontserrat:700,400&amp;subset=latin,latin" media="all">
     <%= stylesheet_link_tag 'auth', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'auth' %>
   </head>
 
-  <body class="bg-auth">
-  
-    <% if notice || alert %>
-      <div class="notice-layout show">
-      <% if notice %>
-        <div class="toast">
-          <button class="btn btn-clear float-right close-btn"></button>
-          <%= notice %>
-        </div>
-      <% end %>
-      <% if alert %>
-        <div class="toast toast-danger">
-          <button class="btn btn-clear float-right close-btn"></button>
-          <%= alert %>
-        </div>
-      <% end %>
-      </div>
-    <% end %>
-
-    <header>
+  <body>
+     <header class="header">
       <% if (params[:controller] == "registrations") %>
-        <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+        <%= link_to "Log in", new_user_session_path(overlay:true), class: "button button--blue button--gray-shadow active abs-btn" %>
       <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "btn btn-primary" %>
+        <%= link_to "Register", new_user_registration_path(overlay:true), class: "button button--blue button--gray-shadow abs-btn" %>
       <% end %>
     </header>
-    <main>
-      <div class="aligner mtn-40">
-        <div class="auth-box">
-          <%= link_to root_path do %>
-              <%= image_tag("logo-app.png", class: "logo-app") %>
-          <% end %>
-          <span class="btn-link tooltip info-app" data-tooltip="<%= raw t ('sign.general') %>"></span>
 
-
+    <nav data-menu-index="07" class="menu menu--07 js-menu">
+      <div class="menu__container">
+        <button type="button" class="menu__closer js-close-menu">close</button>
+        <div class="menu__box">
           <%= yield %>
         </div>
       </div>
-      <footer>
-        <a href="http://blendinnow.info" target="_blank">About Blendin</a>
-        <span class="info-overlay" onclick="openNav()">?</span>
+    </nav>
+
+    <main class="page_wrapper">
+      <div style="background-image: url(img/bg/bg--headphones-white.jpg)" class="features features--06">
+        <div class="container features__container--06">
+          <div class="features__title_box features__title_box--06">
+            <h2 class="features__title--06">Blendin<br>we are one.</h2>
+            <span class="features__description features__description--06">We connect newcomers (refugees) with Dutch locals, if you are a newcomer or a Dutch citizen we can connect you by:</span>
+          </div>
+          <div class="row features__row">
+            <div class="col-md-6 col-lg-3 features__item features__item--06">
+              <div class="features__item_icon_circle features__item_icon_circle--06 features__item_icon_circle--tune-icon--blue features__item_icon_circle--icon--big"></div>
+              <h3 class="features__item_title">facebook Messanger</h3><span class="features__item_text features__item_text--06">Chatting with one of our team members, we are going to help you connecting with our network.</span><a href="https://www.facebook.com/blendinnow/" class="button button--blue button--gray-shadow">Chat with us</a>
+            </div>
+            <div class="col-md-6 col-lg-3 features__item features__item--06">
+              <div class="features__item_icon_circle features__item_icon_circle--06 features__item_icon_circle--zip-icon--blue features__item_icon_circle--icon--big"></div>
+              <h3 class="features__item_title">Whatsapp</h3><span class="features__item_text features__item_text--06">Calling one of the teammembers, add this number to your Rubrica: <a href="tel:+31 6 120 44 388">+31 6 120 44 388</a></span><a href="tel:+31 6 120 44 388" class="button button--blue button--gray-shadow">Call us</a>
+            </div>
+            <div class="col-md-6 col-lg-3 features__item features__item--06">
+              <div class="features__item_icon_circle features__item_icon_circle--06 features__item_icon_circle--tune-icon features__item_icon_circle--icon--big"></div>
+              <h3 class="features__item_title">Signup for free</h3><span class="features__item_text features__item_text--06">Create a new profile today and start matching with our online community. We are one!</span><a href="#" data-menu-index="07" class="button button--blue button--gray-shadow active js-open-menu">Sign up now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer footer--05">
+        <div class="footer__main_box--05">
+          <div class="container footer__container">
+            <div class="footer__left_box--05">
+            <%= link_to(root_path, class: "footer__logo_box footer__logo_box--05" ) do %>
+                <%= image_tag("logo-app.png", class: "footer__logo footer__logo--05") %>
+            <% end %>
+            <span class="footer__description footer__description--05">We have seen a growing gap between <b>newcomers</b> and <b>locals</b> in Dutch society and we wish to bridge this gap.</span>
+            </div>
+            <div class="footer__center_box--05">
+              <ul class="footer__menu footer__menu--05">
+                <li class="footer__menu__item footer__menu__item--05"><a href="http://blendinnow.info" target="_blank" class="footer__menu__link">About</a></li>
+                <li class="footer__menu__item footer__menu__item--05"><a href="https://blendinnow.info/philosophy/" class="footer__menu__link">Philosophy</a></li>
+                <li class="footer__menu__item footer__menu__item--05"><a href="https://blendinnow.info/donate-now/" class="footer__menu__link">Donate</a></li>
+              </ul>
+              <ul class="footer__menu footer__menu--05">
+                <li class="footer__menu__item footer__menu__item--05"><a href="https://blendinnow.info/media/" class="footer__menu__link">Media</a></li>
+                <li class="footer__menu__item footer__menu__item--05"><a href="https://blendinnow.info/about-us/" class="footer__menu__link">Team</a></li>
+                <li class="footer__menu__item footer__menu__item--05"><a href="https://www.instagram.com/blendinnow/?hl=en" class="footer__menu__link">Instagram</a></li>
+              </ul>
+              <ul class="footer__menu footer__menu--05">
+                <li class="footer__menu__item footer__menu__item--05"><a href="#" class="footer__menu__link">Terms</a></li>
+                <li class="footer__menu__item footer__menu__item--05"><a href="https://blendinnow.info/contact/" class="footer__menu__link">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer__right_box--05"><span class="footer__social_text--05">Follow us:</span>
+              <ul class="social footer__social--05 footer__social_box">
+                <li class="social__item social__item--left_margin"><a href="#" title="Say hello in Facebook!" class="social__link social__link--rounded social__link--facebook"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__description_box--05">
+          <div class="container footer__container"><span class="footer__copyright footer__copyright--05">© Blendin, 2017</span></div>
+        </div>
       </footer>
     </main>
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <p><b>Blendin</b> is about bringing people together.<br /> We have seen a growing gap between <b>newcomers</b> and <b>locals</b> in Dutch society and we wish to bridge this gap. <br />That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!</p>
-        <ul>
-        <li><span>1.</span>Make a profile</li>
-        <li><span>2.</span>Tell us when you are available to meet up</li>
-        <li><span>3.</span>Choose one of the best matches we generate for you</li>
-        <li><span>4.</span>Chat and suggest a meet up location to start Blendin!</li>
-        </ul>
-      </div>
-    </div>
+    
     <script type="text/javascript">
         var _iub = _iub || [];
           _iub.csConfiguration = {
@@ -89,6 +115,5 @@
     </script>
      
     <script type="text/javascript" src="//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script>
-
   </body>
 </html>

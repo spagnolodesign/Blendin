@@ -2,19 +2,9 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: false) do |f| %>
  
   <%= devise_error_messages! %>
-  <div class="form-group">
-    <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-input input-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :username, placeholder: "Full name", class: "form-input input-lg" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.password_field :password, autocomplete: "off",placeholder: "Password", class: "form-input input-lg" %>
-  </div>
-
-  <span class="btn-link tooltip" data-tooltip="<%= raw t ('sign.info') %>"><%= raw t ('sign.areyou') %></span>
+  <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+  <%= f.text_field :username, placeholder: "Full name", class: "form-control" %>
+  <%= f.password_field :password, autocomplete: "off",placeholder: "Password", class: "form-control"%>
   
   <div class="form-group form-radio-btn clearfix">
     <%= f.radio_button :local, true, :checked => false, :class => "for_local" %>
@@ -28,9 +18,9 @@
     :href_terms => link_to(t("sign.data_terms"), '/docs/Terms_and_conditions_Blendin.docx')) %>
   </p>
   <div class="form-group" data-no-turbolink>
-      <%= f.submit "Sign up", class: "btn btn-primary btn-lg" %>
+      <%= f.submit "Sign up", class: "button button--white button--gray-shadow" %>
   </div>
-
+  
 <% end %>
 
 <script type="text/javascript" language="JavaScript">
