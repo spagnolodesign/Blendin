@@ -1,14 +1,14 @@
 <% content_for :search do %>
-		<div class="column col-5 search-column">
-			<div id="search-bar" data-turbolinks-permanent>
-	      <%= form_tag '', :method => :get, :"data-turboform" => :true do %>
-	        <%= text_field_tag :tags, params[:t], :id => 'tags-filter', :placeholder => "Search in blendin",  :autofocus => true %>
-	      <% end %>
-	      <script>
-	        var available_tags = <%= @tags %>
-	      </script>
-	    </div>
-    </div>
+	<div class="column col-5 search-column">
+		<div id="search-bar" data-turbolinks-permanent>
+			<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
+			<%= text_field_tag :tags, params[:t], :id => 'tags-filter', :placeholder => "Search in blendin",  :autofocus => true %>
+			<% end %>
+			<script>
+			var available_tags = <%= @tags %>
+			</script>
+		</div>
+	</div>
 <% end %>
 
 <section class="main">
