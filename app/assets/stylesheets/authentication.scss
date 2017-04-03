@@ -6609,7 +6609,12 @@ textarea:focus {
   letter-spacing: 0.05em; }
   .wf-montserrat-n7-active .footer__logo_text {
     font-family: Montserrat, Helvetica, Arial, sans-serif; }
-
+.logo_top{
+  display: block;
+  img{
+    height: 40px;
+  }
+}
 .footer__logo_box {
   display: inline-block;
   height: 30px; }
