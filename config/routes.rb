@@ -12,17 +12,17 @@ Rails.application.routes.draw do
   
   resources :availabilities, only: [:index, :add] do
     collection do
-        get 'me', action: 'index' 
-        post "update", action: 'add'
+      get 'me', action: 'index' 
+      post "update", action: 'add'
     end
   end
 
   resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms, :destroy], param: :token
 
   resources :knoks, only: [:like] do
-	    member do
-	        get "like", to: "knok#like"
-	    end
+    member do
+      get "like", to: "knok#like"
+    end
 	end
 
   root 'home#index'
