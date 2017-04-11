@@ -1,17 +1,18 @@
 <%= content_for :body_class, "chat-view" %>
 
 <%= content_for :aside_left do %>
-  	<aside class="aside aside-1 open-chat" id="aside-panel" >
-			<h6 class="title-line title">
-				<%= t('default.openchat') %> 
-				<button class="toggle-aside-panel cs-btn">Close</button>
-			</h6>
-			<ul class="list">
-	 	 		<li>
-		 	 		<% @subscriptions.each do |subscription| %>
-			 	 		<%= active_link_to chat_room_path(subscription.chat_room.token), class:"clearfix" do %>
-			 	 			<% subscription.members.each do |user| %>
-			 	 				<% user = User.find(user) %>
+<aside class="aside aside-1 open-chat" id="aside-panel" >
+	<h6 class="title-line title">
+		<%= t('default.openchat') %> 
+		<button class="toggle-aside-panel cs-btn">Close</button>
+	</h6>
+	<ul class="list">
+	 		<li>
+ 	 		<% @subscriptions.each do |subscription| %>
+	 	 		<%= active_link_to chat_room_path(subscription.chat_room.token), class:"clearfix" do %>
+	 	 			<% subscription.members.each do |user| %>
+		 	 				<% user = User.find_by_id(user) %>
+			 	 				<% if !user.nil? %>
 				 	 				<% if  user != current_user %>
 						  			<figure class="avatar avatar-lg">
 									  	<img src="<%= user.picture.small_avatar %>">
@@ -20,14 +21,15 @@
 											<h5><%= user.name %></h5>
 						        </div>
 						  		<% end %>
-				  		<% end %>
-				  		<%= link_to 'Delete', chat_room_path(subscription.chat_room.token), method: :delete, data: { confirm: 'Are you sure?' },class:" delete-chat-btn" %>
-				  	<% end %>
-		  		<% end %>
+				  			<% end %>
+			  			<% end %>
+		  		<%= link_to 'Delete', chat_room_path(subscription.chat_room.token), method: :delete, data: { confirm: 'Are you sure?' },class:" delete-chat-btn" %>
+		  	<% end %>
+  		<% end %>
 
-	  		</li>
-			</ul>
-  	</aside>
+		</li>
+	</ul>
+</aside>
 <% end %>
 
 <button class="toggle-aside-panel on-btn">Open rooms ></button>

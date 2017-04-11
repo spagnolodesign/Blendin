@@ -1,5 +1,7 @@
 # app/controllers/registrations_controller.rb
 class RegistrationsController < Devise::RegistrationsController
+	layout 'auth'
+
   private
 
   def sign_up_params

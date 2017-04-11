@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-	before_action :auth_user
+	before_action :authenticate_user!
 	before_filter :allow
 
 	def index

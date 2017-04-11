@@ -1,4 +1,3 @@
-<h1>Log In</h1>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), remote: false) do |f| %>
   <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
   <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
@@ -6,7 +5,8 @@
     <%= f.check_box :remember_me %>
     <%= f.label :remember_me %>
   <% end -%><br />
-  <%= f.submit "Sign in", class: "button button--white button--gray-shadow" %>
+  <%= f.submit "Sign in", class: "button button--blue button--gray-shadow" %>
 <% end %>
-
+<div style="font-size: 0.8em;">
 <%= render "devise/shared/links" %>
+</div>
