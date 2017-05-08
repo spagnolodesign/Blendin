@@ -13,7 +13,15 @@
 
 <section class="main">
 	<div id="center-side" class="users-layout">
-		<p class="title-line no-line">Best matches in <%= current_user.full_street_address %></p>
+		<% if !@best_matches.blank? %>
+		<div class="best_matches_block">
+			<p class="title-line-hp">Best matches in <%= current_user.full_street_address %></p>
+			<div class="cards-list">
+				<%= render partial: "users/user", collection: @best_matches, as: :user  %>
+			</div>
+		</div>
+		<% end %>
+		<p class="title-line no-line">Other people close by you</p>
 		<div class="cards-list" id="users-list" data-turbolinks-partial="users">
 
 			<%= render @users %>

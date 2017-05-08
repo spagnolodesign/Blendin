@@ -2,6 +2,14 @@ Rails.application.routes.draw do
   
   devise_for :users, :controllers => {:registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'sessions'}
   #match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
+  devise_scope :user do
+    authenticated :user do
+      root :to => 'home#index'
+    end
+    unauthenticated :user do
+      root :to => 'registrations#new', as: :unauthenticated_root
+    end
+  end
 
   resources :users, only: [:show, :update, :edit, :destroy] do
     collection do

@@ -34,17 +34,8 @@ class UsersController < ApplicationController
 		if set_current == current_user
 			respond_to do |format|
 	      if @user.update(user_params)
-	      	path = (@user.full_street_address.nil? || @user.full_street_address.empty?) ? location_users_path : root_path
-	        if (@user.about.nil? || @user.about.empty?)
-	        	format.html { redirect_to edit_user_path, notice: 'User was successfully updated.' }
-	        	format.json { render :show, status: :ok, location: @user }
-	        else
-	        	if current_user.available_list.empty?
-	        		format.html { redirect_to me_availabilities_path }
-      			end
-	        	format.html { redirect_to path, notice: 'User was successfully updated.' }
-	        	format.json { render :show, status: :ok, location: @user }
-	      	end
+        	format.html { redirect_to root_path, notice: 'User was successfully updated.' }
+        	format.json { render :show, status: :ok, location: @user }
 	      else
 	        format.html { render :edit }
 	        format.json { render json: @user.errors, status: :unprocessable_entity }

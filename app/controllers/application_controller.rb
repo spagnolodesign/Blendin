@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :unread_messages
 
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(resource)	
   	if resource.sign_in_count == 1 || resource.tag_list.empty?
   		tag_users_path(resource)
   	else	

@@ -5,11 +5,102 @@
 
 
     <ul id="select-tag-list" class="clearfix">
-    		<% tags.each do |tag| %>
-    			<li class="tag-bubble">
-    			    <span><%= tag %></span>
-    			</li>
-    		<% end %>
+        <li class="tag-bubble">
+          <span>Art</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Animals</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Basketball</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Books</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Cooking</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Camping</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Cultures</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Dancing</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Diving</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Drawing</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Family</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Finance</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Friends</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Football</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Geography</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Guitar</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Hiking/walks</span>
+        </li>
+        <li class="tag-bubble">
+          <span>History</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Hip hop</span>
+        </li>
+        <li class="tag-bubble">
+          <span>International relations</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Law</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Medicine</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Movies</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Music</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Photography</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Rap</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Singing</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Sports</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Science</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Swimming</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Travel</span>
+        </li>
+        <li class="tag-bubble">
+          <span>Writing</span>
+        </li>
     </ul>
 
     <%= form_for(@user)do |f| %>
@@ -20,20 +111,6 @@
     <% end %>
   </div>
 </div>
-
-<div class="columns custom-tag-box">
-
-  <div class="column col-12">
-    <h3><%=  t("tag_selection.maketitle") %></h3>
-    <p><%= raw t("tag_selection.makeyours") %></p>
-  </div>
-
-  <div class="column col-3 col-xs-12 input-group">
-      <input type="text" class="form-input input-lg" id="custom-tag-input" placeholder="Add your custom tag">
-      <button class="btn btn-primary input-group-btn btn-lg" id="add-new-tag">Add</button>
-  </div>
-
-  <script>
-    var usertags = "<%= @usertags %>";
-  </script>
-</div>
+<script>
+  var usertags = "<%= @usertags %>";
+</script>

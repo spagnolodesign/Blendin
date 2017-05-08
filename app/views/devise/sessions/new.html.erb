@@ -1,3 +1,4 @@
+<h3 class="features__item_title">Login</h3>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), remote: false) do |f| %>
   <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
   <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>

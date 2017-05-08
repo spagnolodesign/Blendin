@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>    
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic%7CMontserrat:700,400&amp;subset=latin,latin" media="all">
     <%= stylesheet_link_tag 'auth', media: 'all' %>
+    <%= javascript_include_tag 'auth' %>
   </head>
 
   <body>
@@ -18,35 +19,60 @@
     <% end %>
     
     <main class="page_wrapper">
+      <nav class="header header--06">
+          <div class="container header__container">
+            <div class="header__left_box">
+              <%= link_to(root_path, class: "header__logo_box" ) do %>
+                  <%= image_tag("logo-app.png", class: "header__logo_img") %>
+              <% end %>
+            </div>
+            <div class="header__right_box">
+              <ul class="header__menu_list header__item--desktop">
+                <li class="header__menu_item"><a href="http://blendinnow.info" class="header__menu_link header__menu_link--blendin" target="_blank">about</a></li>
+                <li class="header__menu_item">
+                  <%= link_to "Register", new_user_registration_path, class: "header__menu_link header__menu_link--blendin" %>
+                </li>
+                <li class="header__menu_item">
+                <%= link_to "Login", new_user_session_path, class: "button button--blue button--gray-shadow" %>
+                </li>
+              </ul>
+              <button type="button" data-menu-index="06" class="header__burger_button js-open-menu header__item--mobile"></button>
+            </div>
+          </div>
+        </nav>
+
       <div style="background-image: url()" class="features features--06">
+
         <div class="container features__container--06">
           <div class="features__title_box features__title_box--06">
             <h2 class="features__title--06">
-              <%= link_to(root_path, class: "logo_top" ) do %>
-                <%= image_tag("logo-app.png", class: "") %>
-              <% end %> 
-              we are one.
+              Welcome!
             </h2>
-            <span class="features__description features__description--06">We connect newcomers (refugees) with Dutch locals, if you are a newcomer or a Dutch citizen we can connect you by:</span>
+            <span class="features__description features__description--06">We connect newcomers (refugees) with Dutch locals, If your are a newcomer or a Dutch citizen we can connect you in order to bridge the divide. Register now, it's free and only takes 3 minutes.</span>
           </div>
           <div class="row features__row">
-            <div class="col-md-6 col-lg-3 features__item features__item--06">
+           <!--<div class="col-md-6 col-lg-3 features__item features__item--06">
               <div class="features__item_icon_circle features__item_icon_circle--06 features__item_icon_circle--tune-icon--blue features__item_icon_circle--icon--big"></div>
               <h3 class="features__item_title">Messenger</h3><span class="features__item_text features__item_text--06">Chatting with one of our team members. We will ask for some information about yourself and your availability for a meet up!</span><a href="https://www.facebook.com/blendinnow/" class="button button--blue button--gray-shadow">Chat with us</a>
             </div>
             <div class="col-md-6 col-lg-3 features__item features__item--06">
               <div class="features__item_icon_circle features__item_icon_circle--06 features__item_icon_circle--zip-icon--blue features__item_icon_circle--icon--big"></div>
               <h3 class="features__item_title">Phone</h3><span class="features__item_text features__item_text--06">Call us or send a Whatsapp message to get connected<br> by one of our team members. <br>Phone number:<br><a href="tel:+31 6 199978114">+ 31 6 199 978 114</a></span><a href="tel:+31 6 199978114" class="button button--blue button--gray-shadow">Call us</a>
+            </div>-->
+            <div class="col-md-6 col-lg-3 features__item features__item--06">
+              <%= yield %>
             </div>
             <div class="col-md-6 col-lg-3 features__item features__item--06">
-              <div class="features__item_icon_circle features__item_icon_circle--06 features__item_icon_circle--tune-icon features__item_icon_circle--icon--big"></div>
-              <h3 class="features__item_title"><%= link_to "Login", new_user_session_path %> or <%= link_to "Register", new_user_registration_path %></h3>
-                <%= yield %>
+              <h3 class="features__item_title">Getting started</h3>
+              <p><b>1.</b> Make an account and tell us who you are</p>
+              <p><b>2.</b> Wait for the organization to get in touch to introduce you to your best match</p>
+              <p><b>3.</b> log in to our online platform to chat with other Blenders, share stories and ideas!</p>
             </div>
-            <div class="col-md-6 col-lg-3 features__item features__item--06">
-              <div id="leanfund-widget" data-locale="en" data-project-id="10" data-border="3" data-border-color="2080C6" data-background-color="ffffff" data-opacity="0.95" data-button-color="2080C6" data-border-radius="5" data-progress-meter-color="2080C6" data-font-color="424D54" style="margin: 0 auto; max-width: 1000px" ></div>
+            <div class="col-md-6 col-lg-2 features__item features__item--06">
+      
             </div>
-            <div class="col-md-6 col-lg-3 features__item features__item--06">
+            <div class="col-md-6 col-lg-3 features__item features__item--06 move-to-top">
+              <p class="features__description">In order to maintain the Blendin foundation we would like to ask you for a donation, the money you donate will go to our online development and wil only be used to generate as much Blends (meet ups) as possible. Help us grow! </p>
               <div id="leanfund-widget" data-locale="en" data-project-id="10" data-border="3" data-border-color="2080C6" data-background-color="ffffff" data-opacity="0.95" data-button-color="2080C6" data-border-radius="5" data-progress-meter-color="2080C6" data-font-color="424D54" style="margin: 0 auto; max-width: 1000px" ></div>
             </div>
           </div>
@@ -86,6 +112,24 @@
             </div>
           </div>
         </div>
+        <nav data-menu-index="06" class="menu menu--06 js-menu">
+        <div class="menu__container">
+          <button type="button" class="menu__closer js-close-menu">close</button>
+          <div class="menu__box">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="http://blendinnow.info" class="menu__link" target="_blank">about</a></li>
+                <li class="menu__item">
+                  <%= link_to "Register", new_user_registration_path, class: "menu__link" %>
+                </li>
+                <li class="menu__item">
+                <%= link_to "Login", new_user_session_path, class: "menu__link" %>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <div class="js-overlay js-close-navigation js-close-menu overlay"></div>
+
         <div class="footer__description_box--05">
           <div class="container footer__container"><span class="footer__copyright footer__copyright--05">© Blendin, 2017</span></div>
         </div>

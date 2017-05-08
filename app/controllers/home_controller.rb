@@ -3,29 +3,12 @@ class HomeController < ApplicationController
 	before_filter :allow
 
 	def index
-		#@tags = (params[:t].to_s.blank?) ? current_user.tag_list : params[:t].split(",")
-		# @users = User.near([current_user.latitude, current_user.longitude], 20)
-		# 							.tagged_with(@tags, :any => true)
-		# 							.where(local: !current_user.local)
-		# 							.where.not(id: current_user.id)
-		# 							.order("updated_at desc")
-		# 							.paginate(:page => params[:page])
-		if current_user.available_list.empty?
-			respond_to do |format|
-	  			format.html { 
-	  				redirect_to me_availabilities_path, 
-	  				notice: 'Please update your availability before go further and meet with awesome people.' 
-	  			}
-  			end
-		end
-
 		@tags = User.all.tag_counts_on(:tags).as_json(only: [:name]).to_json.html_safe
     	#@tag_list = User.tag_counts_on(:tags).order('count desc')
 
-		@best_matches = current_user.find_related_available
-						 .near([current_user.latitude, current_user.longitude], 20)
-						 .where(local: !current_user.local).order("created_at").order("RANDOM()").limit(3)
-
+		# @best_matches = current_user.find_related_available
+		# 				 .near([current_user.latitude, current_user.longitude], 20)
+		# 				 .where(local: !current_user.local).order("created_at").order("RANDOM()").limit(3)
 		@users = User.near([current_user.latitude, current_user.longitude], 20)
 									.where(local: !current_user.local)
 									.where.not(id: current_user.id).order("created_at")

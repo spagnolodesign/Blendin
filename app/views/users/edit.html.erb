@@ -1,4 +1,6 @@
 <%= form_for(@user, :html => {:class => 'columns profile' }) do |f| %>
+
+
 		<div class="column col-3 col-lg-12">
 			<div class="edit-image">
 	    	<img class="rounded user-avatar" id="preview" src="<%= @user.avatar.large_avatar %>">
@@ -22,7 +24,7 @@
 		    </div>
 	  	<% end %>
 		 	<div class="form-group inline">
-        	<%= f.label :username, class: "form-label" %>
+        	<%= f.label "Name and Surname", class: "form-label" %>
           <%= f.text_field :username, class: "form-input input-lg" %>
       </div>
 			<div class="form-group inline right">
@@ -30,6 +32,14 @@
          	<%= f.text_field :email, class: "form-input input-lg" %>
 	    </div>
 	    <div class="clearfix"></div>
+	     	<%= f.label "Are you?" %> 
+     	<br>
+     	<div class="form-group form-radio-btn clearfix">
+		    <%= f.radio_button :local, true, :class => "for_local" %>
+		    <%= f.label :local, 'Local', :value => true, class: "left" %>
+		    <%= f.radio_button :local, false, :class => "for_new" %> 
+		    <%= f.label :local, 'New in NL', :value => false, class: "right" %>
+	  	</div>
 	    <div class="form-group">
 	        <%= f.label :full_street_address, class: "form-label" %>
 	    		<%= f.text_field :full_street_address, placeholder: "In which city do you live?", class: "select-city" %>
@@ -62,16 +72,26 @@
 
         })();
       </script>
-	    <div class="form-group">
-	        <%= f.label :about, class: "form-label" %>
-					<%= f.text_area :about, :maxlength => 512, :size => 100, placeholder: "Write here something you would like to do in your life.", class:"form-input input-text-area" %>
-			</div>
 			<div class="form-group">
-          <%= f.label :phone, class: "form-label" %>
+        <%= f.label :gender, class: "form-label" %>
+        <label class="form-radio">
+       		<%= f.radio_button :gender, 'm' %> 
+					<i class="form-icon"></i>
+					<%= f.label :gender, 'Male', :value => 'm' %>
+				</label>
+				<label class="form-radio">
+       		<%= f.radio_button :gender, 'f' %> 
+					<i class="form-icon"></i>
+					<%= f.label :gender, 'Female', :value => 'f' %>
+				</label>
+	    </div>
+			<div class="form-group">
+          <%= f.label "Phone Number", class: "form-label" %>
+          <i></i>
           <%= f.text_field :phone, class: "form-input input-lg" %>
 	    </div>    
 	    <div class="form-group">
-	        <%= f.label :job, class: "form-label" %>
+	        <%= f.label "Work experience/academic background", class: "form-label" %>
 	        <%= f.text_field :job, class: "form-input input-lg" %>
 	    </div>
 	    <div class="form-group">
@@ -86,27 +106,6 @@
           <%= f.label :country, class: "form-label" %>
           <%= f.country_select :country, {}, {required: 'true', autofocus: 'true', class: 'form-select select-lg'} %>
 	    </div>    
-	    <div class="form-group">
-        <%= f.label :gender, class: "form-label" %>
-        <label class="form-radio">
-       		<%= f.radio_button :gender, 'm' %> 
-					<i class="form-icon"></i>
-					<%= f.label :gender, 'Male', :value => 'm' %>
-				</label>
-				<label class="form-radio">
-       		<%= f.radio_button :gender, 'f' %> 
-					<i class="form-icon"></i>
-					<%= f.label :gender, 'Female', :value => 'f' %>
-				</label>
-	    </div>
-     	<%= f.label "Are you?" %> 
-     	<br>
-     	<div class="form-group form-radio-btn clearfix">
-		    <%= f.radio_button :local, true, :class => "for_local" %>
-		    <%= f.label :local, 'Local', :value => true, class: "left" %>
-		    <%= f.radio_button :local, false, :class => "for_new" %> 
-		    <%= f.label :local, 'New in NL', :value => false, class: "right" %>
-	  	</div>
 	  	<br>
 			<%= f.submit t('btn.confirm'), class: "btn btn-primary btn-lg float-right" %>
 		</div>

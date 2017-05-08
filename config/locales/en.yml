@@ -17,7 +17,7 @@ en:
     openchat: "Open chat"
   tag_selection:
     title: "Tell us what inspires you!"
-    subtitle: "Choose at least three of these main interests."
+    subtitle: "Choose at least three boxes! The more you fill in the better the match!"
     maketitle: "Don’t stop there!"
     makeyours: "Please name any kind of interest you like.<br />Make sure it is written correctly in English so we can suggest people based on your interests and you location."
   nav:
