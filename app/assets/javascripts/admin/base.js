@@ -1,5 +1,5 @@
 //= require admin/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min
-//= require admin/lib/countUp/countUp
+//= require admin/lib/countup/countUp
 //= require Chart.bundle
 //= require chartkick
 //= require admin/main

@@ -4,17 +4,17 @@ class Admin::AccountController < Admin::AdminController
 		@users_grid = UsersGrid.new(params[:users_grid]) do |scope|
 	      scope.page(params[:page])
 	    end
-		
-		@users_grid_excel = UsersGrid.new(params[:users_grid])
+
+		@users = User.all
 
 		respond_to do |format|
 			format.html
-			format.xlsx 
+			format.xlsx
 		end
 	end
 
 
-private 
+private
 
 	def user_params
 		params.require(:user).permit(:username, :email)

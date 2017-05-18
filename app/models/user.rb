@@ -9,10 +9,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
-  
+
   #Messages and Chatroom
   has_many :messages, dependent: :destroy
-  
+
   has_many :subscriptions
   has_many :chat_rooms, through: :subscriptions
 
@@ -25,8 +25,8 @@ class User < ApplicationRecord
   acts_as_reader
 
   geocoded_by :full_street_address   # can also be an IP address
-  after_validation :geocode      
-    
+  after_validation :geocode
+
   mount_uploader :avatar, AvatarUploader
 
   validates :username, length: { maximum: 25 }, presence: true
@@ -75,7 +75,7 @@ class User < ApplicationRecord
   end
 
   def country_name
-    if (country.blank?) 
+    if (country.blank?)
       return
     end
     cname = ISO3166::Country[country]
@@ -90,5 +90,21 @@ class User < ApplicationRecord
     now = Time.now.utc.to_date
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
-  
+
+  def local_label
+    if (self.local)
+      "Local"
+    else
+      "Refugee"
+    end
+  end
+
+  def phone_strip
+    if phone.nil?
+      "no-phone"
+    else
+      phone.strip
+    end
+  end
+
 end
