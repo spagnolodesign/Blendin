@@ -1,23 +1,8 @@
-<% content_for :search do %>
-	<div class="column col-5 search-column">
-		<div id="search-bar" data-turbolinks-permanent>
-			<%= form_tag '', :method => :get, :"data-turboform" => :true do %>
-			<%= text_field_tag :tags, params[:t], :id => 'tags-filter', :placeholder => "Search in blendin",  :autofocus => true %>
-			<% end %>
-			<script>
-			var available_tags = <%= @tags %>
-			</script>
-		</div>
-	</div>
-<% end %>
-
 <section class="main">
 	<div id="center-side" class="users-layout">
-		<p class="title-line no-line">Best matches in <%= current_user.full_street_address %></p>
+		<p class="title-line no-line">Best 10 matches in <%= current_user.full_street_address %> ready to meet-up!</p>
 		<div class="cards-list" id="users-list" data-turbolinks-partial="users">
-
 			<%= render @users %>
 		</div>
-		<%= will_paginate @users %>
 	</div>
 </section>

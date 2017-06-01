@@ -1,12 +1,15 @@
 <div class="card">
     <div class="card-image">
     	<%= link_to user, remote: true do %>
-        <img class="img-responsive" src="<%= user.avatar.large_avatar %>">
+        <img class="img-responsive floated" src="<%= user.avatar.large_avatar %>">
       <% end %>
     </div>
-    <div class="card-header">
-        <%= link_to t('btn.noc'), chat_rooms_path(user: user), class:"btn btn-sm float-right" %>
-        <h4 class="card-title"><%= truncate(user.name, length: 12) %></h4>
-        <h6 class="card-meta"><%= user.country_name %></h6>
+    <div class="card-header detail-card">
+        <h4 class="card-title"><%= truncate(user.name, length: 17) %></h4>
+        <%= render partial: "tags/list_short", locals: {tags: user.tag_list} %>
+        <div class="pos-button">
+          <%= link_to 'Chat', chat_rooms_path(user: user), class:"btn btn-sm" %>
+          <%= link_to 'Connect', connect_user_knoks_path(user), class:"btn btn-sm btn-primary" %>
+        </div>
     </div>
 </div>

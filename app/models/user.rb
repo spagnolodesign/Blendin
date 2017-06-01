@@ -35,6 +35,10 @@ class User < ApplicationRecord
   validates :job, length: { maximum: 25 }
   validates :languages, length: { maximum: 255 }
 
+  scope :for_age_range, -> min, max {
+    where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
+  }
+
   self.per_page = 9
 
   def name

@@ -5,7 +5,7 @@ class UsersGrid
   # Scope
   #
   scope do
-    User
+    User.all.order('created_at DESC')
   end
 
   #

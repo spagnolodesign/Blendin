@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users, :controllers => {:registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'sessions'}
   #match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
   devise_scope :user do
@@ -14,24 +14,24 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :update, :edit, :destroy] do
     collection do
       get :tag, action: 'update_tags'
-      get :location, action: 'update_location' 
+      get :location, action: 'update_location'
     end
+    resources :knoks, only: [:like, :connect] do
+      collection do
+        get "like", to: "knok#like"
+        get 'connect', to: "knok#connect"
+      end
+  	end
   end
-  
+
   resources :availabilities, only: [:index, :add] do
     collection do
-      get 'me', action: 'index' 
+      get 'me', action: 'index'
       post "update", action: 'add'
     end
   end
 
   resources :chat_rooms, path: 'rooms', only: [:show, :index, :no_rooms, :destroy], param: :token
-
-  resources :knoks, only: [:like] do
-    member do
-      get "like", to: "knok#like"
-    end
-	end
 
   root 'home#index'
 
@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :dashboard, only: [:index]
     resources :account, only: [:index]
+    resources :blend, only: [:index]
   end
 
 end

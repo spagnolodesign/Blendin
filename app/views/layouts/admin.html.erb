@@ -4,16 +4,15 @@
     <title>Blendin</title>
     <meta name="description" content="Berry helps you to connect with people that share your same interests :)">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />
-
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    
     <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+
   <div class="be-wrapper">
+
   <nav class="navbar navbar-default navbar-fixed-top be-top-header">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -72,6 +71,9 @@
                   <li>
                     <%= link_to "Accounts", admin_account_index_path, data: { no_turbolink: false } %>
                   </li>
+                  <li>
+                    <%= link_to "Blend requests", admin_blend_index_path, data: { no_turbolink: false } %>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -82,7 +84,7 @@
   </div>
   <div class="be-content">
     <div class="page-head">
-      <%= yield :title_page %>      
+      <%= yield :title_page %>
     </div>
     <div class="main-content container-fluid">
     <%= yield %>
