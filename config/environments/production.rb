@@ -4,7 +4,7 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  config.web_socket_server_url = "wss://blendinme.herokuapp.com/cable" 
+  config.web_socket_server_url = "wss://blendinme.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://blendinme.herokuapp.com', 'http://blendinme.herokuapp.com','http://www.blendinnow.nl']
   config.action_mailer.default_url_options = { :host => 'http://www.blendinnow.nl' }
   config.action_mailer.asset_host = 'https://blendinme.herokuapp.com'
@@ -14,7 +14,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
+  config.force_ssl = true
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
