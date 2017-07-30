@@ -29,7 +29,7 @@ gem "mini_magick"
 gem 'carrierwave'
 gem 'compass'
 gem 'will_paginate'
-
+gem 'webpacker'
 gem 'axlsx', '2.1.0.pre'
 gem 'axlsx_rails'
 

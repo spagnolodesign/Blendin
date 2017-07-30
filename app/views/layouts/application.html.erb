@@ -7,7 +7,7 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />
 
     <%= csrf_meta_tags %>
-    
+
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -32,7 +32,7 @@
   </head>
 
   <body class="<%=  yield (:body_class) %>">
-          
+
   <div class="wrapper container grid-960">
 
     <header class="header">
@@ -42,14 +42,14 @@
                 <%= image_tag("logo-app.png", class: "logo-app") %>
             <% end %>
           </div>
-          
+
           <%= yield :search %>
           <% if user_signed_in? %>
             <%= render partial: "nav/main" %>
           <% end %>
       </div>
     </header>
-    
+
     <%= yield :aside_left %>
 
     <%= yield %>
@@ -57,7 +57,6 @@
 
     <footer class="footer">
       <button id="drop-footer">Open</button>
-
       <div id="content-drop-footer" class="sub-nav">
         <ul>
             <li><a href="http://blendinnow.info" target="_blank">About Blendin</a></li>
@@ -65,7 +64,6 @@
             <li><a href="https://www.iubenda.com/privacy-policy/7951305/cookie-policy" target="_blank">Cookie Policy</a></li>
         </ul>
       </div>
-
     </footer>
 
   </div>
@@ -77,7 +75,7 @@
   </div>
 
   <span class="info-overlay" onclick="openNav()">?</span>
-  
+
   <div id="myNav" class="o-menu">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="o-menu-content">
