@@ -70,7 +70,7 @@
       .card{
           margin: 0.5rem 0;
           min-height: auto;
-          width: 49.1%;
+          width: 100%;
       }
       .detail-card{
         float: none;
@@ -90,7 +90,7 @@
       }
       .listed-tags{
         overflow: hidden;
-        height: 58px;
+        height: 67px;
       }
       .btn.btn-sm {
         width: 40%;
@@ -99,7 +99,7 @@
         height: 3rem;
         line-height: 1.8rem;
         padding: .4rem 1rem;
-        margin: 1em 0;
+        margin: 0.1em 0;
       }
   }
 }
