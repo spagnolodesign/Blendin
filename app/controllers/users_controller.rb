@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 	def index
 		@user = current_user
 	end
-	
+
 	def update_tags
 		@usertags = @user.tag_list
 		@mostused = User.tag_counts_on(:tags).limit(32)
@@ -45,15 +45,15 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		
+
 	end
 
 	def destroy
 		@subscriptions = Subscription.where(user_id: @user.id)
-		
+
 		#Delete Open ChatRoom
 		@subscriptions.each do |sub|
-			@room_id = sub.chat_room_id	
+			@room_id = sub.chat_room_id
 			@all_users_subs = Subscription.where(chat_room_id:@room_id)
 			@all_users_subs.delete_all
 		end

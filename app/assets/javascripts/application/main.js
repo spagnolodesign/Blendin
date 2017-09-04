@@ -25,14 +25,14 @@ $(document).on('turbolinks:load', function() {
     slidePanel();
     openPanelAside();
     sideFilterJS();
-    
+
     openNav();
     closeNav();
 
 });
 function openNav() { document.getElementById("myNav").style.height = "100%"; }
 function closeNav() { document.getElementById("myNav").style.height = "0%"; }
-    
+
 
 function sideFilterJS(){
     if ($('#filter-column').length != 1) return;
@@ -104,7 +104,7 @@ function paginateMessages(){
 }
 
 function dropdownAccount() {
-    
+
     var dropAccount;
     dropAccount = new Drop({
       target: document.getElementById("drop-account"),
@@ -119,7 +119,7 @@ function dropdownAccount() {
 }
 
 function dropdownFooter() {
-    
+
     var dropAccount;
     dropAccount = new Drop({
       target: document.getElementById("drop-footer"),
@@ -162,10 +162,10 @@ function convertToRGB (hex) {
 function generateColor(colorStart,colorEnd,colorCount){
 
     // The beginning of your gradient
-    var start = convertToRGB (colorStart);    
+    var start = convertToRGB (colorStart);
 
     // The end of your gradient
-    var end   = convertToRGB (colorEnd);    
+    var end   = convertToRGB (colorEnd);
 
     // The number of colors to compute
     var len = colorCount;
@@ -174,21 +174,21 @@ function generateColor(colorStart,colorEnd,colorCount){
     var alpha = 0.0;
 
     var saida = [];
-    
+
     for (i = 0; i < len; i++) {
         var c = [];
         alpha += (1.0/len);
-        
+
         c[0] = start[0] * alpha + (1 - alpha) * end[0];
         c[1] = start[1] * alpha + (1 - alpha) * end[1];
         c[2] = start[2] * alpha + (1 - alpha) * end[2];
 
         saida.push(convertToHex (c));
-        
+
     }
-    
+
     return saida;
-    
+
 }
 function closeOverlay(){
     $('.close-btn').click(function(){
@@ -207,7 +207,6 @@ function initAjaxFormRequest (){
 function initNocAjaxRequest (){
     $(".noc-btn").on("ajax:success", function(e, data, status, xhr) {
         var event = xhr.responseJSON.event;
-        console.log(event)
         $(e.currentTarget).hide();
         if (event == "is_match"){
             showMatchModal(data.data.token);
@@ -227,10 +226,10 @@ function initNocAjaxRequest (){
 }
 
 function showModalAvatar(){
-   
+
     $(".avatar-modal").on("click", function(e) {
         var imgPath = e.currentTarget.dataset.image;
-        
+
         swal({
           imageUrl: imgPath,
           showConfirmButton: false,
@@ -305,12 +304,11 @@ function initGrid() {
     });
     grid.mount();
 }
-  
+
 // mount
 function updateGrid(e) {
     if ($('.cards').length != 1) return;
     var width = window.innerWidth;
-    console.log(width)
     if (width <= '480') {
       grid.props.gutter = 4
     }else if(width >= '700'){
@@ -338,11 +336,11 @@ function scrollHeader() {
 
     function hasScrolled() {
         var st = $(this).scrollTop();
-        
+
         // Make sure they scroll more than delta
         if(Math.abs(lastScrollTop - st) <= delta)
             return;
-        
+
         // If they scrolled down and are past the navbar, add class .nav-up.
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight){
@@ -354,7 +352,7 @@ function scrollHeader() {
                 $('header').removeClass('nav-up').addClass('nav-down');
             }
         }
-        
+
         lastScrollTop = st;
     }
 }
@@ -399,21 +397,24 @@ function tagSelection(){
 
     if (tagList.length != 1) return;
 
+    if (usertags != ""){
     selectedList = usertags.split(',').map(function(item) {
                       return item.trim();
                     });
+    }else {
+      selectedList = [];
+    }
 
     tagList.on( "click", "li", getVal);
     addCustomTagBtn.on( "click", createNewTag);
     selectMyTags();
-    
+
     function getVal(e){
         var el = $(e.currentTarget);
         var tag = el.text().trim();
-        console.log(tag)
         el.toggleClass('active');
         addToList(selectedList, tag);
-    }   
+    }
 
     function addToList(a, v) {
         var i = a.indexOf(v);
@@ -438,11 +439,12 @@ function tagSelection(){
 
     function insertIntoInput(){
         userTagsInput.val(selectedList);
+        console.log(userTagsInput.val())
         if (selectedList.length >= 3){
             submitBtn.addClass('anim-next');
         }
     }
-    
+
     function selectMyTags() {
 
         tagList.find('li').filter(function( index, el ) {
@@ -466,7 +468,7 @@ function initTagSelection() {
     tagList = $('#select-tag-list');
     btnAdd = $('#add-new-tag');
     if (tagList.length == 0) return;
-    
+
     tagList.on( "click", "li:not('.insert')", storeValue);
     // tagList.on( "click", "button", addBubble);
     // tagList.on("keyup", "#new-tag-value", setBubble);
@@ -474,7 +476,7 @@ function initTagSelection() {
 
     input = $('#user_tag_list');
     submit = $('#btn-add-tag');
-    
+
     userTagList = usertags.replace(/\s/g, '').split(',');
 
     init();
@@ -539,4 +541,3 @@ function initTagSelection() {
         }
     }
 }
-

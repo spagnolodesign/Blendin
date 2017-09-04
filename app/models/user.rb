@@ -30,7 +30,8 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   validates :username, length: { maximum: 25 }, presence: true
-  validates :phone, length: { maximum: 15 }, presence: true, on: :update
+  validates :phone, length: { maximum: 15 }, presence: true, :unless => :skip_phone
+
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, length: { maximum: 35 }
   validates :job, length: { maximum: 25 }
   validates :languages, length: { maximum: 255 }
@@ -110,6 +111,10 @@ class User < ApplicationRecord
     else
       phone.strip
     end
+  end
+
+  def skip_phone
+    phone.nil?
   end
 
 end
