@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 		@users = User
 							.near([current_user.latitude, current_user.longitude], 20)
 							.where(local: !current_user.local)
-							.for_age_range(current_user.age - 2, current_user.age + 2)
+							.for_age_range(current_user.age - 5, current_user.age + 5)
 							.tagged_with(current_user.tags, :any => true)
 							.where.not(id: current_user.id).order("RANDOM()").last(10)
 		if @users.empty?
