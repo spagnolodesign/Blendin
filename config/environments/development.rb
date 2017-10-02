@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  
-  config.action_cable.allowed_request_origins = [/https?:\/\/localhost:\d+/,'127.0.0.1:3000', '0.0.0.0:3000']
+
+  config.action_cable.allowed_request_origins = [/https?:\/\/localhost:\d+/,'127.0.0.1:3000', 'localhost:3000']
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -28,13 +28,13 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_cable.allowed_request_origins = ['http://0.0.0.0:3000','10.0.2.2', '0.0.0.0', '127.0.0.1']
+  config.action_cable.allowed_request_origins = ['http://localhost:3000','10.0.2.2', '0.0.0.0', '127.0.0.1']
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
 
-  config.action_mailer.asset_host = 'http://0.0.0.0:3000'
+  config.action_mailer.asset_host = 'http://localhost:3000'
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -51,9 +51,9 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # Devise
-  config.action_mailer.default_url_options = { host: '0.0.0.0', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "0.0.0.0", :port => 1025 }
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
@@ -61,7 +61,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.file_watcher = ActiveSupport::FileUpdateChecker
-  
+
   ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
     html_tag.html_safe
   end

@@ -3,7 +3,7 @@
 <%= content_for :aside_left do %>
 <aside class="aside aside-1 open-chat" id="aside-panel" >
 	<h6 class="title-line title">
-		<%= t('default.openchat') %> 
+		<%= t('default.openchat') %>
 		<button class="toggle-aside-panel cs-btn">Close</button>
 	</h6>
 	<ul class="list">
@@ -36,7 +36,6 @@
 
 <section class="main message-layout">
 	<div id="center-side" class="chat-messages-layout">
-		<%= will_paginate @messages %>
 		<div id="messages" class="clearfix" data-chat-room-id="<%= @chat_room.id %>">
 		  <%= render @messages.reverse %>
 		</div>

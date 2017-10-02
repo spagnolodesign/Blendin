@@ -1,15 +1,15 @@
 class ChatRoomsController < ApplicationController
   before_action :authenticate_user!
 
-  def index  
+  def index
     if params[:user]
-      user_to_chat_with = User.find(params[:user]) 
+      user_to_chat_with = User.find(params[:user])
       token = generate_subscription(current_user, user_to_chat_with)
       @chat_rooms = current_user.chat_rooms
       redirect_to chat_room_path(token)
     else
       subscription = Subscription.where("members @> ?::text[]", '{'"#{current_user.id}"'}').last
-      
+
       if !subscription.nil?
         token = ChatRoom.find(subscription.chat_room_id).token
         redirect_to chat_room_path(token)
@@ -47,8 +47,8 @@ class ChatRoomsController < ApplicationController
   def show
     @subscriptions = Subscription.where("members @> ?::text[]", '{'"#{current_user.id}"'}')
     @chat_room = ChatRoom.where(token: params[:token]).first
-    @messages = Message.where(chat_room_id: @chat_room).order('created_at DESC').paginate(:page => params[:page])
-        
+    @messages = Message.where(chat_room_id: @chat_room).order('created_at DESC')
+
     #New message for form
     @message = Message.new
 
@@ -58,11 +58,11 @@ class ChatRoomsController < ApplicationController
 
   private
 
-  def generate_subscription(a, b) 
+  def generate_subscription(a, b)
 
     old_subscription = Subscription.where("members @> ?::text[]", '{'"#{a.id},#{b.id}"'}').first
-    
-    if !old_subscription.nil? 
+
+    if !old_subscription.nil?
       token = ChatRoom.find(old_subscription.chat_room_id).token
       return token
     else

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+   resources :users
+   resources :knoks
+  
+   root to: "users#index"
+ end
+
+
   devise_for :users, :controllers => {:registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'sessions'}
   #match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
   devise_scope :user do
@@ -37,11 +45,5 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
-  ##ADMIN
-  namespace :admin do
-    resources :dashboard, only: [:index]
-    resources :account, only: [:index]
-    resources :blend, only: [:index]
-  end
 
 end

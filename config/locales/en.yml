@@ -10,7 +10,7 @@ en:
     data_href: "Data Policy"
     data_terms: "Terms"
     general: "Blendin is about bringing people together. We have seen a growing gap between newcomers and locals in Dutch society and we wish to bridge this gap. That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!"
-    
+
   default:
     interests: "Interests"
     mostused: "Filter by most used:"
@@ -38,6 +38,9 @@ en:
     no_title: "No match available."
     no_sub: "Start blendin'"
   activerecord:
+    models:
+      knok:
+        other: "Match request"
     attributes:
       user:
         email: "Email address"

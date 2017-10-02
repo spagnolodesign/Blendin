@@ -40,7 +40,6 @@ class User < ApplicationRecord
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
   }
 
-  self.per_page = 9
 
   def name
     username.capitalize.split(",")[0]
