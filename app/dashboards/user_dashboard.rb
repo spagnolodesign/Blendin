@@ -60,7 +60,7 @@ class UserDashboard < Administrate::BaseDashboard
     :phone,
     :full_street_address,
     :job,
-    :tags,
+    :local,
     :created_at,
   ].freeze
 
