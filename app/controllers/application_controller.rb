@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :terms_and_conditions])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :full_street_address])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :full_street_address, :birthday, :gender, :about, :job, :local, :languages, :country, :education])
   end
 
 end
+# This file is auto-generated from the current state of the database. Instead
