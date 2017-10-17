@@ -17,8 +17,9 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
-  validates :username, length: { maximum: 25 }, presence: true
+  validates :username, length: { maximum: 26 }, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, length: { maximum: 35 }
+
 
   scope :for_age_range, -> min, max {
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
@@ -47,6 +48,7 @@ class User < ActiveRecord::Base
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
 
+
   def blended?(user)
     user = User.find(user.id)
     i_blend = Blend.where(sender: self, recipient:user)
@@ -59,7 +61,6 @@ class User < ActiveRecord::Base
     else
       return false
     end
-
   end
 
 
