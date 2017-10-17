@@ -1,0 +1,66 @@
+.Button{
+  background: #FFFFFF;
+  border: 2px solid #74CCD1;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #74CCD1;
+  font-size: 1.1em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  outline: none;
+  padding: 0.9em 1.3em;
+  cursor: pointer;
+}
+
+.Button:hover{
+  background: #74CCD1;
+  color: #FFF;
+}
+
+.CenterAling{
+  margin: 0 auto;
+  display: block;
+}
+
+.BlendBtn{
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+  background: #74CCD1;
+  color:#FFF;
+}
+.Button:hover{
+  background: #6fdce3;
+  color: #FFF;
+}
+
+.WhatsApp{
+  width: 100%;
+  display: block;
+  color: #FFF;
+  background: #25d366;
+  border: 2px solid #25d366;
+  text-decoration:none;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.WhatsApp:hover{
+  background: #1bcd5d;
+}
+
+.Close {
+  color: #999999;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+  font-size: 2em;
+  border: 0;
+  background: transparent;
+}
+.Close:after {
+  content: '✖'; /* UTF-8 symbol */
+}

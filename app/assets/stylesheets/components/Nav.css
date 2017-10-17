@@ -1,0 +1,60 @@
+.topnav {
+  overflow: hidden;
+  float: right;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-decoration: none;
+  color: #585858;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  opacity: 0.9;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+
+@media only screen and (max-width: 64em) {
+  .responsive {
+    width: 100%;
+    position: relative;
+  }
+  .topnav a{
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding: 1em;
+    margin: -1em -0.5em;
+  }
+  .responsive .topnav {
+    width: 100% !important;
+    border-bottom: 1px solid grey;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  .responsive .topnav a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive .topnav a {
+    float: none;
+    padding-left: 0;
+    display: block;
+    text-align: left;
+  }
+}

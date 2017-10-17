@@ -1,23 +1,42 @@
+<div class="Profile">
+  <div class="sm-col-8 px2 mx-auto clearfix">
+		<div class="sm-col sm-col-4">
+      <img src="<%= @user.avatar.medium_avatar.url %>" class="rounded avatar" />
+      <div class="clearfix">
+        BLEND OPTIONS
+      </div>
+    </div>
+		<div class="sm-col sm-col-8 px2">
+      <div class="ProfileInfo">
+        <h2>I'm <%= @user.name.capitalize %></h2>
+        <p><%= @user.job.capitalize %></p>
+        <p class><%= @user.age %> years old.</p>
+					<% if @user.local %>
+						<span class="label-local">LOCAL</span>
+					<% else %>
+						<span class="label-local">NEW COMER</span>
+					<% end %>
+      </div>
 
-<div class="columns profile">
-	<div class="column col-3 col-lg-12">
-    <img class="rounded user-avatar" src="<%= @user.avatar.large_avatar %>">
-    <p class="title-line">Interests</p>
-    <%= render partial: "tags/list", locals: {tags: @user.tag_list} %>
-	</div>
-	<div class="column col-9 col-lg-12">
-		<h3 class="username">
-			<%= @user.username %>
-			<span class="location"><%= @user.full_street_address %></span>
-		</h3>
-		<h6 class="job-title"><%= @user.job %></h6>
-		<b>About:</b>
-		<p><%= @user.about %></p>
-		<b>Age:</b>
-		<p><%= @user.age %></p>
-		<b>Languages:</b>
-		<p><%= @user.languages %></p>
-		<b>Country:</b>
-		<p><%= @user.country_name %></p>
+      <section class="Detail">
+        <h3>My study:</h3>
+        <p><%= @user.education %></p>
+      </section>
+
+      <section class="Detail">
+        <h3>I like:</h3>
+      </section>
+
+			<section class="Detail">
+				<h3>I Speak:</h3>
+				<p><%= @user.languages %></p>
+			</section>
+
+      <section class="Detail">
+        <h3>About me:</h3>
+        <p><%= @user.about %></p>
+      </section>
+
+    </div>
 	</div>
 </div>

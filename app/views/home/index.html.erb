@@ -1,8 +1,14 @@
-<section class="main">
-	<div id="center-side" class="users-layout">
-		<p class="title-line no-line">Best 10 matches in <%= current_user.full_street_address %> ready to meet-up!</p>
-		<div class="cards-list" id="users-list" data-turbolinks-partial="users">
-			<%= render @users %>
-		</div>
-	</div>
+<section class="Cards CardsContainer">
+  <% @users.each do |user| %>
+    <%= link_to user do %>
+      <div  class="CardWrap">
+        <div class="Card">
+          <div class="CardBg" style="background-image:url(<%= user.avatar.medium_avatar  %>)"></div>
+          <div class="CardInfo flex items-end">
+            <h1><%= user.name %></h1>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </section>

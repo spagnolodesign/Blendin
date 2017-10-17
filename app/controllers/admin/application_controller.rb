@@ -7,7 +7,7 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
     before_action :authenticate_admin
-    before_filter :default_params
+    before_action :default_params
 
     def authenticate_admin
       if current_user

@@ -1,0 +1,25 @@
+.Header {
+  background: #FFF;
+  margin-bottom: 2em;
+}
+
+.Header .Logo{
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  background: #FFF url('/assets/logo-app-small.png') no-repeat top left;
+  background-size: 100%;
+  width: 35px;
+  height: 42px;
+
+}
+
+.Header .Logo img{
+  width: 100%;
+}
+
+@media only screen and (min-width: 64em) {
+  .Blendin-logo{
+    width: 300px;
+  }
+}

@@ -1,0 +1,86 @@
+.Profile .avatar{
+  width: 100%;
+}
+
+.ProfileInfo h2{
+  font-family: 'Crete Round', serif;
+  font-size: 2em;
+  margin: 0.5em 0 0em 0;
+  font-weight: normal;
+}
+
+.ProfileInfo p{
+  font-size: 1.1em;
+  margin: 0em 0;
+  color: #4e4e4e;
+}
+
+.label-local{
+  border-radius: 2em;
+  background: #ffa428;
+  padding: .3em 1em;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  margin-left: -0.5em;
+  display: inline-block;
+}
+
+.Detail {
+  border-top: 1px solid #eee;
+  padding: 1em 0;
+}
+.Detail h3 {
+  margin: 0 0 0.3em 0;
+  font-family: 'Crete Round', serif;
+  font-size: 1.1em;
+  color: #4e4e4e;
+  font-weight: normal;
+}
+.Detail p {
+  margin: 0.5em 0 0 0;
+}
+
+.Bubble {
+  position: relative;
+  background: #74ccd1;
+  border-radius: .4em;
+  padding: 0.5em;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 1px;
+  min-height: 2em;
+}
+
+.Bubble:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 13px solid transparent;
+	border-bottom-color: #74ccd1;
+	border-top: 0;
+	margin-left: -13px;
+	margin-top: -13px;
+}
+.EditProfile{
+  margin: 0 1em 4em 1em;
+}
+.EditProfile .Button{
+  margin: 1em 0;
+}
+@media only screen and (min-width: 40em) {
+  .ProfileInfo {
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+  .Detail {
+    border-top: 0px;
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+}

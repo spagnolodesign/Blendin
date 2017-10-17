@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	before_action :authenticate_user!
-	before_filter :allow
+	before_action :allow
 
 	def index
 		@users = User

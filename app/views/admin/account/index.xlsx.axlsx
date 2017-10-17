@@ -1,7 +1,0 @@
-wb = xlsx_package.workbook
-wb.add_worksheet(name: "Accounts") do |sheet|
-  sheet.add_row ["Email", "Name", "Phone", "Age", "Address", "Gender", "Job", "Local", "Iterests"]
-  @users.each do |user|
-    sheet.add_row [user.email, user.name, user.phone_strip, user.age, user.full_street_address, user.gender, user.job, user.local_label, user.cached_tag_list]
-  end
-end

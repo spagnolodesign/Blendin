@@ -1,0 +1,6 @@
+<!-- Notices and Alerts -->
+<% if notice %>
+  <div id="alert-component" data-type="warning" data-message="<%= notice %>"></div>
+<% elsif alert %>
+  <div id="alert-component" data-type="alert" data-message="<%= alert %>"></div>
+<% end %>

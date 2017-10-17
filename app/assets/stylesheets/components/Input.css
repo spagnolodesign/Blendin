@@ -1,0 +1,49 @@
+.Input{
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+  min-width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.9em;
+  font-size: 1.2em;
+  outline: none;
+  font-weight: bold;
+  margin: 0.3em 0;
+}
+
+.Input.SmallTxt{
+  font-size: 1em;
+  min-height: 6em;
+}
+
+.AutocompleteContainer{
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  padding: 0.3em 0;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+}
+
+.AddressField{
+  height: auto !important;
+}
+
+.DropArea{
+  width: 250px;
+  height: 250px;
+  border-width: 2px;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.DropArea p{
+  text-align: center;
+  margin: 0 1em;
+}
+.DroppedImage{
+  width: 30px;
+  margin: 1em auto;
+  display: block;
+}

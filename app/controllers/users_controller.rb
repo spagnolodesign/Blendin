@@ -3,12 +3,7 @@ class UsersController < ApplicationController
  	before_action :set_user, only: [:show, :destroy]
  	before_action :set_current, only: [:update_tags, :update_location, :update, :edit]
 
-
 	ActsAsTaggableOn.delimiter = ','
-
-	def index
-		@user = current_user
-	end
 
 	def update_tags
 		@usertags = @user.tag_list
@@ -17,14 +12,9 @@ class UsersController < ApplicationController
 
 	# GET /events/1/edit
   def edit
-
   end
 
   def show
-  	respond_to do |format|
-  			format.html
-        format.js
-    end
   end
 
 	def update_location
