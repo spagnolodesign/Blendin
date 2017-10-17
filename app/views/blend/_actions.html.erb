@@ -1,5 +1,9 @@
 <% if @blend[:data].status === "pending" %>
-  Show buttons accept / refuse
+
+  <% if @blend[:data].sender === current_user %>
+    Waiting for approval
+  <% end %>
+
 <% elsif @blend[:data].status === "accepted" %>
   You can chat with me at:
   add me on whatzapp.

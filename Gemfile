@@ -1,47 +1,27 @@
 source 'https://rubygems.org'
 
-ruby "2.3.3"
+ruby '2.4.1'
 gem 'rails'
 gem 'pg'
-gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
-gem 'active_link_to'
-gem 'country_select'
+gem 'puma'
+gem 'sass-rails'
+gem 'uglifier'
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-facebook'
 gem 'geocoder'
-gem 'has_secure_token'
-gem 'unread'
-gem 'chartkick'
 gem 'groupdate'
-gem 'redis', '~> 3.0'
 gem 'acts-as-taggable-on'
 gem 'fog'
 gem "mini_magick"
 gem 'carrierwave'
 gem 'webpacker'
-gem 'axlsx', '2.1.0.pre'
-gem 'axlsx_rails'
 gem "administrate"
 gem 'administrate-field-image'
+gem 'tzinfo-data'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'byebug'
   gem 'faker'
-end
-
-group :development do
-  gem 'web-console'
-  gem 'listen', '~> 3.0.5'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

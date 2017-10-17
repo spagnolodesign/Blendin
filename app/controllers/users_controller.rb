@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def show
 		@blend = current_user.blended?(@user)
+		@newblend = Blend.new
   end
 
 	def update_location

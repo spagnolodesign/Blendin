@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id'
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:facebook]
+         :recoverable, :rememberable, :trackable, :validatable
 
   acts_as_taggable
 

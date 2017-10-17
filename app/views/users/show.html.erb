@@ -11,7 +11,6 @@
             <%= render 'blend/actions' %>
           <% end %>
         <% else %>
-          <%= link_to "BLEND", user_blends_path(@user), :method => :post, class:"Button BlendBtn" %>
           <a href="#modal-1" data-modal-open>Modal 1</a>
         <% end %>
       </div>
@@ -51,7 +50,15 @@
 	</div>
 </div>
 
-<div id="modal-1" class="modal-hider">Modal 1 content</div>
+<div id="modal-1" class="modal-hider">
+  <h1>Blend</h1>
+  <%= form_for @newblend do |f| %>
+    <%= hidden_field_tag(:recipient_id, @user.id) %>
+    <%= f.text_field :message %>
+
+    <%= f.submit "Create" %>
+  <% end %>
+</div>
 
 <div class="modal">
   <div class="modal-inner">

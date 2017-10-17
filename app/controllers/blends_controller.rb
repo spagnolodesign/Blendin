@@ -1,27 +1,27 @@
 class BlendsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_recipient, only: [:create]
+
+  def new
+  end
 
   def create
-    @blend = Blend.new(message: params[:message])
+    @blend = Blend.new(blend_params)
     @blend.sender = current_user
-    @blend.recipient = @recipient
+    @blend.recipient = User.find(params[:recipient_id])
 
     if @blend.save
-
+      flash[:notice] = 'Successfully checked in'
     else
-
+      flash[:alert] = 'Something went wrong'
     end
+    redirect_to user_path(@blend.recipient)
   end
 
   private
 
-  def set_recipient
-		@recipient = User.find(params[:user_id])
-	end
 
   def blend_params
-    params.require(:blends).permit(:message)
+    params.require(:blend).permit(:message)
   end
 
 end
