@@ -3,7 +3,6 @@ class UsersController < ApplicationController
  	before_action :set_user, only: [:show, :destroy]
  	before_action :set_current, only: [:update_tags, :update_location, :update, :edit]
 
-	ActsAsTaggableOn.delimiter = ','
 
 	def update_tags
 		@usertags = @user.tag_list
