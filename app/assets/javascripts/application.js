@@ -1,4 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require validator
+//= require parsley
+//= require modal
 //= require main

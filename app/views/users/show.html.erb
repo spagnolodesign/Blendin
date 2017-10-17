@@ -1,9 +1,19 @@
 <div class="Profile">
   <div class="sm-col-8 px2 mx-auto clearfix">
 		<div class="sm-col sm-col-4">
+
       <img src="<%= @user.avatar.medium_avatar.url %>" class="rounded avatar" />
       <div class="clearfix">
-        BLEND OPTIONS
+        <% if @blend %>
+          <% if @blend[:status] === "SENT" %>
+            <%= render 'blend/actions' %>
+          <% elsif @blend[:status] === "RECIVED" %>
+            <%= render 'blend/actions' %>
+          <% end %>
+        <% else %>
+          <%= link_to "BLEND", user_blends_path(@user), :method => :post, class:"Button BlendBtn" %>
+          <a href="#modal-1" data-modal-open>Modal 1</a>
+        <% end %>
       </div>
     </div>
 		<div class="sm-col sm-col-8 px2">
@@ -40,3 +50,19 @@
     </div>
 	</div>
 </div>
+
+<div id="modal-1" class="modal-hider">Modal 1 content</div>
+
+<div class="modal">
+  <div class="modal-inner">
+    <a data-modal-close>Close</a>
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<script>
+$(function () {
+  var vanillaModal = new VanillaModal.default()
+
+});
+</script>

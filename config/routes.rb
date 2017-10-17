@@ -1,26 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'blends/create'
+
   namespace :admin do
    resources :users
-   resources :knoks
-
    root to: "users#index"
- end
+  end
 
 
   devise_for :users
 
-  resources :users, only: [:show, :update, :edit, :destroy] do
-    collection do
-      get :tag, action: 'update_tags'
-      get :location, action: 'update_location'
-    end
-    resources :knoks, only: [:like, :connect] do
-      collection do
-        get "like", to: "knok#like"
-        get 'connect', to: "knok#connect"
-      end
-  	end
+  resources :users, only: [:show] do
+    resources :blends, only: [:create]
   end
 
   root 'home#index'

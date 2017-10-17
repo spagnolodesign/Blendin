@@ -1,0 +1,7 @@
+<% if @blend[:data].status === "pending" %>
+  Show buttons accept / refuse
+<% elsif @blend[:data].status === "accepted" %>
+  You can chat with me at:
+  add me on whatzapp.
+  <b><%= @user.phone %></b>
+<% end %>

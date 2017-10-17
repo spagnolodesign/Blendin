@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
+		@blend = current_user.blended?(@user)
   end
 
 	def update_location

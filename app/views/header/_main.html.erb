@@ -6,7 +6,8 @@
         <nav class="topnav">
           <a href="/">Home</a>
           <a href="/wizard">Wizard</a>
-          <a href="/my-profile/edit">My Profile</a>
+          <%= link_to "Settings", edit_user_registration_path %>
+
           <a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
           <a href="#open-nav" class="icon">{iconChar}</a>
         </nav>
