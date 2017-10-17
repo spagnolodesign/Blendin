@@ -11,8 +11,7 @@ Bundler.require(*Rails.groups)
 
 module Noc
   class Application < Rails::Application
-  	
-  	config.disable_request_forgery_protection = true
+
   	config.remove_unused_tags = true
 
     # Settings in config/environments/* take precedence over those specified here.
