@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 		@mostused = User.tag_counts_on(:tags).limit(32)
 	end
 
-	# GET /events/1/edit
   def edit
   end
 
@@ -25,11 +24,9 @@ class UsersController < ApplicationController
 		if set_current == current_user
 			respond_to do |format|
 	      if @user.update(user_params)
-        	format.html { redirect_to root_path, notice: 'User was successfully updated.' }
-        	format.json { render :show, status: :ok, location: @user }
+        	format.html { redirect_to root_path, notice: 'All set up :)' }
 	      else
-	        format.html { render :edit }
-	        format.json { render json: @user.errors, status: :unprocessable_entity }
+	        format.html { redirect_to wizard_path }
 	      end
 	    end
   	end
@@ -40,15 +37,6 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		@subscriptions = Subscription.where(user_id: @user.id)
-
-		#Delete Open ChatRoom
-		@subscriptions.each do |sub|
-			@room_id = sub.chat_room_id
-			@all_users_subs = Subscription.where(chat_room_id:@room_id)
-			@all_users_subs.delete_all
-		end
-
 		#Delete User
 		@user.destroy
 
@@ -69,7 +57,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :gender, :about, :tag_list, :full_street_address, :phone, :job, :picture, :avatar, :cached_tag_list, :local, :country, :languages, :birthday)
+    params.require(:user).permit(:username, :email, :gender, :about, {:tag_list => []}, :full_street_address, :phone, :job, :picture, :avatar, :cached_tag_list, :local, :country, :languages, :birthday)
   end
 
 

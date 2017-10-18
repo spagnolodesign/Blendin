@@ -2,4 +2,5 @@
 //= require jquery_ujs
 //= require parsley
 //= require modal
+//= require choices
 //= require main

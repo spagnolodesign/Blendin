@@ -8,10 +8,12 @@ Rails.application.routes.draw do
    root to: "users#index"
   end
 
+  get '/wizard', to: 'wizard#index'
 
   devise_for :users
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :update]
+
   resources :blends, only: [:create, :new] do
     post '/accept', to: 'blends#accept'
     post '/reject', to: 'blends#reject'
