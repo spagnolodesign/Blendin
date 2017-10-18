@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+@import url(basscss.css);
+@import url("https://fonts.googleapis.com/css?family=Crete+Round|Quicksand");
+@import url(main.css);
+@import url(components/Auth.css);
+@import url(components/Header.css);
+@import url(components/Carousel.css);
+@import url(components/Input.css);
+@import url(components/Label.css);
+@import url(components/Button.css);
+@import url(components/Wizard.css);
+@import url(components/DateTime.css);
+@import url(components/Nav.css);
+@import url(components/Profile.css);
+@import url(components/Tags.css);
+@import url(components/Modal.css);
+/* line 5, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardsContainer {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+/* line 15, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardWrap {
+  margin: 10px;
+  transform: perspective(800px);
+  -webkit-transform: perspective(800px);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  cursor: pointer;
+}
+/* line 24, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardWrap:hover .CardBg {
+  opacity: 0.9;
+}
+/* line 36, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardWrap:hover .CardInfo:after {
+  transition: 1s cubic-bezier(0.4, 1, 0.32, 1);
+  opacity: .4;
+  transform: translateY(0);
+}
+
+/* line 45, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.Card {
+  position: relative;
+  flex: 0 0 240px;
+  width: 320px;
+  height: 400px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.42) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.4, 1, 0.32, 1), box-shadow 1s cubic-bezier(0.4, 1, 0.32, 1);
+}
+
+/* line 57, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardBg {
+  opacity: 0.6;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.4, 0.58, 0.57, 1), opacity 0.4s cubic-bezier(0.4, 0.58, 0.57, 1);
+  -webkit-transition: 1s cubic-bezier(0.4, 0.58, 0.57, 1), opacity 0.4s cubic-bezier(0.4, 0.58, 0.57, 1);
+  pointer-events: none;
+}
+
+/* line 71, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardInfo {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  z-index: 1;
+}
+/* line 79, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardInfo:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.4, 0.58, 0.57, 1);
+}
+
+/* line 93, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardInfo h1 {
+  width: 85%;
+  font-family: 'Crete Round', serif;
+  font-size: 2em;
+  margin: 0;
+  font-weight: normal;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  line-height: 1.1em;
+}
+
+@media only screen and (min-width: 64em) {
+  /* line 105, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+  .Card {
+    width: 240px;
+    height: 320px;
+  }
+}
