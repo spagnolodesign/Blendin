@@ -11,7 +11,7 @@
             <%= render 'blend/actions' %>
           <% end %>
         <% else %>
-          <a href="#modal-1" data-modal-open>Modal 1</a>
+          <a href="#modal-1" data-modal-open class="Button BlendBtn">Blend</a>
         <% end %>
       </div>
     </div>
@@ -51,18 +51,18 @@
 </div>
 
 <div id="modal-1" class="modal-hider">
-  <h1>Blend</h1>
+  <h1>Make your BLEND now.</h1>
+  <p>Say hello to <b><%= @user.name.capitalize %></b> and introduce yourself with some words.</p>
   <%= form_for @newblend do |f| %>
     <%= hidden_field_tag(:recipient_id, @user.id) %>
-    <%= f.text_field :message %>
-
-    <%= f.submit "Create" %>
+    <%= f.text_area :message, class:"Input", placeholder:"😃 Hello I'm ..", required:true %>
+    <%= f.submit "Send", class:"Button" %>
   <% end %>
 </div>
 
 <div class="modal">
   <div class="modal-inner">
-    <a data-modal-close>Close</a>
+    <span data-modal-close="">×</span>
     <div class="modal-content"></div>
   </div>
 </div>

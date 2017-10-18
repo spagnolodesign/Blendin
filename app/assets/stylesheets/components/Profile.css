@@ -67,12 +67,22 @@
 	margin-left: -13px;
 	margin-top: -13px;
 }
+
+.details-box{
+  border: 2px solid #ccc;
+  border-style: dashed;
+  border-radius: 8px;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
 .EditProfile{
   margin: 0 1em 4em 1em;
 }
 .EditProfile .Button{
   margin: 1em 0;
 }
+
 @media only screen and (min-width: 40em) {
   .ProfileInfo {
     padding-left: 2rem;

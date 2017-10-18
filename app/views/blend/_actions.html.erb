@@ -1,11 +1,34 @@
-<% if @blend[:data].status === "pending" %>
+<% if @blend[:data].status != "rejected" %>
 
-  <% if @blend[:data].sender === current_user %>
-    Waiting for approval
+  <% if @blend[:data].status === "pending" %>
+
+      <% if @blend[:data].sender === current_user %>
+        <div class="details-box center">
+          We are elaborating your request wait for approvation 🕒.<br />In the meantime a big thank you for making the world a better place together..
+        </div>
+      <% end %>
+
+      <% if @blend[:data].recipient === current_user %>
+        <p class="Bubble"><%= @blend[:data].message %></p>
+        <%= link_to("Accept", blend_accept_path(@blend[:data].id), :method => :post, class:"Button") %>
+        <%= link_to("Refuse", blend_reject_path(@blend[:data].id), :method => :post, class:"Button") %>
+      <% end %>
+
+    <% elsif @blend[:data].status === "accepted" %>
+    <div class="details-box">
+      Yeaa 🎉 🎉 I accepted your blend!<br />
+      You can now chat with me at:
+      <% if !@user.phone.empty? %>
+        <b><%= @user.phone %></b>
+        add me on whatzapp!!
+      <% else %>
+        <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
+      <% end %>
+    </div>
+    <% end %>
+
+  <% else %>
+    <div class="details-box center">
+      Blend refused 😞. Not really a big deal our community is big and we have a planties of other bleders just find wating. Good luck! <br />
+    </div>
   <% end %>
-
-<% elsif @blend[:data].status === "accepted" %>
-  You can chat with me at:
-  add me on whatzapp.
-  <b><%= @user.phone %></b>
-<% end %>

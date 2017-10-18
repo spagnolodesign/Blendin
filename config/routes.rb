@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:show]
-  resources :blends, only: [:create, :new]
+  resources :blends, only: [:create, :new] do
+    post '/accept', to: 'blends#accept'
+    post '/reject', to: 'blends#reject'
+  end
 
   root 'home#index'
 

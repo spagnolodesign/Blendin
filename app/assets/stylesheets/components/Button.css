@@ -28,6 +28,8 @@
   width: 100%;
   background: #74CCD1;
   color:#FFF;
+  text-align: center;
+  text-decoration: none;
 }
 .Button:hover{
   background: #6fdce3;

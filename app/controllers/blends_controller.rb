@@ -10,11 +10,28 @@ class BlendsController < ApplicationController
     @blend.recipient = User.find(params[:recipient_id])
 
     if @blend.save
-      flash[:notice] = 'Successfully checked in'
-    else
-      flash[:alert] = 'Something went wrong'
+      redirect_to user_path(@blend.recipient)
     end
-    redirect_to user_path(@blend.recipient)
+
+  end
+
+
+  def accept
+    @blend = Blend.find(params[:blend_id])
+    @blend.update(status:'accepted')
+
+    if @blend.save
+      redirect_to user_path(@blend.recipient)
+    end
+  end
+
+  def reject
+    @blend = Blend.find(params[:blend_id])
+    @blend.update(status:'rejected')
+
+    if @blend.save
+      redirect_to user_path(@blend.reciver)
+    end
   end
 
   private
