@@ -4,4 +4,12 @@ class Blend < ActiveRecord::Base
 
   validates :message, length: { maximum: 280 }, presence: true
   validates :recipient, presence: true
+
+  STATES = [
+    :pending,
+    :accepted,
+    :declined,
+    :closed
+  ].freeze
+
 end

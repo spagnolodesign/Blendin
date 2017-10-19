@@ -14,7 +14,7 @@ class BlendDashboard < Administrate::BaseDashboard
     sender_id: Field::Number,
     recipient_id: Field::Number,
     message: Field::Text,
-    status: Field::String,
+    status: Field::Select.with_options(collection: Blend::STATES),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -27,8 +27,7 @@ class BlendDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :sender,
     :recipient,
-    :id,
-    :sender_id,
+    :status
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -36,13 +35,9 @@ class BlendDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :sender,
     :recipient,
-    :id,
-    :sender_id,
-    :recipient_id,
     :message,
     :status,
     :created_at,
-    :updated_at,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -51,8 +46,6 @@ class BlendDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :sender,
     :recipient,
-    :sender_id,
-    :recipient_id,
     :message,
     :status,
   ].freeze

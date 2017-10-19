@@ -1,12 +1,7 @@
 require "administrate/base_dashboard"
 
 class UserDashboard < Administrate::BaseDashboard
-  # ATTRIBUTE_TYPES
-  # a hash that describes the type of each of the model's fields.
-  #
-  # Each different type represents an Administrate::Field object,
-  # which determines how the attribute is displayed
-  # on pages throughout the dashboard.
+
   ATTRIBUTE_TYPES = {
     tags: Field::HasMany.with_options(class_name: "ActsAsTaggableOn::Tag"),
     id: Field::Number,
@@ -45,8 +40,12 @@ class UserDashboard < Administrate::BaseDashboard
     birthday: Field::DateTime,
     country: Field::String,
     education: Field::String,
+    age:Field::String,
     admin: Field::Boolean,
     phone: Field::String,
+    blends: Field::Number,
+    sent_blends:Field::HasMany.with_options(class_name: "Blend", foreign_key:"sender_id"),
+    received_blends:Field::HasMany.with_options(class_name: "Blend", foreign_key:"sender_id")
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -56,12 +55,11 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :username,
-    :email,
-    :phone,
-    :full_street_address,
     :job,
     :local,
     :created_at,
+    :age,
+    :blends
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -71,6 +69,8 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :username,
     :phone,
+    :sent_blends,
+    :received_blends,
     :local,
     :full_street_address,
     :avatar,
@@ -84,13 +84,8 @@ class UserDashboard < Administrate::BaseDashboard
     :education,
     :sign_in_count,
     :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
     :unconfirmed_email,
-    :locked_at,
     :created_at,
-    :updated_at,
-    :provider
   ].freeze
 
   # FORM_ATTRIBUTES

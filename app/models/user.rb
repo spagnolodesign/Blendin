@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-
-  has_many :blends, dependent: :destroy
   has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id'
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id'
 
@@ -62,6 +60,9 @@ class User < ActiveRecord::Base
     end
   end
 
+  def blends
+    Blend.where("sender_id = ? OR recipient_id = ?", self.id, self.id).count
+  end
 
 
 end
