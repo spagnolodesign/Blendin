@@ -1,3 +1,7 @@
+.Profile{
+  margin-bottom:4em;
+}
+
 .Profile .avatar{
   width: 100%;
 }
@@ -75,7 +79,10 @@
   padding: 0.5em;
   margin-top: 0.5em;
 }
-
+.blend-actions{
+  display: block;
+  margin: 2em 0;
+}
 .EditProfile{
   margin: 0 1em 4em 1em;
 }
@@ -84,6 +91,7 @@
 }
 
 @media only screen and (min-width: 40em) {
+
   .ProfileInfo {
     padding-left: 2rem;
     padding-right: 0rem;

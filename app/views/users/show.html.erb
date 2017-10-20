@@ -1,24 +1,23 @@
 <div class="Profile">
   <div class="sm-col-8 px2 mx-auto clearfix">
 		<div class="sm-col sm-col-4">
-
       <img src="<%= @user.avatar.medium_avatar.url %>" class="rounded avatar" />
       <div class="clearfix">
         <% if @blend %>
           <% if @blend[:status] === "SENT" %>
-            <%= render 'blend/actions' %>
+            <%= render 'blends/actions' %>
           <% elsif @blend[:status] === "RECIVED" %>
-            <%= render 'blend/actions' %>
+            <%= render 'blends/actions' %>
           <% end %>
         <% else %>
-          <a href="#modal-1" data-modal-open class="Button BlendBtn">Blend</a>
+          <a href="#modal-1" data-modal-open class="Button BlendBtn">Blend with <%= @user.name %></a>
         <% end %>
       </div>
     </div>
+
 		<div class="sm-col sm-col-8 px2">
       <div class="ProfileInfo">
-        <h2>I'm <%= @user.name.capitalize %></h2>
-        <p><%= @user.job.capitalize %></p>
+        <h2>Hey, I'm <%= @user.name.capitalize %>!</h2>
         <p class><%= @user.age %> years old.</p>
 					<% if @user.local %>
 						<span class="label-local">LOCAL</span>
@@ -27,36 +26,57 @@
 					<% end %>
       </div>
 
-      <section class="Detail">
-        <h3>My study:</h3>
-        <p><%= @user.education %></p>
-      </section>
+      <% if @user.education %>
+        <section class="Detail">
+          <h3>My study:</h3>
+          <p><%= @user.education %></p>
+        </section>
+      <% end %>
 
-      <section class="Detail">
-        <h3>I like:</h3>
-      </section>
+      <% if @user.full_street_address %>
+        <section class="Detail">
+          <h3>City/village:</h3>
+          <p><%= @user.full_street_address.capitalize %></p>
+        </section>
+      <% end %>
 
-			<section class="Detail">
-				<h3>I Speak:</h3>
-				<p><%= @user.languages %></p>
-			</section>
 
-      <section class="Detail">
-        <h3>About me:</h3>
-        <p><%= @user.about %></p>
-      </section>
+      <% if @user.tag_list %>
+        <section class="Detail">
+          <h3>Interest in:</h3>
+          <div class="TagList">
+            <% @user.tag_list.each do |tag| %>
+            <div class="Tag">
+              <span><%= tag %></span>
+            </div>
+            <% end %>
+          </div>
+        </section>
+      <% end %>
 
+      <% if @user.job %>
+        <section class="Detail">
+          <h3>Study / Job experience:</h3>
+          <p><%= @user.job.capitalize %></p>
+        </section>
+      <% end %>
+
+      <% if @user.about %>
+        <section class="Detail">
+          <h3>About me:</h3>
+          <p><%= @user.about %></p>
+        </section>
+      <% end %>
     </div>
 	</div>
 </div>
 
 <div id="modal-1" class="modal-hider">
-  <h1>Make your BLEND now.</h1>
-  <p>Say hello to <b><%= @user.name.capitalize %></b> and introduce yourself with some words.</p>
+  <h3>Say hello to <b><%= @user.name.capitalize %></b> and introduce yourself with some words.</h3>
   <%= form_for @newblend do |f| %>
     <%= hidden_field_tag(:recipient_id, @user.id) %>
-    <%= f.text_area :message, class:"Input", placeholder:"😃 Hello I'm ..", required:true %>
-    <%= f.submit "Send", class:"Button" %>
+    <%= f.text_area :message, class:"Input", placeholder:"😉 Hello, my name is ...", required:true %>
+    <%= f.submit "Send message", class:"Button" %>
   <% end %>
 </div>
 
@@ -67,8 +87,8 @@
   </div>
 </div>
 
-<script>
-$(function () {
-  var vanillaModal = new VanillaModal.default()
-});
+<script type="text/javascript">
+  $(function () {
+    var vanillaModal = new VanillaModal.default()
+  });
 </script>

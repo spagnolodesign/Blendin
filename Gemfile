@@ -19,6 +19,7 @@ gem 'webpacker'
 gem "administrate"
 gem 'administrate-field-image'
 gem 'tzinfo-data'
+gem 'active_link_to'
 
 group :development, :test do
   gem 'byebug'

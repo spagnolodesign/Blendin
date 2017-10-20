@@ -1,6 +1,8 @@
 <section class="EditProfile clearfix">
   <div class="sm-col-6 lg-col-6 mx-auto">
-
+    <% if @user.sign_in_count > 1 %>
+      <%= render 'top_nav' %>
+    <% end %>
     <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
       <label class="Label center">Upload/change picture of you:</label>
       <br>

@@ -1,5 +1,6 @@
 <section class="EditProfile clearfix">
     <div class="sm-col-6 lg-col-6 mx-auto">
+      <%= render 'wizard/top_nav' %>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
 
@@ -12,27 +13,6 @@
 
           <label class="Label">Full name</label>
           <%= f.text_field :username, class:"Input" , required: true %>
-
-          <label class="Label">About me</label>
-          <%= f.text_area :about, class:"Input" %>
-
-
-          <label class="Label">Where do you live?</label>
-          <%= f.text_field :full_street_address, class:"Input AddressField", required: true %>
-          <i>(we need your current password to confirm your changes)</i>
-
-          <label class="Label">Phone number</label>
-          <%= f.text_field :phone, required: 'true', class: "Input", required: true %>
-          <i>(Possibly the one you have whatsapp on)</i>
-
-          <label class="Label">Job</label>
-          <%= f.text_field :job, class: "Input", required: true %>
-
-          <label class="Label">Date of Birth</label>
-          <%= f.date_select :birthday, {start_year: 1960, end_year: 2000}, { class: 'Input Select' , required: true} %>
-
-          <label class="Label">Country of origin</label>
-          <%= f.text_field :country, id:"country-js", class:"Input AddressField", required: true %>
 
           <label class="Label">Current password</label> <i>(we need your current password to confirm your changes)</i>
           <%= f.password_field :current_password, autocomplete: "off", class:"Input", required: true %>
@@ -50,28 +30,6 @@
 <script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
   <script>
   $(function () {
-
-    var placesAutocomplete = places({
-      container: document.querySelector('.AddressField'),
-      type: 'city',
-      aroundLatLngViaIP: false,
-      templates: {
-        value: function(suggestion) {
-          return suggestion.name;
-        }
-      }
-    });
-
-    var placesAutocomplete = places({
-      container: document.querySelector('#country-js'),
-      type: 'country',
-      aroundLatLngViaIP: false,
-      templates: {
-        value: function(suggestion) {
-          return suggestion.name;
-        }
-      }
-    });
 
     $('#edit_user').parsley().on('field:validated', function() {
     })

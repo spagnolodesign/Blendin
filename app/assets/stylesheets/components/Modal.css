@@ -82,6 +82,7 @@
 .modal-content{
   padding: 1em;
 }
+
 .modal-content h1{
   margin-top: 0.5em;
 }
@@ -90,4 +91,11 @@
 }
 .modal-hider{
   display: none;
+}
+
+@media only screen and (min-width: 40em) {
+
+  .modal-content{
+    padding: 2em;
+  }
 }

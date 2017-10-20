@@ -2,19 +2,18 @@
 <div class="Header">
   <div class="clearfix py2 px2">
 
-    <div class="col col-right col-4">
+    <div class="col col-right col-5" id="nav-js">
         <nav class="topnav">
-          <a href="/">Home</a>
-          <a href="/wizard">Wizard</a>
-          <%= link_to "Settings", edit_user_registration_path %>
-
+          <%= link_to "Community", root_url %>
+          <%= link_to "My blends", blends_path %>
+          <%= link_to "Settings", wizard_path %>
           <a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
-          <a href="#open-nav" class="icon">{iconChar}</a>
+          <a id="toggle-nav" class="icon" href="#open-nav" >&#9776;</a>
         </nav>
       </div>
 
-    <div class="col col-8">
-      <a href="" class="Logo">Blendin</a>
+    <div class="col col-7">
+      <%= link_to "", root_url, class:"Logo" %>
     </div>
   </div>
 </div>

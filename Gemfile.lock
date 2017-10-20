@@ -25,6 +25,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_link_to (1.0.5)
+      actionpack
+      addressable
     activejob (5.1.4)
       activesupport (= 5.1.4)
       globalid (>= 0.3.6)
@@ -41,6 +44,8 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (5.0.0)
       activerecord (>= 4.2.8)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     administrate (0.8.1)
       actionpack (>= 4.2, < 5.2)
       actionview (>= 4.2, < 5.2)
@@ -288,6 +293,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
     rack-proxy (0.6.2)
@@ -385,6 +391,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   acts-as-taggable-on
   administrate
   administrate-field-image

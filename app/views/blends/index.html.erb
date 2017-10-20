@@ -1,0 +1,12 @@
+<section class="Cards CardsContainer">
+  <% @blends_i_sent.each do |blend| %>
+      <%= render 'users/card', user: blend.recipient %>
+  <% end %>
+  <% @blends_i_received.each do |blend| %>
+    <%= render 'users/card', user: blend.sender %>
+  <% end %>
+
+  <% if @blends_i_sent.empty? && @blends_i_received.empty? %>
+    <p>You dont have any blends yet, start meet new people <%= link_to "here", root_url %></p>
+  <% end %>
+</section>

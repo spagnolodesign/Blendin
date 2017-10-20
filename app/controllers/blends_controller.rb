@@ -1,6 +1,11 @@
 class BlendsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @blends_i_sent = current_user.sent_blends
+    @blends_i_received = current_user.received_blends
+  end
+
   def new
   end
 
@@ -21,7 +26,7 @@ class BlendsController < ApplicationController
     @blend.update(status:'accepted')
 
     if @blend.save
-      redirect_to user_path(@blend.recipient)
+      redirect_to user_path(@blend.sender)
     end
   end
 
@@ -30,7 +35,7 @@ class BlendsController < ApplicationController
     @blend.update(status:'rejected')
 
     if @blend.save
-      redirect_to user_path(@blend.reciver)
+      redirect_to user_path(@blend.sender)
     end
   end
 

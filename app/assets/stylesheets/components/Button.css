@@ -34,6 +34,24 @@
   display: block;
 }
 
+.Button.accept{
+  background: #25d366;
+  border: 2px solid #25d366;
+  color: #FFF;
+}
+.Button.accept:hover{
+  background: rgba(37, 211, 102, 0.8);
+}
+
+.Button.refuse{
+  background: #fc3838;
+  border: 2px solid #fc3838;
+  color: #FFF;
+}
+.Button.refuse:hover{
+  background: rgba(252, 56, 56, 0.67);
+}
+
 .BlendBtn{
   display: block;
   margin: 1em 0;
