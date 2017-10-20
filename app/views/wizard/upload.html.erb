@@ -1,0 +1,46 @@
+<section class="EditProfile clearfix">
+  <div class="sm-col-6 lg-col-6 mx-auto">
+
+    <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
+      <label class="Label center">Upload/change picture of you:</label>
+      <br>
+      <div class="DropArea">
+        <img class="rounded avatar-js" id="preview-js" src="<%= @user.avatar.medium_avatar %>">
+        <%= f.file_field :avatar, class: "InputUpload"  %>
+      </div>
+      <p class="error"></p>
+      <div class="center">
+        <%= link_to "Skip", root_url, class:"Button full back" %>
+        <%= f.submit "Upload ->", class:"Button full" %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+
+  <script>
+  $(function () {
+
+    $('.InputUpload').change(function(){
+      var input = this;
+      var url = $(this).val();
+      var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+      if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg"))
+       {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+             $('#preview-js').attr('src', e.target.result);
+          }
+         reader.readAsDataURL(input.files[0]);
+      }
+      else
+      {
+        $('.error').html('File not supported! Please upload one of the following file: png, jpeg, jpg.');
+      }
+    });
+
+  });
+</script>

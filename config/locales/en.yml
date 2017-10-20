@@ -1,54 +1,5 @@
 en:
+  headline: "Where people and cultures meet"
   seo:
-    title: "Blendin"
-    description: "We have seen a growing gap between newcomers and locals in Dutch society and we wish to bridge this gap. That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!"
-  sign:
-    info: "New in NL society are people who recently arrived here because they had to leave their country of origin for safety and/or other personal reasons. Locals are Dutch people (or other nationalities) who have lived in the Netherlands for a long time and who want to welcome newcomers into Dutch society."
-    policy: "By clicking Sign Up, you agree to our %{href_terms} and that you have read our %{href_policy}, including our %{href_cookie}."
-    areyou: "Are you?"
-    cookie_href: "Cookie Use"
-    data_href: "Data Policy"
-    data_terms: "Terms"
-    general: "Blendin is about bringing people together. We have seen a growing gap between newcomers and locals in Dutch society and we wish to bridge this gap. That's why we have created this social platform, where everyone can sign up and create an online profile. Based on your shared interests and hobbies you can easily make new connections and start Blendin!"
-
-  default:
-    interests: "Interests"
-    mostused: "Filter by most used:"
-    openchat: "Open chat"
-  tag_selection:
-    title: "Tell us what inspires you!"
-    subtitle: "Choose at least three boxes! The more you fill in the better the match!"
-    maketitle: "Don’t stop there!"
-    makeyours: "Please name any kind of interest you like.<br />Make sure it is written correctly in English so we can suggest people based on your interests and you location."
-  nav:
-    settings: "Profile"
-    edit_availability: "Set availability"
-    edit_interest: "Change interests"
-    messages: "Messages"
-    signout: "Sign out"
-    chat: "Chat"
-    signin: "Sign in"
-    edit_photo: "Edit profile picture"
-  btn:
-    confirm: "Confirm"
-    next: "Next"
-    btn: "Edit"
-    noc: "Blend"
-  match:
-    no_title: "No match available."
-    no_sub: "Start blendin'"
-  activerecord:
-    models:
-      knok:
-        other: "Match request"
-    attributes:
-      user:
-        email: "Email address"
-        username: "Username"
-        full_street_address: "City of residence"
-        about: "About"
-        occupation: "Occupation"
-        languages: "Languages"
-        birthday: "Birthday"
-        country: "Country of origin"
-        gender: "Gender"
+    title: "Blendin | where people and cultures meet "
+    description: "Something"

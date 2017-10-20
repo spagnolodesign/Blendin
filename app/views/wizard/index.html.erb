@@ -1,48 +1,65 @@
 <section class="EditProfile clearfix">
   <div class="sm-col-6 lg-col-6 mx-auto">
-    <h3>Hello <%= @user.name %>, in order to make you blend with the community we need some info to verify your persona. Start compleate your profile.</h3>
+    <h3>Hi <%= @user.name %><br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find.</h3>
     <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
 
       <label class="Label">Please select an option:</label>
 
       <label class="Label CheckBoxRound">
-        <input value="true" name="user[local]"  id="local-radio" type="radio" class="css-checkbox" required />
+        <input value="true" name="user[local]"  type="radio" class="css-checkbox" />
         I'm a local
       </label>
 
       <label class="Label CheckBoxRound">
-        <input value="false" name="user[local]"  id="local-radio" type="radio" class="css-checkbox" required />
-        I'm not a local (expats)
+        <input value="false" name="user[local]"  type="radio" class="css-checkbox" required />
+        I'm not a local (newcomer)
       </label>
 
-      <label class="Label">💬 Tell more about you and what you like. </label>
-      <%= f.text_area :about, class:"Input" %>
+      <label class="Label">Please select an option:</label>
+
+      <label class="Label CheckBoxRound">
+        <input value="m" name="user[gender]"  type="radio" class="css-checkbox" />
+        I'm a man 👨
+      </label>
+
+      <label class="Label CheckBoxRound">
+        <input value="f" name="user[gender]"  type="radio" class="css-checkbox" required />
+        I'm a woman 👩
+      </label>
+
+      <label class="Label">🎂 Date of Birth:</label>
+      <%= f.date_select :birthday, {start_year: 1960, end_year: 2000, :order => [:day, :month, :year]}, { class: 'Input Select' , required: true} %>
 
       <label class="Label">🌇 Where do you live?</label>
-      <%= f.text_field :full_street_address, class:"Input AddressField", required: true %>
-      <i>(we need your current password to confirm your changes)</i>
+      <%= f.text_field :full_street_address, class:"Input AddressField", required: true, placeholder: "Amsterdam, Netherlands" %>
 
-      <label class="Label">📱 Phone number</label>
-      <%= f.text_field :phone, required: 'true', class: "Input", required: true %>
-      <i>(Possibly the one you have whatsapp on)</i>
+      <label class="Label">🇸🇾 🇳🇱 Country of origin:</label>
+      <%= f.text_field :country, id:"country-js", class:"Input AddressField", placeholder: "Syria" %>
 
-      <label class="Label">💪 Job</label>
-      <%= f.text_field :job, class: "Input", required: true %>
-
-      <label class="Label">🎂 Date of Birth</label>
-      <%= f.date_select :birthday, {start_year: 1960, end_year: 2000}, { class: 'Input Select' , required: true} %>
-
-      <label class="Label">Country of origin</label>
-      <%= f.text_field :country, id:"country-js", class:"Input AddressField", required: true %>
-
-      <label class="Label">📙 Choose some interest from the list </label>
+      <label class="Label">📙 Choose your interest from the list: </label>
       <select name="user[tag_list][]" id="taglist-js"  multiple required>
         <% @user.tag_list.each do |tag| %>
           <option value="<%= tag %>" selected><%= tag %></option>
         <% end %>
       </select>
+      <i>(Choose at least three interest form the list. The more the better.) </i>
 
-      <%= f.submit "Update", class:"Button" %>
+      <label class="Label">💪 Study and/or work experience:</label>
+      <%= f.text_field :job, class: "Input", placeholder:"Car engineer or lawyer" %>
+      <i>(This could be your previous job/study.) </i>
+
+
+      <label class="Label">📱 Phone number:</label>
+      <%= f.text_field :phone, required: 'true', class: "Input", required: true, 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
+      <i>(Possibly the one you have whatsapp on.)</i>
+
+      <label class="Label">💬 Tell more about yourself: </label>
+      <%= f.text_area :about, class:"Input" %>
+      <i>(Is not mandatory but it'll help you to connect with others in the community)</i>
+
+      <br>
+
+      <%= f.submit "Confirm and continue", class:"Button full center" %>
 
     <% end %>
   </div>

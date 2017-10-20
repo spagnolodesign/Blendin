@@ -24,7 +24,11 @@ class UsersController < ApplicationController
 		if set_current == current_user
 			respond_to do |format|
 	      if @user.update(user_params)
-        	format.html { redirect_to root_path, notice: 'All set up :)' }
+					if @user.avatar.present?
+	        	format.html { redirect_to root_path, notice: 'All set up :)' }
+					else
+						format.html { redirect_to upload_photo_path, notice: 'Would be nice have a picture of you :)' }
+					end
 	      else
 	        format.html { redirect_to wizard_path }
 	      end

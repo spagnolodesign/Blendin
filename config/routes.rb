@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/wizard', to: 'wizard#index'
+  get '/upload-photo', to: 'wizard#upload'
 
   devise_for :users
 
