@@ -1,5 +1,10 @@
 class UserMailer < ApplicationMailer
 
+  def welcome_email(user)
+    @user = user
+    mail(to: @user.email, subject: "Welcome to Blendin!")
+  end
+
   def match_email(user, room)
     @user = user
     @url  = chat_room_url(room)
@@ -16,7 +21,7 @@ class UserMailer < ApplicationMailer
     @from = from
     @revicer = to
     @message = message
-    @room = room 
+    @room = room
     mail(to: @revicer.email, subject: "You have a new message")
   end
 

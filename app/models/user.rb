@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_create :send_welcome_email
+
   acts_as_taggable
 
   validates :terms_and_conditions, acceptance: true
@@ -23,6 +25,7 @@ class User < ActiveRecord::Base
   scope :for_age_range, -> min, max {
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
   }
+
 
 
   def name
@@ -62,6 +65,11 @@ class User < ActiveRecord::Base
     end
   end
 
+  private
+
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver
+  end
 
 
 end
