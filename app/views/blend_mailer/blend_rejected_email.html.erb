@@ -1,0 +1,26 @@
+<h2><%= @sender.username %>, sorry...</h2>
+
+<p>Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request</p>
+ <!-- lista of randon matched users -->
+<table style="margin: 50px 0">
+<tr style="text-align: center">
+    <td>
+            <%= image_tag(@recipient.avatar, id: 'avatar')%>
+    </td>
+    <td>
+            <%= image_tag(@recipient.avatar, id: 'avatar')%>
+    </td>
+    <td>
+            <%= image_tag(@recipient.avatar, id: 'avatar')%>
+    </td>
+    <td>
+            <%= image_tag(@recipient.avatar, id: 'avatar')%>
+    </td>
+    <td>
+            <%= image_tag(@recipient.avatar, id: 'avatar')%>
+    </td>
+</tr>
+</table>
+<div align="center">
+  <%= link_to 'See more newcomers/locals', user_url(@recipient), class: 'button' %>
+</div>
