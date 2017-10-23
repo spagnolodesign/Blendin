@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :update]
 
   resources :blends, only: [:create, :new, :index] do
-    post '/accept', to: 'blends#accept'
-    post '/reject', to: 'blends#reject'
+    get '/accept', to: 'blends#accept'
+    get '/reject', to: 'blends#reject'
   end
 
   root 'home#index'

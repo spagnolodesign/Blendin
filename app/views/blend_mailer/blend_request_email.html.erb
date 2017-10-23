@@ -1,0 +1,23 @@
+<h2><%= @recipient.username %>, you have a new Blend request!</h2>
+
+<p><%= @sender.username %> send you a message and wants to Blend with you.</p>
+
+<table>
+  <tr>
+    <td align="">
+      <p style="padding:0 20px;text-align: right;font-size: 2rem; color: #71c3c7;">
+          <%= image_tag(@sender.avatar.medium_avatar, id: 'avatar')%>
+      </p>
+    </td>
+    <td align="left" style="max-width: 380px;">
+      <p>
+        <em><%= @blend.message%>.<br>Check my <%= link_to 'profile', user_url(@sender) %> for more information.</em>
+      </p>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <%= link_to "Accept", blend_accept_url(@blend.id), class:"button accept" %>
+  <%= link_to "Refuse", blend_reject_url(@blend.id), class:"button refuse" %>
+</div>

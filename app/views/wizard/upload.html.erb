@@ -4,7 +4,7 @@
       <%= render 'top_nav' %>
     <% end %>
     <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
-      <label class="Label center">Upload/change picture of you:</label>
+      <label class="Label center">Upload/change your picture:</label>
       <br>
       <div class="DropArea">
         <img class="rounded avatar-js" id="preview-js" src="<%= @user.avatar.medium_avatar %>">

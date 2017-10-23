@@ -1,0 +1,21 @@
+<h2><%= @sender.username %>, your Blend resquest was accepted!</h2>
+<p> Get in touch with <%= @recipient.username %> and start blending.</p>
+<table>
+  <tr>
+      <td align="">
+          <p style="padding:0 20px;text-align: right;font-size: 2rem; color: #71c3c7;">
+              <%= image_tag(@recipient.avatar, id: 'avatar')%>
+          </p>
+      </td>
+      <td align="left" style="max-width: 380px;">
+        <% if !@recipient.phone.empty? %>
+          <p>That's the spirit! Call me to arrange a meet-up as soon as possible at:<br><%= @recipient.phone %></p>
+        <% else %>
+          <p>That's the spirit! Text me to arrange a meet-up as soon as possible at:<br><a href="mailto:<%= @recipient.email %>"><%= @recipient.email %></a></p>
+        <% end %>
+      </td>
+  </tr>
+</table>
+<div align="center">
+  <%= link_to 'See full profile', user_url(@recipient), class: 'button' %>
+</div>

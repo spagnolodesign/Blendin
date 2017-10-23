@@ -2,31 +2,29 @@
 
   <% if @blend[:data].status === "pending" %>
 
-      <% if @blend[:data].sender === current_user %>
-        <div class="details-box center">
-          We are elaborating your request wait for approvation 🕒.<br />In the meantime a big thank you for making the world a better place together..
-        </div>
-      <% end %>
+    <% if @blend[:data].sender === current_user %>
+      <div class="details-box center">
+        We are elaborating your request. Please wait for approval 🕒.<br />In the meantime a big thank you for making the world a better place together.
+      </div>
+    <% end %>
 
-      <% if @blend[:data].recipient === current_user %>
-        <p class="Bubble"><%= @blend[:data].message %></p>
-        <div class="clearfix blend-actions center">
-          <%= link_to("Accept", blend_accept_path(@blend[:data].id), :method => :post, class:"Button accept") %>
-          <%= link_to("Refuse", blend_reject_path(@blend[:data].id), :method => :post, class:"Button refuse") %>
-        </div>
-      <% end %>
+    <% if @blend[:data].recipient === current_user %>
+      <p class="Bubble"><%= @blend[:data].message %></p>
+      <div class="clearfix blend-actions center">
+        <%= link_to("Accept", blend_accept_path(@blend[:data].id), class:"Button accept") %>
+        <%= link_to("Refuse", blend_reject_path(@blend[:data].id), class:"Button refuse") %>
+      </div>
+    <% end %>
 
     <% elsif @blend[:data].status === "accepted" %>
-    <div class="details-box center">
-      That's the spirit! 🎉 🎉<br>
-      Text/Call me now to meet up asap at:</br>
-      <% if !@user.phone.empty? %>
-        <a href="tel:<%= @user.phone %>"><%= @user.phone %></a><br>
-        (PS: add me on WhatsApp 💬)
-      <% else %>
-        <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
-      <% end %>
-    </div>
+      <div class="details-box center">
+        🎉 That's the spirit! <br>Text/Call me now to meet up asap at:</br>
+        <% if !@user.phone.empty? %>
+          <a href="tel:<%= @user.phone %>"><%= @user.phone %></a>
+        <% else %>
+          <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
+        <% end %>
+      </div>
     <% end %>
 
   <% else %>

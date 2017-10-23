@@ -55,12 +55,11 @@
 
 
       <label class="Label">📱 Phone number:</label>
-      <%= f.text_field :phone, required: 'true', class: "Input", required: true, 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
-      <i>(Possibly the one you have whatsapp on.)</i>
+      <%= f.text_field :phone, required: 'true', class: "Input", required: true, placeholder:"0612345678", 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
 
       <label class="Label">💬 Tell more about yourself: </label>
       <%= f.text_area :about, class:"Input" %>
-      <i>(Is not mandatory but it'll help you to connect with others in the community)</i>
+      <i>(This is not mandatory but it will help you to connect with others in the community.)</i>
 
       <br>
 

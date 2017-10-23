@@ -2,8 +2,9 @@ class User < ActiveRecord::Base
   has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id'
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id'
 
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+
+  after_create :send_welcome_email
 
   acts_as_taggable
 
@@ -21,7 +22,6 @@ class User < ActiveRecord::Base
   scope :for_age_range, -> min, max {
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
   }
-
 
   def name
     username.capitalize.split(",")[0]
@@ -60,9 +60,13 @@ class User < ActiveRecord::Base
     end
   end
 
+
   def blends
     Blend.where("sender_id = ? OR recipient_id = ?", self.id, self.id).count
   end
 
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver
+  end
 
 end
