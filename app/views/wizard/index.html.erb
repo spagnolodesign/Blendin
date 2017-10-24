@@ -11,24 +11,24 @@
       <label class="Label">Please select an option:</label>
 
       <label class="Label CheckBoxRound">
-        <input value="true" name="user[local]"  type="radio" class="css-checkbox" />
+        <%= f.radio_button :local, true, class:"css-checkbox", required:true  %>
         I'm a local
       </label>
 
       <label class="Label CheckBoxRound">
-        <input value="false" name="user[local]"  type="radio" class="css-checkbox" required />
+        <%= f.radio_button :local, false, class:"css-checkbox", required:true  %>
         I'm not a local (newcomer)
       </label>
 
       <label class="Label">Please select an option:</label>
 
       <label class="Label CheckBoxRound">
-        <input value="m" name="user[gender]"  type="radio" class="css-checkbox" />
+        <%= f.radio_button :gender, "m", class:"css-checkbox", required:true  %>
         I'm a man 👨
       </label>
 
       <label class="Label CheckBoxRound">
-        <input value="f" name="user[gender]"  type="radio" class="css-checkbox" required />
+        <%= f.radio_button :gender, "f", class:"css-checkbox", required:true  %>
         I'm a woman 👩
       </label>
 
