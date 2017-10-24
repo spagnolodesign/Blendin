@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
   }
 
+
   def name
     username.capitalize.split(",")[0]
   end
@@ -44,7 +45,6 @@ class User < ActiveRecord::Base
     now = Time.now.utc.to_date
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
-
 
   def blended?(user)
     user = User.find(user.id)

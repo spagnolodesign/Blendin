@@ -40,7 +40,6 @@ class UserDashboard < Administrate::BaseDashboard
     birthday: Field::DateTime,
     country: Field::String,
     education: Field::String,
-    age:Field::String,
     admin: Field::Boolean,
     phone: Field::String,
     blends: Field::Number,
@@ -58,7 +57,6 @@ class UserDashboard < Administrate::BaseDashboard
     :job,
     :local,
     :created_at,
-    :age,
     :blends
   ].freeze
 
