@@ -6,8 +6,6 @@ Rails.application.configure do
 
   config.web_socket_server_url = "wss://blendinnow.nl/cable"
   config.action_cable.allowed_request_origins = ['https://www.blendinnow.nl']
-  config.action_mailer.default_url_options = { :host => 'http://www.blendinnow.nl' }
-  config.action_mailer.asset_host = 'https://www.blendinnow.nl'
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
