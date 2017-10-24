@@ -23,7 +23,6 @@ class User < ActiveRecord::Base
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
   }
 
-
   def name
     username.capitalize.split(",")[0]
   end
