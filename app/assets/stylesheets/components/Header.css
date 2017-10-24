@@ -7,11 +7,10 @@
   display: block;
   overflow: hidden;
   font-size: 0;
-  background: #FFF url('/assets/logo-app-small.png') no-repeat top left;
+  background: #FFF url('/assets/logo-app.png') no-repeat top left;
   background-size: 100%;
-  width: 35px;
-  height: 42px;
-
+  width: 164px;
+  height: 40px;
 }
 
 .Header .Logo img{
