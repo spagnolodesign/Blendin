@@ -1,14 +1,15 @@
-<h2><%= @sender.username %>, sorry...</h2>
-
-<p>Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request</p>
- <!-- lista of randon matched users -->
-<table style="margin: 50px 0">
-<tr style="text-align: center">
-    <td>
-            <%= image_tag(@recipient.avatar.small_avatar, id: 'avatar')%>
+<h2 style="margin: 0;padding: 0;font-size: 18px;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 20px;line-height: 1.25;color: #3e3e3e;"><%= @sender.username %>, sorry...</h2>
+<p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-weight: normal;margin-bottom: 20px;">Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request</p>
+<table style="margin: 50px 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100% !important;">
+  <tr style="text-align: center;margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+    <% User.all.sample(4).each do |user|%>
+    <td style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+      <%= image_tag(user.avatar.small_avatar, id: 'avatar')%>
+      <p class="username" style="margin: 0;padding: 0;font-size: 13px;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-weight: normal;margin-bottom: 20px;"><%= user.username %></p>
     </td>
-</tr>
+    <% end %>
+  </tr>
 </table>
-<div align="center">
-  <%= link_to 'See more newcomers/locals', user_url(@recipient), class: 'button' %>
+<div align="center" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+  <%= link_to 'See more newcomers/locals', root_url, class: 'button' %>
 </div>
