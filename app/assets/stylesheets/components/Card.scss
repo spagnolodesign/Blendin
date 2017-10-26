@@ -45,8 +45,8 @@ $returnEasing: cubic-bezier(0.4, 0.58, 0.57, 1);
 .Card {
   position: relative;
   flex: 0 0 240px;
-  width: 320px;
-  height: 400px;
+  width: 280px;
+  height: 330px;
   background-color: #333;
   overflow: hidden;
   border-radius: 10px;
@@ -55,7 +55,7 @@ $returnEasing: cubic-bezier(0.4, 0.58, 0.57, 1);
 }
 
 .CardBg {
-  opacity: 0.6;
+  opacity: 0.9;
   position: absolute;
   top: -20px; left: -20px;
   width: 100%;
@@ -105,5 +105,8 @@ $returnEasing: cubic-bezier(0.4, 0.58, 0.57, 1);
   .Card {
     width: 240px;
     height: 320px;
+  }
+  .CardBg {
+    opacity: 0.6;
   }
 }
