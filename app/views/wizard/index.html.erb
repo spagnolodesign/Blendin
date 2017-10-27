@@ -33,7 +33,7 @@
       </label>
 
       <label class="Label">🎂 Date of Birth:</label>
-      <%= f.date_select :birthday, {start_year: 1960, end_year: 2000, :order => [:day, :month, :year]}, { class: 'Input Select' , required: true} %>
+      <%= f.date_select :birthday, {start_year: 1960, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class: 'Input Select' , required: true} %>
 
       <label class="Label">🌇 Where do you live?</label>
       <%= f.text_field :full_street_address, class:"Input AddressField", required: true, placeholder: "Amsterdam, Netherlands" %>
