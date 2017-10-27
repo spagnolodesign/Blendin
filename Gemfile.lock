@@ -404,6 +404,7 @@ DEPENDENCIES
   groupdate
   jbuilder
   jquery-rails
+  kaminari
   mini_magick
   pg
   puma
