@@ -32,13 +32,13 @@ class Blend < ActiveRecord::Base
   end
 
   def send_status_update_email
-    case self.status
-      when 'accepted'
-        BlendMailer.blend_accepted_email(self).deliver_later
-      when 'declined'
-        BlendMailer.blend_rejected_email(self).deliver_later
-      else
-        puts "Belend is closed"
-    end
+    if self.status != self.status_before_last_save
+      case self.status
+        when "accepted"
+          BlendMailer.blend_accepted_email(self).deliver
+        when "rejected"
+          BlendMailer.blend_rejected_email(self).deliver
+        end
+      end
   end
 end
