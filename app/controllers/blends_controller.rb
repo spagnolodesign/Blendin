@@ -23,19 +23,17 @@ class BlendsController < ApplicationController
 
   def accept
     @blend = Blend.find(params[:blend_id])
-    @blend.update(status:'accepted')
 
-    if @blend.save
-      redirect_to user_path(@blend.recipient)
+    if @blend.update(status:'accepted')
+      redirect_to user_path(@blend.sender)
     end
   end
 
   def reject
     @blend = Blend.find(params[:blend_id])
-    @blend.update(status:'rejected')
 
-    if @blend.save
-      redirect_to user_path(@blend.recipient)
+    if @blend.update(status:'declined')
+      redirect_to user_path(@blend.sender)
     end
   end
 
