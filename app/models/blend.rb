@@ -7,11 +7,16 @@ class Blend < ActiveRecord::Base
   validates_uniqueness_of :recipient_id, scope: :sender_id
   validate :blended_already
 
-
   after_create :send_blend_request_email
   after_update :send_status_update_email
 
 
+  STATES = [
+    :pending,
+    :accepted,
+    :declined,
+    :closed
+  ].freeze
 
 
   private
@@ -23,15 +28,17 @@ class Blend < ActiveRecord::Base
   end
 
   def send_blend_request_email
-    BlendMailer.blend_request_email(self).deliver
+    BlendMailer.blend_request_email(self).deliver_later
   end
 
   def send_status_update_email
     case self.status
       when 'accepted'
-        BlendMailer.blend_accepted_email(self).deliver
-      when 'rejected'
-        BlendMailer.blend_rejected_email(self).deliver
+        BlendMailer.blend_accepted_email(self).deliver_later
+      when 'declined'
+        BlendMailer.blend_rejected_email(self).deliver_later
+      else
+        puts "Belend is closed"
     end
   end
 end

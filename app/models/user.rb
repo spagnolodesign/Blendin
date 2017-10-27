@@ -59,9 +59,17 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def blends
     Blend.where("sender_id = ? OR recipient_id = ?", self.id, self.id).count
+  end
+
+  def match?(user)
+    blends = Blend.where("sender_id = ? OR recipient_id = ?", self.id, user.id).count
+    if blends > 0
+      return true
+    else
+      return false
+    end
   end
 
   def send_welcome_email
