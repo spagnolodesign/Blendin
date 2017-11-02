@@ -1,22 +1,22 @@
-<h2 style="margin: 0;padding: 0;font-size: 18px;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 20px;line-height: 1.25;color: #3e3e3e;"><%= @recipient.username %>, you have a new Blend request!</h2>
-<p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-weight: normal;margin-bottom: 20px;"><%= @sender.username %> send you a message and wants to Blend with you.</p>
-<table style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100% !important;">
-  <tr style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
-    <td align="" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
-      <p style="padding: 0 20px;text-align: right;font-size: 2rem;color: #71c3c7;margin: 0;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-weight: normal;margin-bottom: 20px;">
+<h2 style="margin: 0;padding: 0;font-size: 18px;font-family: 'Quicksand', sans-serif;margin-bottom: 20px;line-height: 1.25;color: #333333;"><%= @recipient.username %>, you have a new Blend request!</h2>
+<p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;"><%= @sender.username %> send you a message and wants to Blend with you.</p>
+<table style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;border-collapse: collapse;width: 100% !important;">
+  <tr style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
+    <td align="" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
+      <p style="padding: 0 20px;text-align: right;font-size: 2rem;color: #71c3c7;margin: 0;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;">
         <%= image_tag(@sender.avatar.medium_avatar, id: 'avatar')%>
       </p>
     </td>
-    <td align="left" style="max-width: 380px;margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
-      <p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-weight: normal;margin-bottom: 20px;">
-        <em style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"><%= @blend.message%>.<br style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">Check my
+    <td align="left" style="max-width: 380px;margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
+      <p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;">
+        <em style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;"><%= @blend.message%>.<br style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">Check my
           <%= link_to 'profile', user_url(@sender) %>
           for more information.</em>
       </p>
     </td>
   </tr>
 </table>
-<div align="center" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Avenir Next', &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<div align="center" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
   <%= link_to "Accept", blend_accept_url(@blend.id), class:"button accept" %>
   <%= link_to "Refuse", blend_reject_url(@blend.id), class:"button refuse" %>
 </div>
