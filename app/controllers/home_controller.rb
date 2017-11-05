@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
-	before_action :authenticate_user!
-	before_action :allow
+	#before_action :authenticate_user!
+	before_action :auth_user
+	before_action :allow, only: [:index]
+
 
 	def index
 		@users = User.all.near([current_user.latitude, current_user.longitude], 7)
