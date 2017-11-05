@@ -4,6 +4,8 @@ class Blend < ActiveRecord::Base
 
   validates :message, length: { maximum: 280 }, presence: true
   validates :recipient, presence: true
+  validates_uniqueness_of :recipient_id, scope: :sender_id
+  validate :blended_already
 
   after_create :send_blend_request_email
   after_update :send_status_update_email
@@ -16,17 +18,25 @@ class Blend < ActiveRecord::Base
     :closed
   ].freeze
 
+
+  private
+
+  def blended_already
+    if Blend.where("blends.sender_id = ? AND blends.recipient_id = ?", "#{self.recipient_id}", "#{self.sender_id}").count != 0
+      errors.add(:recipient, "Already blended")
+    end
+  end
+
   def send_blend_request_email
     BlendMailer.blend_request_email(self).deliver
   end
 
   def send_status_update_email
     case self.status
-      when 'accepted'
+      when "accepted"
         BlendMailer.blend_accepted_email(self).deliver
-      when 'rejected'
+      when "declined"
         BlendMailer.blend_rejected_email(self).deliver
+      end
     end
-  end
-
 end

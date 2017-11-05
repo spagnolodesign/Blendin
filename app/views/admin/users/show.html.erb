@@ -54,9 +54,9 @@ as well as a link to its edit page.
   </dl>
 </section>
 <section class="main-content__body clearfix">
-  <h1>Might match with:</h1>
+  <h1 class="main-content__page-title">Might match with:</h1><br>
   <% @mightmatch.each do |user| %>
-    <%= link_to( "#{user.name}", admin_user_path(user), class: "button")  %>
+    <%= link_to( "#{user.name}", new_admin_blend_path(sender:page.resource, recipient:user.id) )  %><br>
   <% end %>
 
 </section>

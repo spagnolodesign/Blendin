@@ -1,5 +1,14 @@
 <section class="Cards CardsContainer">
-  <% @users.each do |user| %>
-    <%= render 'users/card', user: user %>
-  <% end %>
+    <% if @users.empty? %>
+      <p class="center">We couldn't find any possible match close to you<br>we are currently based in the Netherlads if you wish to take blendin in your country please write us at: <a href="mailto:info@blendinnow.nl">info@blendinnow.nl</a></p>
+    <% end %>
+    <% @users.each do |user| %>
+      <%= render 'users/card', user: user %>
+    <% end %>
 </section>
+<div class="clearfix center col-12">
+  <div class="paginate-link">
+    <%= link_to_prev_page @users, '< 🚶 Prev' %>
+    <%= link_to_next_page @users, 'Next 🤔 >' %>
+  </div>
+</div>

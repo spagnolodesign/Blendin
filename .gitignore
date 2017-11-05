@@ -13,3 +13,4 @@
 *.crs
 *.key
 .dump
+.DS_Store

@@ -1,45 +1,63 @@
-  <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= t('seo.title') %></title>
-    <meta name="description" content="<%= t('seo.description') %>">
+<!DOCTYPE html>
+<html lang="en">
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />
+<head>
+  <title><%= t('seo.title') %></title>
+  <meta name="description" content="<%= t('seo.description') %>">
 
-    <%= csrf_meta_tags %>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
 
-    <%= stylesheet_link_tag    'application' %>
-    <%= javascript_include_tag 'application' %>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
 
-  </head>
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:image:height" content="382">
+  <meta property="og:image:width" content="729">
+  <meta property="og:title" content="<%= t('seo.title') %>">
+  <meta property="og:description" content="Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!">
+  <meta property="og:url" content="https://community.blendinnow.nl">
 
-  <body>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application' %>
 
-    <%= render 'notice/bar' %>
+</head>
 
-    <% if user_signed_in? %>
-      <%= render 'header/main' %>
-      <!-- <%= javascript_pack_tag 'hello_react' %> -->
-    <% end %>
+<body>
 
-    <main>
-      <%= yield %>
-    </main>
+  <%= render 'notice/bar' %>
 
-    <% if Rails.env.production? %>
-      <!-- Google analytics -->
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <% if user_signed_in? %>
+    <%= render 'header/main' %>
+  <% end %>
 
-        ga('create', 'UA-72581252-5', 'auto');
-        ga('send', 'pageview');
-      </script>
-    <% end %>
+  <main>
+    <%= yield %>
+  </main>
 
+  <% if Rails.env.production? %>
+    <!-- Google analytics -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  </body>
+      ga('create', 'UA-72581252-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  <% end %>
 
+</body>
 </html>

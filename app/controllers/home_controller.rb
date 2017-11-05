@@ -1,9 +1,16 @@
 class HomeController < ApplicationController
-	before_action :authenticate_user!
-	before_action :allow
+	#before_action :authenticate_user!
+	before_action :auth_user
+	before_action :allow, only: [:index]
+
 
 	def index
-		@users = User.all.near([current_user.latitude, current_user.longitude], 7).where(local: !current_user.local).tagged_with(current_user.tags, :any => true).for_age_range(current_user.age - 2, current_user.age + 2).where.not(id: current_user.id).order(created_at: :desc)
+		@users = User.all.near([current_user.latitude, current_user.longitude], 7)
+						 .where(local: !current_user.local)
+						 .tagged_with(current_user.tags, :any => true)
+						 .for_age_range(current_user.age - 4, current_user.age + 4)
+						 .where.not(id: current_user.id).order(created_at: :desc)
+						 .page params[:page]
 	end
 
 	def auth_user
