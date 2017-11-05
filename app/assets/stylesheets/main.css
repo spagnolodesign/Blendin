@@ -32,6 +32,7 @@ a:hover{
   color: #ce0906;
   margin-left: 0.3em;
 }
+
 i{
   font-size: 0.8em;
 }
@@ -82,6 +83,15 @@ label{
   background: #FFF;
   color: #74ccd1;
   border-radius: 30px;
+}
+.paginate-link{
+  margin: 0em 0 3em 0;
+}
+.paginate-link a{
+  padding: 0.2em 1em;
+  margin: 0 0.5em;
+  text-decoration: none;
+  font-size: 1.3em;
 }
 @media only screen and (min-width: 40em) {
   .bigsize{
@@ -190,4 +200,21 @@ select{
   list-style-type: none;
   color: #ed6363;
   font-size: 0.9em;
+}
+
+ /*Input Placeholder style*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  opacity:  0.3;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   opacity:  0.3;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  opacity:  0.3;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   opacity:  0.3;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   opacity:  0.3;
 }

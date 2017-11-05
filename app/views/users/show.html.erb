@@ -19,11 +19,11 @@
       <div class="ProfileInfo">
         <h2>Hey, I'm <%= @user.name.capitalize %>!</h2>
         <p class><%= @user.age %> years old.</p>
-					<% if @user.local %>
+					<!-- <% if @user.local %>
 						<span class="label-local">LOCAL</span>
 					<% else %>
 						<span class="label-local">NEW COMER</span>
-					<% end %>
+					<% end %> -->
       </div>
 
       <% if @user.education %>
@@ -36,7 +36,7 @@
       <% if @user.full_street_address %>
         <section class="Detail">
           <h3>City/village:</h3>
-          <p><%= @user.full_street_address.capitalize %></p>
+          <p class="label-local"><%= @user.full_street_address.capitalize %></p>
         </section>
       <% end %>
 

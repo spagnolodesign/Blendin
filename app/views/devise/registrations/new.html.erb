@@ -9,7 +9,7 @@
       <%= f.password_field :password, placeholder: "Password (min 6char)", autocomplete: "off", class:"Input" %>
 
       <label class="Label CheckBox">
-        <%= f.check_box(:terms_and_conditions )%> I read and agree the <a href="">Terms & Condition</a>
+        <%= f.check_box(:terms_and_conditions )%> I read and agree the <a href="//www.iubenda.com/privacy-policy/7951305" class="no-brand" title="Privacy Policy" target="_blank">Privacy Policy</a>
       </label>
 
       <div class="actions">
@@ -20,3 +20,5 @@
     <%= render "devise/shared/links" %>
   </div>
 </section>
+
+<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
