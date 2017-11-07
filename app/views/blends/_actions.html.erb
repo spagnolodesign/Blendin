@@ -4,21 +4,21 @@
 
     <% if @blend[:data].sender === current_user %>
       <div class="details-box center">
-        We are elaborating your request. Please wait for approval 🕒.<br />In the meantime a big thank you for making the world a better place together.
+        <%= t('.blend_pending_msg_html')%>
       </div>
     <% end %>
 
     <% if @blend[:data].recipient === current_user %>
       <p class="Bubble"><%= @blend[:data].message %></p>
       <div class="clearfix blend-actions center">
-        <%= link_to("Accept", blend_accept_path(@blend[:data].id), class:"Button accept") %>
-        <%= link_to("Refuse", blend_reject_path(@blend[:data].id), class:"Button refuse") %>
+        <%= link_to(t('.blend_accept_btn'), blend_accept_path(@blend[:data].id), class:"Button accept") %>
+        <%= link_to(t('.blend_refuse_btn'), blend_reject_path(@blend[:data].id), class:"Button refuse") %>
       </div>
     <% end %>
 
     <% elsif @blend[:data].status === "accepted" %>
       <div class="details-box center">
-        🎉 That's the spirit! <br>Text/Call me now to meet up asap at:</br>
+        <%= t('.blend_accept_msg_html')%>
         <% if !@user.phone.empty? %>
           <a href="tel:<%= @user.phone %>"><%= @user.phone %></a>
         <% else %>
@@ -29,6 +29,6 @@
 
   <% else %>
     <div class="details-box center">
-      Blend refused 😞. Not really a big deal our community is big and we have a planties of other bleders.<br />
+      <%= t('.blend_refuse_msg')%><br />
     </div>
   <% end %>

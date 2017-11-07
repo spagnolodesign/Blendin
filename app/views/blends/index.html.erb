@@ -7,6 +7,6 @@
   <% end %>
 
   <% if @blends_i_sent.empty? && @blends_i_received.empty? %>
-    <p>You dont have any blends yet, start meet new people <%= link_to "here", root_url %></p>
+    <p><%=t('.no_blend_msg') %><%= link_to t('.no_blend_msg_link'), root_url %></p>
   <% end %>
 </section>

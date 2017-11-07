@@ -10,15 +10,15 @@
             <%= render 'blends/actions' %>
           <% end %>
         <% else %>
-          <a href="#modal-1" data-modal-open class="Button BlendBtn">Blend with <%= @user.name %></a>
+          <a href="#modal-1" data-modal-open class="Button BlendBtn"><%= t '.blend_btn', username: @user.name %></a>
         <% end %>
       </div>
     </div>
 
 		<div class="sm-col sm-col-8 px2">
       <div class="ProfileInfo">
-        <h2>Hey, I'm <%= @user.name.capitalize %>!</h2>
-        <p class><%= @user.age %> years old.</p>
+        <h2><%= t('.profile_username', username: @user.name.capitalize) %></h2>
+        <p class><%= t('.profile_age', age: @user.age) %></p>
 					<!-- <% if @user.local %>
 						<span class="label-local">LOCAL</span>
 					<% else %>
@@ -28,14 +28,14 @@
 
       <% if @user.education %>
         <section class="Detail">
-          <h3>My study:</h3>
+          <h3><%= t('.profile_education') %></h3>
           <p><%= @user.education %></p>
         </section>
       <% end %>
 
       <% if @user.full_street_address %>
         <section class="Detail">
-          <h3>City/village:</h3>
+          <h3><%= t('.profile_adress') %></h3>
           <p class="label-local"><%= @user.full_street_address.capitalize %></p>
         </section>
       <% end %>
@@ -43,7 +43,7 @@
 
       <% if @user.tag_list %>
         <section class="Detail">
-          <h3>Interest in:</h3>
+          <h3><%= t('.profile_interest') %></h3>
           <div class="TagList">
             <% @user.tag_list.each do |tag| %>
             <div class="Tag">
@@ -56,14 +56,14 @@
 
       <% if @user.job %>
         <section class="Detail">
-          <h3>Study / Job experience:</h3>
+          <h3><%= t('.profile_study') %></h3>
           <p><%= @user.job.capitalize %></p>
         </section>
       <% end %>
 
       <% if @user.about %>
         <section class="Detail">
-          <h3>About me:</h3>
+          <h3><%= t('.profile_about') %></h3>
           <p><%= @user.about %></p>
         </section>
       <% end %>
@@ -72,11 +72,11 @@
 </div>
 
 <div id="modal-1" class="modal-hider">
-  <h3>Say hello to <b><%= @user.name.capitalize %></b> and introduce yourself with some words.</h3>
+  <h3><%= t('.blend_message_html', username: @user.name.capitalize) %></h3>
   <%= form_for @newblend do |f| %>
     <%= hidden_field_tag(:recipient_id, @user.id) %>
-    <%= f.text_area :message, class:"Input", placeholder:"😉 Hello, my name is ...", required:true %>
-    <%= f.submit "Send message", class:"Button" %>
+    <%= f.text_area :message, placeholder: t('.blend_message_placeholder'), required:true, class:"Input" %>
+    <%= f.submit t('.blend_message_btn'), class:"Button" %>
   <% end %>
 </div>
 
