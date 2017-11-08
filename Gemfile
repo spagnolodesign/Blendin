@@ -21,6 +21,7 @@ gem 'administrate-field-image'
 gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
+gem "geocoder"
 
 
 group :development, :test do
