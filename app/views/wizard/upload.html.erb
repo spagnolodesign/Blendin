@@ -4,7 +4,7 @@
       <%= render 'top_nav' %>
     <% end %>
     <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
-      <label class="Label center">Upload/change your picture:</label>
+      <label class="Label center"><%= t('.label') %></label>
       <br>
       <div class="DropArea">
         <img class="rounded avatar-js" id="preview-js" src="<%= @user.avatar.medium_avatar %>">
@@ -12,8 +12,8 @@
       </div>
       <p class="error"></p>
       <div class="center">
-        <%= link_to "Skip", root_url, class:"Button full back" %>
-        <%= f.submit "Upload ->", class:"Button full" %>
+        <%= link_to t('.btn_skip'), root_url, class:"Button full back" %>
+        <%= f.submit t('.btn_upload'), class:"Button full" %>
       </div>
     <% end %>
   </div>
@@ -40,7 +40,7 @@
       }
       else
       {
-        $('.error').html('File not supported! Please upload one of the following file: png, jpeg, jpg.');
+        $('.error').html(<%= t('.error')%>);
       }
     });
 

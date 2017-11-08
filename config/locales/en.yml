@@ -3,6 +3,12 @@ en:
   seo:
     title: "Blendin | where people and cultures meet "
     description: "Something"
+    og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
+  header:
+    main:
+      community_link: "Community"
+      my_blends_link: "My blends"
+      settings_link: "Settings"
   home:
     index:
       no_match_msg_htm: "We couldn't find any possible match close to you<br>we are currently based in the Netherlads if you wish to take blendin in your country please write us at: "
@@ -23,7 +29,7 @@ en:
       profile_username: "Hey, I'm %{username}!"
       profile_age: "%{age} years old."
       profile_education: "My study:"
-      profile_adress: "City/Village:"
+      profile_address: "City/Village:"
       profile_interest: "Interest in:"
       profile_study: "Study / Job experience:"
       profile_about: "About me:"
@@ -31,3 +37,36 @@ en:
       blend_message_html: "Say hello to <b>%{username}</b> and introduce yourself with some words."
       blend_message_placeholder: "😉 Hello, my name is ..."
       blend_message_btn: "Send message"
+  wizard:
+    index:
+      greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."
+      local_label: "Please select an option:"
+      local_true: "I'm a local"
+      local_false: "I'm not a local (newcomer)"
+      gender_label: "Please select an option:"
+      gender_male: "I'm a man 👨"
+      gender_female: "I'm a woman 👩"
+      birthday_label: "🎂 Date of Birth:"
+      address_label: "🌇 Where do you live?"
+      address_placeholder: "Ex. Amsterdam, Netherlands"
+      country_label: "🇸🇾 🇳🇱 Country of origin:"
+      country_placeholder: "Ex. Syria"
+      interest_label: "📙 Choose your interest from the list:"
+      interest_helper: "(Choose at least three interest form the list. The more the better.)"
+      job_label: "💪 Study and/or work experience:"
+      job_placeholder: "Ex. Car engineer or lawyer"
+      job_helper: "(This could be your previous job/study.)"
+      phone_label: "📱 Phone number:"
+      phone_placeholder: "Ex. 0612345678"
+      about_label: "💬 Tell more about yourself: "
+      about_helper: "(This is not mandatory but it will help you to connect with others in the community.)"
+      submit_btn: "Confirm and continue"
+    top_nav:
+      profile: "Profile"
+      photo: "Photo"
+      settings: "Settings"
+    upload:
+      label: "Upload/change your picture:"
+      btn_skip: "Skip"
+      btn_upload: "Upload ->"
+      error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
