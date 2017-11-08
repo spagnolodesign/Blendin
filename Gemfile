@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.3'
+ruby '2.4.1'
 gem 'rails'
 gem 'pg'
 gem 'puma'
@@ -21,6 +21,7 @@ gem 'administrate-field-image'
 gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
+gem "geocoder"
 
 
 group :development, :test do

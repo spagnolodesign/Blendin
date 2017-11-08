@@ -10,14 +10,13 @@ module Admin
 
     def show
       user = User.find(params[:id])
-      @mightmatch = User.all.near([user.latitude, user.longitude], 7).where(local: !user.local).tagged_with(user.tags, :any => true).for_age_range(user.age - 2, user.age + 2).where.not(id: user.id).order(created_at: :desc)
+      @mightmatch = User.all.near([user.latitude, user.longitude], 7).where(local: !user.local).tagged_with(user.tags, :any => true)
+      if @mightmatch.any?
+        @mightmatch.for_age_range(user.age - 2, user.age + 2)
+      end
       super
     end
 
-    def suggest
-      byebug
-
-    end
     # Define a custom finder by overriding the `find_resource` method:
     # def find_resource(param)
     #   User.find_by!(slug: param)
