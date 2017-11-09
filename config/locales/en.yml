@@ -70,6 +70,9 @@ en:
       btn_skip: "Skip"
       btn_upload: "Upload ->"
       error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
+  layouts:
+    mailer:
+      footer: "Sent by"
   user_mailer:
     welcome_email:
       greetings: "Welcome %{username},"
