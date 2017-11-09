@@ -70,3 +70,33 @@ en:
       btn_skip: "Skip"
       btn_upload: "Upload ->"
       error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
+  user_mailer:
+    welcome_email:
+      greetings: "Welcome %{username},"
+      msg_html: "Your account has been created - connecting with newcomers/locals has never been easier.</p>
+      <p><strong>Here are three ways for you to get the most out of it:</strong>"
+      match_msg_html: "Find Your Match</strong><br> Find newcomers/locals with the same age and interests as you."
+      match_link: "Get started!"
+      upload_msg_html: "Upload a Profile Photo</strong><br> Personalize your profile and help people recognize you."
+      upload_link: "Uplaod photo"
+      profile_msg_html: "Edit Your Profile</strong><br> Describe your personal interests, work experience & contact info."
+      profile_link: "Complete now!"
+  blend_mailer:
+    blend_accepted_email:
+      main_msg: "%{sender}, your Blend resquest was accepted!"
+      secundary_msg: "Get in touch with %{recipient} and start blending."
+      phone_msg: "That's the spirit! Call me to arrange a meet-up as soon as possible at:"
+      email_msg: "That's the spirit! Text me to arrange a meet-up as soon as possible at:"
+      btn: "See full profile"
+    blend_rejected_email:
+      main_msg: "%{sender}, sorry..."
+      secundary_msg: "Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request"
+      btn: "See more newcomers/locals"
+    blend_request_email:
+      main_msg: "%{recipient}, you have a new Blend request!"
+      secundary_msg: "%{sender} send you a message and wants to Blend with you."
+      profile_msg_start: "Check my "
+      profile_link: "profile "
+      profile_msg_end: "for more information."
+      btn_accept: "Accept"
+      btn_refuse: "Refuse"

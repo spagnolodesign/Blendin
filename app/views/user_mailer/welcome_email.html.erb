@@ -1,6 +1,5 @@
-<h2>Welcome <%= @user.username %>,</h2>
-<p>Your account has been created - connecting with newcomers/locals has never been easier.</p>
-<p><strong>Here are three ways for you to get the most out of it:</strong></p>
+<h2><%= t('.greetings', username: @user.username) %></h2>
+<p><%= t('.msg_html') %></p>
 <table>
   <tr>
     <td>
@@ -9,8 +8,9 @@
       </p>
     </td>
     <td align="left">
-      <strong style="color: #333333;">Find Your Match</strong><br> Find newcomers/locals with the same age and interests as you.
-      <%= link_to 'Get started!', root_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
+      <strong style="color: #333333;">
+        <%= t('.match_msg_html') %>
+      <%= link_to t('.match_link'), root_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
     </td>
   </tr>
   <tr>
@@ -20,8 +20,9 @@
       </p>
     </td>
     <td align="left">
-      <strong style="color: #333333;">Upload a Profile Photo</strong><br> Personalize your profile and help people recognize you.
-      <%= link_to 'Uplaod photo', upload_photo_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
+      <strong style="color: #333333;">
+        <%= t('.upload_msg_html') %>
+      <%= link_to t('.upload_link'), upload_photo_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
     </td>
   </tr>
   <tr>
@@ -31,8 +32,9 @@
       </p>
     </td>
     <td align="left">
-      <strong style="color: #333333;">Edit Your Profile</strong><br> Describe your personal interests, work experience & contact info.
-      <%= link_to 'Complete now!', wizard_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
+      <strong style="color: #333333;">
+        <%= t('.profile_msg_html') %>
+      <%= link_to t('.profile_link'), wizard_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
     </td>
   </tr>
 </table>

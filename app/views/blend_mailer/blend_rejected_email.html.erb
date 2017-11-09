@@ -1,15 +1,15 @@
-<h2 style="margin: 0;padding: 0;font-size: 18px;font-family: 'Quicksand', sans-serif;margin-bottom: 20px;line-height: 1.25;color: #333333;"><%= @sender.username %>, sorry...</h2>
-<p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;">Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request</p>
+<h2 style="margin: 0;padding: 0;font-size: 18px;font-family: 'Quicksand', sans-serif;margin-bottom: 20px;line-height: 1.25;color: #333333;"><%= t('.main_msg', sender: @sender.username) %></h2>
+<p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;"><%= t('.secundary_msg') %></p>
 <table style="margin: 50px 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;border-collapse: collapse;width: 100% !important;">
   <tr style="text-align: center;margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
     <% User.all.sample(4).each do |user|%>
     <td style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-      <%= image_tag(user.avatar.small_avatar, id: 'avatar')%>
+      <%= image_tag(user.avatar.small_avatar, id: 'avatar', style:" width: 70px; height: 70px; border-radius: 50%; display: unset")%>
       <p class="username" style="margin: 0;padding: 0;font-size: 13px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;"><%= user.username %></p>
     </td>
     <% end %>
   </tr>
 </table>
 <div align="center" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-  <%= link_to 'See more newcomers/locals', root_url, class: 'button' %>
+  <%= link_to t('.btn'), root_url, class: 'button' %>
 </div>
