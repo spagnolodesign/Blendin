@@ -8,18 +8,22 @@ Rails.application.routes.draw do
    root to: "users#index"
   end
 
-  get '/wizard', to: 'wizard#index'
-  get '/upload-photo', to: 'wizard#upload'
+  # config/routes.rb
+  scope "(:locale)", locale: /en|nl/ do
 
-  devise_for :users
 
-  resources :users, only: [:show, :update]
+    get '/wizard', to: 'wizard#index'
+    get '/upload-photo', to: 'wizard#upload'
 
-  resources :blends, only: [:create, :new, :index] do
-    get '/accept', to: 'blends#accept'
-    get '/reject', to: 'blends#reject'
+    devise_for :users
+
+    resources :users, only: [:show, :update]
+
+    resources :blends, only: [:create, :new, :index] do
+      get '/accept', to: 'blends#accept'
+      get '/reject', to: 'blends#reject'
+    end
+
+    root 'home#index'
   end
-
-  root 'home#index'
-
 end

@@ -4,8 +4,8 @@
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
-      <%= f.email_field :email, autofocus: true, class:"Input", placeholder:"Email" %>
-      <%= f.password_field :password, autocomplete: "off", class:"Input", placeholder:"Password" %>
+      <%= f.email_field :email, autofocus: true, class:"Input", placeholder: t('.email_placeholder') %>
+      <%= f.password_field :password, autocomplete: "off", class:"Input", placeholder: t('.pass_placeholder') %>
 
       <% if devise_mapping.rememberable? -%>
         <div class="field">
@@ -15,7 +15,7 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Sign in", class: "Button center" %>
+        <%= f.submit t('.btn_submit'), class: "Button center" %>
       </div>
     <% end %>
 

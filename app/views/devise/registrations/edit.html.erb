@@ -4,25 +4,25 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
 
-          <label class="Label">Email</label>
+          <label class="Label"><%= t('.form_email') %></label>
           <%= f.email_field :email, autofocus: true, class:"Input", 'data-parsley-trigger' => "change" %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <p><%= t('.form_email', email: resource.unconfirmed_email) %></p>
           <% end %>
 
-          <label class="Label">Full name</label>
+          <label class="Label"><%= t('.form_fulln_name') %></label>
           <%= f.text_field :username, class:"Input" , required: true %>
 
-          <label class="Label">Current password</label> <i>(we need your current password to confirm your changes)</i>
+          <label class="Label"><%= t('.form_current_pass_html') %>
           <%= f.password_field :current_password, autocomplete: "off", class:"Input", required: true %>
 
-          <%= f.submit "Update", class:"Button" %>
+          <%= f.submit t('.btn_submit'), class:"Button" %>
       <% end %>
 
-      <h3>Cancel my account, Unhappy? </h3>
+      <h3><%= t('.cancel_account_msg') %></h3>
 
-      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"Button" %>
+      <%= button_to t('.cancel_account_btn'), registration_path(resource_name), data: { confirm: t('.cancel_account_confirmation') }, method: :delete, class:"Button" %>
   </div>
 </section>
 

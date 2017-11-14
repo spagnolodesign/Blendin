@@ -1,17 +1,17 @@
 <section class="Auth clearfix flex items-center">
     <div class="sm-col-6 lg-col-3 mx-auto">
-      <h2 class="center">Change your password</h2>
+      <h2 class="center"><%= t('.header')%>Change your password</h2>
 
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
         <%= f.hidden_field :reset_password_token %>
-          <%= f.password_field :password, autofocus: true, autocomplete: "off", class:"Input", placeholder:"Type a new password" %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", class:"Input", placeholder:"Confirm the new password" %>
+          <%= f.password_field :password, autofocus: true, autocomplete: "off", class:"Input", placeholder: t('.pass_placeholder') %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class:"Input", placeholder:t('.pass_conf_placeholder') %>
           <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em><br />
           <% end %>
         <div class="actions">
-          <%= f.submit "Change my password", class: "Button center" %>
+          <%= f.submit t('.btn_submit'), class: "Button center" %>
         </div>
       <% end %>
 

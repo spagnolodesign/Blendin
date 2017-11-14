@@ -103,3 +103,45 @@ en:
       profile_msg_end: "for more information."
       btn_accept: "Accept"
       btn_refuse: "Refuse"
+  devise:
+    confirmations:
+      new:
+        header: "Resend confirmation instructions"
+    passwords:
+      new:
+        header: "Forgot your password?"
+        btn_submit: "Send reset link"
+        email_placeholder: "Type your email address"
+      edit:
+        header: "Change your password"
+        pass_placeholder: "Type a new password"
+        pass_conf_placeholder: "Confirm the new password"
+        btn_submit: "Change my password"
+    registrations:
+      new:
+        email_placeholder: "Email"
+        pass_placeholder: "Password (min 6char)"
+        terms_and_conditions: "I read and agree the"
+        privacy_policy: "Privacy Policy"
+        btn_submit: "Sign up DB"
+      edit:
+        form_email: "Email"
+        confirmation_msg: "Currently waiting confirmation for: %{email}."
+        form_fulln_name: "Full name"
+        form_current_pass_html: "Current password</label> <i>(we need your current password to confirm your changes)</i>"
+        btn_submit: "Update"
+        cancel_account_msg: "Cancel my account, Unhappy?"
+        cancel_account_btn: "Cancel my account"
+        cancel_account_confirmation: "Are you sure?"
+    sessions:
+      new:
+        email_placeholder: "Email"
+        pass_placeholder: "Password"
+        btn_submit: "Sign in"
+    shared:
+      links:
+        already_have_an_account: "I have already an account"
+        register: "Register"
+        forgot_pass: "Forgot your password?"
+        didnt_receive_confirmation: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock_confirmation: "Didn't receive unlock instructions?"
