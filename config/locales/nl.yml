@@ -1,147 +1,358 @@
 nl:
-    headline: "Where people and cultures meet"
-    seo:
-      title: "Blendin | where people and cultures meet "
-      description: "Something"
-      og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
-    header:
-      main:
-        community_link: "Community"
-        my_blends_link: "My blends"
-        settings_link: "Settings"
-    home:
-      index:
-        no_match_msg_htm: "We couldn't find any possible match close to you<br>we are currently based in the Netherlads if you wish to take blendin in your country please write us at: "
-        prev_link: "< 🚶 Prev'"
-        next_link: "Next 🤔 >"
-    blends:
-      index:
-        no_blend_msg: "You dont have any blends yet, start meet new people "
-        no_blend_msg_link: "here"
-      actions:
-        blend_pending_msg_html: "We are elaborating your request. Please wait for approval 🕒.<br />In the meantime a big thank you for making the world a better place together."
-        blend_accept_btn: "Accept"
-        blend_refuse_btn: "Refuse"
-        blend_accept_msg_html: "🎉 That's the spirit! <br>Text/Call me now to meet up asap at:</br>"
-        blend_refuse_msg: "Blend refused 😞. Not really a big deal our community is big and we have a planties of other bleders."
-    users:
-      show:
-        profile_username: "Hey, I'm %{username}!"
-        profile_age: "%{age} years old."
-        profile_education: "My study:"
-        profile_address: "City/Village:"
-        profile_interest: "Interest in:"
-        profile_study: "Study / Job experience:"
-        profile_about: "About me:"
-        blend_btn: "Blend with %{username}"
-        blend_message_html: "Say hello to <b>%{username}</b> and introduce yourself with some words."
-        blend_message_placeholder: "😉 Hello, my name is ..."
-        blend_message_btn: "Send message"
-    wizard:
-      index:
-        greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."
-        local_label: "Please select an option:"
-        local_true: "I'm a local"
-        local_false: "I'm not a local (newcomer)"
-        gender_label: "Please select an option:"
-        gender_male: "I'm a man 👨"
-        gender_female: "I'm a woman 👩"
-        birthday_label: "🎂 Date of Birth:"
-        address_label: "🌇 Where do you live?"
-        address_placeholder: "Ex. Amsterdam, Netherlands"
-        country_label: "🇸🇾 🇳🇱 Country of origin:"
-        country_placeholder: "Ex. Syria"
-        interest_label: "📙 Choose your interest from the list:"
-        interest_helper: "(Choose at least three interest form the list. The more the better.)"
-        job_label: "💪 Study and/or work experience:"
-        job_placeholder: "Ex. Car engineer or lawyer"
-        job_helper: "(This could be your previous job/study.)"
-        phone_label: "📱 Phone number:"
-        phone_placeholder: "Ex. 0612345678"
-        about_label: "💬 Tell more about yourself: "
-        about_helper: "(This is not mandatory but it will help you to connect with others in the community.)"
-        submit_btn: "Confirm and continue"
-      top_nav:
-        profile: "Profile"
-        photo: "Photo"
-        settings: "Settings"
-      upload:
-        label: "Upload/change your picture:"
-        btn_skip: "Skip"
-        btn_upload: "Upload ->"
-        error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
-    layouts:
-      mailer:
-        footer: "Sent by"
-    user_mailer:
-      welcome_email:
-        greetings: "Welcome %{username},"
-        msg_html: "Your account has been created - connecting with newcomers/locals has never been easier.</p>
-        <p><strong>Here are three ways for you to get the most out of it:</strong>"
-        match_msg_html: "Find Your Match</strong><br> Find newcomers/locals with the same age and interests as you."
-        match_link: "Get started!"
-        upload_msg_html: "Upload a Profile Photo</strong><br> Personalize your profile and help people recognize you."
-        upload_link: "Uplaod photo"
-        profile_msg_html: "Edit Your Profile</strong><br> Describe your personal interests, work experience & contact info."
-        profile_link: "Complete now!"
-    blend_mailer:
-      blend_accepted_email:
-        main_msg: "%{sender}, your Blend resquest was accepted!"
-        secundary_msg: "Get in touch with %{recipient} and start blending."
-        phone_msg: "That's the spirit! Call me to arrange a meet-up as soon as possible at:"
-        email_msg: "That's the spirit! Text me to arrange a meet-up as soon as possible at:"
-        btn: "See full profile"
-      blend_rejected_email:
-        main_msg: "%{sender}, sorry..."
-        secundary_msg: "Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request"
-        btn: "See more newcomers/locals"
-      blend_request_email:
-        main_msg: "%{recipient}, you have a new Blend request!"
-        secundary_msg: "%{sender} send you a message and wants to Blend with you."
-        profile_msg_start: "Check my "
-        profile_link: "profile "
-        profile_msg_end: "for more information."
-        btn_accept: "Accept"
-        btn_refuse: "Refuse"
-    devise:
-      confirmations:
-        new:
-          header: "Resend confirmation instructions"
-      passwords:
-        new:
-          header: "Forgot your password?"
-          btn_submit: "Send reset link"
-          email_placeholder: "Type your email address"
-        edit:
-          header: "Change your password"
-          pass_placeholder: "Type a new password"
-          pass_conf_placeholder: "Confirm the new password"
-          btn_submit: "Change my password"
-      registrations:
-        new:
-          email_placeholder: "Email"
-          pass_placeholder: "Password (min 6char)"
-          terms_and_conditions: "I read and agree the"
-          privacy_policy: "Privacy Policy"
-          btn_submit: "Sign up DB"
-        edit:
-          form_email: "Email"
-          confirmation_msg: "Currently waiting confirmation for: %{email}."
-          form_fulln_name: "Full name"
-          form_current_pass_html: "Current password</label> <i>(we need your current password to confirm your changes)</i>"
-          btn_submit: "Update"
-          cancel_account_msg: "Cancel my account, Unhappy?"
-          cancel_account_btn: "Cancel my account"
-          cancel_account_confirmation: "Are you sure?"
-      sessions:
-        new:
-          email_placeholder: "Email"
-          pass_placeholder: "Password"
-          btn_submit: "Sign in"
-      shared:
-        links:
-          already_have_an_account: "I have already an account"
-          register: "Register"
-          forgot_pass: "Forgot your password?"
-          didnt_receive_confirmation: "Didn't receive confirmation instructions?"
-          didnt_receive_unlock_confirmation: "Didn't receive unlock instructions?"
+  headline: "Where people and cultures meet"
+  seo:
+    title: "Blendin | where people and cultures meet "
+    description: "Something"
+    og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
+  header:
+    main:
+      community_link: "Community"
+      my_blends_link: "My blends"
+      settings_link: "Settings"
+  home:
+    index:
+      no_match_msg_htm: "We couldn't find any possible match close to you<br>we are currently based in the Netherlads if you wish to take blendin in your country please write us at: "
+      prev_link: "< 🚶 Prev'"
+      next_link: "Next 🤔 >"
+  blends:
+    index:
+      no_blend_msg: "You dont have any blends yet, start meet new people "
+      no_blend_msg_link: "here"
+    actions:
+      blend_pending_msg_html: "We are elaborating your request. Please wait for approval 🕒.<br />In the meantime a big thank you for making the world a better place together."
+      blend_accept_btn: "Accept"
+      blend_refuse_btn: "Refuse"
+      blend_accept_msg_html: "🎉 That's the spirit! <br>Text/Call me now to meet up asap at:</br>"
+      blend_refuse_msg: "Blend refused 😞. Not really a big deal our community is big and we have a planties of other bleders."
+  users:
+    show:
+      profile_username: "Hey, I'm %{username}!"
+      profile_age: "%{age} years old."
+      profile_education: "My study:"
+      profile_address: "City/Village:"
+      profile_interest: "Interest in:"
+      profile_study: "Study / Job experience:"
+      profile_about: "About me:"
+      blend_btn: "Blend with %{username}"
+      blend_message_html: "Say hello to <b>%{username}</b> and introduce yourself with some words."
+      blend_message_placeholder: "😉 Hello, my name is ..."
+      blend_message_btn: "Send message"
+  wizard:
+    index:
+      greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."
+      local_label: "Please select an option:"
+      local_true: "I'm a local"
+      local_false: "I'm not a local (newcomer)"
+      gender_label: "Please select an option:"
+      gender_male: "I'm a man 👨"
+      gender_female: "I'm a woman 👩"
+      birthday_label: "🎂 Date of Birth:"
+      address_label: "🌇 Where do you live?"
+      address_placeholder: "Ex. Amsterdam, Netherlands"
+      country_label: "🇸🇾 🇳🇱 Country of origin:"
+      country_placeholder: "Ex. Syria"
+      interest_label: "📙 Choose your interest from the list:"
+      interest_helper: "(Choose at least three interest form the list. The more the better.)"
+      job_label: "💪 Study and/or work experience:"
+      job_placeholder: "Ex. Car engineer or lawyer"
+      job_helper: "(This could be your previous job/study.)"
+      phone_label: "📱 Phone number:"
+      phone_placeholder: "Ex. 0612345678"
+      about_label: "💬 Tell more about yourself: "
+      about_helper: "(This is not mandatory but it will help you to connect with others in the community.)"
+      submit_btn: "Confirm and continue"
+    top_nav:
+      profile: "Profile"
+      photo: "Photo"
+      settings: "Settings"
+    upload:
+      label: "Upload/change your picture:"
+      btn_skip: "Skip"
+      btn_upload: "Upload ->"
+      error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
+  layouts:
+    mailer:
+      footer: "Sent by"
+  user_mailer:
+    welcome_email:
+      greetings: "Welcome %{username},"
+      msg_html: "Your account has been created - connecting with newcomers/locals has never been easier.</p>
+      <p><strong>Here are three ways for you to get the most out of it:</strong>"
+      match_msg_html: "Find Your Match</strong><br> Find newcomers/locals with the same age and interests as you."
+      match_link: "Get started!"
+      upload_msg_html: "Upload a Profile Photo</strong><br> Personalize your profile and help people recognize you."
+      upload_link: "Uplaod photo"
+      profile_msg_html: "Edit Your Profile</strong><br> Describe your personal interests, work experience & contact info."
+      profile_link: "Complete now!"
+  blend_mailer:
+    blend_accepted_email:
+      main_msg: "%{sender}, your Blend resquest was accepted!"
+      secundary_msg: "Get in touch with %{recipient} and start blending."
+      phone_msg: "That's the spirit! Call me to arrange a meet-up as soon as possible at:"
+      email_msg: "That's the spirit! Text me to arrange a meet-up as soon as possible at:"
+      btn: "See full profile"
+    blend_rejected_email:
+      main_msg: "%{sender}, sorry..."
+      secundary_msg: "Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request"
+      btn: "See more newcomers/locals"
+    blend_request_email:
+      main_msg: "%{recipient}, you have a new Blend request!"
+      secundary_msg: "%{sender} send you a message and wants to Blend with you."
+      profile_msg_start: "Check my "
+      profile_link: "profile "
+      profile_msg_end: "for more information."
+      btn_accept: "Accept"
+      btn_refuse: "Refuse"
+  devise:
+    confirmations:
+      new:
+        header: "Resend confirmation instructions"
+    passwords:
+      new:
+        header: "Forgot your password?"
+        btn_submit: "Send reset link"
+        email_placeholder: "Type your email address"
+      edit:
+        header: "Change your password"
+        pass_placeholder: "Type a new password"
+        pass_conf_placeholder: "Confirm the new password"
+        btn_submit: "Change my password"
+    registrations:
+      new:
+        email_placeholder: "Email"
+        pass_placeholder: "Password (min 6char)"
+        terms_and_conditions: "I read and agree the"
+        privacy_policy: "Privacy Policy"
+        btn_submit: "Sign up"
+      edit:
+        form_email: "Email"
+        confirmation_msg: "Currently waiting confirmation for: %{email}."
+        form_fulln_name: "Full name"
+        form_current_pass_html: "Current password</label> <i>(we need your current password to confirm your changes)</i>"
+        btn_submit: "Update"
+        cancel_account_msg: "Cancel my account, Unhappy?"
+        cancel_account_btn: "Cancel my account"
+        cancel_account_confirmation: "Are you sure?"
+    sessions:
+      new:
+        email_placeholder: "Email"
+        pass_placeholder: "Password"
+        btn_submit: "Sign in"
+    shared:
+      links:
+        already_have_an_account: "I have already an account"
+        register: "Register"
+        forgot_pass: "Forgot your password?"
+        didnt_receive_confirmation: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock_confirmation: "Didn't receive unlock instructions?"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Validatie mislukt: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Kan item niet verwijderen omdat %{record} afhankelijk is
+          has_many: Kan item niet verwijderen omdat afhankelijke %{record} bestaan
+  date:
+    abbr_day_names:
+    - zo
+    - ma
+    - di
+    - wo
+    - do
+    - vr
+    - za
+    abbr_month_names:
+    -
+    - jan
+    - feb
+    - mrt
+    - apr
+    - mei
+    - jun
+    - jul
+    - aug
+    - sep
+    - okt
+    - nov
+    - dec
+    day_names:
+    - zondag
+    - maandag
+    - dinsdag
+    - woensdag
+    - donderdag
+    - vrijdag
+    - zaterdag
+    formats:
+      default: "%d-%m-%Y"
+      long: "%e %B %Y"
+      short: "%e %b"
+    month_names:
+    -
+    - januari
+    - februari
+    - maart
+    - april
+    - mei
+    - juni
+    - juli
+    - augustus
+    - september
+    - oktober
+    - november
+    - december
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: ongeveer een uur
+        other: ongeveer %{count} uur
+      about_x_months:
+        one: ongeveer een maand
+        other: ongeveer %{count} maanden
+      about_x_years:
+        one: ongeveer een jaar
+        other: ongeveer %{count} jaar
+      almost_x_years:
+        one: bijna een jaar
+        other: bijna %{count} jaar
+      half_a_minute: een halve minuut
+      less_than_x_minutes:
+        one: minder dan een minuut
+        other: minder dan %{count} minuten
+      less_than_x_seconds:
+        one: minder dan een seconde
+        other: minder dan %{count} seconden
+      over_x_years:
+        one: meer dan een jaar
+        other: meer dan %{count} jaar
+      x_days:
+        one: 1 dag
+        other: "%{count} dagen"
+      x_minutes:
+        one: 1 minuut
+        other: "%{count} minuten"
+      x_months:
+        one: 1 maand
+        other: "%{count} maanden"
+      x_years:
+        one: 1 jaar
+        other: "%{count} jaar"
+      x_seconds:
+        one: 1 seconde
+        other: "%{count} seconden"
+    prompts:
+      day: dag
+      hour: uur
+      minute: minuut
+      month: maand
+      second: seconde
+      year: jaar
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: moet worden geaccepteerd
+      blank: moet opgegeven zijn
+      present: moet leeg zijn
+      confirmation: komt niet overeen met %{attribute}
+      empty: moet opgegeven zijn
+      equal_to: moet gelijk zijn aan %{count}
+      even: moet even zijn
+      exclusion: is gereserveerd
+      greater_than: moet groter zijn dan %{count}
+      greater_than_or_equal_to: moet groter dan of gelijk zijn aan %{count}
+      inclusion: is niet in de lijst opgenomen
+      invalid: is ongeldig
+      less_than: moet minder zijn dan %{count}
+      less_than_or_equal_to: moet minder dan of gelijk zijn aan %{count}
+      model_invalid: "Validatie mislukt: %{errors}"
+      not_a_number: is geen getal
+      not_an_integer: moet een geheel getal zijn
+      odd: moet oneven zijn
+      required: moet bestaan
+      taken: is al in gebruik
+      too_long:
+        one: is te lang (maximaal %{count} teken)
+        other: is te lang (maximaal %{count} tekens)
+      too_short:
+        one: is te kort (minimaal %{count} teken)
+        other: is te kort (minimaal %{count} tekens)
+      wrong_length:
+        one: heeft onjuiste lengte (moet 1 teken lang zijn)
+        other: heeft onjuiste lengte (moet %{count} tekens lang zijn)
+      other_than: moet anders zijn dan %{count}
+    template:
+      body: 'Er zijn problemen met de volgende velden:'
+      header:
+        one: "%{model} niet opgeslagen: 1 fout gevonden"
+        other: "%{model} niet opgeslagen: %{count} fouten gevonden"
+  helpers:
+    select:
+      prompt: Maak een keuze
+    submit:
+      create: "%{model} toevoegen"
+      submit: "%{model} opslaan"
+      update: "%{model} bijwerken"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 2
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: miljard
+          million: miljoen
+          quadrillion: biljard
+          thousand: duizend
+          trillion: biljoen
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: byte
+            other: bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " en "
+      two_words_connector: " en "
+      words_connector: ", "
+  time:
+    am: "'s ochtends"
+    formats:
+      default: "%a %d %b %Y %H:%M:%S %Z"
+      long: "%d %B %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: "'s middags"

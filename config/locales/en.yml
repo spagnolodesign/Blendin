@@ -121,9 +121,9 @@ en:
       new:
         email_placeholder: "Email"
         pass_placeholder: "Password (min 6char)"
-        terms_and_conditions: "I read and agree the"
+        terms_and_conditions: "I have read and agree with the "
         privacy_policy: "Privacy Policy"
-        btn_submit: "Sign up DB"
+        btn_submit: "Sign up"
       edit:
         form_email: "Email"
         confirmation_msg: "Currently waiting confirmation for: %{email}."
@@ -140,7 +140,7 @@ en:
         btn_submit: "Sign in"
     shared:
       links:
-        already_have_an_account: "I have already an account"
+        already_have_an_account: "I already have an account"
         register: "Register"
         forgot_pass: "Forgot your password?"
         didnt_receive_confirmation: "Didn't receive confirmation instructions?"
