@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
   { locale: I18n.locale }
   end
 
+  def set_admin_locale
+    I18n.locale = :en
+  end
+
   protected
 
   def configure_permitted_parameters

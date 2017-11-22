@@ -16,8 +16,7 @@ gem 'fog'
 gem "mini_magick"
 gem 'carrierwave'
 gem 'webpacker'
-gem "administrate"
-gem 'administrate-field-image'
+gem 'activeadmin', github: 'activeadmin'
 gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
