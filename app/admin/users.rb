@@ -2,7 +2,7 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :username, :tag_list, :tags, :tag_ids, :cached_tag_list
+  permit_params :username, {:tag_list => []}, :cached_tag_list, :phone, :local, :birthday, :job
 #
 # or
 #
@@ -25,11 +25,18 @@ ActiveAdmin.register User do
   filter :base_tags
   filter :local
   filter :created_at
+  filter :avatar_present, :as => :boolean , label: 'Avatar'
+  filter :full_street_address_contains, label: 'Location'
+  filter :gender, :as => :select , label: 'Gender'
 
   form :html => { :multipart => true } do |f|
     f.semantic_errors
     f.inputs do
       f.input :username
+      f.input :phone
+      f.input :local
+      f.input :birthday, as: :datepicker
+      f.input :job
       f.input :tag_list, :as => :select, :multiple => :true, :collection => ActsAsTaggableOn::Tag.pluck(:name)
     end
     f.actions
