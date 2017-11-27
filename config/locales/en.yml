@@ -124,6 +124,7 @@ en:
         terms_and_conditions: "I have read and agree with the "
         privacy_policy: "Privacy Policy"
         btn_submit: "Sign up"
+        name_placeholder: "Full name"
       edit:
         form_email: "Email"
         confirmation_msg: "Currently waiting confirmation for: %{email}."

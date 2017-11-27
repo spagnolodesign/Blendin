@@ -124,6 +124,7 @@ nl:
         terms_and_conditions: "Ik accepteer bij deze de algemene voorwaarde en privacy policy"
         privacy_policy: "Privacy Policy"
         btn_submit: "Meld aan"
+        name_placeholder: "Naam"
       edit:
         form_email: "Email"
         confirmation_msg: "Currently waiting confirmation for: %{email}."
