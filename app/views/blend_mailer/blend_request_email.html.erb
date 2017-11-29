@@ -10,13 +10,13 @@
     <td align="left" style="max-width: 380px;margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
       <p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;">
         <em style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;"><%= @blend.message %>.<br style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;"><%= t('.profile_msg_start') %>
-          <%= link_to t('.profile_link'), user_url(locale: 'en', @sender) %>
+          <%= link_to t('.profile_link'), user_url(@sender, locale: :en) %>
           <%= t('.profile_msg_end') %></em>
       </p>
     </td>
   </tr>
 </table>
 <div align="center" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-  <%= link_to t('.btn_accept'), blend_accept_url(@blend.id), class:"button accept" %>
-  <%= link_to t('.btn_refuse'), blend_reject_url(@blend.id), class:"button refuse" %>
+  <%= link_to t('.btn_accept'), blend_accept_url(@blend.id, locale: :en), class:"button accept" %>
+  <%= link_to t('.btn_refuse'), blend_reject_url(@blend.id, locale: :en), class:"button refuse" %>
 </div>
