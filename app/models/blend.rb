@@ -18,6 +18,9 @@ class Blend < ActiveRecord::Base
     :closed
   ].freeze
 
+  def send_blend_request_email
+    BlendMailer.blend_request_email(self).deliver
+  end
 
   private
 
@@ -25,10 +28,6 @@ class Blend < ActiveRecord::Base
     if Blend.where("blends.sender_id = ? AND blends.recipient_id = ?", "#{self.recipient_id}", "#{self.sender_id}").count != 0
       errors.add(:recipient, "Already blended")
     end
-  end
-
-  def send_blend_request_email
-    BlendMailer.blend_request_email(self).deliver
   end
 
   def send_status_update_email
