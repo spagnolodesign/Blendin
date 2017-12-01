@@ -14,6 +14,7 @@ en:
       no_match_msg_htm: "We couldn't find any possible match close to you<br>we are currently based in the Netherlads if you wish to take blendin in your country please write us at: "
       prev_link: "< 🚶 Prev'"
       next_link: "Next 🤔 >"
+      introjs_step_1_html: data-intro="Profiles shown on top of the community are most similar to yours, based on mutual interests, place of living and age. Click on a picture to see more information about someone!"
   blends:
     index:
       no_blend_msg: "You dont have any blends yet, start meet new people "
@@ -37,6 +38,7 @@ en:
       blend_message_html: "Say hello to <b>%{username}</b> and introduce yourself with some words."
       blend_message_placeholder: "😉 Hello, my name is ..."
       blend_message_btn: "Send message"
+      introjs_step_1_html: data-intro="Would you like to meet him/her? Click here and send a Blend request. If the request is accepted you will receive each other’s phone number and you make an appointment."
   wizard:
     index:
       greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."
@@ -61,6 +63,10 @@ en:
       about_label: "💬 Tell more about yourself: "
       about_helper: "(This is not mandatory but it will help you to connect with others in the community.)"
       submit_btn: "Confirm and continue"
+      introjs_step_1_html: data-intro="Click 'local' if you feel at home here in the Netherlands and you are looking for contact with people that are new here."
+      introjs_step_2_html: data-intro="Choose ‘Not a local’ is you are not a Dutch local and looking for more contact with them."
+      introjs_step_3_html: data-intro="Choose as many interests as you like. Our system will find your matches based on these interests, location, and age."
+      introjs_step_4: "Confirm"
     top_nav:
       profile: "Profile"
       photo: "Photo"
@@ -70,6 +76,7 @@ en:
       btn_skip: "Skip"
       btn_upload: "Upload ->"
       error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
+      introjs_step_1_html: data-intro="Make sure you upload a picture; this increases your chances of finding people to meet up with!"
   layouts:
     mailer:
       footer: "Sent by"

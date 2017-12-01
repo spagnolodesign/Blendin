@@ -10,7 +10,7 @@
             <%= render 'blends/actions' %>
           <% end %>
         <% else %>
-          <a href="#modal-1" data-modal-open class="Button BlendBtn"><%= t '.blend_btn', username: @user.name %></a>
+          <a href="#modal-1" data-modal-open class="Button BlendBtn" data-step="1" <%= t '.introjs_step_1_html' %> data-position= "right" ><%= t '.blend_btn', username: @user.name %></a>
         <% end %>
       </div>
     </div>
@@ -76,7 +76,7 @@
   <%= form_for @newblend do |f| %>
     <%= hidden_field_tag(:recipient_id, @user.id) %>
     <%= f.text_area :message, placeholder: t('.blend_message_placeholder'), required:true, class:"Input" %>
-    <%= f.submit t('.blend_message_btn'), class:"Button" %>
+    <%= f.submit t('.blend_message_btn'), class:"Button"%>
   <% end %>
 </div>
 
@@ -92,3 +92,17 @@
     var vanillaModal = new VanillaModal.default()
   });
 </script>
+
+<!-- Display the intro tour only one time -->
+<% content_for(:after_js) do %>
+  <script>
+  //   introJs.fn.oncomplete(
+  //     function() {
+  //   if (document.cookie.replace(/(?:(?:^|.*;\s*)introViewBlend\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  //     introJs().start();
+  //     document.cookie = "introViewBlend=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  //   }
+  // });
+    introJs().start();
+  </script>
+<% end %>

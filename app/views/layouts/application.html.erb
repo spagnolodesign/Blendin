@@ -24,7 +24,7 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application' %>
   <%= javascript_include_tag 'application' %>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.js"></script>
 </head>
 
 <body>
@@ -58,6 +58,7 @@
       ga('send', 'pageview');
     </script>
   <% end %>
+  <%= yield(:after_js) %>
 
 </body>
 </html>

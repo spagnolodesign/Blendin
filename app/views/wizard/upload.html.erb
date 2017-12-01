@@ -4,7 +4,7 @@
       <%= render 'top_nav' %>
     <% end %>
     <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
-      <label class="Label center"><%= t('.label') %></label>
+      <label class="Label center" data-step="1" <%= t('.introjs_step_1_html') %>><%= t('.label') %></label>
       <br>
       <div class="DropArea">
         <img class="rounded avatar-js" id="preview-js" src="<%= @user.avatar.medium_avatar %>">
@@ -46,3 +46,16 @@
 
   });
 </script>
+<!-- Display the intro tour only one time -->
+<% content_for(:after_js) do %>
+  <script>
+  //   introJs.fn.oncomplete(
+  //     function() {
+  //   if (document.cookie.replace(/(?:(?:^|.*;\s*)introViewPhoto\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  //     introJs().start();
+  //     document.cookie = "introViewPhoto=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  //   }
+  // });
+    introJs().start();
+  </script>
+<% end %>

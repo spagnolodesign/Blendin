@@ -4,3 +4,4 @@
 //= require modal
 //= require choices
 //= require main
+//= require intro

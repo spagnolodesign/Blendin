@@ -57,66 +57,11 @@ ActiveRecord::Schema.define(version: 20171121124321) do
     t.index ["sender_id"], name: "index_blends_on_sender_id"
   end
 
-  create_table "chat_rooms", id: :serial, force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "token"
-  end
-
   create_table "chatrooms", id: :serial, force: :cascade do |t|
     t.string "topic"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "events", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.float "latitude"
-    t.float "longitude"
-    t.string "address"
-    t.datetime "start"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "full_street_address"
-  end
-
-  create_table "knoks", id: :serial, force: :cascade do |t|
-    t.integer "from_id"
-    t.integer "to_id"
-    t.boolean "liked"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["from_id"], name: "index_knoks_on_from_id"
-    t.index ["to_id"], name: "index_knoks_on_to_id"
-  end
-
-  create_table "messages", id: :serial, force: :cascade do |t|
-    t.text "body"
-    t.integer "user_id"
-    t.integer "chat_room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
-  create_table "read_marks", id: :serial, force: :cascade do |t|
-    t.string "readable_type", null: false
-    t.integer "readable_id"
-    t.string "reader_type", null: false
-    t.integer "reader_id"
-    t.datetime "timestamp"
-    t.index ["reader_id", "reader_type", "readable_type", "readable_id"], name: "read_marks_reader_readable_index", unique: true
-  end
-
-  create_table "subscriptions", id: :serial, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "chat_room_id"
-    t.text "members", default: [], array: true
-    t.index ["chat_room_id"], name: "index_subscriptions_on_chat_room_id"
-    t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -189,6 +134,4 @@ ActiveRecord::Schema.define(version: 20171121124321) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
-  add_foreign_key "messages", "chat_rooms"
-  add_foreign_key "messages", "users"
 end
