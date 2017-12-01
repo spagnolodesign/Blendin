@@ -2,8 +2,12 @@
     <% if @users.empty? %>
       <p class="center"><%= t('.no_match_msg_htm')%><a href="mailto:info@blendinnow.nl">info@blendinnow.nl</a></p>
     <% end %>
-    <% @users.each do |user| %>
-      <%= render 'users/card', user: user %>
+    <% @users.each_with_index do |user, i| %>
+      <% if i == 0 %>
+        <span data-step="1" <%= t('.introjs_step_1_html') %> >
+      <% end %>
+        <%= render 'users/card', user: user %>
+      </span>
     <% end %>
 </section>
 <div class="clearfix center col-12">
@@ -12,3 +16,12 @@
     <%= link_to_next_page @users, t('.next_link') %>
   </div>
 </div>
+
+
+<% content_for(:after_js) do %>
+  <script>
+    $(function () {
+      window.initIntroJs('home');
+    });
+  </script>
+<% end %>

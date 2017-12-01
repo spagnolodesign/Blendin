@@ -12,4 +12,25 @@ $(function () {
       }
   }
 
+  window.initIntroJs = function (section){
+    var introInViews = introJs();
+    var labelViewTour = section + "-done-tour";
+
+    var doneTour = localStorage.getItem(labelViewTour);
+
+    if (doneTour) {
+      return;
+    }else{
+      introInViews.oncomplete(function() {
+        localStorage.setItem(labelViewTour, true);
+      }).start();
+      introInViews.onexit(function() {
+         localStorage.setItem(labelViewTour, true);
+      }).start();
+      introInViews.start();
+    }
+  }
+
+
+
 });

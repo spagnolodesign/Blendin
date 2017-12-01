@@ -10,12 +10,12 @@
 
       <label class="Label"><%= t('.local_label') %></label>
 
-      <label class="Label CheckBoxRound">
+      <label class="Label CheckBoxRound" data-step="1" <%= t('.introjs_step_1_html') %> >
         <%= f.radio_button :local, true, class:"css-checkbox", required:true  %>
         <%= t('.local_true') %>
       </label>
 
-      <label class="Label CheckBoxRound">
+      <label class="Label CheckBoxRound" data-step="2" <%= t('.introjs_step_2_html') %>>
         <%= f.radio_button :local, false, class:"css-checkbox", required:true  %>
         <%= t('.local_false') %>
       </label>
@@ -41,7 +41,7 @@
       <label class="Label"><%= t('.country_label') %></label>
       <%= f.text_field :country, id:"country-js", class:"Input AddressField", placeholder: t('.country_placeholder') %>
 
-      <label class="Label"><%= t('.interest_label') %></label>
+      <label class="Label" data-step="3" <%= t('.introjs_step_3_html')%>><%= t('.interest_label') %></label>
       <select name="user[tag_list][]" id="taglist-js"  multiple required>
         <% @user.tag_list.each do |tag| %>
           <option value="<%= tag %>" selected><%= tag %></option>
@@ -63,7 +63,7 @@
 
       <br>
 
-      <%= f.submit t('.submit_btn'), class:"Button full center" %>
+      <%= f.submit t('.submit_btn'), class:"Button full center", 'data-step'=>'4', 'data-intro'=> t('.introjs_step_4')  %>
 
     <% end %>
   </div>
@@ -115,3 +115,11 @@
 
   });
 </script>
+
+<% content_for(:after_js) do %>
+  <script>
+    $(function () {
+      window.initIntroJs('wizard');
+    });
+  </script>
+<% end %>

@@ -14,6 +14,7 @@ nl:
       no_match_msg_htm: "We hebben geen passende match gevonden voor jou<br>We zijn momenteel slechts actief in Nederland. Ben je geintereseerd om Blendin te beginnen in jouw land? Stuur ons dan een bericht."
       prev_link: "< 🚶 Prev'"
       next_link: "Next 🤔 >"
+      introjs_step_1_html: data-intro="De bovenste profielen komen het meest overeen met jouw profiel op basis van gelijke interesses, woonplaats en leeftijd. Klik op een foto om meer informatie over iemand te zien!"
   blends:
     index:
       no_blend_msg: "Je hebt nog geen Blends. Nodig mensen uit om te ontmoeten!"
@@ -37,6 +38,7 @@ nl:
       blend_message_html: "`Stel jezelf voor aan <b>%{username}</b> en vraag om een keer te Blenden."
       blend_message_placeholder: "😉 Hallo, mijn naam is ..."
       blend_message_btn: "Stuur bericht"
+      introjs_step_1_html: data-intro="Wil je met hem/haar afspreken? Klik dan hier en stuur een Blend verzoek. Als je verzoek wordt geaccepteerd krijgen jullie elkaars telefoon nummers en kunnen jullie elkaar ontmoeten."
   wizard:
     index:
       greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid rofiel helpt je bij het vinden van goede matches."
@@ -61,6 +63,10 @@ nl:
       about_label: "Vertel meer over jezelf💬: "
       about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
       submit_btn: "Bevestig en ga door"
+      introjs_step_1_html: data-intro="Kies op ‘Local’ als je je thuis voelt in Nederland en op zoek bent naar contact met mensen die nieuw zijn in Nederland."
+      introjs_step_2_html: data-intro="Kies hier ‘nieuwkomer’ als je niet opgegroeid bent in Nederland en op zoek ben naar contact met Nederlanders."
+      introjs_step_3_html: data-intro="Geef hier zo veel mogelijk interesses aan! Ons systeem zal daarop matches selecteren."
+      introjs_step_4: "Bevestigen"
     top_nav:
       profile: "Profiel"
       photo: "Foto"
@@ -70,6 +76,7 @@ nl:
       btn_skip: "Sla over"
       btn_upload: "Upload ->"
       error: "Bestand niet ondersteund! Upload een van de volgende bestandformaties: png, jpeg, jpg."
+      introjs_step_1_html: data-intro="Zorg dat je een foto kiest want dit vergroot je kansen op ontmoetingen aanzienlijk!"
   layouts:
     mailer:
       footer: "Verstuurd door"
