@@ -9,14 +9,12 @@
           <%= link_to t('.settings_link'), wizard_path %>
           <a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
           <a id="toggle-nav" class="icon" href="#open-nav" >&#9776;</a>
-          <%= link_to 'NL', url_for( :locale => 'nl' ), class: "lang-lnk right-border" %>
-          <%= link_to 'EN', url_for( :locale => 'en' ), class: "lang-lnk"  %>
+          <%= render 'header/languages' %>
         </nav>
       </div>
-
-    <div class="col col-7">
-      <%= link_to "", root_url, class:"Logo" %>
-    </div>
+      <div class="col col-7">
+        <%= link_to "", root_url, class:"Logo" %>
+      </div>
   </div>
 </div>
 <!--/HEADER-->

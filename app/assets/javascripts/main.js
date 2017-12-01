@@ -1,5 +1,5 @@
 $(function () {
-  console.log('ready')
+  var introInViews;
 
   $('#toggle-nav').on('click', toggleNav);
 
@@ -13,7 +13,7 @@ $(function () {
   }
 
   window.initIntroJs = function (section){
-    var introInViews = introJs();
+    introInViews = introJs();
     var labelViewTour = section + "-done-tour";
 
     var doneTour = localStorage.getItem(labelViewTour);
@@ -21,16 +21,9 @@ $(function () {
     if (doneTour) {
       return;
     }else{
-      introInViews.oncomplete(function() {
-        localStorage.setItem(labelViewTour, true);
-      }).start();
-      introInViews.onexit(function() {
-         localStorage.setItem(labelViewTour, true);
-      }).start();
       introInViews.start();
+      localStorage.setItem(labelViewTour, true);
     }
   }
-
-
 
 });

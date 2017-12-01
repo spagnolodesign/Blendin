@@ -33,6 +33,10 @@
 
   <% if user_signed_in? %>
     <%= render 'header/main' %>
+  <% else %>
+    <div class="lngs">
+      <%= render 'header/languages' %>
+    </div>
   <% end %>
 
   <main>

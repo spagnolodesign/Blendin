@@ -1,0 +1,8 @@
+<% @matches = User.match_with(user) %>
+
+<div>
+  <h1>Possible matches based on interest with:</h1>
+  <% @matches.each do |account| %>
+    <%= link_to account.username, admin_user_path(account) %><br>
+  <% end %>
+</div>

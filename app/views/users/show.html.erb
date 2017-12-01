@@ -93,16 +93,10 @@
   });
 </script>
 
-<!-- Display the intro tour only one time -->
 <% content_for(:after_js) do %>
   <script>
-  //   introJs.fn.oncomplete(
-  //     function() {
-  //   if (document.cookie.replace(/(?:(?:^|.*;\s*)introViewBlend\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
-  //     introJs().start();
-  //     document.cookie = "introViewBlend=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-  //   }
-  // });
-    introJs().start();
+    $(function () {
+      window.initIntroJs('profile');
+    });
   </script>
 <% end %>

@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.lngs{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
 @media only screen and (min-width: 64em) {
   .Blendin-logo{
     width: 300px;

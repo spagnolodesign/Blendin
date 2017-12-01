@@ -42,4 +42,25 @@ ActiveAdmin.register User do
     f.actions
   end
 
+  show do
+    attributes_table do
+      row :username
+      row :local
+      row :avatar do |user|
+        image_tag user.avatar.medium_avatar
+      end
+      row :job
+      row :about
+      row :full_street_address
+      row :country
+      row :birthday
+      row :gender
+      row :tag_list
+      row :phone
+      row :education
+    end
+    # renders app/views/admin/users/_matches.html.erb
+    render 'matches', { user: user }
+   end
+
 end

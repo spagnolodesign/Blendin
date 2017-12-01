@@ -1,15 +1,17 @@
+
 <section class="Cards CardsContainer">
-    <% if @users.empty? %>
-      <p class="center"><%= t('.no_match_msg_htm')%><a href="mailto:info@blendinnow.nl">info@blendinnow.nl</a></p>
+  <% if @users.empty? %>
+    <p class="center"><%= t('.no_match_msg_htm')%><a href="mailto:info@blendinnow.nl">info@blendinnow.nl</a></p>
+  <% end %>
+  <% @users.each_with_index do |user, i| %>
+    <% if i == 0 %>
+      <span data-step="1" <%= t('.introjs_step_1_html') %> >
     <% end %>
-    <% @users.each_with_index do |user, i| %>
-      <% if i == 0 %>
-        <span data-step="1" <%= t('.introjs_step_1_html') %> >
-      <% end %>
-        <%= render 'users/card', user: user %>
-      </span>
-    <% end %>
+      <%= render 'users/card', user: user %>
+    </span>
+  <% end %>
 </section>
+
 <div class="clearfix center col-12">
   <div class="paginate-link">
     <%= link_to_prev_page @users, t('.prev_link') %>
