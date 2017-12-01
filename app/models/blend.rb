@@ -19,7 +19,7 @@ class Blend < ActiveRecord::Base
   ].freeze
 
   def send_blend_request_email
-    BlendMailer.blend_request_email(self).deliver
+    BlendMailer.blend_request_email(self).deliver_later
   end
 
   private

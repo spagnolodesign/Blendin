@@ -5,7 +5,7 @@ namespace :blender do
     @pending_blend = Blend.where(status:'pending')
 
     @pending_blend.each do |blend|
-      puts "send email to #{blend.recipient.username}"
+      puts "send email"
       blend.send_blend_request_email
     end
 
