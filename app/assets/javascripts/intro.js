@@ -441,7 +441,7 @@
     var continueExit = true;
 
     // calling onbeforeexit callback
-    // 
+    //
     // If this callback return `false`, it would halt the process
     if (this._introBeforeExitCallback != undefined) {
       continueExit = this._introBeforeExitCallback.call(self);

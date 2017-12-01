@@ -4,9 +4,9 @@
     <% end %>
     <% @users.each_with_index do |user, i| %>
       <% if i == 0 %>
-      <span data-step="1" <%= t('.introjs_step_1_html') %> >
-        <% end %>
-      <%= render 'users/card', user: user %>
+        <span data-step="1" <%= t('.introjs_step_1_html') %> >
+      <% end %>
+        <%= render 'users/card', user: user %>
       </span>
     <% end %>
 </section>
@@ -16,16 +16,12 @@
     <%= link_to_next_page @users, t('.next_link') %>
   </div>
 </div>
-<!-- Display the intro tour only one time -->
+
+
 <% content_for(:after_js) do %>
   <script>
-    // introJs.fn.oncomplete(
-    //   function() {
-    // if (document.cookie.replace(/(?:(?:^|.*;\s*)introViewIndex\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
-    //   introJs().start();
-    //   document.cookie = "introViewIndex=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-    // }
-    // });
-    introJs().start();
+    $(function () {
+      window.initIntroJs('home');
+    });
   </script>
 <% end %>
