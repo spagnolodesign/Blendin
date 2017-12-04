@@ -19,7 +19,7 @@
     <% elsif @blend[:data].status === "accepted" %>
       <div class="details-box center">
         <%= t('.blend_accept_msg_html')%>
-        <% if !@user.phone.empty? %>
+        <% if !@user.phone.blank? %>
           <a href="tel:<%= @user.phone %>"><%= @user.phone %></a>
         <% else %>
           <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
