@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id'
-  has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id'
+  has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id', dependent: :destroy
+  has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id', dependent: :destroy
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
