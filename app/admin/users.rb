@@ -64,6 +64,13 @@ ActiveAdmin.register User do
       row :tag_list
       row :phone
       row :education
+      row :languages
+      row :sign_in_count
+      row :current_sign_in_at
+      row :last_sign_in_at
+      row :current_sign_in_ip
+      row :last_sign_in_ip
+      row :created_at
     end
     # renders app/views/admin/users/_matches.html.erb
     render 'matches', { user: user }
