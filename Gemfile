@@ -21,6 +21,7 @@ gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
 gem "geocoder"
+gem 'omniauth-facebook'
 
 
 group :development, :test do

@@ -251,8 +251,12 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  
-  # config.omniauth :facebook, "1633133673635521", "b4f345e7e22458ca55a4ead6d6df3c3e", callback_url: "http://localhost:3000/users/auth/facebook/callback", :scope => 'email,public_profile,user_birthday', info_fields:'id,email,name,birthday,first_name,about,age_range,last_name,picture,gender', :image_size => 'large'
+
+  config.omniauth :facebook, '305545103281539', '06a268792e93c69c15bdd39a670a8505',
+  scope: 'email, public_profile',
+  info_fields: 'email, first_name, last_name, gender, picture',
+  image_size: 'square', # 50x50, guaranteed ratio
+  secure_image_url: true
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
