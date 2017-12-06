@@ -24,12 +24,14 @@ class User < ActiveRecord::Base
   }
 
   scope :match_with, ->(user) {
-      near([user.latitude, user.longitude], 7)
+      near([user.latitude, user.longitude], 10)
       .where(local: !user.local)
       .tagged_with(user.tags, :any => true)
       .for_age_range(user.age - 4, user.age + 4)
       .where.not(id: user.id).order(created_at: :desc)
   }
+
+  scope :near_address, ->(address) { all.near(address, 20) }
 
   def name
     username.capitalize.split(",")[0]

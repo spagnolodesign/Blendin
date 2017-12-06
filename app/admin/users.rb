@@ -2,8 +2,8 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :username, {:tag_list => []}, :cached_tag_list, :phone, :local, :birthday, :job
-#
+  permit_params :username, {:tag_list => []}, :cached_tag_list, :phone, :local, :birthday, :job, :full_street_address, :longitude, :latitude
+
 # or
 #
 # permit_params do
@@ -11,7 +11,11 @@ ActiveAdmin.register User do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  scope :all, default: true
+  scope :all
+  # scope :full_street_address_contains do |users|
+  #   byebug
+  #   User.all.near_address('Amsterdam')
+  # end
 
   index do
     column :username
@@ -26,8 +30,9 @@ ActiveAdmin.register User do
   filter :local
   filter :created_at
   filter :avatar_present, :as => :boolean , label: 'Avatar'
-  filter :full_street_address_contains, label: 'Location'
   filter :gender, :as => :select , label: 'Gender'
+  filter :full_street_address, :as => :select
+
 
   form :html => { :multipart => true } do |f|
     f.semantic_errors
@@ -37,6 +42,7 @@ ActiveAdmin.register User do
       f.input :local
       f.input :birthday, as: :datepicker
       f.input :job
+      f.input :full_street_address
       f.input :tag_list, :as => :select, :multiple => :true, :collection => ActsAsTaggableOn::Tag.pluck(:name)
     end
     f.actions
