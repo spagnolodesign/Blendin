@@ -23,11 +23,11 @@ class User < ActiveRecord::Base
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
   }
 
-  scope :match_with, ->(user) {
-      near([user.latitude, user.longitude], 10)
+  scope :match_with, ->(user, age_range, km) {
+       near([user.latitude, user.longitude], km)
       .where(local: !user.local)
       .tagged_with(user.tags, :any => true)
-      .for_age_range(user.age - 4, user.age + 4)
+      .for_age_range(user.age - age_range, user.age + age_range)
       .where.not(id: user.id).order(created_at: :desc)
   }
 
