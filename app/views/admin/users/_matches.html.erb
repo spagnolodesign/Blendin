@@ -1,10 +1,9 @@
 <%
-  @matches = User.match_with(current_user, 7, 10).page params[:page]
+  @matches = User.match_with(user, 7, 10).page params[:page]
   if @matches.length <= 10
-    @matches = User.match_with(current_user, 15, 20).page params[:page]
+    @matches = User.match_with(user, 15, 20).page params[:page]
   end
 %>
-
 <div>
   <h1>Possible matches based on interest with:</h1>
   <% @matches.each do |account| %>
