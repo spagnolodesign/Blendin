@@ -61,7 +61,7 @@ ActiveAdmin.register User do
       row :country
       row :birthday
       row :gender
-      row :tag_list
+      list_row :tag_list, list_type: :ol
       row :phone
       row :education
       row :languages

@@ -27,7 +27,7 @@ form do |f|
     f.input :sender
     f.input :recipient
     f.input :message
-    f.input :status, as: :select, collection:  Blend::STATES
+    f.input :status, as: :select, collection:  Blend::STATES, input_html: { class: "default-select" }
   end
   f.actions
 end

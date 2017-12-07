@@ -9,6 +9,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'jbuilder'
 gem 'devise'
+gem 'coffee-rails'
 gem 'geocoder'
 gem 'groupdate'
 gem 'acts-as-taggable-on'
@@ -21,7 +22,7 @@ gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
 gem "geocoder"
-
+gem 'activeadmin_addons'
 
 group :development, :test do
   gem 'byebug'
