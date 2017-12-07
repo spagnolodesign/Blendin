@@ -87,7 +87,7 @@ class User < ActiveRecord::Base
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email)
-    user_params[:facebook_picture_url] = auth.info.image
+    user_params[:remote_avatar_url] = auth.info.image
     user_params[:username] = auth.info.name
     user_params[:gender] = auth.extra.gender
     user_params[:token] = auth.credentials.token
