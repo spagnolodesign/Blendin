@@ -8,7 +8,7 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   outline: none;
-  padding: 0.9em 1.3em;
+  padding: 0.7em 1em;
   cursor: pointer;
   text-decoration: none;
 }
@@ -53,9 +53,9 @@
 }
 
 .BlendBtn{
-  display: block;
-  margin: 1em 0;
-  width: 100%;
+  display: inline-block;
+  margin: 0.5em 0;
+  width: auto;
   background: #74CCD1;
   color:#FFF;
   text-align: center;
@@ -95,4 +95,11 @@
 }
 .Close:after {
   content: '✖'; /* UTF-8 symbol */
+}
+
+@media only screen and (min-width: 40em) {
+
+  .Button{
+    padding: 0.9em 1.3em;
+  }
 }

@@ -34,6 +34,7 @@ nl:
       profile_interest: "Mijn interesses:"
       profile_study: "Studie/ werk ervaring:"
       profile_about: "Wat meer over mij:"
+      blend_txt: "Zullen we afspreken?"
       blend_btn: "Blend met %{username}"
       blend_message_html: "`Stel jezelf voor aan <b>%{username}</b> en vraag om een keer te Blenden."
       blend_message_placeholder: "😉 Hallo, mijn naam is ..."

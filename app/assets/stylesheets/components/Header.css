@@ -1,6 +1,5 @@
 .Header {
   background: #FFF;
-  margin-bottom: 2em;
 }
 
 .Header .Logo{
@@ -25,5 +24,8 @@
 @media only screen and (min-width: 64em) {
   .Blendin-logo{
     width: 300px;
+  }
+  .Header {
+    margin-bottom: 1.2em;
   }
 }

@@ -1,29 +1,29 @@
 <div class="Profile">
+
+  <div class="sm-col-8 px2 mx-auto clearfix">
+    <div class="details-box center">
+      <% if @blend %>
+        <% if @blend[:status] === "SENT" %>
+          <%= render 'blends/actions' %>
+        <% elsif @blend[:status] === "RECIVED" %>
+          <%= render 'blends/actions' %>
+        <% end %>
+      <% else %>
+        <h3 class="title-message"><%= t '.blend_txt' %></h3>
+        <a href="#modal-1" data-modal-open class="Button BlendBtn" data-step="1" <%= t '.introjs_step_1_html' %> data-position= "right" ><%= t '.blend_btn', username: @user.name %></a>
+      <% end %>
+    </div>
+  </div>
+
   <div class="sm-col-8 px2 mx-auto clearfix">
 		<div class="sm-col sm-col-4">
       <img src="<%= @user.avatar.medium_avatar.url %>" class="rounded avatar" />
-      <div class="clearfix">
-        <% if @blend %>
-          <% if @blend[:status] === "SENT" %>
-            <%= render 'blends/actions' %>
-          <% elsif @blend[:status] === "RECIVED" %>
-            <%= render 'blends/actions' %>
-          <% end %>
-        <% else %>
-          <a href="#modal-1" data-modal-open class="Button BlendBtn" data-step="1" <%= t '.introjs_step_1_html' %> data-position= "right" ><%= t '.blend_btn', username: @user.name %></a>
-        <% end %>
-      </div>
     </div>
 
 		<div class="sm-col sm-col-8 px2">
       <div class="ProfileInfo">
         <h2><%= t('.profile_username', username: @user.name.capitalize) %></h2>
         <p class><%= t('.profile_age', age: @user.age) %></p>
-					<!-- <% if @user.local %>
-						<span class="label-local">LOCAL</span>
-					<% else %>
-						<span class="label-local">NEW COMER</span>
-					<% end %> -->
       </div>
 
       <% if @user.education %>

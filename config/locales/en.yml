@@ -34,6 +34,7 @@ en:
       profile_interest: "Interest in:"
       profile_study: "Study / Job experience:"
       profile_about: "About me:"
+      blend_txt: "Would you like to meet up?"
       blend_btn: "Blend with %{username}"
       blend_message_html: "Say hello to <b>%{username}</b> and introduce yourself with some words."
       blend_message_placeholder: "😉 Hello, my name is ..."

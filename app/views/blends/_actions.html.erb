@@ -1,34 +1,32 @@
-<% if @blend[:data].status != "declined" %>
+<% @blend = @blend[:data] %>
 
-  <% if @blend[:data].status === "pending" %>
 
-    <% if @blend[:data].sender === current_user %>
-      <div class="details-box center">
-        <%= t('.blend_pending_msg_html')%>
-      </div>
+  <% if @blend.status != "declined" %>
+
+    <% if @blend.status === "pending" %>
+
+      <% if @blend.sender === current_user %>
+          <%= t('.blend_pending_msg_html')%>
+      <% end %>
+
+      <% if @blend.recipient === current_user %>
+        <h3 class="title-message">Personal message from <%= @blend.sender.name %> </h3>
+        <q><%= @blend.message %></q>
+        <div class="clearfix blend-actions center">
+          <%= link_to(t('.blend_accept_btn'), blend_accept_path(@blend.id), class:"Button accept") %>
+          <%= link_to(t('.blend_refuse_btn'), blend_reject_path(@blend.id), class:"Button refuse") %>
+        </div>
+      <% end %>
+
+      <% elsif @blend.status === "accepted" %>
+          <%= t('.blend_accept_msg_html')%>
+          <% if !@user.phone.blank? %>
+            <a href="tel:<%= @user.phone %>"><%= @user.phone %></a>
+          <% else %>
+            <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
+          <% end %>
+      <% end %>
+
+    <% else %>
+        <%= t('.blend_refuse_msg')%><br />
     <% end %>
-
-    <% if @blend[:data].recipient === current_user %>
-      <p class="Bubble"><%= @blend[:data].message %></p>
-      <div class="clearfix blend-actions center">
-        <%= link_to(t('.blend_accept_btn'), blend_accept_path(@blend[:data].id), class:"Button accept") %>
-        <%= link_to(t('.blend_refuse_btn'), blend_reject_path(@blend[:data].id), class:"Button refuse") %>
-      </div>
-    <% end %>
-
-    <% elsif @blend[:data].status === "accepted" %>
-      <div class="details-box center">
-        <%= t('.blend_accept_msg_html')%>
-        <% if !@user.phone.blank? %>
-          <a href="tel:<%= @user.phone %>"><%= @user.phone %></a>
-        <% else %>
-          <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
-        <% end %>
-      </div>
-    <% end %>
-
-  <% else %>
-    <div class="details-box center">
-      <%= t('.blend_refuse_msg')%><br />
-    </div>
-  <% end %>

@@ -77,17 +77,25 @@
   border-style: dashed;
   border-radius: 8px;
   padding: 0.5em;
-  margin-top: 0.5em;
+  margin-bottom: 1em;
 }
+
 .blend-actions{
   display: block;
   margin: 2em 0;
 }
+
 .EditProfile{
   margin: 0 1em 4em 1em;
 }
+
 .EditProfile .Button{
   margin: 1em 0;
+}
+
+.title-message{
+  font-family: 'Crete Round', serif;
+  font-weight: normal;
 }
 
 @media only screen and (min-width: 40em) {
