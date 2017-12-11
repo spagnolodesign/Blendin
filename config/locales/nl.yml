@@ -154,6 +154,7 @@ nl:
         forgot_pass: "Wachtwoord vergeten?"
         didnt_receive_confirmation: "Heb je geen bevestigingsinstructies ontvangen?"
         didnt_receive_unlock_confirmation: "Heb je geen unlock instructies ontvangen?"
+        sign_in_with_provider: "Meld je aan met %{provider}"
   activerecord:
     errors:
       messages:

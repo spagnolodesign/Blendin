@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id', dependent: :destroy
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id', dependent: :destroy
 
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   after_create :send_welcome_email
 
@@ -84,6 +84,27 @@ class User < ActiveRecord::Base
 
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
+  end
+
+  def self.find_for_facebook_oauth(auth)
+    user_params = auth.slice(:provider, :uid)
+    user_params.merge! auth.info.slice(:email)
+    user_params[:remote_avatar_url] = auth.info.image
+    user_params[:username] = auth.info.name
+    user_params[:gender] = auth.extra.gender
+    user_params[:token] = auth.credentials.token
+    user_params[:token_expiry] = Time.at(auth.credentials.expires_at)
+    user_params = user_params.to_h
+    user = User.where(provider: auth.provider, uid: auth.uid).first
+    user ||= User.where(email: auth.info.email).first # User did a regular sign up in the past.
+    if user
+      user.update(user_params)
+    else
+      user = User.new(user_params)
+      user.password = Devise.friendly_token[0,20] # Fake password for validation
+      user.save
+    end
+    return user
   end
 
 end

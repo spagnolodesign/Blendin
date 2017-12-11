@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get '/upload-photo', to: 'wizard#upload'
     get 'blends/create'
 
-    devise_for :users
+    devise_for :users, skip: :omniauth_callbacks
 
     resources :users, only: [:show, :update]
 
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
       get '/reject', to: 'blends#reject'
     end
   end
+
+  devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 
 
 
