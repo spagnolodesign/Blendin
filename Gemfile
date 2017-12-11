@@ -20,7 +20,6 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
-gem "geocoder"
 gem 'omniauth-facebook'
 
 
