@@ -255,7 +255,7 @@ Devise.setup do |config|
   config.omniauth :facebook, Rails.application.secrets.FACEBOOK_APP_ID, Rails.application.secrets.FACEBOOK_APP_SECRET,
   scope: 'email, public_profile',
   info_fields: 'email, first_name, last_name, gender, picture',
-  image_size: 'square', # 50x50, guaranteed ratio
+  image_size: 'large',
   secure_image_url: true
 
   # ==> Warden configuration
