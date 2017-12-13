@@ -2,7 +2,7 @@
   <div class="sm-col-6 lg-col-3 mx-auto">
     <%= render "devise/shared/headline" %>
     <div class="center">
-      <a class="loginBtn loginBtn--facebook" href="/users/auth/facebook">Meld je aan met Facebook</a><br>
+      <a class="loginBtn loginBtn--facebook" href="/users/auth/facebook"><%= t('devise.shared.links.sign_in_with_provider', provider: "Facebook") %></a><br>
     </div>
 
     <div class="divider">OR</div>
