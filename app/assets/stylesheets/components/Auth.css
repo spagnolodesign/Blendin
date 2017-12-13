@@ -1,5 +1,5 @@
 .Auth{
-  margin: 0;
+  margin: 1em;
   min-height: 100vh;
 }
 
@@ -28,8 +28,13 @@
     color: #74ccd1;
 }
 
-@media only screen and (min-width: 40em) {
-  .headline{
+.divider{
+  text-align: center;
+  margin: 0.4em 0;
+}
 
+@media only screen and (min-width: 40em) {
+  .Auth{
+    margin: 0;
   }
 }

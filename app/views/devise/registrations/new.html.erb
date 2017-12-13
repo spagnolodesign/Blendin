@@ -1,6 +1,11 @@
 <section class="Auth clearfix flex items-center">
   <div class="sm-col-6 lg-col-3 mx-auto">
     <%= render "devise/shared/headline" %>
+    <div class="center">
+      <a class="loginBtn loginBtn--facebook" href="/users/auth/facebook">Meld je aan met Facebook</a><br>
+    </div>
+
+    <div class="divider">OR</div>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
