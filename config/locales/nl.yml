@@ -42,7 +42,7 @@ nl:
       introjs_step_1_html: data-intro="Wil je met hem/haar afspreken? Klik dan hier en stuur een Blend verzoek. Als je verzoek wordt geaccepteerd krijgen jullie elkaars telefoon nummers en kunnen jullie elkaar ontmoeten."
   wizard:
     index:
-      greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid rofiel helpt je bij het vinden van goede matches."
+      greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid profiel helpt je bij het vinden van goede matches."
       local_label: "Selecteer een optie:"
       local_true: "Ik ben een local"
       local_false: "Ik ben een nieuwkomer"
@@ -75,7 +75,7 @@ nl:
     upload:
       label: "Upload/verander jouw foto:"
       btn_skip: "Sla over"
-      btn_upload: "Upload ->"
+      btn_upload: "Next"
       error: "Bestand niet ondersteund! Upload een van de volgende bestandformaties: png, jpeg, jpg."
       introjs_step_1_html: data-intro="Zorg dat je een foto kiest want dit vergroot je kansen op ontmoetingen aanzienlijk!"
   layouts:

@@ -75,7 +75,7 @@ en:
     upload:
       label: "Upload/change your picture:"
       btn_skip: "Skip"
-      btn_upload: "Upload ->"
+      btn_upload: "Next"
       error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
       introjs_step_1_html: data-intro="Make sure you upload a picture; this increases your chances of finding people to meet up with!"
   layouts:

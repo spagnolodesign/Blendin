@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   scope :near_address, ->(address) { all.near(address, 20) }
 
   def name
-    username.capitalize.split(",")[0]
+    username.split.map(&:capitalize).join(' ')
   end
 
   def parse_chache_tag
