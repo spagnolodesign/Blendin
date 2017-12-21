@@ -51,6 +51,7 @@ ActiveAdmin.register User do
   show do
     attributes_table do
       row :username
+      row :email
       row :local
       row :avatar do |user|
         image_tag user.avatar.medium_avatar

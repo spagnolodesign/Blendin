@@ -1,24 +1,72 @@
-<h2 style="margin: 0;padding: 0;font-size: 18px;font-family: 'Quicksand', sans-serif;margin-bottom: 20px;line-height: 1.25;color: #333333;">
-  <%= t('.main_msg', recipient: @recipient.name) %>
-</h2>
-<p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;"><%= t('.secundary_msg', sender: @sender.name ) %></p>
-<table style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;border-collapse: collapse;width: 100% !important;">
-  <tr style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-    <td align="" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-      <p style="padding: 0 20px;text-align: right;font-size: 2rem;color: #71c3c7;margin: 0;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;">
-        <%= image_tag(@sender.avatar.medium_avatar, id: 'avatar', style:" width: 70px; height: 70px; border-radius: 50%; display: unset")%>
-      </p>
-    </td>
-    <td align="left" style="max-width: 380px;margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-      <p style="margin: 0;padding: 0;font-size: 16px;font-family: 'Quicksand', sans-serif;font-weight: normal;margin-bottom: 20px;">
-        <em style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;"><%= @blend.message %>.<br style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;"><%= t('.profile_msg_start') %>
-          <%= link_to t('.profile_link'), user_url(@sender, locale: :en) %>
-          <%= t('.profile_msg_end') %></em>
-      </p>
-    </td>
-  </tr>
+<!-- ONE COLUMN SECTION -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 70px 15px 70px 15px;" class="section-padding">
+            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <!-- HERO IMAGE -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                             <tr>
+                                                  <td class="padding-copy">
+                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                          <tr>
+                                                              <td>
+                                                                 <%= image_tag(@sender.avatar.medium_avatar, size: "200x200", class:"img-max", border:0, style:"display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 200px; height: 200px; margin:0 auto;")%>
+                                                              </td>
+                                                            </tr>
+                                                        </table>
+                                                  </td>
+                                              </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- COPY -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy"><%= t('.main_msg', recipient: @recipient.name, sender:@sender.name ) %></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy"><%= @blend.message %></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding: 20px 0 0 0; font-size: 12px; font-style: italic; line-height: 16px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Press accept if you would like to share your contact information<br> and start a conversation.</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- BULLETPROOF BUTTON -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+                                        <tr>
+                                            <td align="center" style="padding: 25px 0 0 0;" class="padding-copy">
+                                                <table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
+                                                    <tr>
+                                                        <td align="center">
+                                                          <%= link_to t('.btn_accept'), blend_accept_url(@blend.id, locale: :en), style:"font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #5dec9e; border-top: 15px solid #5dec9e; border-bottom: 15px solid #5dec9e; border-left: 25px solid #5dec9e; border-right: 25px solid #5dec9e; border-left: 25px solid #5dec9e; border-right: 25px solid #5dec9e; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; margin-right:10px;", class:"mobile-button" %>
+                                                        </td>
+                                                        <td align="center">
+                                                          <%= link_to t('.profile_link'), user_url(@sender, locale: :en), style:"font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #5D9CEC; border-top: 15px solid #5D9CEC; border-bottom: 15px solid #5D9CEC; border-left: 25px solid #5D9CEC; border-right: 25px solid #5D9CEC; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; margin-right:10px;", class: "mobile-button" %>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
-<div align="center" style="margin: 0;padding: 0;font-size: 100%;font-family: 'Quicksand', sans-serif;">
-  <%= link_to t('.btn_accept'), blend_accept_url(@blend.id, locale: :en), class:"button accept" %>
-  <%= link_to t('.btn_refuse'), blend_reject_url(@blend.id, locale: :en), class:"button refuse" %>
-</div>

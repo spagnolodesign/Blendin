@@ -104,10 +104,10 @@ en:
       secundary_msg: "Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request"
       btn: "See more newcomers/locals"
     blend_request_email:
-      main_msg: "%{recipient}, you have a new Blend request!"
+      main_msg: "%{recipient}, you have a new Blend request from %{sender}"
       secundary_msg: "%{sender} send you a message and wants to Blend with you."
       profile_msg_start: "Check my "
-      profile_link: "profile "
+      profile_link: "Go to profile"
       profile_msg_end: "for more information."
       btn_accept: "Accept"
       btn_refuse: "Refuse"

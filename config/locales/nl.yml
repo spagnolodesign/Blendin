@@ -104,10 +104,10 @@ nl:
       secundary_msg: "Helaas is jouw Blend verzoek geweigerd, maar maak je niet druk. We hebben genoeg andere die wachten op jouw verzoek!"
       btn: "Zie meer nieuwkomers/ locals"
     blend_request_email:
-      main_msg: "%{recipient}, je hebt een nieuw Blend verzoek!"
+      main_msg: "%{recipient}, je hebt een nieuw Blend verzoek! from %{sender}"
       secundary_msg: "%{sender} heeft je een bericht gestuurd en wilt graag met je in contact komen."
       profile_msg_start: "Kijk naar mijn "
-      profile_link: "profiel"
+      profile_link: "Go to profiel"
       profile_msg_end: "voor meer informatie."
       btn_accept: "Accepteer"
       btn_refuse: "Weigeren"
