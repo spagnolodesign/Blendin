@@ -7,7 +7,7 @@
       <label class="Label center" data-step="1" <%= t('.introjs_step_1_html') %>><%= t('.label') %></label>
       <br>
       <div class="DropArea">
-        <img class="rounded avatar-js" id="preview-js" src="<%= @user.avatar.medium_avatar %>">
+        <img class="rounded avatar-js" id="preview-js" width="80%" src="<%= @user.avatar.medium_avatar %>">
         <%= f.file_field :avatar, class: "InputUpload"  %>
       </div>
       <p class="error"></p>

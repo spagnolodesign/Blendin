@@ -2,8 +2,7 @@ class BlendsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @blends_i_sent = current_user.sent_blends
-    @blends_i_received = current_user.received_blends
+    @my_blends = Blend.where("sender_id = ? OR recipient_id = ?", "#{current_user.id}", "#{current_user.id}").order(created_at: :desc)
   end
 
   def new

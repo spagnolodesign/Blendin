@@ -34,6 +34,8 @@
   height: 100%;
   width: 100%;
   cursor: pointer;
+  background: transparent url('/assets/picture_upload.svg') no-repeat 80% 96%;
+  background-size: 6em;
 }
 
 .DropArea{
@@ -45,10 +47,11 @@
   border-style: dashed;
   margin: 0 auto;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .DropArea img{
-  margin: 1.5em auto;
+  margin: 1.5em auto 0 auto;
   display: block;
-  height: 80%;
+  height: auto;
 }

@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
 
   scope :near_address, ->(address) { all.near(address, 20) }
 
+
   def name
     username.split.map(&:capitalize).join(' ')
   end
@@ -48,7 +49,7 @@ class User < ActiveRecord::Base
 
   def age
     if (birthday.blank?)
-      return
+      return ""
     end
     dob = self.birthday
     now = Time.now.utc.to_date

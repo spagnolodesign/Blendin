@@ -4,18 +4,7 @@ ActiveAdmin.register User do
 #
   permit_params :username, {:tag_list => []}, :cached_tag_list, :phone, :local, :birthday, :job, :full_street_address, :longitude, :latitude
 
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
   scope :all
-  # scope :full_street_address_contains do |users|
-  #   byebug
-  #   User.all.near_address('Amsterdam')
-  # end
 
   index do
     column :username
@@ -31,6 +20,7 @@ ActiveAdmin.register User do
   filter :created_at
   filter :avatar_present, :as => :boolean , label: 'Avatar'
   filter :gender, :as => :select , label: 'Gender'
+  filter :birthday, as: :date_range
   filter :full_street_address, :as => :select
 
 
