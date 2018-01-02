@@ -107,4 +107,10 @@ class User < ActiveRecord::Base
     return user
   end
 
+  def self.count_pending_blend(user)
+    Rails.cache.fetch("count_pending_blends", expires_in: 10.minutes) do
+      user.received_blends.where(status: 'pending').count
+    end
+  end
+
 end

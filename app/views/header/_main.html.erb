@@ -10,6 +10,7 @@
           <a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
           <a id="toggle-nav" class="icon" href="#open-nav" >&#9776;</a>
           <%= render 'header/languages' %>
+          <span id="notification"><%= User.count_pending_blend(current_user) %></span>
         </nav>
       </div>
       <div class="col col-7">
