@@ -30,3 +30,7 @@ group :development, :test do
   gem 'faker'
   gem 'spring'
 end
+
+group :production, :test do
+  gem 'dalli'
+end
