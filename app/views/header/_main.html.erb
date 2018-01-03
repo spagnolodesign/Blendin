@@ -5,7 +5,10 @@
     <div class="col col-right col-5" id="nav-js">
         <nav class="topnav">
           <%= link_to t('.community_link'), root_url %>
-          <%= link_to t('.my_blends_link'), blends_path %>
+          <%= link_to blends_path  do %>
+            <%=  t('.my_blends_link') %>
+            <span id="notification"><%= User.count_pending_blend(current_user) %></span>
+          <% end %>
           <%= link_to t('.settings_link'), wizard_path %>
           <a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
           <a id="toggle-nav" class="icon" href="#open-nav" >&#9776;</a>
