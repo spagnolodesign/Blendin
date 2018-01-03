@@ -23,14 +23,10 @@ gem 'kaminari'
 gem 'activeadmin'
 gem 'omniauth-facebook'
 gem 'activeadmin_addons'
-
+gem 'dalli'
 
 group :development, :test do
   gem 'byebug'
   gem 'faker'
   gem 'spring'
-end
-
-group :production, :test do
-  gem 'dalli'
 end
