@@ -1,0 +1,3671 @@
+/* line 1, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.h1 {
+  font-size: 2rem;
+}
+
+/* line 5, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.h2 {
+  font-size: 1.5rem;
+}
+
+/* line 9, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.h3 {
+  font-size: 1.25rem;
+}
+
+/* line 13, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.h4 {
+  font-size: 1rem;
+}
+
+/* line 17, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.h5 {
+  font-size: 0.875rem;
+}
+
+/* line 21, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.h6 {
+  font-size: 0.75rem;
+}
+
+/* line 25, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.font-family-inherit {
+  font-family: inherit;
+}
+
+/* line 29, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.font-size-inherit {
+  font-size: inherit;
+}
+
+/* line 33, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.text-decoration-none {
+  text-decoration: none;
+}
+
+/* line 37, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.bold {
+  font-weight: 700;
+}
+
+/* line 41, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.regular {
+  font-weight: 400;
+}
+
+/* line 45, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 49, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* line 54, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.left-align {
+  text-align: left;
+}
+
+/* line 58, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.center {
+  text-align: center;
+}
+
+/* line 62, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.right-align {
+  text-align: right;
+}
+
+/* line 66, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.justify {
+  text-align: justify;
+}
+
+/* line 70, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* line 74, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.break-word {
+  word-wrap: break-word;
+}
+
+/* line 78, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.line-height-1 {
+  line-height: 1;
+}
+
+/* line 82, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.line-height-2 {
+  line-height: 1.125;
+}
+
+/* line 86, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.line-height-3 {
+  line-height: 1.25;
+}
+
+/* line 90, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.line-height-4 {
+  line-height: 1.5;
+}
+
+/* line 94, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.list-style-none {
+  list-style: none;
+}
+
+/* line 98, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.underline {
+  text-decoration: underline;
+}
+
+/* line 102, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 109, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 114, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.inline {
+  display: inline;
+}
+
+/* line 118, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.block {
+  display: block;
+}
+
+/* line 122, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 126, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.table {
+  display: table;
+}
+
+/* line 130, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.table-cell {
+  display: table-cell;
+}
+
+/* line 134, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* line 138, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* line 142, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* line 146, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: table;
+}
+
+/* line 151, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 155, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.left {
+  float: left;
+}
+
+/* line 159, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.right {
+  float: right;
+}
+
+/* line 163, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.fit {
+  max-width: 100%;
+}
+
+/* line 167, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.max-width-1 {
+  max-width: 24rem;
+}
+
+/* line 171, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.max-width-2 {
+  max-width: 32rem;
+}
+
+/* line 175, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.max-width-3 {
+  max-width: 48rem;
+}
+
+/* line 179, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.max-width-4 {
+  max-width: 64rem;
+}
+
+/* line 183, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border-box {
+  box-sizing: border-box;
+}
+
+/* line 187, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.align-baseline {
+  vertical-align: baseline;
+}
+
+/* line 191, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.align-top {
+  vertical-align: top;
+}
+
+/* line 195, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.align-middle {
+  vertical-align: middle;
+}
+
+/* line 199, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.align-bottom {
+  vertical-align: bottom;
+}
+
+/* line 203, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.m0 {
+  margin: 0;
+}
+
+/* line 207, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mt0 {
+  margin-top: 0;
+}
+
+/* line 211, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mr0 {
+  margin-right: 0;
+}
+
+/* line 215, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mb0 {
+  margin-bottom: 0;
+}
+
+/* line 219, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.ml0, .mx0 {
+  margin-left: 0;
+}
+
+/* line 223, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mx0 {
+  margin-right: 0;
+}
+
+/* line 227, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.my0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 232, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.m1 {
+  margin: 0.5rem;
+}
+
+/* line 236, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mt1 {
+  margin-top: 0.5rem;
+}
+
+/* line 240, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mr1 {
+  margin-right: 0.5rem;
+}
+
+/* line 244, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mb1 {
+  margin-bottom: 0.5rem;
+}
+
+/* line 248, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.ml1, .mx1 {
+  margin-left: 0.5rem;
+}
+
+/* line 252, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mx1 {
+  margin-right: 0.5rem;
+}
+
+/* line 256, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.my1 {
+  margin-top: .5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 261, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.m2 {
+  margin: 1rem;
+}
+
+/* line 265, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mt2 {
+  margin-top: 1rem;
+}
+
+/* line 269, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mr2 {
+  margin-right: 1rem;
+}
+
+/* line 273, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mb2 {
+  margin-bottom: 1rem;
+}
+
+/* line 277, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.ml2, .mx2 {
+  margin-left: 1rem;
+}
+
+/* line 281, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mx2 {
+  margin-right: 1rem;
+}
+
+/* line 285, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.my2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 290, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.m3 {
+  margin: 2rem;
+}
+
+/* line 294, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mt3 {
+  margin-top: 2rem;
+}
+
+/* line 298, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mr3 {
+  margin-right: 2rem;
+}
+
+/* line 302, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mb3 {
+  margin-bottom: 2rem;
+}
+
+/* line 306, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.ml3, .mx3 {
+  margin-left: 2rem;
+}
+
+/* line 310, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mx3 {
+  margin-right: 2rem;
+}
+
+/* line 314, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.my3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* line 319, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.m4 {
+  margin: 4rem;
+}
+
+/* line 323, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mt4 {
+  margin-top: 4rem;
+}
+
+/* line 327, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mr4 {
+  margin-right: 4rem;
+}
+
+/* line 331, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mb4 {
+  margin-bottom: 4rem;
+}
+
+/* line 335, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.ml4, .mx4 {
+  margin-left: 4rem;
+}
+
+/* line 339, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mx4 {
+  margin-right: 4rem;
+}
+
+/* line 343, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.my4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* line 348, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mxn1 {
+  margin-left: -.5rem;
+  margin-right: -0.5rem;
+}
+
+/* line 353, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mxn2 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+/* line 358, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mxn3 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+/* line 363, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mxn4 {
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+
+/* line 368, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* line 372, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mr-auto, .mx-auto {
+  margin-right: auto;
+}
+
+/* line 376, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.mx-auto {
+  margin-left: auto;
+}
+
+/* line 380, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.p0 {
+  padding: 0;
+}
+
+/* line 384, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pt0 {
+  padding-top: 0;
+}
+
+/* line 388, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pr0 {
+  padding-right: 0;
+}
+
+/* line 392, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pb0 {
+  padding-bottom: 0;
+}
+
+/* line 396, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pl0, .px0 {
+  padding-left: 0;
+}
+
+/* line 400, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.px0 {
+  padding-right: 0;
+}
+
+/* line 404, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.py0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 409, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.p1 {
+  padding: 0.5rem;
+}
+
+/* line 413, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pt1 {
+  padding-top: 0.5rem;
+}
+
+/* line 417, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pr1 {
+  padding-right: 0.5rem;
+}
+
+/* line 421, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pb1 {
+  padding-bottom: 0.5rem;
+}
+
+/* line 425, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pl1 {
+  padding-left: 0.5rem;
+}
+
+/* line 429, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.py1 {
+  padding-top: .5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* line 434, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.px1 {
+  padding-left: .5rem;
+  padding-right: 0.5rem;
+}
+
+/* line 439, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.p2 {
+  padding: 1rem;
+}
+
+/* line 443, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pt2 {
+  padding-top: 1rem;
+}
+
+/* line 447, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pr2 {
+  padding-right: 1rem;
+}
+
+/* line 451, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pb2 {
+  padding-bottom: 1rem;
+}
+
+/* line 455, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pl2 {
+  padding-left: 1rem;
+}
+
+/* line 459, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.py2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* line 464, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 469, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.p3 {
+  padding: 2rem;
+}
+
+/* line 473, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pt3 {
+  padding-top: 2rem;
+}
+
+/* line 477, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pr3 {
+  padding-right: 2rem;
+}
+
+/* line 481, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pb3 {
+  padding-bottom: 2rem;
+}
+
+/* line 485, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pl3 {
+  padding-left: 2rem;
+}
+
+/* line 489, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.py3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* line 494, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.px3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* line 499, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.p4 {
+  padding: 4rem;
+}
+
+/* line 503, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pt4 {
+  padding-top: 4rem;
+}
+
+/* line 507, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pr4 {
+  padding-right: 4rem;
+}
+
+/* line 511, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pb4 {
+  padding-bottom: 4rem;
+}
+
+/* line 515, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.pl4 {
+  padding-left: 4rem;
+}
+
+/* line 519, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.py4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* line 524, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.px4 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+/* line 529, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col {
+  float: left;
+}
+
+/* line 533, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col, .col-right {
+  box-sizing: border-box;
+}
+
+/* line 537, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-right {
+  float: right;
+}
+
+/* line 541, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-1 {
+  width: 8.33333%;
+}
+
+/* line 545, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-2 {
+  width: 16.66667%;
+}
+
+/* line 549, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 553, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-4 {
+  width: 33.33333%;
+}
+
+/* line 557, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-5 {
+  width: 41.66667%;
+}
+
+/* line 561, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 565, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-7 {
+  width: 58.33333%;
+}
+
+/* line 569, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-8 {
+  width: 66.66667%;
+}
+
+/* line 573, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 577, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-10 {
+  width: 83.33333%;
+}
+
+/* line 581, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-11 {
+  width: 91.66667%;
+}
+
+/* line 585, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.col-12 {
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  /* line 590, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  /* line 594, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* line 598, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 601, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 604, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-3 {
+    width: 25%;
+  }
+
+  /* line 607, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 610, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 613, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-6 {
+    width: 50%;
+  }
+
+  /* line 616, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 619, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 622, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-9 {
+    width: 75%;
+  }
+
+  /* line 625, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 628, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 631, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-col-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 52em) {
+  /* line 637, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  /* line 641, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* line 645, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 648, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 651, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-3 {
+    width: 25%;
+  }
+
+  /* line 654, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 657, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 660, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-6 {
+    width: 50%;
+  }
+
+  /* line 663, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 666, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 669, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-9 {
+    width: 75%;
+  }
+
+  /* line 672, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 675, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 678, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-col-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 64em) {
+  /* line 684, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  /* line 688, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* line 692, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 695, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 698, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-3 {
+    width: 25%;
+  }
+
+  /* line 701, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 704, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 707, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-6 {
+    width: 50%;
+  }
+
+  /* line 710, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 713, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 716, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-9 {
+    width: 75%;
+  }
+
+  /* line 719, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 722, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 725, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-col-12 {
+    width: 100%;
+  }
+}
+/* line 730, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 40em) {
+  /* line 738, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 52em) {
+  /* line 747, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 64em) {
+  /* line 756, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/* line 764, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 772, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 778, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.items-start {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
+}
+
+/* line 786, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.items-end {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+}
+
+/* line 794, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.items-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+/* line 802, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.items-baseline {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  -ms-grid-row-align: baseline;
+  align-items: baseline;
+}
+
+/* line 810, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.items-stretch {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-items: stretch;
+}
+
+/* line 818, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.self-start {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+/* line 824, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.self-end {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+/* line 830, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.self-center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+/* line 836, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.self-baseline {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+/* line 842, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.self-stretch {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+/* line 848, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.justify-start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+/* line 855, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.justify-end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+/* line 862, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 869, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.justify-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* line 876, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.justify-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+/* line 882, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.content-start {
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+/* line 888, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.content-end {
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+/* line 894, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.content-center {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+/* line 900, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.content-between {
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+}
+
+/* line 906, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.content-around {
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+}
+
+/* line 912, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.content-stretch {
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+/* line 918, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.flex-auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* line 927, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.flex-none {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+/* line 934, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.order-0 {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+/* line 941, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.order-1 {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+/* line 948, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.order-2 {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+/* line 955, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.order-3 {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+/* line 962, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.order-last {
+  -webkit-box-ordinal-group: 100000;
+  -webkit-order: 99999;
+  -ms-flex-order: 99999;
+  order: 99999;
+}
+
+/* line 969, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.relative {
+  position: relative;
+}
+
+/* line 973, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 977, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 981, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.top-0 {
+  top: 0;
+}
+
+/* line 985, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.right-0 {
+  right: 0;
+}
+
+/* line 989, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.bottom-0 {
+  bottom: 0;
+}
+
+/* line 993, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.left-0 {
+  left: 0;
+}
+
+/* line 997, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.z1 {
+  z-index: 1;
+}
+
+/* line 1001, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.z2 {
+  z-index: 2;
+}
+
+/* line 1005, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.z3 {
+  z-index: 3;
+}
+
+/* line 1009, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.z4 {
+  z-index: 4;
+}
+
+/* line 1013, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border {
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* line 1018, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+/* line 1023, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+/* line 1028, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+/* line 1033, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border-left {
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+/* line 1038, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.border-none {
+  border: 0;
+}
+
+/* line 1042, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.rounded {
+  border-radius: 8px;
+}
+
+/* line 1046, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.circle {
+  border-radius: 50%;
+}
+
+/* line 1050, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.rounded-top {
+  border-radius: 8px 8px 0 0;
+}
+
+/* line 1054, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.rounded-right {
+  border-radius: 0 8px 8px 0;
+}
+
+/* line 1058, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.rounded-bottom {
+  border-radius: 0 0 8px 8px;
+}
+
+/* line 1062, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.rounded-left {
+  border-radius: 8px 0 0 8px;
+}
+
+/* line 1066, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.not-rounded {
+  border-radius: 0;
+}
+
+/* line 1070, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media (max-width: 40em) {
+  /* line 1079, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .xs-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 40em) and (max-width: 52em) {
+  /* line 1085, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .sm-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 52em) and (max-width: 64em) {
+  /* line 1091, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .md-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 64em) {
+  /* line 1097, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+  .lg-hide {
+    display: none !important;
+  }
+}
+/* line 1102, /Users/luca/code/blendinme/app/assets/stylesheets/bass.scss */
+.display-none {
+  display: none !important;
+}
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Crete+Round|Quicksand");
+/* line 3, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1em;
+  margin: 0;
+  color: #333333;
+}
+
+/* line 10, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+a {
+  color: #74CCD1;
+}
+
+/* line 14, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+a:hover {
+  color: #777777;
+}
+
+/* line 17, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+q {
+  quotes: "“" "”" "‘" "’";
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em 0 3em 0;
+}
+
+/* line 23, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.headline {
+  text-align: center;
+  font-size: 1.6em;
+  margin: 0.3em 0;
+  font-family: 'Crete Round', serif;
+  font-weight: normal;
+  margin: 0.3em auto 0.7em auto;
+}
+
+/* line 32, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.bigsize {
+  font-size: 2.5em;
+}
+
+/* line 35, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.error {
+  font-weight: bold;
+  color: #ce0906;
+  margin-left: 0.3em;
+}
+
+/* line 41, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+i {
+  font-size: 0.8em;
+}
+
+/* line 44, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+label {
+  font-size: 1.2em;
+}
+
+/* line 48, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Modal {
+  position: relative;
+  padding: 1em;
+  background-color: white;
+  min-height: 100%;
+}
+
+/* line 55, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(111, 111, 111, 0.65);
+}
+
+/* line 64, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Modal h2 {
+  margin: 0;
+}
+
+/* line 68, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Modal h1 {
+  margin: 0.3em 0;
+}
+
+/* line 71, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.tabs {
+  background: #74ccd1;
+  padding: 0.3em;
+  color: #FFF;
+  border-radius: 25px;
+}
+
+/* line 77, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.tab a {
+  width: 100%;
+  display: inline-block;
+  padding: 0.5em 0;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 84, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.tab a:hover {
+  text-decoration: underline;
+}
+
+/* line 87, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.tab a.active {
+  background: #FFF;
+  color: #74ccd1;
+  border-radius: 30px;
+}
+
+/* line 92, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.paginate-link {
+  margin: 0em 0 3em 0;
+}
+
+/* line 95, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.paginate-link a {
+  padding: 0.2em 1em;
+  margin: 0 0.5em;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+/* line 102, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Flash {
+  background: rgba(246, 249, 252, 0.9);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+  color: #424770;
+  margin: 0 auto;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 100%;
+  font-size: 1em;
+  padding-left: 1em;
+  padding: 0.6em 0;
+  text-align: center;
+  padding-left: 0;
+}
+
+/* line 120, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Flash.danger {
+  background: #d33838;
+  color: #FFF;
+}
+
+/* line 125, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.Flash p {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* line 131, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.ContainerFlash {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 40em) {
+  /* line 140, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+  .bigsize {
+    font-size: 3em;
+  }
+
+  /* line 143, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+  .Modal {
+    border-radius: 8px;
+    outline: none;
+  }
+
+  /* line 148, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+  .Overlay {
+    padding: 8em;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  /* line 152, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+  .Flash {
+    min-width: 490px;
+    padding-left: 1em;
+  }
+}
+@media only screen and (min-width: 64em) {
+  /* line 158, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+  .Overlay {
+    padding: 8em 15em;
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+/* Loader */
+/* line 165, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.loaderContainer {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: #eeeeee;
+}
+
+/* line 174, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.loader-spin {
+  pointer-events: none;
+  width: 2em;
+  height: 2em;
+  margin: 0 auto;
+  border: 0.2em solid transparent;
+  border-color: #eee;
+  border-top-color: #3E67EC;
+  border-radius: 50%;
+  -webkit-animation: loadingspin 1s linear infinite;
+  animation: loadingspin 1s linear infinite;
+}
+
+@-webkit-keyframes loadingspin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadingspin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* CUSTOM CHECKBOX */
+/* line 202, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/* line 206, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 41px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 36px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* line 218, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -36px;
+}
+
+/* line 222, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+label.css-label {
+  background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_5e67f778a4d9b72b5f87ea729418f5ce.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 232, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+  display: inline-block;
+  min-width: auto !important;
+  background: none;
+}
+
+/* line 242, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.parsley-errors-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 246, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+.parsley-errors-list li {
+  list-style-type: none;
+  color: #ed6363;
+  font-size: 0.9em;
+}
+
+/*Input Placeholder style*/
+/* line 253, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  opacity: 0.3;
+}
+
+/* line 256, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  opacity: 0.3;
+}
+
+/* line 259, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  opacity: 0.3;
+}
+
+/* line 262, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  opacity: 0.3;
+}
+
+/* line 265, /Users/luca/code/blendinme/app/assets/stylesheets/main.scss */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  opacity: 0.3;
+}
+.Auth{
+  margin: 1em;
+  min-height: 100vh;
+}
+
+.Auth .Logo{
+  display: block;
+  width: 242px;
+  margin: 0 auto;
+}
+
+.Auth .headline{
+  width: 250px;
+}
+.Auth .actions{
+  margin: 1em 0;
+
+}
+.Auth .Link{
+  font-family: 'Crete Round', serif;
+  color: #000000;
+  font-size: 1.1em;
+  text-align: center;
+  display: block;
+}
+
+.Auth .Link:hover{
+    color: #74ccd1;
+}
+
+.divider{
+  text-align: center;
+  margin: 0.4em 0;
+}
+
+@media only screen and (min-width: 40em) {
+  .Auth{
+    margin: 0;
+  }
+}
+.Button{
+  background: #FFFFFF;
+  border: 2px solid #74CCD1;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #74CCD1;
+  font-size: 1.1em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  outline: none;
+  padding: 0.7em 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Button:hover{
+  background: #74CCD1;
+  color: #FFF;
+}
+
+.Button.full{
+  background: #74CCD1;
+  border: 2px solid #74CCD1;
+  color: #FFF;
+}
+.Button.full.back{
+  background: #dadada;
+  border: 2px solid #c4c4c4;
+  color: #8a8a8a;
+}
+
+.Button.center{
+  margin: 2em auto !important;
+  display: block;
+}
+
+.Button.accept{
+  background: #25d366;
+  border: 2px solid #25d366;
+  color: #FFF;
+}
+.Button.accept:hover{
+  background: rgba(37, 211, 102, 0.8);
+}
+
+.Button.refuse{
+  background: #fc3838;
+  border: 2px solid #fc3838;
+  color: #FFF;
+}
+.Button.refuse:hover{
+  background: rgba(252, 56, 56, 0.67);
+}
+
+.BlendBtn{
+  display: inline-block;
+  margin: 0.5em 0;
+  width: auto;
+  background: #74CCD1;
+  color:#FFF;
+  text-align: center;
+  text-decoration: none;
+}
+.Button:hover{
+  background: #6fdce3;
+  color: #FFF;
+}
+
+/* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  padding: 0.3em 1em 0.3em 2.5em;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 1em;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 39px;
+  height: 100%;
+}
+
+.loginBtn:focus {
+  outline: none;
+  color: #FFF;
+}
+
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 12px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  color: #FFF;
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+.WhatsApp{
+  width: 100%;
+  display: block;
+  color: #FFF;
+  background: #25d366;
+  border: 2px solid #25d366;
+  text-decoration:none;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.WhatsApp:hover{
+  background: #1bcd5d;
+}
+
+.Close {
+  color: #999999;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+  font-size: 2em;
+  border: 0;
+  background: transparent;
+}
+.Close:after {
+  content: '✖'; /* UTF-8 symbol */
+}
+
+@media only screen and (min-width: 40em) {
+
+  .Button{
+    padding: 0.9em 1.3em;
+  }
+
+  .loginBtn {
+    font-size: 1.2em;
+    display: inline-block;
+  }
+
+}
+/* line 5, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardsContainer {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+/* line 15, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardWrap {
+  margin: 10px;
+  transform: perspective(800px);
+  -webkit-transform: perspective(800px);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  cursor: pointer;
+}
+/* line 24, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardWrap:hover .CardBg {
+  opacity: 0.9;
+}
+/* line 36, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardWrap:hover .CardInfo:after {
+  transition: 1s cubic-bezier(0.4, 1, 0.32, 1);
+  opacity: .4;
+  transform: translateY(0);
+}
+
+/* line 45, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.Card {
+  position: relative;
+  flex: 0 0 240px;
+  width: 280px;
+  height: 330px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.42) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.4, 1, 0.32, 1), box-shadow 1s cubic-bezier(0.4, 1, 0.32, 1);
+}
+
+/* line 57, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardBg {
+  opacity: 0.9;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.4, 0.58, 0.57, 1), opacity 0.4s cubic-bezier(0.4, 0.58, 0.57, 1);
+  -webkit-transition: 1s cubic-bezier(0.4, 0.58, 0.57, 1), opacity 0.4s cubic-bezier(0.4, 0.58, 0.57, 1);
+  pointer-events: none;
+}
+
+/* line 71, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardInfo {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  z-index: 1;
+}
+/* line 79, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardInfo:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.4, 0.58, 0.57, 1);
+}
+
+/* line 93, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardInfo h1 {
+  width: 85%;
+  font-family: 'Crete Round', serif;
+  font-size: 2em;
+  margin: 0;
+  font-weight: normal;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  line-height: 1.1em;
+}
+
+/* line 104, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardBlend {
+  margin: 1em;
+}
+/* line 106, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.CardBlend .avatar-card-blend {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.22) 0 7px 29px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+}
+
+/* line 113, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.shake-card-blend {
+  width: 60%;
+  display: inline-block;
+}
+
+/* line 118, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.link-to-blend-card {
+  text-decoration: none;
+  color: #333333;
+  transition: 0.1s;
+  border: 3px solid #fff;
+  display: block;
+  border-radius: 10px;
+  margin: 0;
+}
+
+/* line 127, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+.link-to-blend-card:hover {
+  border: 3px solid #c0c0c052;
+  border-style: dashed;
+}
+
+@media only screen and (min-width: 64em) {
+  /* line 132, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+  .Card {
+    width: 240px;
+    height: 320px;
+  }
+
+  /* line 136, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+  .CardBg {
+    opacity: 0.6;
+  }
+
+  /* line 139, /Users/luca/code/blendinme/app/assets/stylesheets/components/Card.scss */
+  .link-to-blend-card {
+    margin: 0 10%;
+  }
+}
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+.Carousel{
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.slick-arrow {
+  background: transparent;
+}
+.slick-prev{
+  left: 0;
+  z-index: 99999
+}
+.slick-next{
+  right: 0;
+  z-index: 99999
+}
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.rdtPicker td span.rdtOld {
+  color: #999999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-child th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+
+.rdtCounters {
+  display: inline-block;
+}
+
+.rdtCounters > div {
+  float: left;
+}
+
+.rdtCounter {
+  height: 100px;
+}
+
+.rdtCounter {
+  width: 40px;
+}
+
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+.Header {
+  background: #FFF;
+}
+
+.Header .Logo{
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  background: #FFF url('/assets/logo-app.png') no-repeat top left;
+  background-size: 100%;
+  width: 164px;
+  height: 40px;
+}
+
+.Header .Logo img{
+  width: 100%;
+}
+
+.lngs{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+@media only screen and (min-width: 64em) {
+  .Blendin-logo{
+    width: 300px;
+  }
+  .Header {
+    margin-bottom: 1.2em;
+  }
+}
+.Input{
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+  min-width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.9em;
+  font-size: 1.2em;
+  outline: none;
+  font-weight: normal;
+  margin: 0.3em 0;
+}
+
+.Input.SmallTxt{
+  font-size: 1em;
+  min-height: 6em;
+}
+
+.AutocompleteContainer{
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  padding: 0.3em 0;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+}
+
+.AddressField{
+  height: auto !important;
+}
+
+.InputUpload{
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background: transparent url('/assets/picture_upload.svg') no-repeat 80% 96%;
+  background-size: 6em;
+}
+
+.DropArea{
+  width: 250px;
+  position: relative;
+  height: 250px;
+  border-width: 2px;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.DropArea img{
+  margin: 1.5em auto 0 auto;
+  display: block;
+  height: auto;
+}
+.Label{
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  font-weight: normal;
+  display: block;
+  color: #565656;
+}
+
+.Label.CheckBox{
+  font-size: 0.8em;
+  margin: 0.3em 0;
+  display: block;
+}
+
+.Label.CheckBoxRound{
+  border: 2px solid #e0e0e0;
+  margin: 0.5em 1em 0 0;
+  display: inline-block;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+}
+
+
+@media only screen and (min-width: 40em) {
+  .LabelQuestion{
+    font-size: 1.4em;
+  }
+}
+.modal {
+  display: none;
+}
+
+.vanilla-modal .modal {
+  display: block;
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s, z-index 0s 0.2s;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vanilla-modal .modal > * {
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.vanilla-modal .modal:before {
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.vanilla-modal.modal-visible .modal {
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.modal-inner {
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
+
+}
+.modal-visible .modal-inner {
+  z-index: 100;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+[data-modal-close] {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.modal-content{
+  padding: 1em;
+}
+
+.modal-content h1{
+  margin-top: 0.5em;
+}
+.modal-content p{
+  font-size: 1.3em;
+}
+.modal-hider{
+  display: none;
+}
+
+@media only screen and (min-width: 40em) {
+
+  .modal-content{
+    padding: 2em;
+  }
+}
+.topnav {
+  overflow: hidden;
+  float: right;
+  position: relative;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-decoration: none;
+  color: #585858;
+  font-size: 17px;
+  position: relative;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  opacity: 0.9;
+  color: #00bcd4;
+}
+
+/*Style the notification icon*/
+#notification {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  background-color: orange;
+  border-radius: 30%;
+  width: 10px;
+  height: 10px;
+  font-size: 0.6em;
+  color: white;
+  font-weight: bold;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+.topnav .lang-lnk{
+  padding: 13px 10px;
+}
+.right-border{
+  border-right: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 64em) {
+  .responsive {
+    width: 100%;
+    position: relative;
+  }
+  .topnav a{
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding: 1em;
+    margin: -1em -0.5em;
+  }
+  .responsive .topnav {
+    width: 100% !important;
+    border-bottom: 1px solid grey;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  .responsive .topnav a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive .topnav a {
+    float: none;
+    padding-left: 0;
+    display: block;
+    text-align: left;
+  }
+  .right-border{
+    border-right: 0;
+  }
+
+  #notification {
+    top: 66px;
+    left: 85px;
+  }
+}
+.Profile{
+  margin-bottom:4em;
+}
+
+.Profile .avatar{
+  width: 100%;
+}
+
+.ProfileInfo h2{
+  font-family: 'Crete Round', serif;
+  font-size: 2em;
+  margin: 0.5em 0 0em 0;
+  font-weight: normal;
+}
+
+.ProfileInfo p{
+  font-size: 1.1em;
+  margin: 0em 0;
+  color: #4e4e4e;
+}
+
+.label-local{
+  border-radius: 2em;
+  background: #ffa428;
+  padding: .3em 1em;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  margin-left: -0.5em;
+  display: inline-block;
+}
+
+.Detail {
+  border-top: 1px solid #eee;
+  padding: 1em 0;
+}
+.Detail h3 {
+  margin: 0 0 0.3em 0;
+  font-family: 'Crete Round', serif;
+  font-size: 1.1em;
+  color: #4e4e4e;
+  font-weight: normal;
+}
+.Detail p {
+  margin: 0.5em 0 0 0;
+}
+
+.Bubble {
+  position: relative;
+  background: #74ccd1;
+  border-radius: .4em;
+  padding: 0.5em;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 1px;
+  min-height: 2em;
+}
+
+.Bubble:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 13px solid transparent;
+	border-bottom-color: #74ccd1;
+	border-top: 0;
+	margin-left: -13px;
+	margin-top: -13px;
+}
+
+.details-box{
+  border: 2px solid #ccc;
+  border-style: dashed;
+  border-radius: 8px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.blend-actions{
+  display: block;
+  margin: 2em 0;
+}
+
+.EditProfile{
+  margin: 0 1em 4em 1em;
+}
+
+.EditProfile .Button{
+  margin: 1em 0;
+}
+
+.title-message{
+  font-family: 'Crete Round', serif;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 40em) {
+
+  .ProfileInfo {
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+  .Detail {
+    border-top: 0px;
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+}
+.TagList{
+  margin: 1em 0 0 0;
+}
+
+.Tag{
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.Tag span {
+  padding: 0.3em 0.4em;
+  background: #efefef;
+  border-radius: .3em;
+  margin-right: .4em;
+  font-weight: 500;
+  color: #74ccd1;
+  font-size: 1.1em;
+}
+.Wizard{
+  margin:1em 0;
+}
+
+.intro-txt{
+  font-size: 1.2em;
+  margin: 2em 1em;
+}
+
+.Wizard .Button{
+    margin-top: 2em;
+}
+
+@media only screen and (min-width: 40em) {
+  .intro-txt{
+    font-size: 1.5em;
+    margin: 1em 0 2em 0;
+  }
+}
+/*===============================
+=            Choices            =
+===============================*/
+/* line 25, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices {
+  position: relative;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+/* line 29, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices:focus {
+  outline: none;
+}
+/* line 30, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices:last-child {
+  margin-bottom: 0;
+}
+/* line 32, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices.is-disabled .choices__inner, .choices.is-disabled .choices__input {
+  background-color: #EAEAEA;
+  cursor: not-allowed;
+  user-select: none;
+}
+/* line 37, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices.is-disabled .choices__item {
+  cursor: not-allowed;
+}
+
+/* line 41, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"] {
+  cursor: pointer;
+}
+/* line 43, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"] .choices__inner {
+  padding-bottom: 7.5px;
+}
+/* line 44, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"] .choices__input {
+  display: block;
+  max-width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #DDDDDD;
+  background-color: #FFFFFF;
+  margin: 0;
+}
+/* line 52, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"] .choices__button {
+  background-image: url("../../icons/cross-inverse.svg");
+  padding: 0;
+  background-size: 8px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+  margin-right: 25px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10em;
+  opacity: .5;
+}
+/* line 66, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"] .choices__button:hover, .choices[data-type*="select-one"] .choices__button:focus {
+  opacity: 1;
+}
+/* line 67, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"] .choices__button:focus {
+  box-shadow: 0px 0px 0px 2px #00BCD4;
+}
+/* line 69, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"]:after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-color: #333333 transparent transparent transparent;
+  border-width: 5px;
+  position: absolute;
+  right: 11.5px;
+  top: 50%;
+  margin-top: -2.5px;
+  pointer-events: none;
+}
+/* line 82, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"].is-open:after {
+  border-color: transparent transparent #333333 transparent;
+  margin-top: -7.5px;
+}
+/* line 87, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"][dir="rtl"]:after {
+  left: 11.5px;
+  right: auto;
+}
+/* line 91, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-one"][dir="rtl"] .choices__button {
+  right: auto;
+  left: 0;
+  margin-left: 25px;
+  margin-right: 0;
+}
+
+/* line 101, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-multiple"] .choices__inner, .choices[data-type*="text"] .choices__inner {
+  cursor: text;
+}
+/* line 102, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-multiple"] .choices__button, .choices[data-type*="text"] .choices__button {
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+  margin-right: -4px;
+  margin-bottom: 0;
+  margin-left: 8px;
+  padding-left: 16px;
+  border-left: 1px solid #008fa1;
+  background-image: url("../../icons/cross.svg");
+  background-size: 8px;
+  width: 8px;
+  line-height: 1;
+  opacity: .75;
+}
+/* line 116, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices[data-type*="select-multiple"] .choices__button:hover, .choices[data-type*="select-multiple"] .choices__button:focus, .choices[data-type*="text"] .choices__button:hover, .choices[data-type*="text"] .choices__button:focus {
+  opacity: 1;
+}
+
+/* line 120, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__inner {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 95%;
+  padding: 0.7em 0 0.7em 0.7em;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+  font-size: 1em;
+  min-height: 48px;
+  overflow: hidden;
+}
+/* line 132, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.is-focused .choices__inner, .is-open .choices__inner {
+  border-color: #b7b7b7;
+}
+/* line 133, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.is-open .choices__inner {
+  border-radius: 2.5px 2.5px 0 0;
+}
+/* line 134, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.is-flipped.is-open .choices__inner {
+  border-radius: 0 0 2.5px 2.5px;
+}
+
+/* line 137, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 143, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--single {
+  display: inline-block;
+  padding: 4px 16px 4px 4px;
+  width: 100%;
+}
+/* line 147, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+[dir="rtl"] .choices__list--single {
+  padding-right: 4px;
+  padding-left: 16px;
+}
+/* line 151, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--single .choices__item {
+  width: 100%;
+}
+
+/* line 154, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--multiple {
+  display: inline;
+}
+/* line 156, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--multiple .choices__item {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 1em;
+  font-weight: 500;
+  margin-right: 3.75px;
+  margin-bottom: 3.75px;
+  background-color: #00BCD4;
+  border: 1px solid #00a5bb;
+  color: #FFFFFF;
+  word-break: break-all;
+}
+/* line 169, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--multiple .choices__item[data-deletable] {
+  padding-right: 5px;
+}
+/* line 170, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+[dir="rtl"] .choices__list--multiple .choices__item {
+  margin-right: 0;
+  margin-left: 3.75px;
+}
+/* line 174, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--multiple .choices__item.is-highlighted {
+  background-color: #00a5bb;
+  border: 1px solid #008fa1;
+}
+/* line 178, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.is-disabled .choices__list--multiple .choices__item {
+  background-color: #aaaaaa;
+  border: 1px solid #919191;
+}
+
+/* line 185, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--dropdown {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  top: 100%;
+  margin-top: -1px;
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+  overflow: hidden;
+  word-break: break-all;
+}
+/* line 198, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--dropdown.is-active {
+  display: block;
+}
+/* line 199, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.is-open .choices__list--dropdown {
+  border-color: #b7b7b7;
+}
+/* line 200, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.is-flipped .choices__list--dropdown {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: -1px;
+  border-radius: .25rem .25rem 0 0;
+}
+/* line 207, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--dropdown .choices__list {
+  position: relative;
+  max-height: 300px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+}
+/* line 214, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--dropdown .choices__item {
+  position: relative;
+  padding: 10px;
+  font-size: 1em;
+}
+/* line 218, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+[dir="rtl"] .choices__list--dropdown .choices__item {
+  text-align: right;
+}
+@media (min-width: 640px) {
+  /* line 220, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+  .choices__list--dropdown .choices__item--selectable {
+    padding-right: 100px;
+  }
+  /* line 223, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+  .choices__list--dropdown .choices__item--selectable:after {
+    content: attr(data-select-text);
+    font-size: 1em;
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /* line 232, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+  [dir="rtl"] .choices__list--dropdown .choices__item--selectable {
+    text-align: right;
+    padding-left: 100px;
+    padding-right: 10px;
+  }
+  /* line 236, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+  [dir="rtl"] .choices__list--dropdown .choices__item--selectable:after {
+    right: auto;
+    left: 10px;
+  }
+}
+/* line 242, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #f2f2f2;
+}
+/* line 244, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+  opacity: .5;
+}
+
+/* line 249, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__item {
+  cursor: default;
+}
+
+/* line 250, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__item--selectable {
+  cursor: pointer;
+}
+
+/* line 251, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__item--disabled {
+  cursor: not-allowed;
+  user-select: none;
+  opacity: .5;
+}
+
+/* line 257, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__heading {
+  font-weight: 600;
+  font-size: 1em;
+  padding: 10px;
+  border-bottom: 1px solid #f7f7f7;
+  color: gray;
+}
+
+/* line 265, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__button {
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+/* line 274, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__button:focus {
+  outline: none;
+}
+
+/* line 277, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__input {
+  display: inline-block;
+  vertical-align: baseline;
+  background-color: #FFFFFF;
+  font-size: 1em;
+  margin-bottom: 5px;
+  border: 0;
+  border-radius: 0;
+  max-width: 100%;
+  padding: 4px 0 4px 2px;
+}
+/* line 287, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__input:focus {
+  outline: 0;
+}
+/* line 288, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+[dir="rtl"] .choices__input {
+  padding-right: 2px;
+  padding-left: 0;
+}
+
+/* line 294, /Users/luca/code/blendinme/app/assets/stylesheets/components/choices.scss */
+.choices__placeholder {
+  opacity: .5;
+}
+
+/*=====  End of Choices  ======*/
+.introjs-overlay {
+  position: absolute;
+  box-sizing: content-box;
+  z-index: 999999;
+  background-color: #000;
+  opacity: 0;
+  background: -moz-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,rgba(0,0,0,0.4)),color-stop(100%,rgba(0,0,0,0.9)));
+  background: -webkit-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -o-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -ms-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000',endColorstr='#e6000000',GradientType=1)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.introjs-fixParent {
+  z-index: auto !important;
+  opacity: 1.0 !important;
+  -webkit-transform: none !important;
+     -moz-transform: none !important;
+      -ms-transform: none !important;
+       -o-transform: none !important;
+          transform: none !important;
+}
+
+.introjs-showElement,
+tr.introjs-showElement > td,
+tr.introjs-showElement > th {
+  z-index: 9999999 !important;
+}
+
+.introjs-disableInteraction {
+  z-index: 99999999 !important;
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.introjs-relativePosition,
+tr.introjs-showElement > td,
+tr.introjs-showElement > th {
+  position: relative;
+}
+
+.introjs-helperLayer {
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 9999998;
+  background-color: #FFF;
+  background-color: rgba(255,255,255,.9);
+  border: 1px solid #777;
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,.4);
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.introjs-tooltipReferenceLayer {
+  box-sizing: content-box;
+  position: absolute;
+  visibility: hidden;
+  z-index: 10000000;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.introjs-helperLayer *,
+.introjs-helperLayer *:before,
+.introjs-helperLayer *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+      -ms-box-sizing: content-box;
+       -o-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.introjs-helperNumberLayer {
+  box-sizing: content-box;
+  position: absolute;
+  visibility: visible;
+  top: -16px;
+  left: -16px;
+  z-index: 9999999999 !important;
+  padding: 2px;
+  font-family: Arial, verdana, tahoma;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  background: #ff3019; /* Old browsers */
+  background: -webkit-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* Chrome10+,Safari5.1+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3019), color-stop(100%, #cf0404)); /* Chrome,Safari4+ */
+  background:    -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+  background:     -ms-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* IE10+ */
+  background:      -o-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* Opera 11.10+ */
+  background:         linear-gradient(to bottom, #ff3019 0%, #cf0404 100%);  /* W3C */
+  width: 20px;
+  height:20px;
+  line-height: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0)"; /* IE6-9 */
+  filter: "progid:DXImageTransform.Microsoft.Shadow(direction=135, strength=2, color=ff0000)"; /* IE10 text shadows */
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
+}
+
+.introjs-arrow {
+  border: 5px solid white;
+  content:'';
+  position: absolute;
+}
+.introjs-arrow.top {
+  top: -10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:white;
+  border-left-color:transparent;
+}
+.introjs-arrow.top-right {
+  top: -10px;
+  right: 10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:white;
+  border-left-color:transparent;
+}
+.introjs-arrow.top-middle {
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:white;
+  border-left-color:transparent;
+}
+.introjs-arrow.right {
+  right: -10px;
+  top: 10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:white;
+}
+.introjs-arrow.right-bottom {
+  bottom:10px;
+  right: -10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:white;
+}
+.introjs-arrow.bottom {
+  bottom: -10px;
+  border-top-color:white;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+.introjs-arrow.left {
+  left: -10px;
+  top: 10px;
+  border-top-color:transparent;
+  border-right-color:white;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+.introjs-arrow.left-bottom {
+  left: -10px;
+  bottom:10px;
+  border-top-color:transparent;
+  border-right-color:white;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+
+.introjs-tooltip {
+  box-sizing: content-box;
+  position: absolute;
+  visibility: visible;
+  padding: 10px;
+  background-color: white;
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px rgba(0,0,0,.4);
+  -webkit-transition: opacity 0.1s ease-out;
+     -moz-transition: opacity 0.1s ease-out;
+      -ms-transition: opacity 0.1s ease-out;
+       -o-transition: opacity 0.1s ease-out;
+          transition: opacity 0.1s ease-out;
+}
+
+.introjs-tooltipbuttons {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/*
+ Buttons style by http://nicolasgallagher.com/lab/css3-github-buttons/
+ Changed by Afshin Mehrabani
+*/
+.introjs-button {
+  box-sizing: content-box;
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff;
+  font: 11px/normal sans-serif;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  margin-top: 10px;
+}
+
+.introjs-button:hover {
+  border-color: #bcbcbc;
+  text-decoration: none;
+  box-shadow: 0px 1px 1px #e3e3e3;
+}
+
+.introjs-button:focus,
+.introjs-button:active {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ececec), to(#f4f4f4));
+  background-image: -moz-linear-gradient(#ececec, #f4f4f4);
+  background-image: -o-linear-gradient(#ececec, #f4f4f4);
+  background-image: linear-gradient(#ececec, #f4f4f4);
+}
+
+/* overrides extra padding on button elements in Firefox */
+.introjs-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.introjs-skipbutton {
+  box-sizing: content-box;
+  margin-right: 5px;
+  color: #7a7a7a;
+}
+
+.introjs-prevbutton {
+  -webkit-border-radius: 0.2em 0 0 0.2em;
+  -moz-border-radius: 0.2em 0 0 0.2em;
+  border-radius: 0.2em 0 0 0.2em;
+  border-right: none;
+}
+
+.introjs-prevbutton.introjs-fullbutton {
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+}
+
+.introjs-nextbutton {
+  -webkit-border-radius: 0 0.2em 0.2em 0;
+  -moz-border-radius: 0 0.2em 0.2em 0;
+  border-radius: 0 0.2em 0.2em 0;
+}
+
+.introjs-nextbutton.introjs-fullbutton {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+}
+
+.introjs-disabled, .introjs-disabled:hover, .introjs-disabled:focus {
+  color: #9a9a9a;
+  border-color: #d4d4d4;
+  box-shadow: none;
+  cursor: default;
+  background-color: #f4f4f4;
+  background-image: none;
+  text-decoration: none;
+}
+
+.introjs-hidden {
+     display: none;
+}
+
+.introjs-bullets {
+  text-align: center;
+}
+.introjs-bullets ul {
+  box-sizing: content-box;
+  clear: both;
+  margin: 15px auto 0;
+  padding: 0;
+  display: inline-block;
+}
+.introjs-bullets ul li {
+  box-sizing: content-box;
+  list-style: none;
+  float: left;
+  margin: 0 2px;
+}
+.introjs-bullets ul li a {
+  box-sizing: content-box;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.introjs-bullets ul li a:hover {
+  background: #999;
+}
+.introjs-bullets ul li a.active {
+  background: #999;
+}
+
+.introjs-progress {
+  box-sizing: content-box;
+  overflow: hidden;
+  height: 10px;
+  margin: 10px 0 5px 0;
+  border-radius: 4px;
+  background-color: #ecf0f1
+}
+.introjs-progressbar {
+  box-sizing: content-box;
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  background-color: #08c;
+}
+
+.introjsFloatingElement {
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 50%;
+  top: 50%;
+}
+
+.introjs-fixedTooltip {
+  position: fixed;
+}
+
+.introjs-hint {
+  box-sizing: content-box;
+  position: absolute;
+  background: transparent;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+}
+.introjs-hint:focus {
+    border: 0;
+    outline: 0;
+}
+.introjs-hidehint {
+  display: none;
+}
+
+.introjs-fixedhint {
+  position: fixed;
+}
+
+.introjs-hint:hover > .introjs-hint-pulse {
+  border: 5px solid rgba(60, 60, 60, 0.57);
+}
+
+.introjs-hint-pulse {
+  box-sizing: content-box;
+  width: 10px;
+  height: 10px;
+  border: 5px solid rgba(60, 60, 60, 0.27);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: rgba(136, 136, 136, 0.24);
+  z-index: 10;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+     -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+}
+.introjs-hint-no-anim .introjs-hint-dot {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+}
+.introjs-hint-dot {
+  box-sizing: content-box;
+  border: 10px solid rgba(146, 146, 146, 0.36);
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: introjspulse 3s ease-out;
+  -moz-animation: introjspulse 3s ease-out;
+  animation: introjspulse 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  z-index: 1;
+  opacity: 0;
+}
+
+@-webkit-keyframes introjspulse {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        -webkit-transform: scale(0);
+        opacity: 0.1;
+    }
+    50% {
+        -webkit-transform: scale(0.1);
+        opacity: 0.3;
+    }
+    75% {
+        -webkit-transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0.0;
+    }
+}
+
+@-moz-keyframes introjspulse {
+    0% {
+        -moz-transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        -moz-transform: scale(0);
+        opacity: 0.1;
+    }
+    50% {
+        -moz-transform: scale(0.1);
+        opacity: 0.3;
+    }
+    75% {
+        -moz-transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 0.0;
+    }
+}
+
+@keyframes introjspulse {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        transform: scale(0);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+    75% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.0;
+    }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+
+ */
+
