@@ -1,7 +1,11 @@
 <%
-  @matches = User.match_with(user, 7, 10).page params[:page]
-  if @matches.length <= 10
-    @matches = User.match_with(user, 15, 20).page params[:page]
+  begin
+    @matches = User.match_with(user, 7, 10).page params[:page]
+    if @matches.length <= 10
+      @matches = User.match_with(user, 15, 20).page params[:page]
+    end
+  rescue NoMethodError
+    @matches = []
   end
 %>
 <div>

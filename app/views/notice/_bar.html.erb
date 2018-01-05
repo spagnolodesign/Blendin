@@ -1,6 +1,5 @@
-<!-- Notices and Alerts -->
-<% if notice %>
-  <div id="alert-component" data-type="warning" data-message="<%= notice %>"></div>
-<% elsif alert %>
-  <div id="alert-component" data-type="alert" data-message="<%= alert %>"></div>
+<% if notice || alert %>
+  <div id="alert-component" data-notice="<%= notice %>" data-alert="<%= alert %>"></div>
 <% end %>
+
+<%= javascript_pack_tag 'flash' %>
