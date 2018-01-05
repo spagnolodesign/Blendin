@@ -15,7 +15,7 @@ class HomeController < ApplicationController
 	end
 
 	def allow
-		if (current_user.latitude.nil? || current_user.latitude.nil?  || current_user.birthday.nil? || current_user.age.empty?)
+		if (current_user.latitude.nil? || current_user.latitude.nil?  || current_user.birthday.nil?)
 			flash[:notice] = 'Please update the mandatory fields before start blending!'
 			redirect_to wizard_path
 		end
