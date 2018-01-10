@@ -5,11 +5,13 @@ ActiveAdmin.register User do
   permit_params :username, {:tag_list => []}, :cached_tag_list, :phone, :local, :birthday, :job, :full_street_address, :longitude, :latitude
 
   scope :all
+  scope("Never sent or recived a blends") { |scope| scope.where("id NOT IN (SELECT sender_id FROM blends) AND id NOT IN (SELECT recipient_id FROM blends)") }
 
   index do
     column :username
     column :local
     column :phone
+    column :blends
     column :created_at
     actions
   end
@@ -65,13 +67,20 @@ ActiveAdmin.register User do
       row :created_at
       row :blends
     end
-    panel "Recived Blend" do
+    panel "Recived blend request" do
        attributes_table_for user.received_blends do
          row :sender
          row :recipient
          row :status
        end
-     end
+    end
+    panel "Sent blend request" do
+       attributes_table_for user.sent_blends do
+         row :sender
+         row :recipient
+         row :status
+       end
+    end
     # renders app/views/admin/users/_matches.html.erb
     render 'matches', { user: user }
    end
