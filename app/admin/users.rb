@@ -10,6 +10,7 @@ ActiveAdmin.register User do
     column :username
     column :local
     column :phone
+    column :created_at
     actions
   end
 
@@ -62,7 +63,15 @@ ActiveAdmin.register User do
       row :current_sign_in_ip
       row :last_sign_in_ip
       row :created_at
+      row :blends
     end
+    panel "Recived Blend" do
+       attributes_table_for user.received_blends do
+         row :sender
+         row :recipient
+         row :status
+       end
+     end
     # renders app/views/admin/users/_matches.html.erb
     render 'matches', { user: user }
    end
