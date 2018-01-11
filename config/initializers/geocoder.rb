@@ -4,6 +4,6 @@ Geocoder.configure(
   #:api_key => "...",
   :timeout => 5,
   :units => :km,
-  :cache => Rails.cache,
+  :cache => :redis_store,
   #:cache_prefix => "..."
 )
