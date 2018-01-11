@@ -1,6 +1,6 @@
 <section class="Cards CardsContainer">
   <% if @users.empty? %>
-    <p class="center"><%= t('.no_match_msg_htm')%><a href="mailto:info@blendinnow.nl">info@blendinnow.nl</a></p>
+    <p class="center"><%= raw t('.no_match_msg_htm')%> <a href="mailto:info@blendinnow.nl">info@blendinnow.nl</a></p>
   <% end %>
   <% @users.each_with_index do |user, i| %>
     <% if i == 0 %>

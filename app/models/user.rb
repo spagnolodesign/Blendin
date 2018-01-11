@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   validates :terms_and_conditions, acceptance: true
 
-  geocoded_by :full_street_address   # can also be an IP address
+  geocoded_by :full_street_address, if: ->(obj){ obj.full_street_address.present? and obj.full_street_address_changed? }
   after_validation :geocode
 
   mount_uploader :avatar, AvatarUploader
