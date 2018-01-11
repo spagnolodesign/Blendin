@@ -82,7 +82,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
-    dalli (2.7.6)
     devise (4.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -383,6 +382,23 @@ GEM
       json (>= 1.8)
       nokogiri (~> 1.5)
       trollop (~> 2.1)
+    redis (4.0.1)
+    redis-actionpack (5.0.2)
+      actionpack (>= 4.0, < 6)
+      redis-rack (>= 1, < 3)
+      redis-store (>= 1.1.0, < 2)
+    redis-activesupport (5.0.4)
+      activesupport (>= 3, < 6)
+      redis-store (>= 1.3, < 2)
+    redis-rack (2.0.4)
+      rack (>= 1.5, < 3)
+      redis-store (>= 1.2, < 2)
+    redis-rails (5.0.2)
+      redis-actionpack (>= 5.0, < 6)
+      redis-activesupport (>= 5.0, < 6)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.4.1)
+      redis (>= 2.2, < 5)
     require_all (1.5.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -451,7 +467,6 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails
-  dalli
   devise
   faker
   fog
@@ -465,6 +480,7 @@ DEPENDENCIES
   pg
   puma
   rails
+  redis-rails
   sass-rails
   spring
   tzinfo-data

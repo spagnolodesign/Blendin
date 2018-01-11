@@ -23,7 +23,7 @@ gem 'kaminari'
 gem 'activeadmin'
 gem 'omniauth-facebook'
 gem 'activeadmin_addons'
-gem 'dalli'
+gem 'redis-rails'
 
 group :development, :test do
   gem 'byebug'
