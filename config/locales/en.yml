@@ -9,6 +9,23 @@ en:
       community_link: "Community"
       my_blends_link: "My blends"
       settings_link: "Settings"
+  networks:
+    new:
+      title: "Share your network"
+    form:
+        fullname: "Lorem Impsum 1"
+        fullname_placeholder: "Lorem Impsum 1"
+        sector: "Lorem Impsum 2"
+        sector_placeholder: "Lorem Impsum 2"
+        network: "Lorem Impsum 3"
+        network_placeholder: "Lorem Impsum 3"
+        email: "Lorem Impsum 4"
+        email_placeholder: "Lorem Impsum 4"
+        city: "Lorem Impsum 5"
+        city_placeholder: "Lorem Impsum 5"
+        submit_btn: "Bevestig"
+    end_submit:
+      thank_you_message: "Thank you message"
   home:
     index:
       no_match_msg_htm: "We couldn't find any possible match close to you<br>we are currently based in the Netherlads if you wish to take blendin in your country please write us at: "
@@ -40,6 +57,11 @@ en:
       blend_message_placeholder: "😉 Hello, my name is ..."
       blend_message_btn: "Send message"
       introjs_step_1_html: data-intro="Would you like to meet him/her? Click here and send a Blend request. If the request is accepted you will receive each other’s phone number and you make an appointment."
+  networks:
+    new:
+      title: "Share your network"
+    form:
+        fullname: "asdajs kdja sldj"
   wizard:
     index:
       greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."

@@ -1,0 +1,32 @@
+<%= form_with(model: network, local: true) do |form| %>
+  <% if network.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(network.errors.count, "error") %> prohibited this network from being saved:</h2>
+
+      <ul>
+      <% network.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label class="Label"><%= t('.fullname') %></label>
+  <%= form.text_field :name, required: true, class: 'Input Select', placeholder: t('.fullname_placeholder') %>
+
+  <label class="Label"><%= t('.sector') %></label>
+  <%= form.text_area :sector, required: true, class: 'Input Select', placeholder: t('.sector_placeholder') %>
+
+
+  <label class="Label"><%= t('.network') %></label>
+  <%= form.text_area :network, required: true, class: 'Input Select', placeholder: t('.network_placeholder') %>
+
+  <label class="Label"><%= t('.city') %></label>
+  <%= form.text_field :city, required: true, class: 'Input Select', placeholder: t('.city_placeholder') %>
+
+  <label class="Label"><%= t('.email') %></label>
+  <%= form.text_field :email, required: true, class: 'Input Select', placeholder: t('.email_placeholder') %>
+
+  <br>
+  <%= form.submit t('.submit_btn'), class:"Button full center" %>
+<% end %>
