@@ -9,6 +9,23 @@ nl:
       community_link: "Community"
       my_blends_link: "Mijn blends"
       settings_link: "Instellingen"
+  networks:
+    new:
+      title: "Share your network"
+    form:
+        fullname: "Lorem Impsum 1"
+        fullname_placeholder: "Lorem Impsum 1"
+        sector: "Lorem Impsum 2"
+        sector_placeholder: "Lorem Impsum 2"
+        network: "Lorem Impsum 3"
+        network_placeholder: "Lorem Impsum 3"
+        email: "Lorem Impsum 4"
+        email_placeholder: "Lorem Impsum 4"
+        city: "Lorem Impsum 5"
+        city_placeholder: "Lorem Impsum 5"
+        submit_btn: "Bevestig"
+    end_submit:
+      thank_you_message: "Thank you message"
   home:
     index:
       no_match_msg_htm: "We hebben geen passende match gevonden voor jou<br>We zijn momenteel slechts actief in Nederland. Ben je geintereseerd om Blendin te beginnen in jouw land? Stuur ons dan een bericht."

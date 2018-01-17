@@ -19,6 +19,8 @@ Rails.application.routes.draw do
       get '/accept', to: 'blends#accept'
       get '/reject', to: 'blends#reject'
     end
+
+    resources :networks, only: [:new, :create, :index], :path => "work"
   end
 
   devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
