@@ -12,20 +12,38 @@ nl:
   networks:
     new:
       title: "Share your network"
+    index:
+      title: "Doneer je netwerk!"
+      body: "Wil jij jouw netwerk doneren aan een nieuwkomer, en zo het essentiele duwtje in de rug geven om een leven in Nederland op te bouwen? Doneer dan nu je netwerk via Blendin Work! Hoe ziet dit eruit? <br /><br /><br /> Binnenkort starten wij een pilot van 50 nieuwkomers en 50 Nederlanderse netwerk donateurs. Meld je nu snel aan, want dan maak je de grootste kans om deel uit te maken van onze pilotfase!<br /><br /><br />Blendin is een stichting met als hoofddoel het creëren van duurzame vriendschappen tussen nieuwkomers (vluchtelingen) en locals. Naast de behoefte aan vriendschappen zag Blendin dat nieuwkomers grote behoefte hebben aan contacten die hen wegwijs kunnen maken op de Nederlandse arbeidsmarkt. Het opbouwen van een zakelijk netwerk is voor hen van cruciaal belang om werk te vinden in Nederland."
+      step_title: "HOE DOE JE MEE?"
+      step_two: "Stap 2: Wij matchen jou met een nieuwkomer dat op zoek is naar een baan die aansluit op jouw netwerk"
+      step_three: "Stap 3: Spreek af en ga samen in gesprek over ambities, ervaringen en toekomstdromen"
+      step_four: "Stap 4: Ga binnen je netwerk op zoek naar nuttige contacten voor de nieuwkomer, regel koffie afspraken, werkbezoeken en hopelijk sollicitaties!"
+      action: "Doe mee & doneer je netwerk!"
     form:
-        fullname: "Lorem Impsum 1"
-        fullname_placeholder: "Lorem Impsum 1"
-        sector: "Lorem Impsum 2"
-        sector_placeholder: "Lorem Impsum 2"
-        network: "Lorem Impsum 3"
-        network_placeholder: "Lorem Impsum 3"
-        email: "Lorem Impsum 4"
-        email_placeholder: "Lorem Impsum 4"
-        city: "Lorem Impsum 5"
-        city_placeholder: "Lorem Impsum 5"
+        fullname: "Naam en achternaam"
+        fullname_placeholder: ""
+        sector: "Beschrijf jouw sector en functie 💼"
+        sector_placeholder: ""
+        network: "Beschrijf jouw netwerk 👔"
+        network_placeholder: ""
+        email: "Email ✉️"
+        email_placeholder: "lorem@gmail.com"
+        city: "Plaats / regio van jouw werk 🏢"
+        city_placeholder: "Bijv. Den Haag"
+        residence: "Waar woon je? 🌇"
+        residence_placeholder: "Bijv. Amsterdam"
+        gender_label: "Selecteer een optie:"
+        gender_male: "Ik ben een man 👨"
+        gender_female: "Ik ben een vrouw 👩"
+        birthday_label: "Geboorte datum 🎂:"
+        phone_label: "Telefoon nummer 📱:"
+        phone_placeholder: "Bijv. 0612345678"
+        about_label: "Vertel meer over jezelf 💬: "
+        about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
         submit_btn: "Bevestig"
     end_submit:
-      thank_you_message: "Thank you message"
+      thank_you_message: "Heel erg bedankt voor je aanmelding! Onze pilot gaat nu van start. <br /><br /> We nemen binnen 5 werkdagen contact met je op om te laten weten of je binnen de pilotfase valt.<br /><br /> Hou je mail daarom goed in de gaten! "
   home:
     index:
       no_match_msg_htm: "We hebben geen passende match gevonden voor jou<br>We zijn momenteel slechts actief in Nederland. Ben je geintereseerd om Blendin te beginnen in jouw land? Stuur ons dan een bericht."
@@ -78,7 +96,7 @@ nl:
       job_helper: "(Dit kan dus ook een baan van vroeger zijn.)"
       phone_label: "Telefoon nummer 📱:"
       phone_placeholder: "Bijv. 0612345678"
-      about_label: "Vertel meer over jezelf💬: "
+      about_label: "Vertel meer over jezelf 💬: "
       about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
       submit_btn: "Bevestig en ga door"
       introjs_step_1_html: data-intro="Kies op ‘Local’ als je je thuis voelt in Nederland en op zoek bent naar contact met mensen die nieuw zijn in Nederland."
@@ -128,6 +146,9 @@ nl:
       profile_msg_end: "voor meer informatie."
       btn_accept: "Accepteer"
       btn_refuse: "Weigeren"
+  network_mailer:
+    thank_you_email:
+      message: "Heel erg bedankt voor je aanmelding! Onze pilot gaat nu van start. <br /><br /> We nemen binnen 5 werkdagen contact met je op om te laten weten of je binnen de pilotfase valt.<br /><br /> Hou je mail daarom goed in de gaten!"
   devise:
     confirmations:
       new:

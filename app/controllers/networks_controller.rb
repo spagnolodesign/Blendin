@@ -2,7 +2,7 @@ class NetworksController < ApplicationController
   before_action :set_network, only: [:show, :edit, :update, :destroy]
 
   def index
-    redirect_to action: "new"
+    # redirect_to action: "new"
   end
 
   def new
@@ -59,6 +59,6 @@ class NetworksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def network_params
-      params.require(:network).permit(:name, :sector, :network, :city, :email)
+      params.require(:network).permit(:name, :sector, :network, :city, :email, :residence, :phone, :gender, :birthday, :about)
     end
 end
