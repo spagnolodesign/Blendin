@@ -17,15 +17,39 @@
   <label class="Label"><%= t('.sector') %></label>
   <%= form.text_area :sector, required: true, class: 'Input Select', placeholder: t('.sector_placeholder') %>
 
-
   <label class="Label"><%= t('.network') %></label>
   <%= form.text_area :network, required: true, class: 'Input Select', placeholder: t('.network_placeholder') %>
 
   <label class="Label"><%= t('.city') %></label>
   <%= form.text_field :city, required: true, class: 'Input Select', placeholder: t('.city_placeholder') %>
 
+  <label class="Label"><%= t('.gender_label') %></label>
+
+  <label class="Label CheckBoxRound">
+    <%= form.radio_button :gender, "m", class:"css-checkbox", required:true  %>
+    <%= t('.gender_male') %>
+  </label>
+
+  <label class="Label CheckBoxRound">
+    <%= form.radio_button :gender, "f", class:"css-checkbox", required:true  %>
+    <%= t('.gender_female') %>
+  </label>
+
+  <label class="Label"><%= t('.birthday_label') %></label>
+  <%= form.date_select :birthday, {start_year: 1945, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class: 'Input Select' , required: true} %>
+
+  <label class="Label"><%= t('.about_label') %></label>
+  <%= form.text_area :about, class:"Input" %>
+  <i><%= t('.about_helper') %></i>
+
+  <label class="Label"><%= t('.residence') %></label>
+  <%= form.text_field :residence, required: true, class: 'Input Select', placeholder: t('.residence_placeholder') %>
+
   <label class="Label"><%= t('.email') %></label>
   <%= form.text_field :email, required: true, class: 'Input Select', placeholder: t('.email_placeholder') %>
+
+  <label class="Label"><%= t('.phone_label') %></label>
+  <%= form.text_field :phone, required: 'true', class: "Input", required: true, placeholder: t('.phone_placeholder'), 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
 
   <br>
   <%= form.submit t('.submit_btn'), class:"Button full center" %>

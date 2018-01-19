@@ -1,35 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Network Applications</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Sector</th>
-      <th>Network</th>
-      <th>City</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @networks.each do |network| %>
-      <tr>
-        <td><%= network.name %></td>
-        <td><%= network.sector %></td>
-        <td><%= network.network %></td>
-        <td><%= network.city %></td>
-        <td><%= network.email %></td>
-        <td><%= link_to 'Show', network %></td>
-        <td><%= link_to 'Edit', edit_network_path(network) %></td>
-        <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Network Application', new_network_path %>
+<section class="NetworkPage clearfix">
+  <div class="sm-col-5 lg-col-5 mx-auto">
+    <h1><%= raw t(".title") %></h1>
+    <p><%= raw t(".body") %></p>
+    <div class="step">
+      <h3><%= raw t(".step_title") %></h3>
+      <ul>
+        <li>Stap 1: Meld je aan via <%= link_to 'registreer', new_network_path %> als Netwerk Donateur. Beschrijf jouw sector, functie en netwerk.</li>
+        <li><%= raw t(".step_two") %></li>
+        <li><%= raw t(".step_three") %></li>
+        <li><%= raw t(".step_four") %></li>
+      </ul>
+    </div>
+    <br /><br />
+    <div class="center">
+      <%= link_to t(".action"), new_network_path, class: "Button full" %>
+    </div>
+  </div>
+</section>

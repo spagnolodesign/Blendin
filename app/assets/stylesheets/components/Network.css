@@ -1,0 +1,18 @@
+.NetworkPage{
+  margin:3em 1em;
+}
+
+.NetworkPage ul {
+  padding: 0;
+  list-style: none;
+}
+
+.NetworkPage li {
+  margin-bottom:1.3em;
+}
+
+@media only screen and (min-width: 40em) {
+  .NetworkPage{
+    margin:1em 0;
+  }
+}
