@@ -16,3 +16,23 @@
     margin:3em 0 5em 0;
   }
 }
+
+
+/*.logo img:last-child {
+
+  height: 68px;
+  float: right;
+
+}*/
+
+
+
+.logo div img {
+
+  width: 90%;
+
+}
+
+/*#doneer-logo {
+  height: 68px;
+}*/

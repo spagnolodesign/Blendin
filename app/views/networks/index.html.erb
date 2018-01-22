@@ -1,14 +1,16 @@
 <section class="NetworkPage clearfix">
   <div class="sm-col-5 lg-col-5 mx-auto">
+    <%= render 'header'%>
     <h1><%= raw t(".title") %></h1>
-    <p><%= raw t(".body") %></p>
+    <p class="mb3"><%= raw t(".body") %></p>
     <div class="step">
       <h3><%= raw t(".step_title") %></h3>
       <ul>
-        <li>Stap 1: Meld je aan via <%= link_to 'registreer', new_network_path %> als Netwerk Donateur. Beschrijf jouw sector, functie en netwerk.</li>
+        <li><%= raw t(".step_one") %></li>
         <li><%= raw t(".step_two") %></li>
         <li><%= raw t(".step_three") %></li>
         <li><%= raw t(".step_four") %></li>
+        <li><%= raw t(".step_five") %></li>
       </ul>
     </div>
     <br /><br />
