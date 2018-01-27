@@ -56,7 +56,8 @@
 
       <label class="Label"><%= t('.phone_label') %></label>
       <%= f.text_field :phone, required: 'true', class: "Input", required: true, placeholder: t('.phone_placeholder'), 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
-
+      <i><%= t('.phone_helper') %></i>
+  
       <label class="Label"><%= t('.about_label') %> </label>
       <%= f.text_area :about, class:"Input" %>
       <i><%= t('.about_helper') %></i>
@@ -119,7 +120,7 @@
 <% content_for(:after_js) do %>
   <script>
     $(function () {
-      window.initIntroJs('wizard');
+      // window.initIntroJs('wizard');
     });
   </script>
 <% end %>
