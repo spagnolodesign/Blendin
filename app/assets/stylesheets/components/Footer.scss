@@ -1,0 +1,75 @@
+footer{
+  background: #272727;
+  padding: 1em;
+  margin-top:3em;
+
+  .logo-footer{
+    img{
+      display: block;
+      width: 50px;
+      margin-bottom: 2em;
+    }
+  }
+
+  .title{
+    font-size: 1.6em;
+    margin: 0 0 0.5em 0;
+    font-family: 'Crete Round', serif;
+    font-weight: normal;
+  }
+
+  .navs{
+    text-align: left;
+    color: #FFF;
+    margin-bottom: 1em;
+    p{
+      margin: 0 0 0.5em 0;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.icon-footer{
+  margin-right: 0.2em;
+}
+.fb-icon{
+    img{
+      width: 20px;
+    }
+}
+.insta-icon{
+  img{
+    width: 22px;
+  }
+}
+.youtube-icon{
+  img{
+    width: 20px;
+  }
+}
+
+
+@media only screen and (min-width: 40em) {
+  footer{
+    background: #272727;
+    padding: 2em 4em;
+
+    .logo-footer{
+      img{
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  footer{
+    .logo-footer{
+      img{
+        width: 150px;
+      }
+    }
+  }
+}

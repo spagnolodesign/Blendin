@@ -9,6 +9,11 @@ nl:
       community_link: "Community"
       my_blends_link: "Mijn blends"
       settings_link: "Instellingen"
+  footer:
+    team: "Ons team"
+    work: "Hoe het werkt"
+    donate: "Doneren"
+    news: "Nieuws"
   networks:
     new:
       title: "Share your network"

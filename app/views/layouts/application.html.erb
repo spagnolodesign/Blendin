@@ -41,6 +41,8 @@
     <%= yield %>
   </main>
 
+  <%= render 'footer/footer' %>
+
   <% if Rails.env.production? %>
     <!-- Google analytics -->
     <script>
