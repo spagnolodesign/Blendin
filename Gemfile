@@ -11,7 +11,6 @@ gem 'jbuilder'
 gem 'devise'
 gem 'coffee-rails'
 gem 'geocoder'
-gem 'groupdate'
 gem 'acts-as-taggable-on'
 gem 'fog'
 gem "mini_magick"
@@ -29,4 +28,5 @@ group :development, :test do
   gem 'byebug'
   gem 'faker'
   gem 'spring'
+  gem 'derailed'
 end
