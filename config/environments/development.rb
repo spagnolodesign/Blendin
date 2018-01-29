@@ -1,4 +1,7 @@
 Rails.application.configure do
+    # Verifies that versions and hashed value of the package contents in the project's package.json
+  config.webpacker.check_yarn_integrity = true
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.action_cable.allowed_request_origins = [/https?:\/\/localhost:\d+/,'127.0.0.1:3000', 'localhost:3000']
