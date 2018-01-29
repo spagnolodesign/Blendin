@@ -14,6 +14,5 @@
 *.key
 .dump
 .DS_Store
-/public/packs
 /public/packs-test
 /node_modules
