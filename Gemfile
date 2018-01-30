@@ -23,6 +23,8 @@ gem 'activeadmin'
 gem 'omniauth-facebook'
 gem 'activeadmin_addons'
 gem 'redis-rails'
+gem 'sidekiq'
+gem 'sidekiq-failures'
 
 group :development, :test do
   gem 'byebug'

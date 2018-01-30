@@ -19,7 +19,7 @@ class Blend < ActiveRecord::Base
   ].freeze
 
   def send_blend_request_email
-    BlendMailer.blend_request_email(self).deliver_now
+    BlendMailer.blend_request_email(self).deliver_later
   end
 
   private
@@ -33,9 +33,9 @@ class Blend < ActiveRecord::Base
   def send_status_update_email
     case self.status
       when "accepted"
-        BlendMailer.blend_accepted_email(self).deliver
+        BlendMailer.blend_accepted_email(self).deliver_later
       when "declined"
-        BlendMailer.blend_rejected_email(self).deliver
+        BlendMailer.blend_rejected_email(self).deliver_later
       end
     end
 end
