@@ -25,6 +25,7 @@ gem 'activeadmin_addons'
 gem 'redis-rails'
 gem 'sidekiq'
 gem 'sidekiq-failures'
+gem 'twilio-ruby'
 
 group :development, :test do
   gem 'byebug'
