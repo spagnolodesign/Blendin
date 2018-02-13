@@ -19,7 +19,6 @@ class TwilioService
   end
 
   def send_sms
-    p self.message
     @client.messages.create(
       # to: @recipient.phone,
       to: "+5511981813636",
