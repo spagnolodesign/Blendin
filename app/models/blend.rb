@@ -20,7 +20,12 @@ class Blend < ActiveRecord::Base
 
   def send_blend_request_email
     BlendMailer.blend_request_email(self.id).deliver_later
+    return unless self.recipient_has_mobile?
     SendSmsJob.set(wait: 1.week).perform_later(self.id)
+  end
+
+  def recipient_has_mobile?
+    %w[061 062 063 064 065 068].include?(self.recipient.phone[0..2])
   end
 
   private
