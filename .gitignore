@@ -16,3 +16,4 @@
 .DS_Store
 /public/packs-test
 /node_modules
+dump.rdb
