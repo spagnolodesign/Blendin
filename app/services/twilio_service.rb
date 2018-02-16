@@ -7,7 +7,7 @@ class TwilioService
     @sender = blend.sender
     @recipient = blend.recipient
     @client = Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
-    @from = ENV['TWILIO_PHONE']
+    @from = ENV['TWILIO_PHONE'].to_s
   end
 
   def message

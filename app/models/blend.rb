@@ -20,7 +20,7 @@ class Blend < ActiveRecord::Base
 
   def send_blend_request_email
     BlendMailer.blend_request_email(self.id).deliver_later
-    # return unless self.recipient_has_mobile?
+    return unless self.recipient_has_mobile?
     SendSmsJob.perform_later(self.id)
   end
 
