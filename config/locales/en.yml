@@ -132,7 +132,7 @@ en:
       profile_link: "Complete now!"
   blend_mailer:
     blend_accepted_email:
-      main_msg: "%{sender}, your Blend resquest was accepted!"
+      main_msg: "%{sender}, your Blend request was accepted!"
       secundary_msg: "Get in touch with %{recipient} and start blending."
       phone_msg: "That's the spirit! Call me to arrange a meet-up as soon as possible at:"
       email_msg: "That's the spirit! Text me to arrange a meet-up as soon as possible at:"
@@ -142,13 +142,14 @@ en:
       secundary_msg: "Unfortunately your Blend request was declined, but don't worry, there are lots of newcomers/locals waiting for your request"
       btn: "See more newcomers/locals"
     blend_request_email:
-      main_msg: "%{recipient}, you have a new Blend request from %{sender}"
-      secundary_msg: "%{sender} send you a message and wants to Blend with you."
+      main_msg: "Hi %{recipient}"
+      secundary_msg: "you have a new Blend request! Are you curious to know who this is?"
       profile_msg_start: "Check my "
       profile_link: "Go to profile"
       profile_msg_end: "for more information."
       btn_accept: "Accept"
       btn_refuse: "Refuse"
+      click_here: "Click here!"
   devise:
     confirmations:
       new:

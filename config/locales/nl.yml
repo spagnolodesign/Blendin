@@ -147,13 +147,14 @@ nl:
       secundary_msg: "Helaas is jouw Blend verzoek geweigerd, maar maak je niet druk. We hebben genoeg andere die wachten op jouw verzoek!"
       btn: "Zie meer nieuwkomers/ locals"
     blend_request_email:
-      main_msg: "%{recipient}, je hebt een nieuw Blend verzoek! from %{sender}"
-      secundary_msg: "%{sender} heeft je een bericht gestuurd en wilt graag met je in contact komen."
+      main_msg: "Hi %{recipient}"
+      secundary_msg: "je hebt een nieuw Blend verzoek! Ben je benieuwd wie dit is?"
       profile_msg_start: "Kijk naar mijn "
       profile_link: "Go to profiel"
       profile_msg_end: "voor meer informatie."
       btn_accept: "Accepteer"
       btn_refuse: "Weigeren"
+      click_here: "Klik dan hier!"
   network_mailer:
     thank_you_email:
       message: "Heel erg bedankt voor je aanmelding! Onze pilot gaat nu van start. <br /><br /> We nemen binnen 5 werkdagen contact met je op om te laten weten of je binnen de pilotfase valt.<br /><br /> Hou je mail daarom goed in de gaten!"
