@@ -101,6 +101,7 @@ en:
       phone_placeholder: "Ex. 0612345678"
       about_label: "💬 Tell more about yourself: "
       about_helper: "(This is not mandatory but it will help you to connect with others in the community.)"
+      phone_helper: "This number only becomes visible to other users once your blend request gets accepted or you accept your request."
       submit_btn: "Confirm and continue"
       introjs_step_1_html: data-intro="Click 'local' if you feel at home here in the Netherlands and you are looking for contact with people that are new here."
       introjs_step_2_html: data-intro="Choose ‘Not a local’ is you are not a Dutch local and looking for more contact with them."
