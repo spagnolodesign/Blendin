@@ -1,13 +1,13 @@
 
 class TwilioService
-    include Rails.application.routes.url_helpers
+  include Rails.application.routes.url_helpers
 
   def initialize(blend)
     @blend = blend
     @sender = blend.sender
     @recipient = blend.recipient
     @client = Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
-    @from = ENV['TWILIO_PHONE'].to_s
+    @from = ENV['TWILIO_PHONE']
   end
 
   def message
@@ -19,12 +19,34 @@ class TwilioService
   end
 
   def send_sms
+    to_phone_number = validate_dutch_phone_number @recipient.phone
+    return unless to_phone_number.length == 12
     @client.messages.create(
-      to: @recipient.phone,
-      #to: "+6282147982860",
-      # from: @from,
-      MessagingServiceSid: 'MG437cabfebef6599830f782f4882c42ec',
+      to: to_phone_number,
+      from: '+3197004499273',
       body: self.message
     )
   end
+
+  def validate_dutch_phone_number userphone
+    valid_string = !userphone.nil? && !userphone.empty? && (userphone.length > 0)
+    if valid_string
+      number = remove_space_and_special_char userphone
+      prefix = number[0..1]
+      case prefix
+        when "00" then prefix = "+"
+        when "31" then prefix = "+#{prefix}"
+        when "06" then prefix = "+316"
+      end
+      valid_number = prefix.to_s + number[2..-1].to_s
+      return valid_number
+    else
+      return ""
+    end
+  end
+
+  def remove_space_and_special_char number
+    return number.to_s.scan(/[\d]+/).join
+  end
+
 end

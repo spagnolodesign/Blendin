@@ -26,6 +26,7 @@ gem 'redis-rails'
 gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'twilio-ruby'
+gem "figaro"
 
 group :development, :test do
   gem 'byebug'

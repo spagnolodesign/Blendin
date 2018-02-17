@@ -12,8 +12,11 @@
 /node_modules
 *.crs
 *.key
-.dump
+/config/secrets.yml
 .DS_Store
 /public/packs-test
 /node_modules
 dump.rdb
+
+# Ignore application configuration
+/config/application.yml
