@@ -9,7 +9,7 @@ namespace :blender do
       @pending_blend.each do |blend|
         if (blend.sender && blend.recipient)
           puts "send blend request: from #{blend.sender.username} to #{blend.recipient.username}"
-          blend.send_blend_request_email
+          blend.send_pending_blend_email_reminder
         else
           blend.destroy
         end

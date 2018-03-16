@@ -7,7 +7,7 @@ class Blend < ActiveRecord::Base
   validates_uniqueness_of :recipient_id, scope: :sender_id
   validate :blended_already
 
-  after_create :send_blend_request_email
+  after_create :sms_and_email_notification
   after_update :send_status_update_email
 
 
@@ -18,10 +18,14 @@ class Blend < ActiveRecord::Base
     :closed
   ].freeze
 
-  def send_blend_request_email
+  def sms_and_email_notification
     BlendMailer.blend_request_email(self.id).deliver_later
     return if self.recipient_has_not_mobile?
     SendSmsJob.perform_later(self.id)
+  end
+
+  def send_pending_blend_email_reminder
+    BlendMailer.blend_request_email(self.id).deliver_later
   end
 
   def recipient_has_not_mobile?
