@@ -25,7 +25,13 @@ class Blend < ActiveRecord::Base
   end
 
   def recipient_has_not_mobile?
-    self.recipient.phone.empty? || self.recipient.phone.nil? || self.recipient.phone.length < 5
+    if self.recipient.phone.nil?
+      true
+    elsif (self.recipient.phone.empty? || self.recipient.phone.length < 5)
+      true
+    else
+      false
+    end
   end
 
   private
