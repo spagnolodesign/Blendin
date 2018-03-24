@@ -2,7 +2,7 @@
 
 # Install
 
-	In order to run the project locally please make sure you are running you've installed the following services:
+	In order to run the project locally please make sure to install the following services:
 
 	1. ruby '2.4.3'  
 	2. Rails 5.1.5
@@ -23,7 +23,13 @@
 	pg_restore --verbose --clean --no-acl --no-owner -h localhost -d blendin_development latest.dump
 	pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
-# Backup DB and export
+# Backup DB and export (only Admin can do this operation)
 
-	heroku pg:backups capture
+	heroku pg:backups capture -a blendinme
 	curl -o latest.dump `heroku pg:backups public-url`
+
+# Production
+	[https://blendinme.herokuapp.com/](https://blendinme.herokuapp.com/) CNAME on http://community.blendinnow.nl
+
+# Staging
+	[https://staging-blendin.herokuapp.com/](https://staging-blendin.herokuapp.com/)
