@@ -8,7 +8,7 @@
 	2. Rails 5.1.5
 	3. Redis [link](https://redis.io/topics/quickstart)
 	4. Sidekiq [link](https://github.com/mperham/sidekiq)
-	5. Mailcatcher [quick start install Mailcatcher] https://mailcatcher.me/
+	5. Mailcatcher [link](https://mailcatcher.me)
 
 # Run project in development
 
