@@ -1,7 +1,5 @@
 # README
 
-
-
 # Install
 
 	In order to run the project locally please make sure you are running you've installed the following services:
@@ -14,17 +12,18 @@
 
 # Run project in development
 
-	1. `rails s`
-	2. `redis-server`
-	3. `bundle exec sidekiq`
-	4. `redis-server`
-	4. `mailcatcher`
+	1. rails s
+	2. redis-server
+	3. bundle exec sidekiq
+	4. redis-server
+	5. mailcatcher
 
 # Set up DB with data from live website.
 
-	1. `pg_restore --verbose --clean --no-acl --no-owner -h localhost -d blendin_development latest.dump`
-	2. `pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start`
+	pg_restore --verbose --clean --no-acl --no-owner -h localhost -d blendin_development latest.dump
+	pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 # Backup DB and export
+
 	heroku pg:backups capture
 	curl -o latest.dump `heroku pg:backups public-url`
