@@ -37,8 +37,12 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployment
 
-Deployment is handle by Heroku in two different stages. Staging  and Production
+Deployment is handle by Heroku in two different stages. Staging  and
+
+*Production*
 [blendinme.herokuapp.com](https://blendinme.herokuapp.com/) CNAME on [community.blendinnow.nl](http://community.blendinnow.nl)
+
+*Staging*
 [staging-blendin.herokuapp.com](https://staging-blendin.herokuapp.com/)
 
 ## DB
@@ -59,7 +63,7 @@ curl -o latest.dump `heroku pg:backups public-url`
 
 ## Authors
 
-* **Codegull LTD** - *Blendin Team* - [Codegull](https://codegull.com)
+* *Codegull LTD* and *Blendin Team* - [Codegull](https://codegull.com)
 
 ## License
 
