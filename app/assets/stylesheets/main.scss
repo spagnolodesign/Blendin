@@ -135,6 +135,18 @@ label{
     z-index: 1;
 }
 
+.banner-event{
+  background: #f8f8f8;
+  padding: 20px 0;
+  border-radius: 8px;
+  border: 2px solid #74ccd2;
+  text-align: center;
+  p{
+    padding: 0;
+    margin: 0;
+  }
+}
+
 @media only screen and (min-width: 40em) {
   .bigsize{
     font-size: 3em;
