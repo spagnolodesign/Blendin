@@ -147,6 +147,26 @@ label{
   }
 }
 
+.feedback-button{
+  background: #ffa503;
+  border-radius: 30px;
+  color: #FFF;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  padding: 10px;
+  cursor: pointer;
+  p{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.feedback-button:hover{
+  background: #ffb530;
+}
+
 @media only screen and (min-width: 40em) {
   .bigsize{
     font-size: 3em;
@@ -163,6 +183,9 @@ label{
   .Flash{
     min-width: 490px;
     padding-left: 1em;
+  }
+  .feedback-button{
+    padding: 17px 40px;
   }
 }
 @media only screen and (min-width: 64em) {
