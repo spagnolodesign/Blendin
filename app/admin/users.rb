@@ -5,7 +5,7 @@ ActiveAdmin.register User do
   permit_params :username, {:tag_list => []}, :cached_tag_list, :phone, :local, :birthday, :job, :full_street_address, :longitude, :latitude
 
   scope :all
-  scope("Never sent or recived a blends") { |scope| scope.where("id NOT IN (SELECT sender_id FROM blends) AND id NOT IN (SELECT recipient_id FROM blends)") }
+  #scope("Never sent or recived a blends") { |scope| scope.where("id NOT IN (SELECT sender_id FROM blends) AND id NOT IN (SELECT recipient_id FROM blends)") }
 
   index do
     column :username
