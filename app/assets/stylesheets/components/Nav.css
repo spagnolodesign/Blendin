@@ -12,15 +12,26 @@
   padding: 14px 16px;
   text-decoration: none;
   text-decoration: none;
-  color: #585858;
-  font-size: 17px;
+  color: #282828;
+  font-size: 16px;
   position: relative;
+  font-weight: 500;
+  letter-spacing: -.03em;
+
+}
+
+.topnav a span {
+  border-bottom: 8px solid transparent;
+  padding-bottom: 1px
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  opacity: 0.9;
-  color: #00bcd4;
+.topnav a span:hover {
+  border-bottom: solid 8px #77CCCF;
+}
+
+.active-topnav-link > span {
+  border-bottom: solid 8px #77CCCF !important;
 }
 
 /*Style the notification icon*/
@@ -39,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none !important
 }
 
 
@@ -92,5 +104,13 @@
   #notification {
     top: 66px;
     left: 85px;
+  }
+}
+
+
+@media only screen and (max-width: 64em) {
+  #toggle-nav
+{
+    margin-top: 15px;
   }
 }
