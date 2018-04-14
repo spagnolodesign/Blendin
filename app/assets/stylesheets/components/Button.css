@@ -6,7 +6,6 @@
   color: #74CCD1;
   font-size: 1.1em;
   font-family:  'Montserrat', sans-serif;
-  /* font-family: 'Quicksand', sans-serif; */
   font-weight: bold;
   outline: none;
   padding: 0.7em 1em;
@@ -81,7 +80,6 @@
   font-size: 1em;
   color: #FFF;
   text-decoration: none;
-  font-weight: bold;
   display: inline-block;
 }
 

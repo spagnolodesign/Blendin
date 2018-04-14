@@ -26,10 +26,10 @@ Rails.application.routes.draw do
   devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 
   # Sidekiq Web UI, only for admins.
-  require "sidekiq/web"
-  authenticate :user, lambda { |u| u.admin } do
-    mount Sidekiq::Web => '/sidekiq'
-  end
+  # require "sidekiq/web"
+  # authenticate :user, lambda { |u| u.admin } do
+  #   mount Sidekiq::Web => '/sidekiq'
+  # end
 
 
 

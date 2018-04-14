@@ -32,7 +32,11 @@
 }
 
 @media only screen and (max-width: 64em) {
-  .Logo{
-    float: right;
+  .Header .Logo{
+    float: left;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 50px;
+    height:50px;
   }
 }
