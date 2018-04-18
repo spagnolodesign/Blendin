@@ -1,9 +1,9 @@
-.Button{
+.Button {
   background-color: #FED577;
   color: #0a0a0a;
   box-sizing: border-box;
   font-size: 16px;
-  font-family:  'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   outline: none;
   padding: 0.7em 1em;
@@ -14,49 +14,54 @@
   font-weight: 300;
 }
 
-.Button:hover{
+.Button:hover {
   background: #D9B45A !important;
   color: #0a0a0a;
 }
 
-.Button.full{
+.Button.full {
   background: #FED577;
   color: #0a0a0a;
   border: none
 }
-.Button.full.back{
+
+.Button.full.back {
   background: #dadada;
   border: 2px solid #c4c4c4;
   color: #0a0a0a;
 }
 
-.Button.center{
+.Button.center {
   margin: 2em auto !important;
   display: block;
   font-weight: 300;
-
 }
 
-.Button.accept{
-  background: #25d366;
-  border: 2px solid #25d366;
+.Button.accept {
+  background: #77CCCF;
+  border: 2px solid #77CCCF;
   color: #FFF;
 }
-.Button.accept:hover{
-  background: rgba(37, 211, 102, 0.8) !important;
+
+.Button.accept:hover {
+  background: #b4e5e6 !important;
+  border: 2px solid #b4e5e6;
 }
 
-.Button.refuse{
-  background: #fc3838;
-  border: 2px solid #fc3838;
+.Button.refuse {
+  background: #FD72A6;
+  border: 2px solid #FD72A6;
   color: #FFF;
 }
-.Button.refuse:hover{
-  background: rgba(252, 56, 56, 0.67) !important;
+
+.Button.refuse:hover {
+  background: #dc9ab2 !important;
+  border: 2px solid #dc9ab2;
 }
 
 /* ok */
-.BlendBtn{
+
+.BlendBtn {
   display: inline-block;
   margin: 0.5em 0;
   width: auto;
@@ -67,14 +72,13 @@
   text-decoration: none;
 }
 
-.BlendBtn:hover{
+.BlendBtn:hover {
   background-color: #DAB553 !important;
   color: black !important
 }
 
-
-
 /* Shared */
+
 .loginBtn {
   box-sizing: border-box;
   position: relative;
@@ -107,38 +111,40 @@
 }
 
 .loginBtn:active {
-  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Facebook */
+
 .loginBtn--facebook {
   background-color: #4C69BA;
   background-image: linear-gradient(#4C69BA, #3B55A0);
   text-shadow: 0 -1px 0 #354C8C;
 }
+
 .loginBtn--facebook:before {
   border-right: #364e92 1px solid;
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 12px no-repeat;
 }
-.loginBtn--facebook:hover,
-.loginBtn--facebook:focus {
+
+.loginBtn--facebook:hover, .loginBtn--facebook:focus {
   color: #FFF;
   background-color: #5B7BD5;
   background-image: linear-gradient(#5B7BD5, #4864B1);
 }
-.WhatsApp{
+
+.WhatsApp {
   width: 100%;
   display: block;
   color: #FFF;
   background: #25d366;
   border: 2px solid #25d366;
-  text-decoration:none;
+  text-decoration: none;
   margin: 1em 0;
   text-align: center;
 }
 
-.WhatsApp:hover{
+.WhatsApp:hover {
   background: #1bcd5d;
 }
 
@@ -154,19 +160,18 @@
   border: 0;
   background: transparent;
 }
+
 .Close:after {
-  content: '✖'; /* UTF-8 symbol */
+  content: '✖';
+  /* UTF-8 symbol */
 }
 
 @media only screen and (min-width: 40em) {
-
-  .Button{
+  .Button {
     padding: 0.9em 1.3em;
   }
-
   .loginBtn {
     font-size: 1.2em;
     display: inline-block;
   }
-
 }
