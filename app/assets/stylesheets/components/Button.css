@@ -1,37 +1,40 @@
 .Button{
-  background: #FFFFFF;
-  border: 2px solid #74CCD1;
+  background-color: #FED577;
+  color: #0a0a0a;
   box-sizing: border-box;
-  border-radius: 8px;
-  color: #74CCD1;
-  font-size: 1.1em;
+  font-size: 16px;
   font-family:  'Montserrat', sans-serif;
   font-weight: bold;
   outline: none;
   padding: 0.7em 1em;
   cursor: pointer;
   text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 300;
 }
 
 .Button:hover{
-  background: #74CCD1;
-  color: #FFF;
+  background: #D9B45A !important;
+  color: #0a0a0a;
 }
 
 .Button.full{
-  background: #74CCD1;
-  border: 2px solid #74CCD1;
-  color: #FFF;
+  background: #FED577;
+  color: #0a0a0a;
+  border: none
 }
 .Button.full.back{
   background: #dadada;
   border: 2px solid #c4c4c4;
-  color: #8a8a8a;
+  color: #0a0a0a;
 }
 
 .Button.center{
   margin: 2em auto !important;
   display: block;
+  font-weight: 300;
+
 }
 
 .Button.accept{
@@ -40,7 +43,7 @@
   color: #FFF;
 }
 .Button.accept:hover{
-  background: rgba(37, 211, 102, 0.8);
+  background: rgba(37, 211, 102, 0.8) !important;
 }
 
 .Button.refuse{
@@ -49,22 +52,27 @@
   color: #FFF;
 }
 .Button.refuse:hover{
-  background: rgba(252, 56, 56, 0.67);
+  background: rgba(252, 56, 56, 0.67) !important;
 }
 
+/* ok */
 .BlendBtn{
   display: inline-block;
   margin: 0.5em 0;
   width: auto;
-  background: #74CCD1;
-  color:#FFF;
+  background-color: #FED577;
+  color: #0a0a0a;
+  font-weight: 300;
   text-align: center;
   text-decoration: none;
 }
-.Button:hover{
-  background: #6fdce3;
-  color: #FFF;
+
+.BlendBtn:hover{
+  background-color: #DAB553 !important;
+  color: black !important
 }
+
+
 
 /* Shared */
 .loginBtn {

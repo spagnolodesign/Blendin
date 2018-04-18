@@ -1,0 +1,10 @@
+<%= link_to user do %>
+    <div class="DashCard">
+        <div class="DashCardImgContainer" style="background-image:url(<%= user.avatar.medium_avatar  %>)"></div>
+      <div class="DashCardInfo">
+        <p class ="DashUserTag"><%= user.tags.sample %></p>
+        <h1><%= user.name %></h1>
+        <p class ="DashUserJob"><%= user.job %></p>
+      </div>
+    </div>
+<% end %>
