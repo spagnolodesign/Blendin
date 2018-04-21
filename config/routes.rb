@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|nl/ do
     # root 'home#index'
     root 'dashboard#index'
-    get '/all_blends', to: 'home#index', as: 'home'
+    get '/all-blends', to: 'home#index', as: 'home'
     get '/wizard', to: 'wizard#index'
     get '/upload-photo', to: 'wizard#upload'
     get 'blends/create'
