@@ -1,0 +1,12 @@
+<div class="clearfix center col-12">
+  <div class="col md-col-12 DashBoardMainContainer ">
+    <div class="DashCardContainer-title">
+      <h1>Blenders with your interests <span><%= link_to "SEE MORE", home_path %> </span> </h1>
+    </div>
+    <div class="DashCardsContainer">
+      <% @users.shuffle[0..7].each do |user| %>
+        <%= render 'users/dashboard_card', user: user %>
+      <% end %>
+    </div>
+    </div>
+</div>
