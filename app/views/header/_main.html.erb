@@ -1,21 +1,25 @@
 <!--HEADER-->
 <div class="Header">
-  <div class="clearfix py2 px2">
+  <div class="clearfix pt3 pb1 px2">
 
-    <div class="col col-right col-5" id="nav-js">
+    <div class="col col-right col-7" id="nav-js">
         <nav class="topnav">
-          <%= link_to t('.community_link'), root_url %>
-          <%= link_to blends_path  do %>
-            <%=  t('.my_blends_link') %>
+          <%= link_to root_url, :class => current_class?(root_path) do %>
+          <span ><%= t('.community_link') %></span>
+          <% end %>
+          <%= link_to blends_path, :class => current_class?(blends_path)  do %>
+            <span><%=  t('.my_blends_link') %></span>
             <span id="notification"><%= User.count_pending_blend(current_user) %></span>
           <% end %>
-          <%= link_to t('.settings_link'), wizard_path %>
-          <a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a>
+          <%= link_to wizard_path, :class => current_class?(wizard_path) do %>
+          <span><%= t('.settings_link') %></span>
+          <% end  %>
+          <a rel="nofollow" data-method="delete" href="/users/sign_out"> <span>Logout</span> </a>
           <a id="toggle-nav" class="icon" href="#open-nav" >&#9776;</a>
-          <%= render 'header/languages' %>
+          <%= render 'header/languages'%>
         </nav>
       </div>
-      <div class="col col-7">
+      <div class="col col-5">
         <%= link_to "", root_url, class:"Logo" %>
       </div>
   </div>

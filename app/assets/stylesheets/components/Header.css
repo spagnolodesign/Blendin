@@ -6,10 +6,11 @@
   display: block;
   overflow: hidden;
   font-size: 0;
-  background: #FFF url('/assets/logo-app.png') no-repeat top left;
+  background: #FFF url('/assets/blendin-logo-footer.png') no-repeat top left;
   background-size: 100%;
-  width: 164px;
-  height: 40px;
+  width: 75px;
+  height:75px;
+  margin-left: 40px;
 }
 
 .Header .Logo img{
@@ -27,5 +28,15 @@
   }
   .Header {
     margin-bottom: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .Header .Logo{
+    float: left;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 50px;
+    height:50px;
   }
 }

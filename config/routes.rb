@@ -6,11 +6,13 @@ Rails.application.routes.draw do
 
   # config/routes.rb
   scope "(:locale)", locale: /en|nl/ do
-    root 'home#index'
+    # root 'home#index'
+    root 'dashboard#index'
+    get '/all-blends', to: 'home#index', as: 'home'
     get '/wizard', to: 'wizard#index'
     get '/upload-photo', to: 'wizard#upload'
     get 'blends/create'
-
+    get '/dashboard', to: 'dashboard#index'
     devise_for :users, skip: :omniauth_callbacks
 
     resources :users, only: [:show, :update]
@@ -26,10 +28,10 @@ Rails.application.routes.draw do
   devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 
   # Sidekiq Web UI, only for admins.
-  require "sidekiq/web"
-  authenticate :user, lambda { |u| u.admin } do
-    mount Sidekiq::Web => '/sidekiq'
-  end
+  # require "sidekiq/web"
+  # authenticate :user, lambda { |u| u.admin } do
+  #   mount Sidekiq::Web => '/sidekiq'
+  # end
 
 
 

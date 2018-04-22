@@ -1,6 +1,6 @@
 
 body{
-  font-family: 'Quicksand', sans-serif;
+  font-family:  'Montserrat', sans-serif;
   font-size: 1.1em;
   margin: 0;
   color: #333333;
@@ -21,9 +21,9 @@ q {
 }
 .headline{
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.5em;
   margin: 0.3em 0;
-  font-family: 'Crete Round', serif;
+  font-family:  'Montserrat', sans-serif;
   font-weight: normal;
   margin: 0.3em auto 0.7em auto;
 }
@@ -148,7 +148,7 @@ label{
 }
 
 .feedback-button{
-  background: #ffa503;
+  background: #FD9774;
   border-radius: 30px;
   color: #FFF;
   font-weight: bold;
@@ -164,7 +164,7 @@ label{
 }
 
 .feedback-button:hover{
-  background: #ffb530;
+  background: #ce795c;
 }
 
 @media only screen and (min-width: 40em) {
