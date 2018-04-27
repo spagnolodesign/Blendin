@@ -27,6 +27,7 @@ gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'twilio-ruby'
 gem "figaro"
+gem "rack-timeout"
 
 
 group :development, :test do
@@ -34,8 +35,4 @@ group :development, :test do
   gem 'faker'
   gem 'spring'
   gem 'derailed'
-end
-
-group :production do
-  gem "rack-timeout"
 end
