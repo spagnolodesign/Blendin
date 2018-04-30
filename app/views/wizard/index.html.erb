@@ -1,6 +1,6 @@
 <section class="EditProfile clearfix">
   <div class="sm-col-6 lg-col-6 mx-auto">
-    <% if @user.sign_in_count == 1 %>
+    <% if @user.full_street_address.nil? %>
       <h3><%= t('.greetings_html', username: @user.name) %></h3>
     <% else %>
       <%= render 'top_nav' %>
@@ -57,7 +57,7 @@
       <label class="Label"><%= t('.phone_label') %></label>
       <%= f.text_field :phone, required: 'true', class: "Input", required: true, placeholder: t('.phone_placeholder'), 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
       <i><%= t('.phone_helper') %></i>
-  
+
       <label class="Label"><%= t('.about_label') %> </label>
       <%= f.text_area :about, class:"Input" %>
       <i><%= t('.about_helper') %></i>
