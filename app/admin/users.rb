@@ -13,6 +13,7 @@ ActiveAdmin.register User do
     column :phone
     column :blends
     column :created_at
+    column :last_sign_in_at
     actions
   end
 
