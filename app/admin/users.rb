@@ -20,6 +20,7 @@ ActiveAdmin.register User do
   filter :email_contains, label: 'Email'
   filter :base_tags, :as => :select, :collection => User.tag_counts.where("taggings_count > 20").map{|u| [u.name, u.id]}
   filter :local
+  filter :last_sign_in_at
   filter :created_at
   filter :avatar_present, :as => :boolean , label: 'Avatar'
   filter :gender, :as => :select , label: 'Gender'
