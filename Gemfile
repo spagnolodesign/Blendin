@@ -4,6 +4,7 @@ ruby '2.4.3'
 gem 'rails'
 gem 'pg'
 gem 'puma'
+gem 'bootsnap', require: false
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
