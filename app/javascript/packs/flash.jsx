@@ -7,7 +7,7 @@ export class Flash extends Component {
   super();
   this.state = {
     show:true,
-    type: (!props.alert) ? "advice" : "danger"
+    type: (!props.alert) ? "alert-success" : "alert-danger"
   }
  }
 
@@ -17,13 +17,12 @@ export class Flash extends Component {
 
  render(){
    const {show, type} = this.state
+   if (!show){
+    return;
+   }
    return(
-       <div className="ContainerFlash">
-         {show &&
-           <div className={`Flash ${type}`}>
-              <p>{this.props.alert || this.props.notice}</p>
-           </div>
-         }
+       <div className={`alert alert-primary ${type} mt-3`} role="alert">
+            <span>{this.props.alert || this.props.notice}</span>
        </div>
    )
  }

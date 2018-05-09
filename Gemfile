@@ -29,6 +29,7 @@ gem 'sidekiq-failures'
 gem 'twilio-ruby'
 gem "figaro"
 gem "rack-timeout"
+gem 'bootstrap', '~> 4.1.1'
 
 
 group :development, :test do

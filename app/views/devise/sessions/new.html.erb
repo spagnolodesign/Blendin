@@ -1,24 +1,35 @@
-<section class="Auth clearfix flex items-center">
-  <div class="sm-col-6 lg-col-3 mx-auto">
-    <%= render "devise/shared/headline" %>
+<div class="text-center mt-5">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-auth"}) do |f| %>
+    <h2>Please sign in</h2>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-      <%= f.email_field :email, autofocus: true, class:"Input", placeholder: t('.email_placeholder') %>
-      <%= f.password_field :password, autocomplete: "off", class:"Input", placeholder: t('.pass_placeholder') %>
+    <a class="btn btn-lg btn-primary btn-block my-3" href="/users/auth/facebook">
+      <i class="fab fa-facebook-f"></i>
+      <%= t('devise.shared.links.sign_in_with_provider', provider: "Facebook") %>
+    </a>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
+    <p class="text-uppercase">OR</p>
 
-      <div class="actions">
-        <%= f.submit t('.btn_submit'), class: "Button center" %>
-      </div>
-    <% end %>
+    <%= devise_error_messages! %>
 
-    <%= render "devise/shared/links" %>
-  </div>
-</section>
+    <label for="inputEmail" class="sr-only"><%= t('.email_placeholder') %></label>
+    <%= f.email_field :email, autofocus: true, class:"form-control", id: "inputEmail", placeholder: t('.email_placeholder'), required: true %>
+
+    <label for="inputPassword" class="sr-only"><%= t('.pass_placeholder') %></label>
+    <%= f.password_field :password, autocomplete: "off", class:"form-control", id:"inputPassword", placeholder: t('.pass_placeholder'), required: true%>
+
+    <% if devise_mapping.rememberable? -%>
+    <div class="checkbox mb-3">
+      <label>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </label>
+    </div>
+    <% end -%>
+
+    <%= f.submit t('.btn_submit'), class: "btn btn-lg btn-primary btn-block" %>
+    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
