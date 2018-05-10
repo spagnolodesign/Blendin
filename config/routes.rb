@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-
   # config/routes.rb
   scope "(:locale)", locale: /en|nl/ do
     # root 'home#index'
+    get "/pages/:page" => "pages#show"
     root 'dashboard#index'
     get '/all-blends', to: 'home#index', as: 'home'
     get '/wizard', to: 'wizard#index'

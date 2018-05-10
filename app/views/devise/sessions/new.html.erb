@@ -1,11 +1,9 @@
 <div class="text-center mt-5">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-auth"}) do |f| %>
-    <h2>Please sign in</h2>
+  <h2>Please sign in</h2>
 
-    <a class="btn btn-lg btn-primary btn-block my-3" href="/users/auth/facebook">
-      <i class="fab fa-facebook-f"></i>
-      <%= t('devise.shared.links.sign_in_with_provider', provider: "Facebook") %>
-    </a>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-auth"}) do |f| %>
+
+    <%= render "devise/shared/fb_btn" %>
 
     <p class="text-uppercase">OR</p>
 
