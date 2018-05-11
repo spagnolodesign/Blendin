@@ -4,8 +4,8 @@ nl:
     title: "Blendin | where people and cultures meet "
     description: "Something"
     og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
-  header:
-    main:
+  navbar:
+    nav:
       community_link: "Community"
       my_blends_link: "Mijn blends"
       settings_link: "Instellingen"
@@ -40,14 +40,14 @@ nl:
         city_placeholder: "Bijv. Den Haag"
         residence: "Waar woon je? 🌇"
         residence_placeholder: "Bijv. Amsterdam"
-        gender_label: "Selecteer een optie:"
+        gender_label: "Selecteer een optie"
         gender_male: "Ik ben een man 👨"
         gender_female: "Ik ben een vrouw 👩"
-        birthday_label: "Geboorte datum 🎂:"
-        phone_label: "Telefoon nummer 📱:"
+        birthday_label: "Geboorte datum 🎂"
+        phone_label: "Telefoon nummer 📱"
         phone_placeholder: "Bijv. 0612345678"
         phone_helper: "Dit nummer is pas zichtbaar voor andere gebruikers als je blend verzoek geaccepteerd wordt of jij je verzoek accepteerd."
-        about_label: "Vertel meer over jezelf 💬: "
+        about_label: "Vertel meer over jezelf 💬"
         about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
         submit_btn: "Bevestig"
     end_submit:
@@ -83,45 +83,45 @@ nl:
       blend_message_placeholder: "😉 Hallo, mijn naam is ..."
       blend_message_btn: "Stuur bericht"
       introjs_step_1_html: data-intro="Wil je met hem/haar afspreken? Klik dan hier en stuur een Blend verzoek. Als je verzoek wordt geaccepteerd krijgen jullie elkaars telefoon nummers en kunnen jullie elkaar ontmoeten."
-  wizard:
-    index:
+  settings:
+    profile_form:
+      username_label: "First and last name"
       greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid profiel helpt je bij het vinden van goede matches."
-      local_label: "Selecteer een optie:"
+      local_label: "Selecteer een optie"
       local_true: "Ik ben een local"
       local_false: "Ik ben een nieuwkomer"
-      gender_label: "Selecteer een optie:"
-      gender_male: "Ik ben een man 👨"
-      gender_female: "Ik ben een vrouw 👩"
-      birthday_label: "Geboorte datum 🎂:"
-      address_label: "Waar woon je? 🌇"
+      gender_label: "Selecteer een optie"
+      gender_male: "Ik ben een man"
+      gender_female: "Ik ben een vrouw"
+      birthday_label: "Geboorte datum"
+      address_label: "Waar woon je?"
       address_placeholder: "Bijv. Amsterdam"
-      country_label: "Land van herkomst 🌎:"
+      country_label: "Land van herkomst"
       country_placeholder: "Bijv. Syrie"
-      interest_label: "Kies jouw interesses uit deze lijst 📙"
+      interest_label: "Kies jouw interesses uit deze lijst"
       interest_helper: "(Kies minstens 3 interesses. Hoe meer hoe beter! )"
-      job_label: "Studie en/of werk ervaring 💪"
+      job_label: "Studie en/of werk ervaring"
       job_placeholder: "Bijv. auto monteur of advocaat"
       job_helper: "(Dit kan dus ook een baan van vroeger zijn.)"
-      phone_label: "Telefoon nummer 📱:"
+      phone_label: "Telefoon nummer"
       phone_placeholder: "Bijv. 0612345678"
-      about_label: "Vertel meer over jezelf 💬: "
-      about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
+      about_label: "Vertel meer over jezelf 💬"
+      about_helper: "Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten."
       phone_helper: "Dit nummer is pas zichtbaar voor andere gebruikers als je blend verzoek geaccepteerd wordt of jij je verzoek accepteerd."
       submit_btn: "Bevestig en ga door"
       introjs_step_1_html: data-intro="Kies op ‘Local’ als je je thuis voelt in Nederland en op zoek bent naar contact met mensen die nieuw zijn in Nederland."
       introjs_step_2_html: data-intro="Kies hier ‘nieuwkomer’ als je niet opgegroeid bent in Nederland en op zoek ben naar contact met Nederlanders."
       introjs_step_3_html: data-intro="Geef hier zo veel mogelijk interesses aan! Ons systeem zal daarop matches selecteren."
       introjs_step_4: "Bevestigen"
-    top_nav:
+    navigation:
       profile: "Profiel"
       photo: "Foto"
       settings: "Instellingen"
-    upload:
+    photo_form:
       label: "Upload/verander jouw foto:"
-      btn_skip: "Sla over"
       btn_upload: "Next"
       error: "Bestand niet ondersteund! Upload een van de volgende bestandformaties: png, jpeg, jpg."
-      introjs_step_1_html: data-intro="Zorg dat je een foto kiest want dit vergroot je kansen op ontmoetingen aanzienlijk!"
+      info: "Clear frontal face photos are an important way for the community and guests to learn about each other. It’s not much fun to host a landscape! Be sure to use a photo that clearly shows your face and doesn’t include any personal or sensitive info you’d rather not have hosts or guests see."
   layouts:
     mailer:
       footer: "Verstuurd door"

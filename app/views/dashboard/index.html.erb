@@ -1,12 +1,54 @@
-<div class="clearfix center col-12">
-  <div class="col md-col-12 DashBoardMainContainer ">
-    <div class="DashCardContainer-title">
-      <h1>Blenders with your interests <span><%= link_to "SEE MORE", home_path %> </span> </h1>
+<h2>What would you like to do today?</h2>
+
+<div class="row my-md-4">
+  <div class="col-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title"><i class="fas fa-users"></i> Meet Blenders</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
     </div>
-    <div class="DashCardsContainer">
-      <% @users.shuffle[0..7].each do |user| %>
-        <%= render 'users/dashboard_card', user: user %>
-      <% end %>
+  </div>
+  <div class="col-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title"><i class="fas fa-diagnoses"></i>Teach my Talent</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
     </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title"><i class="fas fa-lightbulb"></i> Learn a Talent</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
     </div>
+  </div>
+</div>
+<div class="row my-md-3">
+  <div class="col-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title"><i class="fas fa-hand-holding-usd"></i> Donate</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title"><i class="fas fa-globe"></i> Share my network</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title"><i class="fas fa-handshake"></i> Become a partner</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
 </div>

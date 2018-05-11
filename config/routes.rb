@@ -22,6 +22,10 @@ Rails.application.routes.draw do
       get '/reject', to: 'blends#reject'
     end
 
+    get "/settings/profile" => "settings#profile"
+    get "/settings/photo" => "settings#photo"
+
+
     resources :networks, only: [:new, :create, :index], :path => "work"
   end
 

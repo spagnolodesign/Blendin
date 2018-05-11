@@ -12,5 +12,7 @@
  *
  *= require main
  *= require auth
+ *= require loader
+ *= require custom-bootstrap
 
  */

@@ -1,0 +1,13 @@
+.custom-width-select{
+  width: auto;
+  margin-right: 0.2em;
+}
+.custom-file-label{
+  cursor: pointer;
+  text-align: center;
+}
+.custom-file-label::after{
+  width: 100%;
+  content: "Upload a file from your computer";
+  cursor: pointer;
+}
