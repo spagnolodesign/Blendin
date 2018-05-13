@@ -28,8 +28,8 @@ gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'twilio-ruby'
 gem "figaro"
-gem "rack-timeout"
 gem 'bootstrap', '~> 4.1.1'
+gem 'mailboxer'
 
 
 group :development, :test do

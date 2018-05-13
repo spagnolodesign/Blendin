@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -7,23 +8,32 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|nl/ do
     # root 'home#index'
     get "/pages/:page" => "pages#show"
+
     root 'dashboard#index'
-    get '/all-blends', to: 'home#index', as: 'home'
-    get '/wizard', to: 'wizard#index'
-    get '/upload-photo', to: 'wizard#upload'
-    get 'blends/create'
+
+    # get '/all-blends', to: 'home#index', as: 'home'
+    # get '/wizard', to: 'wizard#index'
+    # get '/upload-photo', to: 'wizard#upload'
+    # get 'blends/create'
+
     get '/dashboard', to: 'dashboard#index'
     devise_for :users, skip: :omniauth_callbacks
 
     resources :users, only: [:show, :update]
 
-    resources :blends, only: [:create, :new, :index] do
-      get '/accept', to: 'blends#accept'
-      get '/reject', to: 'blends#reject'
-    end
+    # resources :blends, only: [:create, :new, :index] do
+    #   get '/accept', to: 'blends#accept'
+    #   get '/reject', to: 'blends#reject'
+    # end
 
     get "/settings/profile" => "settings#profile"
     get "/settings/photo" => "settings#photo"
+
+    resources :inbox, only: [:index, :show] do
+      member do
+         post 'reply'
+      end
+    end
 
 
     resources :networks, only: [:new, :create, :index], :path => "work"

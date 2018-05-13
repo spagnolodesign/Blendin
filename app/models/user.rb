@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   after_create :send_welcome_email
 
   acts_as_taggable
+  
+  acts_as_messageable
 
   validates :terms_and_conditions, acceptance: true
 
@@ -36,6 +38,10 @@ class User < ActiveRecord::Base
 
   def name
     username.split.map(&:capitalize).join(' ')
+  end
+
+  def mailboxer_email(object)
+    return self.email
   end
 
   def parse_chache_tag

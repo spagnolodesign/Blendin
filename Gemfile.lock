@@ -179,6 +179,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mailboxer (0.15.1)
+      carrierwave (>= 0.5.8)
+      rails (>= 5.0.0)
     memory_profiler (0.9.10)
     method_source (0.9.0)
     mime-types (3.1)
@@ -223,7 +226,6 @@ GEM
       rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
-    rack-timeout (0.4.2)
     rails (5.1.5)
       actioncable (= 5.1.5)
       actionmailer (= 5.1.5)
@@ -355,11 +357,11 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   kaminari
+  mailboxer
   mini_magick
   omniauth-facebook
   pg
   puma
-  rack-timeout
   rails
   redis-rails
   sass-rails

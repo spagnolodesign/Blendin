@@ -1,0 +1,15 @@
+<%= form_for :message, :url => reply_inbox_url(@conversation) do |f| %>
+  <%= f.label :body %>:
+  <%= f.text_field :body %>
+  <%= f.submit "Reply" %>
+<% end %>
+
+<br />
+
+
+<% @receipts.each_with_index do |receipt, i| %>
+  <% if receipt.receiver == current_user %>
+    <% @conversation.mark_as_read(current_user) %>
+  <% end %>
+  <p><%= receipt.message.sender.name %>: <%= receipt.message.body %> | un_read : <%= receipt.is_unread? %></p>
+<% end %>

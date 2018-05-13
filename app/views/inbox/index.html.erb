@@ -1,0 +1,6 @@
+<h1>Inbox</h1>
+
+
+<% @conversations.each_with_index do |conversation, i| %>
+  <p><%= conversation.last_sender.name %> | <%= conversation.subject %> | <%= conversation.last_message.body %> | <%= link_to "Open messages", inbox_path(conversation) %> | <%=  time_ago_in_words(conversation.updated_at) %></p>
+<% end %>
