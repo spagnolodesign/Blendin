@@ -7,9 +7,6 @@
 <br />
 
 
-<% @receipts.each_with_index do |receipt, i| %>
-  <% if receipt.receiver == current_user %>
-    <% @conversation.mark_as_read(current_user) %>
-  <% end %>
-  <p><%= receipt.message.sender.name %>: <%= receipt.message.body %> | un_read : <%= receipt.is_unread? %></p>
+<% @receipts.order(updated_at: :desc).each_with_index do |receipt, i| %>
+  <p><%= receipt.message.sender.name %>: <%= receipt.message.body %></p>
 <% end %>
