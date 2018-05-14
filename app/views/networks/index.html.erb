@@ -1,21 +1,24 @@
-<section class="NetworkPage clearfix">
-  <div class="sm-col-5 lg-col-5 mx-auto">
-    <%= render 'header'%>
-    <h1><%= raw t(".title") %></h1>
-    <p class="mb3"><%= raw t(".body") %></p>
-    <div class="step">
-      <h3><%= raw t(".step_title") %></h3>
-      <ul>
+<section class="jumbotron text-center" style="background: #FFF  url('/assets/network/hero-network-blendin.jpg') no-repeat top center; background-size:cover; color:#FFF; padding: 6rem 0;">
+  <div class="container">
+    <h1 class="jumbotron-heading display-4"><%= t('.title') %></h1>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-lg-8">
+      <p class="lead mb-5"><%= raw t(".body") %></p>
+      <h2 class="text-center mb-2"><%= raw t(".step_title") %></h2>
+      <ul class="list-unstyled">
         <li><%= raw t(".step_one") %></li>
         <li><%= raw t(".step_two") %></li>
         <li><%= raw t(".step_three") %></li>
         <li><%= raw t(".step_four") %></li>
         <li><%= raw t(".step_five") %></li>
       </ul>
-    </div>
-    <br /><br />
-    <div class="center">
-      <%= link_to t(".action"), new_network_path, class: "Button full" %>
+      <div class="text-center mt-5">
+        <%= link_to t(".action"), new_network_path, class: "btn btn-primary btn-lg" %>
+      </div>
     </div>
   </div>
-</section>
+</div>

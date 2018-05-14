@@ -1,4 +1,15 @@
-.dashboard-card-lnk{
-  text-decoration: none;
-  color: auto;
+.dashboard-card-lnk {
+  text-decoration: none !important;
+  color: #212529;
+  transform-origin: center;
+  transition: transform .2s cubic-bezier(0,0,.2,1),box-shadow .2s cubic-bezier(0,0,.2,1);
+}
+
+.dashboard-card-lnk:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,1);
+  transform: translateY(-10px);
+}
+
+.list-unstyled > li{
+  margin-bottom: 1em;
 }

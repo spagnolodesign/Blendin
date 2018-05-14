@@ -1,13 +1,9 @@
-<section class="NetworkPage clearfix">
-  <div class="sm-col-5 lg-col-5 mx-auto">
-        <%= render 'header'%>
-    <div class="center">
-      <p class="center"><%= raw t('.thank_you_message') %></p>
-      <br />
+<div class="container mt-5">
+  <div class="row justify-content-md-center">
+    <div class="col-lg-8 text-center">
       <img src="https://i.giphy.com/26gsjCZpPolPr3sBy.gif" width="300" />
-      <br /><br />
-      <a href="https://blendinnow.nl">Team Blendin & Doneer Je Netwerk
-</a>
+      <p class="mt-4"><%= raw t('.thank_you_message') %></p>
+      <%= link_to "Back to dashboard", root_url %>
     </div>
   </div>
-</section>
+</div>
