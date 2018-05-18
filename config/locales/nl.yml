@@ -19,6 +19,10 @@ nl:
       title: "Steun ons en maak een verschil!"
       lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
       cta: "Doneer nu!"
+  talents:
+    index:
+      title: "Share your talent on Blendin"
+      subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
   networks:
     new:
       title: "Share your network"

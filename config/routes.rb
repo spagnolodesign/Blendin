@@ -31,10 +31,15 @@ Rails.application.routes.draw do
 
     resources :inbox, only: [:index, :show] do
       member do
-         post 'reply'
+         post "reply"
       end
     end
 
+    resources :talents, only: [:index, :new] do
+      collection do
+        get "learn", to: 'talents#learn'
+      end
+    end
 
     resources :networks, only: [:new, :create, :index], :path => "work"
   end
