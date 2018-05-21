@@ -22,3 +22,50 @@
 #   end
 #
 # end
+
+
+5.times do
+  Event.create(
+    name: Faker::BossaNova.song,
+    date: Date.today + rand(20..40),
+    time: "2000-01-01 20:00:00",
+    description: "Lorem ipsum dolor sit amet, legere graecis duo at. Mei augue movet ne. Appetere delicata vis id. Has alii illud cu, est ea tritani partiendo rationibus. His mazim ornatus pericula ne, esse graeci nec ei.
+    In timeam epicuri placerat mea, phaedrum iudicabit cum te. Ut ferri inimicus sed, et cum facer corrumpit, omnes voluptaria et nec. Nam liber paulo posidonium ex. Ad eius omnesque fabellas eos, modus dicam consul duo id. Offendit recteque pro ea. At electram similique quo. Te nulla cetero inermis eam, pri facer epicuri in.",
+    city: Faker::Address.city,
+    max_refugee_capacity: 5,
+    max_local_capacity: 5,
+    community_events: false
+  )
+end
+
+3.times do
+  Event.create(
+    name: Faker::BossaNova.song,
+    date: Date.today + rand(20..40),
+    time: "2000-01-01 20:00:00",
+    description: "Lorem ipsum dolor sit amet, legere graecis duo at. Mei augue movet ne. Appetere delicata vis id. Has alii illud cu, est ea tritani partiendo rationibus. His mazim ornatus pericula ne, esse graeci nec ei.
+    In timeam epicuri placerat mea, phaedrum iudicabit cum te. Ut ferri inimicus sed, et cum facer corrumpit, omnes voluptaria et nec. Nam liber paulo posidonium ex. Ad eius omnesque fabellas eos, modus dicam consul duo id. Offendit recteque pro ea. At electram similique quo. Te nulla cetero inermis eam, pri facer epicuri in.",
+    city: Faker::Address.city,
+    topic: "Music",
+    community_events: true
+  )
+end
+
+refugee = User.where(local: false)
+local = User.where(local: true)
+
+
+Event.all.each do |event|
+  rand(1..4).times do
+    Partecipant.create(
+    event: event,
+    user_id: refugee.sample.id
+  )
+  end
+  rand(1..4).times do
+    Partecipant.create(
+    event: event,
+    user_id: local.sample.id
+  )
+  end
+end

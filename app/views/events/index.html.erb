@@ -1,0 +1,49 @@
+<% @backgroundurl = "https://berryhoop.s3-eu-central-1.amazonaws.com/uploads/event/photo/10/small_event_favicon.jpg?X-Amz-Expires=600&X-Amz-Date=20180517T053649Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIOPPK7RU4V34P6MQ/20180517/eu-central-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=33d5962b1b81cce8dc174270e84eb2b69c2a1398c1cbed3d359d89163d485629" %>
+
+  <div class="container">
+
+    <% if user_signed_in? && @my_events.any? %>
+      <h1><%= t('events.index.my_next_events') %></h1>
+      <% @my_events.each do |event|  %>
+        <%= render "card_my_event", event: event %>
+      <% end %>
+
+    <% end %>
+
+    <!-- small_description: "These events are limited to 10 Blenders each. Please click 'ATTEND' to join."
+    community: "Community events" -->
+
+    <h1><%= t('events.index.small_group') %></h1>
+    <h4><%= t('events.index.small_description') %></h4>
+    <% @normal_events.each do |event|  %>
+        <%= render "card_small_group_events", event: event %>
+    <% end %>
+
+  <h1><%= t('events.index.community') %></h1>
+  <div class="row my-4 mx-auto">
+    <% @community_events.each do |event|  %>
+      <%= render "card_community", event: event %>
+    <% end %>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="manage_subscriptions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button id="close-modal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  generateSubscriptionModal()
+  generateUnsubscriptionModal()
+</script>

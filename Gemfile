@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'webpacker'
+gem "i18n-js"
 gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'

@@ -419,3 +419,19 @@ nl:
       long: "%d %B %Y %H:%M"
       short: "%d %b %H:%M"
     pm: "'s middags"
+  events:
+    index:
+      my_next_events: "My next events"
+      small_group: "Small group events"
+      small_description: "These events are limited to 10 Blenders each. Please click 'ATTEND' to join."
+      community: "Community events"
+      subscribe_modal: "<h5>Top! Thanks for your interest in this event.</h5><p>By click on partecipate you will reserve a place for this event!If your plans change, simply click the button 'Cannot Attend'to change your RSVP and allow another Blender to partecipate.</p>"
+      subscribe_button: "Subscribe"
+      unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5><p>Unsubscribe modal text to change</p>"
+      unsubscribe_button: "Unsubscribe"
+    _card_small_group_event:
+      subscribe: "Attend"
+      see_more: "See More"
+      spaces_available: "spaces available"
+    _card_my_event:
+      cantattend: "Cannot attend"

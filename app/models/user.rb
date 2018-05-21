@@ -1,13 +1,15 @@
 class User < ActiveRecord::Base
   has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id', dependent: :destroy
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id', dependent: :destroy
+  has_many :partecipants
+  has_many :events, through: :partecipants
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   after_create :send_welcome_email
 
   acts_as_taggable
-  
+
   acts_as_messageable
 
   validates :terms_and_conditions, acceptance: true
@@ -118,6 +120,15 @@ class User < ActiveRecord::Base
     Rails.cache.fetch("#{user.id}/count_pending_blends", expires_in: 10.minutes) do
       user.received_blends.where(status: 'pending').count
     end
+  end
+
+
+  def partecipation_id(event)
+    self.partecipants.where(event_id: event.id)[0].id
+  end
+
+  def is_partecipant?(event)
+    self.events.include?(event)
   end
 
 end

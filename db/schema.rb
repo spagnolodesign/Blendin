@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513033250) do
+ActiveRecord::Schema.define(version: 20180517030833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,15 +71,23 @@ ActiveRecord::Schema.define(version: 20180513033250) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", id: :serial, force: :cascade do |t|
+  create_table "events", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
     t.string "name"
+    t.text "description"
+    t.string "city"
+    t.string "topic"
+    t.string "address"
+    t.integer "zip_code"
     t.float "latitude"
     t.float "longitude"
-    t.string "address"
-    t.datetime "start"
+    t.integer "max_refugee_capacity"
+    t.integer "max_local_capacity"
+    t.string "photo"
+    t.boolean "community_events", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "full_street_address"
   end
 
   create_table "knoks", id: :serial, force: :cascade do |t|
@@ -169,6 +177,15 @@ ActiveRecord::Schema.define(version: 20180513033250) do
     t.string "residence"
     t.text "about"
     t.string "phone"
+  end
+
+  create_table "partecipants", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_partecipants_on_event_id"
+    t.index ["user_id"], name: "index_partecipants_on_user_id"
   end
 
   create_table "read_marks", id: :serial, force: :cascade do |t|

@@ -1,0 +1,25 @@
+<% background = "https://picsum.photos/500/500"  %>
+
+  <div class="col-md-5 mx-3 my-3 event-card">
+    <div class="mb-4 event-normal-card-img" style="background-image:url(<%= background%>)">
+    </div>
+    <p><%= event.topic.upcase %></p>
+    <div class="d-flex justify-content-start align-items-baseline">
+      <%= link_to event_path(event.id) do %>
+      <h2 class="card-title"><%= event.name %></h2>
+      <% end  %>
+      <p class = "my-0 ml-4"> <%= event.date.strftime("%e %b %Y")%> - <%= event.time.strftime("%H:%M")%></p>
+    </div>
+    <p class="card-text">
+      <%= event.description.truncate(200) %>
+    </p>
+    <p> Location: <%= event.complete_address %></p>
+    <div class="d-flex justify-content-end ">
+      <%= link_to "See more", event_path(event.id), class: "btn btn-primary mr-3" %>
+      <% if user_signed_in? %>
+        <button class="btn btn-primary confirm-button" type="button" name="button" data-toggle="modal" data-target="#manage_subscriptions" value ="<%= event.id %>">Subscribe</button>
+      <% end %>
+    </div>
+    <%= link_to "edit", edit_event_path(event.id) %>
+    <%= link_to "destroy", event_path(event.id), method: :delete %>
+  </div>

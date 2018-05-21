@@ -11,6 +11,12 @@ Rails.application.routes.draw do
 
     root 'dashboard#index'
 
+    resources :events do
+      resources :partecipants, only: [:create]
+    end
+    delete "/partecipants/:id", to: "partecipants#destroy"
+
+
     # get '/all-blends', to: 'home#index', as: 'home'
     # get '/wizard', to: 'wizard#index'
     # get '/upload-photo', to: 'wizard#upload'
@@ -34,7 +40,6 @@ Rails.application.routes.draw do
          post 'reply'
       end
     end
-
 
     resources :networks, only: [:new, :create, :index], :path => "work"
   end
