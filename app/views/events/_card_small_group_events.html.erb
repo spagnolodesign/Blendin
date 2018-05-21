@@ -28,7 +28,7 @@
           <% end %>
           </div>
           <div class="w-50">
-            <% if user_signed_in? %>
+            <% if user_signed_in? && event.is_available_for_user?(current_user) %>
                 <button class="btn btn-primary confirm-button" type="button" name="button" data-toggle="modal" data-target="#manage_subscriptions" value="<%= event.id %>">
                   <%= t('events._card_small_group_event.subscribe')%>
                 </button>
@@ -43,8 +43,9 @@
                     <%= t('events._card_small_group_event.spaces_available')%>
                   </p>
                 <% end %>
+            <% elsif user_signed_in? && !event.is_available_for_user?(current_user) %>
+              <p> <%= t('events._card_small_group_event.event_full')%> </p>
             <% end %>
-
           </div>
         </div>
       </div>
