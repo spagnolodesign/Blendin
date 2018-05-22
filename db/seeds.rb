@@ -24,6 +24,7 @@
 # end
 
 
+
 5.times do
   Event.create(
     name: Faker::BossaNova.song,

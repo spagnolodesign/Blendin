@@ -8,6 +8,9 @@ class SettingsController < ApplicationController
   def photo
   end
 
+  def community
+  end
+
   def set_current_user
     @user = current_user
   end

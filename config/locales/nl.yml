@@ -93,8 +93,6 @@ nl:
       username_label: "First and last name"
       greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid profiel helpt je bij het vinden van goede matches."
       local_label: "Selecteer een optie"
-      local_true: "Ik ben een local"
-      local_false: "Ik ben een nieuwkomer"
       gender_label: "Selecteer een optie"
       gender_male: "Ik ben een man"
       gender_female: "Ik ben een vrouw"
@@ -118,6 +116,11 @@ nl:
       introjs_step_2_html: data-intro="Kies hier ‘nieuwkomer’ als je niet opgegroeid bent in Nederland en op zoek ben naar contact met Nederlanders."
       introjs_step_3_html: data-intro="Geef hier zo veel mogelijk interesses aan! Ons systeem zal daarop matches selecteren."
       introjs_step_4: "Bevestigen"
+    community_form:
+      info: "Lorem ipsum dolorem sit amet."
+      local_label: "Selecteer een optie"
+      im_local: "Ik ben een local"
+      im_newcomer: "Ik ben een nieuwkomer"
     navigation:
       profile: "Profiel"
       photo: "Foto"

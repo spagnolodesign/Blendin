@@ -1,3 +1,40 @@
+.b-card {
+  margin-bottom: 25px;
+}
+
+.b-image-cover{
+  margin-top: 0px;
+  margin-bottom: 15px;
+  padding: 0;
+  height: 270px;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.b-small-image-cover{
+  height: 170px;
+}
+
+.b-card-divider {
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background-color: #eee;
+}
+.b-topic-label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.b-title {
+  margin-top: 0px;
+  margin-bottom: 3px;
+  font-size: 23px;
+}
+
 .event-card {
   border: 1px solid #c7c7c7;
   border-radius: 6px;

@@ -34,6 +34,7 @@ Rails.application.routes.draw do
 
     get "/settings/profile" => "settings#profile"
     get "/settings/photo" => "settings#photo"
+    get "/settings/community" => "settings#community"
 
     resources :inbox, only: [:index, :show] do
       member do

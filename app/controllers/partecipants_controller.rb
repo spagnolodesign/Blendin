@@ -1,5 +1,6 @@
 class PartecipantsController < ApplicationController
-before_action :authenticate_user!
+
+  before_action :authenticate_user!
 
   def create
     @event = Event.find(params[:event_id])
@@ -12,8 +13,6 @@ before_action :authenticate_user!
       redirect_to events_path
     end
   end
-
-
 
   def destroy
     @partecipant = Partecipant.find(params[:id])
