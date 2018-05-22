@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
   # config/routes.rb
   scope "(:locale)", locale: /en|nl/ do
-    # root 'home#index'
-    get "/pages/:page" => "pages#show"
 
     root 'dashboard#index'
+    get "/pages/:page" => "pages#show"
 
+    #EVENTS
     resources :events do
       resources :partecipants, only: [:create]
     end
@@ -22,9 +22,7 @@ Rails.application.routes.draw do
     # get '/upload-photo', to: 'wizard#upload'
     # get 'blends/create'
 
-    get '/dashboard', to: 'dashboard#index'
     devise_for :users, skip: :omniauth_callbacks
-
     resources :users, only: [:show, :update]
 
     # resources :blends, only: [:create, :new, :index] do
