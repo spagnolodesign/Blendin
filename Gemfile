@@ -32,7 +32,6 @@ gem "figaro"
 gem 'bootstrap', '~> 4.1.1'
 gem 'mailboxer'
 
-
 group :development, :test do
   gem 'byebug'
   gem 'faker'

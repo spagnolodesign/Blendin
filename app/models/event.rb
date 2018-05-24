@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   has_many :partecipants,  dependent: :destroy
   has_many :users, through: :partecipants
-  geocoded_by :location
+  geocoded_by :address
   before_save :geocode
   before_save :check_max_capacity
 
@@ -56,7 +56,6 @@ class Event < ApplicationRecord
     end
     refugee
   end
-
 
   def is_available_for_user?(user)
     @user = User.find(user.id)

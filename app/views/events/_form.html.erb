@@ -58,7 +58,6 @@
 <script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
 
 
-
 <script>
 (function() {
   var placesAutocomplete = places({
@@ -66,6 +65,7 @@
     type: 'address',
     templates: {
       value: function(suggestion) {
+        console.log(suggestion)
         return suggestion.name;
       }
     }

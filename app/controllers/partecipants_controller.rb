@@ -7,7 +7,8 @@ class PartecipantsController < ApplicationController
     @partecipant = Partecipant.new(event: @event, user_id: current_user.id)
     if !current_user.is_partecipant?(@event) && @partecipant.can_partecipate?
       @partecipant.save
-      redirect_to events_path
+      flash[:notice] = "Yeee. We can't wait to meet you!"
+      redirect_to event_path(@event)
     else
       flash[:alert] = "You can't subscribe to this event"
       redirect_to events_path

@@ -122,7 +122,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def partecipation_id(event)
     self.partecipants.where(event_id: event.id)[0].id
   end

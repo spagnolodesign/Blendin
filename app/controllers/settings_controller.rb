@@ -1,7 +1,7 @@
 class SettingsController < ApplicationController
 
   before_action :set_current_user
-
+  
   def profile
   end
 

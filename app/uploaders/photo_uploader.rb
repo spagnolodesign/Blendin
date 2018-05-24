@@ -12,15 +12,18 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :small_event do
-    # returns a 35x35 image
     process :auto_orient
     process :resize_to_fill => [250, 250]
   end
 
   version :big_event do
-    # returns a 35x35 image
     process :auto_orient
     process :resize_to_fill => [500, 500]
+  end
+
+  version :event_detail do
+    process :auto_orient
+    process :resize_to_fill => [500, 300]
   end
 
 

@@ -1,7 +1,7 @@
 <div class="col-sm-3">
   <div class="b-card">
     <%= link_to event_path(event.id) do %>
-      <div class="b-image-cover b-small-image-cover" style="background-image: url(<%= event.photo %>)"></div>
+      <div class="b-image-cover b-small-image-cover" style="background-image: url(<%= event.photo.big_event %>)"></div>
     <% end %>
     <div class="b-topic-label"><%= event.topic %></div>
     <h2 class="b-title"><%= event.name %></h2>

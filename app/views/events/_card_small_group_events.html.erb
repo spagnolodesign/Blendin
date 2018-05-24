@@ -1,7 +1,7 @@
 <div class="col-sm-4">
   <div class="b-card">
     <%= link_to event_path(event.id) do %>
-      <div class="b-image-cover d-flex align-items-end" style="background-image: url(<%= event.photo %>)"></div>
+      <div class="b-image-cover" style="background-image: url(<%= event.photo.big_event %>)"></div>
     <% end %>
     <div class="b-topic-label"><%= event.topic %></div>
     <h2 class="b-title"><%= event.name %></h2>
@@ -10,11 +10,7 @@
       <%= link_to "See more", event_path(event.id) %>
       <% if user_signed_in? && event.is_available_for_user?(current_user) %> |
         <a class="confirm-button" href="#" data-toggle="modal" data-target="#manage_subscriptions" data-value="<%= event.id %>"><%= t('events._card_small_group_event.subscribe')%>
-        <% if current_user.local %>
-          <%= event.max_local_capacity %> <%= t('events._card_small_group_event.spaces_available')%>
-        <% else %>
-          <%= event.max_refugee_capacity %> <%= t('events._card_small_group_event.spaces_available')%>
-        <% end %>
+          <%= render "events/components/capacity", event: event %>
         </a>
       <% end %>
     </div>

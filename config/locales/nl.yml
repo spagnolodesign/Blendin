@@ -423,6 +423,8 @@ nl:
       short: "%d %b %H:%M"
     pm: "'s middags"
   events:
+    actions:
+      attend: "Attend the event"
     index:
       my_next_events: "My next events"
       small_group: "Small group events"
