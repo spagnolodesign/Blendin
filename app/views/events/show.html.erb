@@ -1,11 +1,11 @@
 <section class="bg-white position-sticky sticky-top">
   <div class="container py-3">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <p class="font-weight-light mb-1"><%= @event.date.strftime("%A, %e %b %Y")%> - <%= @event.time.strftime("%H:%M")%></p>
         <h1><%= @event.name %></h1>
       </div>
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <% if user_signed_in? && @event.is_available_for_user?(current_user) && !current_user.is_partecipant?(@event)  %>
           <p class="font-weight-bold mb-2">Are you going? <span class="font-weight-normal"><%= render "events/components/capacity", event: @event %></span></p>
           <button class="btn btn-block btn-lg btn-primary confirm-button" type="button" name="button" data-toggle="modal" data-target="#manage_subscriptions" data-value ="<%= @event.id %>"><%=  t('events.actions.attend')%></button>
@@ -21,15 +21,15 @@
 
 <div class="container">
   <div class="row mt-4">
-    <div class="col-md-7">
+    <div class="col-lg-7">
       <figure class="figure">
         <%= image_tag @event.photo.event_detail, class: "figure-img img-fluid rounded", alt: @event.name %>
         <figcaption class="figure-caption">Picture for the event</figcaption>
       </figure>
       <p><%= @event.description %></p>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-4">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4">
       <%= render 'events/components/participants', event: @event %>
       <%= render 'events/components/map' %>
     </div>
