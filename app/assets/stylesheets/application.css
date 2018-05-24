@@ -11,11 +11,12 @@
  * It is generally better to create a new file per style scope.
  *
  *= require main
+ *= require custom-bootstrap
  *= require auth
  *= require loader
  *= require dashboard
  *= require components/index
  *= require events/index
- *= require custom-bootstrap
+ *= require talents
 
  */
