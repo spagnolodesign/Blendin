@@ -16,7 +16,6 @@
  *= require loader
  *= require dashboard
  *= require components/index
- *= require events/index
  *= require talents
 
  */
