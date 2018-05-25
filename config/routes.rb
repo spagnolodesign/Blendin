@@ -11,9 +11,10 @@ Rails.application.routes.draw do
     get "/pages/:page" => "pages#show"
 
     #EVENTS
-    resources :events do
+    resources :events, only: [:index, :show] do
       resources :partecipants, only: [:create]
     end
+    
     delete "/partecipants/:id", to: "partecipants#destroy"
 
 
