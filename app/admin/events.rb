@@ -17,9 +17,17 @@ ActiveAdmin.register Event do
   form :html => { :multipart => true } do |f|
     f.semantic_errors
     f.inputs do
+      f.input :topic
       f.input :name
       f.input :date, as: :datepicker
       f.input :time
+      f.input :address
+      f.input :city
+      f.input :zip_code
+      f.input :max_refugee_capacity
+      f.input :max_local_capacity
+      f.input :photo
+      f.input :community_events
       f.input :description, as: :quill_editor
     end
     f.actions
