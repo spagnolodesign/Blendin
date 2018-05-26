@@ -3,6 +3,8 @@
   color: #212529;
   transform-origin: center;
   transition: transform .2s cubic-bezier(0,0,.2,1),box-shadow .2s cubic-bezier(0,0,.2,1);
+  min-height: 200px;
+  margin-bottom: 1em;
 }
 
 .dashboard-card-lnk:hover {
@@ -12,4 +14,10 @@
 
 .list-unstyled > li{
   margin-bottom: 1em;
+}
+
+@media (max-width: 767.98px) {
+  .dashboard-card-lnk {
+    min-height: auto;
+  }
 }

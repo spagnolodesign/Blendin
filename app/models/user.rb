@@ -1,12 +1,12 @@
 class User < ActiveRecord::Base
   has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id', dependent: :destroy
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id', dependent: :destroy
-  has_many :partecipants
-  has_many :events, through: :partecipants
+  has_many :participants
+  has_many :events, through: :participants
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
 
   acts_as_taggable
 
@@ -123,10 +123,10 @@ class User < ActiveRecord::Base
   end
 
   def partecipation_id(event)
-    self.partecipants.where(event_id: event.id)[0].id
+    self.participants.where(event_id: event.id)[0].id
   end
 
-  def is_partecipant?(event)
+  def is_participant?(event)
     self.events.include?(event)
   end
 

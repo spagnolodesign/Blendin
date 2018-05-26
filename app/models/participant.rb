@@ -1,11 +1,10 @@
-class Partecipant < ApplicationRecord
-  has_one :user
+class Participant < ApplicationRecord
+  belongs_to :user
   belongs_to :event
+
   validates :user_id, uniqueness: { scope: :event_id,  message: "The user is already registered" }
   validate :can_partecipate?
   after_save :decrese_event_capacity
-
-
 
 
   def can_partecipate?

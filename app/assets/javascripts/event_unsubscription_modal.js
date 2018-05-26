@@ -6,7 +6,7 @@ function generateUnsubscriptionModal(){
       button.forEach(function(element){
         element.addEventListener("click", function(){
           var body = document.querySelector("#modal-body")
-          var link = "<span id = 'confirm'>" + I18n.t('events.index.unsubscribe_modal') + "<a class='btn btn-primary float-right' rel='nofollow' id='confirm' data-method='delete' href='/partecipants/" + element.dataset.value + "'>" + I18n.t('events.index.unsubscribe_button')+ "</a> </span>"
+          var link = "<span id = 'confirm'>" + I18n.t('events.index.unsubscribe_modal') + "<a class='btn btn-primary float-right' rel='nofollow' id='confirm' data-method='delete' href='/participants/" + element.dataset.value + "'>" + I18n.t('events.index.unsubscribe_button')+ "</a> </span>"
           body.insertAdjacentHTML('beforeend', link)
           closeModal = document.querySelector("#close-modal")
            closeModal.addEventListener("click", function(){

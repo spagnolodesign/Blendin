@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow">
 
   <%= link_to root_url, class:"navbar-brand my-0" do %>
-   <%= image_tag("blendin-logo-navbar.png", width: 55, height: 55, class: "d-inline-block align-top", alt: "Blendin, we are one.") %>
+    <%= image_tag("blendin-logo-navbar.png", width: 55, height: 55, class: "d-inline-block align-top", alt: "Blendin, we are one.") %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,9 +15,6 @@
       </li>
       <li class="nav-item">
         <%= active_link_to "Messages", inbox_index_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Disabled</a>
       </li>
 
       <% if user_signed_in? %>

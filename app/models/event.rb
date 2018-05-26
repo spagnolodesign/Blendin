@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
-  has_many :partecipants,  dependent: :destroy
-  has_many :users, through: :partecipants
+  has_many :participants, dependent: :destroy
+  has_many :attendees, through: :participants, source: 'user'
+
   geocoded_by :address
   before_save :geocode
   before_save :check_max_capacity
@@ -25,7 +26,7 @@ class Event < ApplicationRecord
   end
 
   def self.normal_events(my_events = nil)
-    if  my_events && my_events.any?
+    if my_events && my_events.any?
       return (Event.order("date ASC").where(community_events: false) - my_events)
     else
       return Event.order("date ASC").where(community_events: false)
@@ -39,29 +40,18 @@ class Event < ApplicationRecord
     end
   end
 
-  def local_partecipants
-    local = []
-    self.partecipants.each do |partecipant|
-      @user =  User.find(partecipant.user_id)
-      local << @user if @user.local
-    end
-    local
+  def local_participants
+    self.attendees.where(local:true).uniq
   end
 
-  def refugee_partecipants
-    refugee = []
-    self.partecipants.each do |partecipant|
-      @user =  User.find(partecipant.user_id)
-      refugee << @user if !@user.local
-    end
-    refugee
+  def refugee_participants
+    self.attendees.where(local:false).uniq
   end
 
   def is_available_for_user?(user)
-    @user = User.find(user.id)
-    if !self.community_events && @user.local && self.max_local_capacity > 0
+    if (!self.community_events && user.local && self.max_local_capacity.to_i > 0)
       return true
-    elsif !self.community_events && !@user.local && self.max_refugee_capacity > 0
+    elsif (!self.community_events && !user.local && self.max_refugee_capacity.to_i > 0)
       return true
     else
       return false

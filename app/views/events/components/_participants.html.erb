@@ -7,7 +7,7 @@
       <h6 class="card-subtitle mb-2 text-muted">Locals group:</h6>
 
       <div class="d-flex justify-content-start">
-        <% event.local_partecipants.each do |user| %>
+        <% event.local_participants.each do |user| %>
           <span data-toggle="tooltip" data-placement="top" title="<%= user.name %>">
             <%= image_tag user.avatar.small_avatar, width: 50, height: 50, class: "rounded-circle mr-2" %>
           </span>
@@ -19,7 +19,7 @@
       <h6 class="card-subtitle mb-2 text-muted">New comers group:</h6>
 
       <div class="d-flex justify-content-start">
-        <% event.refugee_partecipants.each do |user| %>
+        <% event.refugee_participants.each do |user| %>
           <span data-toggle="tooltip" data-placement="top" title="<%= user.name %>">
             <%= image_tag user.avatar.small_avatar, width: 50, height: 50, class: "rounded-circle mr-2" %>
           </span>

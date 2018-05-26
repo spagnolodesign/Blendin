@@ -24,6 +24,8 @@
 # end
 
 
+Event.destroy_all
+Participant.destroy_all
 
 5.times do
   Event.create(
@@ -58,13 +60,13 @@ local = User.where(local: true)
 
 Event.all.each do |event|
   rand(1..4).times do
-    Partecipant.create(
+    Participant.create(
     event: event,
     user_id: refugee.sample.id
   )
   end
   rand(1..4).times do
-    Partecipant.create(
+    Participant.create(
     event: event,
     user_id: local.sample.id
   )

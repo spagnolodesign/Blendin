@@ -2,36 +2,42 @@
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-        <small class="d-block mb-3 text-muted">© 2017-2018</small>
+        <div class="social-links mb-3">
+          <a href=""><i class="fab fa-lg fa-facebook-square"></i></a>
+          <a href=""><i class="fab fa-lg fa-facebook-messenger"></i></a>
+          <a href=""><i class="fab fa-lg fa-instagram"></i></a>
+        </div>
+
+        <h6 class="mb-1"><%= t('footer.languages') %></h6>
+        <%= link_to 'Nederlands', url_for( :locale => 'nl' ), class: "lang-lnk right-border" %> or
+        <%= link_to 'English', url_for( :locale => 'en' ), class: "lang-lnk"  %>
+        <small class="d-block mb-3 text-muted mt-3">© 2017-2018</small>
       </div>
       <div class="col-6 col-md">
-        <h5>Features</h5>
+        <h5 class="mb-3"><%= t('footer.about') %></h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Cool stuff</a></li>
-          <li><a class="text-muted" href="#">Random feature</a></li>
-          <li><a class="text-muted" href="#">Team feature</a></li>
-          <li><a class="text-muted" href="#">Stuff for developers</a></li>
-          <li><a class="text-muted" href="#">Another one</a></li>
-          <li><a class="text-muted" href="#">Last time</a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.team') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.mission') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.news') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.gallery') %></a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>Resources</h5>
+        <h5 class="mb-3"><%= t('footer.support') %></h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Resource</a></li>
-          <li><a class="text-muted" href="#">Resource name</a></li>
-          <li><a class="text-muted" href="#">Another resource</a></li>
-          <li><a class="text-muted" href="#">Final resource</a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.contact') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.privacy') %></a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>About</h5>
+        <h5 class="mb-3"><%= t('footer.involvement') %></h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Team</a></li>
-          <li><a class="text-muted" href="#">Locations</a></li>
-          <li><a class="text-muted" href="#">Privacy</a></li>
-          <li><a class="text-muted" href="#">Terms</a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.meet') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.teach') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.learn') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.donate') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.share') %></a></li>
+          <li><a class="text-muted" href="#"><%= t('footer.become') %></a></li>
         </ul>
       </div>
     </div>

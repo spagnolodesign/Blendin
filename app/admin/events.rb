@@ -11,6 +11,9 @@ ActiveAdmin.register Event do
     column :name
     column :date
     column :created_at
+    column "participants" do |event|
+      event.participants.count
+    end
     actions
   end
 
@@ -32,6 +35,24 @@ ActiveAdmin.register Event do
     end
     f.actions
   end
+
+  show do
+    attributes_table do
+      row :name
+    end
+
+    panel "Local participants" do
+       attributes_table_for event.local_participants do
+         row :username
+       end
+    end
+
+    panel "New comer participants" do
+       attributes_table_for event.refugee_participants do
+         row :username
+       end
+    end
+   end
 
 
 end

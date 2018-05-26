@@ -12,11 +12,10 @@ Rails.application.routes.draw do
 
     #EVENTS
     resources :events, only: [:index, :show] do
-      resources :partecipants, only: [:create]
+      resources :participants, only: [:create]
     end
-    
-    delete "/partecipants/:id", to: "partecipants#destroy"
 
+    delete "/participants/:id", to: "participants#destroy"
 
     # get '/all-blends', to: 'home#index', as: 'home'
     # get '/wizard', to: 'wizard#index'

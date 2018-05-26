@@ -4,15 +4,15 @@ import PropTypes from 'prop-types'
 
 export class Flash extends Component {
  constructor(props) {
-  super();
-  this.state = {
-    show:true,
-    type: (!props.alert) ? "alert-success" : "alert-danger"
-  }
+    super();
+    this.state = {
+      show:true,
+      type: (!props.alert) ? "alert-success" : "alert-danger"
+    }
  }
 
  componentDidMount(){
-   setTimeout(function() { this.setState({show: false}); }.bind(this), 4000);
+   setTimeout(function() { this.setState({show: false}); }.bind(this), 335000);
  }
 
  render(){
@@ -21,9 +21,9 @@ export class Flash extends Component {
     return;
    }
    return(
-       <div className={`alert alert-primary ${type} mt-3`} role="alert">
-            <span>{this.props.alert || this.props.notice}</span>
-       </div>
+     <div className={`alert alert-primary ${type} mt-3`} role="alert">
+        <span>{this.props.alert || this.props.notice}</span>
+     </div>
    )
  }
 }
