@@ -17,33 +17,21 @@ class UsersController < ApplicationController
 		@newblend = Blend.new
   end
 
-	def update_location
-	end
-
 	def update
-		if set_current == current_user
-			respond_to do |format|
-	      if @user.update(user_params)
-					if @user.avatar.present?
-	        	format.html { redirect_to root_path, notice: 'All set up :)' }
-					else
-						format.html { redirect_to upload_photo_path, notice: 'Would be nice have a picture of you :)' }
-					end
-	      else
-	        format.html { redirect_to wizard_path }
-	      end
-	    end
-  	end
-	end
-
-	def create
-
+		@user = current_user
+		respond_to do |format|
+			if @user.update(user_params)
+				flash[:notice] = 'We updated your profile'
+				format.html { redirect_back fallback_location: root_path }
+			else
+				flash[:alert] = 'Something went wrong, please check!'
+        format.html { redirect_to settings_profile_path }
+    	end
+		end
 	end
 
 	def destroy
-		#Delete User
 		@user.destroy
-
 		respond_to do |format|
       format.html { redirect_to :back, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }

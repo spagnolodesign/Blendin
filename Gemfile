@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'webpacker'
+gem "i18n-js"
 gem 'tzinfo-data'
 gem 'active_link_to'
 gem 'kaminari'
@@ -28,8 +29,9 @@ gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'twilio-ruby'
 gem "figaro"
-gem "rack-timeout"
-
+gem 'bootstrap', '~> 4.1.1'
+gem 'mailboxer'
+gem 'activeadmin_quill_editor'
 
 group :development, :test do
   gem 'byebug'

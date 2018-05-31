@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+crossorigin=""/>
+
+<section class="bg-white position-sticky sticky-top">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-lg-8">
+        <p class="font-weight-light mb-1"><%= @event.date.strftime("%A, %e %b %Y")%> - <%= @event.time.strftime("%H:%M")%></p>
+        <h1><%= @event.name %></h1>
+      </div>
+      <div class="col-lg-4">
+        <% if user_signed_in? %>
+          <%= render "events/components/attend_actions" %>
+        <% else %>
+          <%= link_to "Attend the event", event_participants_path(@event), method: :post %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-lg-7">
+      <figure class="figure">
+        <%= image_tag @event.photo.event_detail, class: "figure-img img-fluid rounded", alt: @event.name %>
+        <figcaption class="figure-caption">Picture for the event</figcaption>
+      </figure>
+      <p><%= raw @event.description %></p>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4">
+      <%= render 'events/components/participants', event: @event %>
+      <%= render 'events/components/map' %>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="manage_subscriptions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Attend</h5>
+        <button id="close-modal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+</div>
+
+<%= content_for(:header_script) do %>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+  integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+  crossorigin=""></script>
+<% end %>
+
+<script type="text/javascript">
+  generateSubscriptionModal();
+</script>
+
+<script type="text/javascript">
+  var lat = "<%= @event.latitude %>"
+  var lng = "<%= @event.longitude %>"
+  console.log(lat);
+  var mymap = L.map('mapid').setView([lat, lng], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'your.mapbox.access.token'
+  }).addTo(mymap);
+  var marker = L.marker([lat, lng]).addTo(mymap);
+</script>

@@ -36,6 +36,21 @@ class AvatarUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [50, 50]
   end
 
+  version :small_event do
+    # returns a 35x35 image
+    process :auto_orient
+    process :resize_to_fill => [250, 250]
+  end
+
+  version :big_event do
+    # returns a 35x35 image
+    process :auto_orient
+    process :resize_to_fill => [450, 450]
+  end
+
+
+
+
   def extension_white_list
     %w(jpg jpeg gif png)
   end

@@ -1,25 +1,39 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-
   # config/routes.rb
   scope "(:locale)", locale: /en|nl/ do
-    # root 'home#index'
-    root 'dashboard#index'
-    get '/all-blends', to: 'home#index', as: 'home'
-    get '/wizard', to: 'wizard#index'
-    get '/upload-photo', to: 'wizard#upload'
-    get 'blends/create'
-    get '/dashboard', to: 'dashboard#index'
-    devise_for :users, skip: :omniauth_callbacks
 
+    root 'dashboard#index'
+    get "/dashboard", to: "dashboard#index"
+    get "/pages/:page", to: "pages#show", as: :pages
+
+    resources :events, only: [:index, :show] do
+      resources :participants, only: [:create]
+    end
+
+    delete "/participants/:id", to: "participants#destroy"
+
+    devise_for :users, skip: :omniauth_callbacks
     resources :users, only: [:show, :update]
 
-    resources :blends, only: [:create, :new, :index] do
-      get '/accept', to: 'blends#accept'
-      get '/reject', to: 'blends#reject'
+    get "/settings/profile" => "settings#profile"
+    get "/settings/photo" => "settings#photo"
+    get "/settings/community" => "settings#community"
+
+    resources :inbox, only: [:index, :show] do
+      member do
+         post "reply"
+      end
+    end
+
+    resources :talents, only: [:index, :new] do
+      collection do
+        get "learn", to: 'talents#learn'
+      end
     end
 
     resources :networks, only: [:new, :create, :index], :path => "work"

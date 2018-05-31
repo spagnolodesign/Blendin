@@ -45,6 +45,8 @@ GEM
       sass-rails
       select2-rails (~> 4.0)
       xdan-datetimepicker-rails (~> 2.5.1)
+    activeadmin_quill_editor (0.1.2)
+      activeadmin (~> 1.0)
     activejob (5.1.5)
       activesupport (= 5.1.5)
       globalid (>= 0.3.6)
@@ -66,10 +68,16 @@ GEM
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (8.0.0)
+    autoprefixer-rails (8.4.1)
+      execjs
     bcrypt (3.1.11)
     benchmark-ips (2.7.2)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
+    bootstrap (4.1.1)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.0)
     carrierwave (1.2.2)
@@ -142,6 +150,8 @@ GEM
     heapy (0.1.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.5)
+      i18n (>= 0.6.6, < 2)
     inherited_resources (1.8.0)
       actionpack (>= 4.2, <= 5.2)
       has_scope (~> 0.6)
@@ -173,6 +183,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mailboxer (0.15.1)
+      carrierwave (>= 0.5.8)
+      rails (>= 5.0.0)
     memory_profiler (0.9.10)
     method_source (0.9.0)
     mime-types (3.1)
@@ -207,6 +220,7 @@ GEM
     pg (1.0.0)
     polyamorous (1.3.3)
       activerecord (>= 3.0)
+    popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.2)
     rack (2.0.4)
@@ -216,7 +230,6 @@ GEM
       rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
-    rack-timeout (0.4.2)
     rails (5.1.5)
       actioncable (= 5.1.5)
       actionmailer (= 5.1.5)
@@ -333,8 +346,10 @@ DEPENDENCIES
   active_link_to
   activeadmin
   activeadmin_addons
+  activeadmin_quill_editor
   acts-as-taggable-on
   bootsnap
+  bootstrap (~> 4.1.1)
   byebug
   carrierwave
   coffee-rails
@@ -344,14 +359,15 @@ DEPENDENCIES
   figaro
   fog-aws
   geocoder
+  i18n-js
   jbuilder
   jquery-rails
   kaminari
+  mailboxer
   mini_magick
   omniauth-facebook
   pg
   puma
-  rack-timeout
   rails
   redis-rails
   sass-rails

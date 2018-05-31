@@ -13,6 +13,5 @@ module Noc
     config.i18n.available_locales = [:en, :nl]
     config.app_generators.scaffold_controller = :scaffold_controller
     config.active_job.queue_adapter = :sidekiq
-    ActsAsTaggableOn.remove_unused_tags = true
   end
 end

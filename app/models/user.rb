@@ -1,12 +1,15 @@
 class User < ActiveRecord::Base
   has_many :sent_blends, class_name: 'Blend', foreign_key: 'sender_id', dependent: :destroy
   has_many :received_blends, class_name: 'Blend', foreign_key: 'recipient_id', dependent: :destroy
+  has_many :participants
+  has_many :events, through: :participants
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
 
   acts_as_taggable
+  acts_as_messageable
 
   validates :terms_and_conditions, acceptance: true
 
@@ -17,7 +20,6 @@ class User < ActiveRecord::Base
 
   validates :username, length: { maximum: 26 }, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, length: { maximum: 35 }
-
 
   scope :for_age_range, -> min, max {
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
@@ -33,9 +35,12 @@ class User < ActiveRecord::Base
 
   scope :near_address, ->(address) { all.near(address, 20) }
 
-
   def name
     username.split.map(&:capitalize).join(' ')
+  end
+
+  def mailboxer_email(object)
+    return self.email
   end
 
   def parse_chache_tag
@@ -46,7 +51,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def age
     if (birthday.blank?)
       return ""
@@ -54,6 +58,11 @@ class User < ActiveRecord::Base
     dob = self.birthday
     now = Time.now.utc.to_date
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
+
+
+  def is_profile_complete
+    !self.local.nil? && !self.avatar.file.nil? && !self.latitude.nil?
   end
 
   def blended?(user)
@@ -112,6 +121,14 @@ class User < ActiveRecord::Base
     Rails.cache.fetch("#{user.id}/count_pending_blends", expires_in: 10.minutes) do
       user.received_blends.where(status: 'pending').count
     end
+  end
+
+  def partecipation_id(event)
+    self.participants.where(event_id: event.id)[0].id
+  end
+
+  def is_participant?(event)
+    self.events.include?(event)
   end
 
 end

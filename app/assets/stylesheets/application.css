@@ -10,8 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require bass
  *= require main
- *= require_tree ./components/
+ *= require custom-bootstrap
+ *= require auth
+ *= require loader
+ *= require dashboard
+ *= require components/index
+ *= require talents
 
  */

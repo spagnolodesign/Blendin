@@ -1,7 +1,9 @@
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
-//= require parsley
-//= require modal
-//= require intro
-//= require choices
+//= require popper
+//= require bootstrap
 //= require main
+//= require event_partecipation_modal
+//= require event_unsubscription_modal
+//= require i18n
+//= require i18n/translations

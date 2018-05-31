@@ -4,16 +4,54 @@ nl:
     title: "Blendin | where people and cultures meet "
     description: "Something"
     og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
-  header:
-    main:
+  navbar:
+    nav:
       community_link: "Community"
       my_blends_link: "Mijn blends"
       settings_link: "Instellingen"
+  dashboard:
+    index:
+      events_card_title: "Ontmoet Blenders"
+      events_card_subtitle: "Kom naar unieke evenementen en ontmoet Blenders die geïnteresseerd zijn in een hechte Blendin community."
+      talent_teach_card_title: "Deel mijn talent"
+      talent_teach_card_subtitle: "Biedt een skill, interesse of hobby aan, aan andere Blendin leden."
+      talent_learn_card_title: "Leer een nieuwe skill"
+      talent_learn_card_subtitle: "Ontdek een leuke nieuwe skill die je kan leren van een andere Blender."
+      donate_card_title: "Doneer"
+      donate_card_subtitle: "Elke donatie helpt direct om Blendin’s impact te vergroten en onze community uit te bouwen. Op deze manier kunnen we veel meer kansen creëren voor zowel nieuwkomers als locals."
+      network_card_title: "Doneer Je Netwerk"
+      network_card_subtitle: "Veel nieuwkomers willen graag aan de slag, maar missen vaak het netwerk om werk te vinden. Jouw professionele netwerk kan voor een nieuwkomer de stap richting een passende baan of stage zijn."
+      partner_card_title: "Wordt Partner"
+      partner_card_subtitle: "Wil jouw bedrijf meer doen om de Blendin-community te ondersteunen? Wij staan altijd open voor nieuwe samenwerkingen."
   footer:
+    about: "About Blendin"
     team: "Ons team"
+    mission: "Mission Statement"
+    news: "Nieuws"
+    gallery: "Gallery"
     work: "Hoe het werkt"
     donate: "Doneren"
-    news: "Nieuws"
+    support: "Support"
+    contact: "Contact Us"
+    privacy: "Privacy Policy & Terms of Use"
+    involvement: "Involvement"
+    meet: "Meet Blenders"
+    teach: "Teach A Talent"
+    learn: "Learn A Talent"
+    share: "Share Your Network"
+    partner: "Become A Partner"
+    languages: "Select a language"
+  pages:
+    donate:
+      title: "Steun ons en maak een verschil!"
+      lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
+      cta: "Doneer nu!"
+  talents:
+    index:
+      title: "Share your talent on Blendin"
+      subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+      info_headline: "The request of learning is <span class='text-muted'>neverending...</span>"
+      info_content: "that’s why we want to give you an opportunity to teach <br> your <b>talents</b> and <b>interests</b> to other Blendin users.<br><br>Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
   networks:
     new:
       title: "Share your network"
@@ -21,11 +59,11 @@ nl:
       title: "Doneer je netwerk!"
       body: "Wil jij jouw netwerk doneren aan een nieuwkomer, en zo het essentiële duwtje in de rug geven om een leven in Nederland op te bouwen? Doneer dan nu je netwerk via Blendin Work! Hoe ziet dit eruit? <br />Binnenkort starten wij een pilot van 50 nieuwkomers en 50 Nederlandse netwerk donateurs. Meld je nu snel aan, want dan maak je de grootste kans om deel uit te maken van onze pilotfase!"
       step_title: "HOE DOE JE MEE?"
-      step_one: "Stap 1: Meld je aan als Netwerk Donateur, beschrijf jouw sector, functie en netwerk."
-      step_two: "Stap 2: Wij matchen jou met een nieuwkomer dat op zoek is naar een baan die aansluit op jouw netwerk."
-      step_three: "Stap 3: Spreek af en ga samen in gesprek over ambities, ervaringen en toekomstdromen."
-      step_four: "Stap 4: Ga binnen je netwerk op zoek naar nuttige contacten voor de nieuwkomer, regel koffie afspraken, werkbezoeken en sollicitaties."
-      step_five: "Stap 5: De nieuwkomer gaat vervolgens koffie drinken met jouw contacten, op werkbezoek of sollicitatie. Zo vergroten we diens netwerk en daarmee de kans op werk!"
+      step_one: "<strong>Stap 1:</strong> Meld je aan als Netwerk Donateur, beschrijf jouw sector, functie en netwerk."
+      step_two: "<strong>Stap 2:</strong> Wij matchen jou met een nieuwkomer dat op zoek is naar een baan die aansluit op jouw netwerk."
+      step_three: "<strong>Stap 3:</strong> Spreek af en ga samen in gesprek over ambities, ervaringen en toekomstdromen."
+      step_four: "<strong>Stap 4:</strong> Ga binnen je netwerk op zoek naar nuttige contacten voor de nieuwkomer, regel koffie afspraken, werkbezoeken en sollicitaties."
+      step_five: "<strong>Stap 5:</strong> De nieuwkomer gaat vervolgens koffie drinken met jouw contacten, op werkbezoek of sollicitatie. Zo vergroten we diens netwerk en daarmee de kans op werk!"
       action: "Doe mee & doneer je netwerk!"
     form:
         fullname: "Naam en achternaam"
@@ -40,14 +78,14 @@ nl:
         city_placeholder: "Bijv. Den Haag"
         residence: "Waar woon je? 🌇"
         residence_placeholder: "Bijv. Amsterdam"
-        gender_label: "Selecteer een optie:"
+        gender_label: "Selecteer een optie"
         gender_male: "Ik ben een man 👨"
         gender_female: "Ik ben een vrouw 👩"
-        birthday_label: "Geboorte datum 🎂:"
-        phone_label: "Telefoon nummer 📱:"
+        birthday_label: "Geboorte datum 🎂"
+        phone_label: "Telefoon nummer 📱"
         phone_placeholder: "Bijv. 0612345678"
         phone_helper: "Dit nummer is pas zichtbaar voor andere gebruikers als je blend verzoek geaccepteerd wordt of jij je verzoek accepteerd."
-        about_label: "Vertel meer over jezelf 💬: "
+        about_label: "Vertel meer over jezelf 💬"
         about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
         submit_btn: "Bevestig"
     end_submit:
@@ -83,45 +121,48 @@ nl:
       blend_message_placeholder: "😉 Hallo, mijn naam is ..."
       blend_message_btn: "Stuur bericht"
       introjs_step_1_html: data-intro="Wil je met hem/haar afspreken? Klik dan hier en stuur een Blend verzoek. Als je verzoek wordt geaccepteerd krijgen jullie elkaars telefoon nummers en kunnen jullie elkaar ontmoeten."
-  wizard:
-    index:
+  settings:
+    profile_form:
+      username_label: "First and last name"
       greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid profiel helpt je bij het vinden van goede matches."
-      local_label: "Selecteer een optie:"
-      local_true: "Ik ben een local"
-      local_false: "Ik ben een nieuwkomer"
-      gender_label: "Selecteer een optie:"
-      gender_male: "Ik ben een man 👨"
-      gender_female: "Ik ben een vrouw 👩"
-      birthday_label: "Geboorte datum 🎂:"
-      address_label: "Waar woon je? 🌇"
+      local_label: "Selecteer een optie"
+      gender_label: "Selecteer een optie"
+      gender_male: "Ik ben een man"
+      gender_female: "Ik ben een vrouw"
+      birthday_label: "Geboorte datum"
+      address_label: "Waar woon je?"
       address_placeholder: "Bijv. Amsterdam"
-      country_label: "Land van herkomst 🌎:"
+      country_label: "Land van herkomst"
       country_placeholder: "Bijv. Syrie"
-      interest_label: "Kies jouw interesses uit deze lijst 📙"
+      interest_label: "Kies jouw interesses uit deze lijst"
       interest_helper: "(Kies minstens 3 interesses. Hoe meer hoe beter! )"
-      job_label: "Studie en/of werk ervaring 💪"
+      job_label: "Studie en/of werk ervaring"
       job_placeholder: "Bijv. auto monteur of advocaat"
       job_helper: "(Dit kan dus ook een baan van vroeger zijn.)"
-      phone_label: "Telefoon nummer 📱:"
+      phone_label: "Telefoon nummer"
       phone_placeholder: "Bijv. 0612345678"
-      about_label: "Vertel meer over jezelf 💬: "
-      about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
+      about_label: "Vertel meer over jezelf 💬"
+      about_helper: "Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten."
       phone_helper: "Dit nummer is pas zichtbaar voor andere gebruikers als je blend verzoek geaccepteerd wordt of jij je verzoek accepteerd."
       submit_btn: "Bevestig en ga door"
       introjs_step_1_html: data-intro="Kies op ‘Local’ als je je thuis voelt in Nederland en op zoek bent naar contact met mensen die nieuw zijn in Nederland."
       introjs_step_2_html: data-intro="Kies hier ‘nieuwkomer’ als je niet opgegroeid bent in Nederland en op zoek ben naar contact met Nederlanders."
       introjs_step_3_html: data-intro="Geef hier zo veel mogelijk interesses aan! Ons systeem zal daarop matches selecteren."
       introjs_step_4: "Bevestigen"
-    top_nav:
+    community_form:
+      info: "Lorem ipsum dolorem sit amet."
+      local_label: "Selecteer een optie"
+      im_local: "Ik ben een local"
+      im_newcomer: "Ik ben een nieuwkomer"
+    navigation:
       profile: "Profiel"
       photo: "Foto"
       settings: "Instellingen"
-    upload:
+    photo_form:
       label: "Upload/verander jouw foto:"
-      btn_skip: "Sla over"
       btn_upload: "Next"
       error: "Bestand niet ondersteund! Upload een van de volgende bestandformaties: png, jpeg, jpg."
-      introjs_step_1_html: data-intro="Zorg dat je een foto kiest want dit vergroot je kansen op ontmoetingen aanzienlijk!"
+      info: "Clear frontal face photos are an important way for the community and guests to learn about each other. It’s not much fun to host a landscape! Be sure to use a photo that clearly shows your face and doesn’t include any personal or sensitive info you’d rather not have hosts or guests see."
   layouts:
     mailer:
       footer: "Verstuurd door"
@@ -202,7 +243,7 @@ nl:
         forgot_pass: "Wachtwoord vergeten?"
         didnt_receive_confirmation: "Heb je geen bevestigingsinstructies ontvangen?"
         didnt_receive_unlock_confirmation: "Heb je geen unlock instructies ontvangen?"
-        sign_in_with_provider: "Meld je aan met %{provider}"
+        sign_in_with_provider: " Meld je aan met %{provider}"
   activerecord:
     errors:
       messages:
@@ -414,3 +455,24 @@ nl:
       long: "%d %B %Y %H:%M"
       short: "%d %b %H:%M"
     pm: "'s middags"
+  events:
+    actions:
+      attend: "Attend the event"
+      areyougoing: "Ben je erbij?"
+    index:
+      my_next_events: "Evenementen waar ik bij ben"
+      small_group: "Kleine groepsevenementen"
+      small_description: "Deze events zijn gelimiteerd tot 10 Blenders. Klik op “Aanwezig” om een plekje te reserveren."
+      community: "Community evenementen"
+      community_description: "Deze evenementen zijn voor iedereen. Een kaartje kan in sommige gevallen nodig zijn."
+      subscribe_modal: "<h5>Top! Thanks for your interest in this event. </h5><br/><p>By click on partecipate you will reserve a place for this event! <br/>If your plans change, simply click the button 'Cannot Attend' to change your RSVP and allow another Blender to partecipate.</p>"
+      subscribe_button: "Subscribe"
+      unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5> <p></p>"
+      unsubscribe_button: "Unsubscribe"
+    _card_small_group_event:
+      subscribe: "Attend"
+      see_more: "See More"
+      spaces_available: "plaatsen beschibaar"
+      event_full: "This event is full!"
+    _card_my_event:
+      cantattend: "Cannot attend"

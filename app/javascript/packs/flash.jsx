@@ -4,27 +4,26 @@ import PropTypes from 'prop-types'
 
 export class Flash extends Component {
  constructor(props) {
-  super();
-  this.state = {
-    show:true,
-    type: (!props.alert) ? "advice" : "danger"
-  }
+    super();
+    this.state = {
+      show:true,
+      type: (!props.alert) ? "alert-success" : "alert-danger"
+    }
  }
 
  componentDidMount(){
-   setTimeout(function() { this.setState({show: false}); }.bind(this), 4000);
+   setTimeout(function() { this.setState({show: false}); }.bind(this), 335000);
  }
 
  render(){
    const {show, type} = this.state
+   if (!show){
+    return;
+   }
    return(
-       <div className="ContainerFlash">
-         {show &&
-           <div className={`Flash ${type}`}>
-              <p>{this.props.alert || this.props.notice}</p>
-           </div>
-         }
-       </div>
+     <div className={`alert alert-primary ${type} mt-3`} role="alert">
+        <span>{this.props.alert || this.props.notice}</span>
+     </div>
    )
  }
 }

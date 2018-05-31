@@ -4,11 +4,54 @@ en:
     title: "Blendin | where people and cultures meet "
     description: "Something"
     og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
-  header:
-    main:
+  navbar:
+    nav:
       community_link: "Community"
       my_blends_link: "My blends"
       settings_link: "Settings"
+  dashboard:
+    index:
+      events_card_title: "Meet Blenders"
+      events_card_subtitle: "Attend unique events and meet Blenders who share your interests and are interested in developing the Blendin community.."
+      talent_teach_card_title: "Teach My Talent"
+      talent_teach_card_subtitle: "Offer to teach a skill, interest, or hobby to other Blendin members."
+      talent_learn_card_title: "Learn a Talent:"
+      talent_learn_card_subtitle: "Find an exciting new skill to learn from another Blendin member."
+      donate_card_title: "Donate"
+      donate_card_subtitle: "Your contributions directly impact Blendin's community outreach and our ability to create opportunities for newcomers and locals alike."
+      network_card_title: "Share Your  Network:"
+      network_card_subtitle: "Is your company hiring? Blendin's special matching process has allowed us to help place 50 (?)  newcomers into career opportunities throughout the Netherlands."
+      partner_card_title: "Become a Partner:"
+      partner_card_subtitle: "Does your company want to do more to help support the Blendin community? We are open to accepting new collaborations now."
+  footer:
+    about: "About Blendin"
+    team: "Our team"
+    mission: "Mission Statement"
+    news: "News"
+    gallery: "Gallery"
+    work: "How it works"
+    donate: "Donate"
+    support: "Support"
+    contact: "Contact Us"
+    privacy: "Privacy Policy & Terms of Use"
+    involvement: "Involvement"
+    meet: "Meet Blenders"
+    teach: "Teach A Talent"
+    learn: "Learn A Talent"
+    share: "Share Your Network"
+    partner: "Become A Partner"
+    languages: "Select a language"
+  pages:
+    donate:
+      title: "Steun ons en maak een verschil!"
+      lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
+      cta: "Doneer nu!"
+  talents:
+    index:
+      title: "Share your talent on Blendin"
+      subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+      info_headline: "The request of learning is <span class='text-muted'>neverending...</span>"
+      info_content: "that’s why we want to give you an opportunity to teach <br> your <b>talents</b> and <b>interests</b> to other Blendin users.<br><br>Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
   networks:
     new:
       title: "Share your network"
@@ -38,11 +81,11 @@ en:
         gender_label: "Selecteer een optie:"
         gender_male: "Ik ben een man 👨"
         gender_female: "Ik ben een vrouw 👩"
-        birthday_label: "Geboorte datum 🎂:"
-        phone_label: "Telefoon nummer 📱:"
+        birthday_label: "Geboorte datum 🎂"
+        phone_label: "Telefoon nummer 📱"
         phone_placeholder: "Bijv. 0612345678"
         phone_helper: "This number only becomes visible to other users once your blend request gets accepted or you accept your request."
-        about_label: "Vertel meer over jezelf 💬: "
+        about_label: "Vertel meer over jezelf 💬"
         about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
         submit_btn: "Bevestig"
     end_submit:
@@ -78,45 +121,45 @@ en:
       blend_message_placeholder: "😉 Hello, my name is ..."
       blend_message_btn: "Send message"
       introjs_step_1_html: data-intro="Would you like to meet him/her? Click here and send a Blend request. If the request is accepted you will receive each other’s phone number and you make an appointment."
-  wizard:
-    index:
+  settings:
+    profile_form:
+      username_label: "First and last name"
       greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."
-      local_label: "Please select an option:"
+      local_label: "Please select an option"
       local_true: "I'm a local"
       local_false: "I'm not a local (newcomer)"
-      gender_label: "Please select an option:"
-      gender_male: "I'm a man 👨"
-      gender_female: "I'm a woman 👩"
-      birthday_label: "🎂 Date of Birth:"
-      address_label: "🌇 Where do you live?"
+      gender_label: "I'am"
+      gender_male: "I'm a man"
+      gender_female: "I'm a woman"
+      birthday_label: "Birth Date"
+      address_label: "Where You Live"
       address_placeholder: "Ex. Amsterdam, Netherlands"
-      country_label: "🌎 Country of origin:"
+      country_label: "Country of origin:"
       country_placeholder: "Ex. Syria"
-      interest_label: "📙 Choose your interest from the list:"
-      interest_helper: "(Choose at least three interest form the list. The more the better.)"
-      job_label: "💪 Study and/or work experience:"
+      interest_label: "Choose your interest from the list"
+      interest_helper: "Choose at least three interest form the list. The more the better."
+      job_label: "Study and/or work experience"
       job_placeholder: "Ex. Car engineer or lawyer"
-      job_helper: "(This could be your previous job/study.)"
-      phone_label: "📱 Phone number:"
+      job_helper: "This could be your previous job/study."
+      phone_label: "Phone number"
       phone_placeholder: "Ex. 0612345678"
-      about_label: "💬 Tell more about yourself: "
-      about_helper: "(This is not mandatory but it will help you to connect with others in the community.)"
+      about_label: "Tell more about yourself"
+      about_helper: "Blendin is built on relationships and trust. Help other people get to know you.<br /><br />Tell them about the things you like: What are 5 things you can’t live without? Share your favorite travel destinations, books, movies, shows, music, food.<br /><br />Tell them what it’s like to have you as a friend or teacher host: What’s your style?<br /><br />Tell them about you: Do you have a life motto?"
       phone_helper: "This number only becomes visible to other users once your blend request gets accepted or you accept your request."
       submit_btn: "Confirm and continue"
       introjs_step_1_html: data-intro="Click 'local' if you feel at home here in the Netherlands and you are looking for contact with people that are new here."
       introjs_step_2_html: data-intro="Choose ‘Not a local’ is you are not a Dutch local and looking for more contact with them."
       introjs_step_3_html: data-intro="Choose as many interests as you like. Our system will find your matches based on these interests, location, and age."
       introjs_step_4: "Confirm"
-    top_nav:
-      profile: "Profile"
+    navigation:
+      profile: "Edit profile"
       photo: "Photo"
       settings: "Settings"
-    upload:
+    photo_form:
       label: "Upload/change your picture:"
-      btn_skip: "Skip"
       btn_upload: "Next"
       error: "File not supported! Please upload one of the following file: png, jpeg, jpg."
-      introjs_step_1_html: data-intro="Make sure you upload a picture; this increases your chances of finding people to meet up with!"
+      info: "Clear frontal face photos are an important way for the community and guests to learn about each other. It’s not much fun to host a landscape! Be sure to use a photo that clearly shows your face and doesn’t include any personal or sensitive info you’d rather not have hosts or guests see."
   layouts:
     mailer:
       footer: "Sent by"
@@ -194,4 +237,25 @@ en:
         forgot_pass: "Forgot your password?"
         didnt_receive_confirmation: "Didn't receive confirmation instructions?"
         didnt_receive_unlock_confirmation: "Didn't receive unlock instructions?"
-        sign_in_with_provider: "Sign in with %{provider}"
+        sign_in_with_provider: " Sign in with %{provider}"
+  events:
+    actions:
+      attend: "Attend the event"
+      areyougoing: "Are you going?"
+    index:
+      my_next_events: "Events I'm Attending"
+      small_group: "Small group events"
+      small_description: "These events are limited to 10 Blenders each. Please click 'ATTEND' to join."
+      community: "Community events"
+      community_description: "These events are open to everyone. A ticket may be required."
+      subscribe_modal: "<h5>Top! Thanks for your interest in this event. </h5><br/><p>By click on partecipate you will reserve a place for this event! <br/>If your plans change, simply click the button 'Cannot Attend' to change your RSVP and allow another Blender to partecipate.</p>"
+      subscribe_button: "Subscribe"
+      unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5><p>Unsubscribe modal text to change</p>"
+      unsubscribe_button: "Unsubscribe"
+    _card_small_group_event:
+      subscribe: "Attend"
+      see_more: "See More"
+      spaces_available: "spaces available"
+      event_full: "This event is full!"
+    _card_my_event:
+      cantattend: "Cannot attend"

@@ -17,6 +17,7 @@
 /public/packs-test
 /node_modules
 dump.rdb
+public/uploads/*
 
 # Ignore application configuration
 /config/application.yml
