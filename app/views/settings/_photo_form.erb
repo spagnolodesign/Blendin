@@ -1,33 +1,29 @@
 
-
 <div class="row">
   <div class="col-sm-4 mb-3">
     <img class="img-fluid" id="preview-js" width="100%" src="<%= @user.avatar.medium_avatar %>">
   </div>
   <div class="col-sm-8">
-  <p><%= t('.info') %></p>
+  <p><%= t('settings.photo_form.info') %></p>
   <%= form_for(@user, html: {id:'form-photo-js'}) do |f| %>
-
     <div class="input-group mb-3">
       <div class="custom-file">
         <%= f.file_field :avatar, class: "custom-file-input file-input-js", id: "inputGroupFile01" %>
         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
       </div>
     </div>
-
     <p class="error"></p>
     <div class="loader hidden"></div>
   <% end %>
   </div>
 </div>
 
-
 <script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
 
-  <script>
+<script>
   $(function () {
     let inputFile = $('.file-input-js');
-    let errorText = "<%= t('.error') %>";
+    let errorText = "<%= t('settings.photo_form.error') %>";
     let loader = $('.loader');
 
     inputFile.change(function(){

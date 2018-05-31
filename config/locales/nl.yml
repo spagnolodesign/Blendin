@@ -11,18 +11,18 @@ nl:
       settings_link: "Instellingen"
   dashboard:
     index:
-      events_card_title: "Meet Blenders"
-      events_card_subtitle: "Attend unique events and meet Blenders who share your interests and are interested in developing the Blendin community.."
-      talent_teach_card_title: "Teach My Talent"
-      talent_teach_card_subtitle: "Offer to teach a skill, interest, or hobby to other Blendin members."
-      talent_learn_card_title: "Learn a Talent:"
-      talent_learn_card_subtitle: "Find an exciting new skill to learn from another Blendin member."
-      donate_card_title: "Donate"
-      donate_card_subtitle: "Your contributions directly impact Blendin's community outreach and our ability to create opportunities for newcomers and locals alike."
-      network_card_title: "Share Your  Network:"
-      network_card_subtitle: "Is your company hiring? Blendin's special matching process has allowed us to help place 50 (?)  newcomers into career opportunities throughout the Netherlands."
-      partner_card_title: "Become a Partner:"
-      partner_card_subtitle: "Does your company want to do more to help support the Blendin community? We are open to accepting new collaborations now."
+      events_card_title: "Ontmoet Blenders"
+      events_card_subtitle: "Kom naar unieke evenementen en ontmoet Blenders die geïnteresseerd zijn in een hechte Blendin community."
+      talent_teach_card_title: "Deel mijn talent"
+      talent_teach_card_subtitle: "Biedt een skill, interesse of hobby aan, aan andere Blendin leden."
+      talent_learn_card_title: "Leer een nieuwe skill"
+      talent_learn_card_subtitle: "Ontdek een leuke nieuwe skill die je kan leren van een andere Blender."
+      donate_card_title: "Doneer"
+      donate_card_subtitle: "Elke donatie helpt direct om Blendin’s impact te vergroten en onze community uit te bouwen. Op deze manier kunnen we veel meer kansen creëren voor zowel nieuwkomers als locals."
+      network_card_title: "Doneer Je Netwerk"
+      network_card_subtitle: "Veel nieuwkomers willen graag aan de slag, maar missen vaak het netwerk om werk te vinden. Jouw professionele netwerk kan voor een nieuwkomer de stap richting een passende baan of stage zijn."
+      partner_card_title: "Wordt Partner"
+      partner_card_subtitle: "Wil jouw bedrijf meer doen om de Blendin-community te ondersteunen? Wij staan altijd open voor nieuwe samenwerkingen."
   footer:
     about: "About Blendin"
     team: "Ons team"
@@ -50,6 +50,8 @@ nl:
     index:
       title: "Share your talent on Blendin"
       subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+      info_headline: "The request of learning is <span class='text-muted'>neverending...</span>"
+      info_content: "that’s why we want to give you an opportunity to teach <br> your <b>talents</b> and <b>interests</b> to other Blendin users.<br><br>Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
   networks:
     new:
       title: "Share your network"
@@ -456,19 +458,21 @@ nl:
   events:
     actions:
       attend: "Attend the event"
+      areyougoing: "Ben je erbij?"
     index:
-      my_next_events: "My next events"
-      small_group: "Small group events"
-      small_description: "These events are limited to 10 Blenders each. Please click 'ATTEND' to join."
-      community: "Community events"
-      subscribe_modal: "<h5>Top! Thanks for your interest in this event.</h5><p>By click on partecipate you will reserve a place for this event!If your plans change, simply click the button 'Cannot Attend'to change your RSVP and allow another Blender to partecipate.</p>"
+      my_next_events: "Evenementen waar ik bij ben"
+      small_group: "Kleine groepsevenementen"
+      small_description: "Deze events zijn gelimiteerd tot 10 Blenders. Klik op “Aanwezig” om een plekje te reserveren."
+      community: "Community evenementen"
+      community_description: "Deze evenementen zijn voor iedereen. Een kaartje kan in sommige gevallen nodig zijn."
+      subscribe_modal: "<h5>Top! Thanks for your interest in this event. </h5><br/><p>By click on partecipate you will reserve a place for this event! <br/>If your plans change, simply click the button 'Cannot Attend' to change your RSVP and allow another Blender to partecipate.</p>"
       subscribe_button: "Subscribe"
-      unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5><p>Unsubscribe modal text to change</p>"
+      unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5> <p></p>"
       unsubscribe_button: "Unsubscribe"
     _card_small_group_event:
       subscribe: "Attend"
       see_more: "See More"
-      spaces_available: "spaces available"
+      spaces_available: "plaatsen beschibaar"
       event_full: "This event is full!"
     _card_my_event:
       cantattend: "Cannot attend"

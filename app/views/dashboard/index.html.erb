@@ -18,15 +18,16 @@
       <% end %>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= link_to learn_talents_path, class:"card shadow-sm dashboard-card-lnk" do %>
+      <%= link_to "", class:"card shadow-sm dashboard-card-lnk" do %>
         <div class="card-body">
           <h4 class="card-title"><i class="fas fa-lightbulb"></i> <%= t('.talent_learn_card_title') %></h4>
           <p class="card-text"><%= t('.talent_learn_card_subtitle') %></p>
+          <p>COMING SOON! 🔥</p>
         </div>
       <% end %>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= link_to "/pages/donate", class:"card shadow-sm dashboard-card-lnk" do %>
+      <%= link_to pages_path("donate"), class:"card shadow-sm dashboard-card-lnk" do %>
         <div class="card-body">
           <h4 class="card-title"><i class="fas fa-hand-holding-usd"></i> <%= t('.donate_card_title') %></h4>
           <p class="card-text"><%= t('.donate_card_subtitle') %></p>
@@ -42,7 +43,7 @@
       <% end %>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= link_to "", class:"card shadow-sm dashboard-card-lnk" do %>
+      <%= link_to pages_path("partner"), class:"card shadow-sm dashboard-card-lnk" do %>
         <div class="card-body">
           <h4 class="card-title"><i class="fas fa-handshake"></i> <%= t('.partner_card_title') %></h4>
           <p class="card-text"><%= t('.partner_card_subtitle') %></p>

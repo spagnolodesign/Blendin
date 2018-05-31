@@ -9,6 +9,49 @@ en:
       community_link: "Community"
       my_blends_link: "My blends"
       settings_link: "Settings"
+  dashboard:
+    index:
+      events_card_title: "Meet Blenders"
+      events_card_subtitle: "Attend unique events and meet Blenders who share your interests and are interested in developing the Blendin community.."
+      talent_teach_card_title: "Teach My Talent"
+      talent_teach_card_subtitle: "Offer to teach a skill, interest, or hobby to other Blendin members."
+      talent_learn_card_title: "Learn a Talent:"
+      talent_learn_card_subtitle: "Find an exciting new skill to learn from another Blendin member."
+      donate_card_title: "Donate"
+      donate_card_subtitle: "Your contributions directly impact Blendin's community outreach and our ability to create opportunities for newcomers and locals alike."
+      network_card_title: "Share Your  Network:"
+      network_card_subtitle: "Is your company hiring? Blendin's special matching process has allowed us to help place 50 (?)  newcomers into career opportunities throughout the Netherlands."
+      partner_card_title: "Become a Partner:"
+      partner_card_subtitle: "Does your company want to do more to help support the Blendin community? We are open to accepting new collaborations now."
+  footer:
+    about: "About Blendin"
+    team: "Our team"
+    mission: "Mission Statement"
+    news: "News"
+    gallery: "Gallery"
+    work: "How it works"
+    donate: "Donate"
+    support: "Support"
+    contact: "Contact Us"
+    privacy: "Privacy Policy & Terms of Use"
+    involvement: "Involvement"
+    meet: "Meet Blenders"
+    teach: "Teach A Talent"
+    learn: "Learn A Talent"
+    share: "Share Your Network"
+    partner: "Become A Partner"
+    languages: "Select a language"
+  pages:
+    donate:
+      title: "Steun ons en maak een verschil!"
+      lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
+      cta: "Doneer nu!"
+  talents:
+    index:
+      title: "Share your talent on Blendin"
+      subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+      info_headline: "The request of learning is <span class='text-muted'>neverending...</span>"
+      info_content: "that’s why we want to give you an opportunity to teach <br> your <b>talents</b> and <b>interests</b> to other Blendin users.<br><br>Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
   networks:
     new:
       title: "Share your network"
@@ -196,12 +239,16 @@ en:
         didnt_receive_unlock_confirmation: "Didn't receive unlock instructions?"
         sign_in_with_provider: " Sign in with %{provider}"
   events:
+    actions:
+      attend: "Attend the event"
+      areyougoing: "Are you going?"
     index:
-      my_next_events: "My next events"
+      my_next_events: "Events I'm Attending"
       small_group: "Small group events"
       small_description: "These events are limited to 10 Blenders each. Please click 'ATTEND' to join."
       community: "Community events"
-      subscribe_modal: "<h5>Top! Thanks for your interest in this event.</h5><p>By click on partecipate you will reserve a place for this event!If your plans change, simply click the button 'Cannot Attend'to change your RSVP and allow another Blender to partecipate.</p>"
+      community_description: "These events are open to everyone. A ticket may be required."
+      subscribe_modal: "<h5>Top! Thanks for your interest in this event. </h5><br/><p>By click on partecipate you will reserve a place for this event! <br/>If your plans change, simply click the button 'Cannot Attend' to change your RSVP and allow another Blender to partecipate.</p>"
       subscribe_button: "Subscribe"
       unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5><p>Unsubscribe modal text to change</p>"
       unsubscribe_button: "Unsubscribe"

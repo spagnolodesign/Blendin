@@ -17,6 +17,7 @@
 .form-auth .form-control:focus {
   z-index: 2;
 }
+
 .form-auth input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
@@ -30,4 +31,9 @@
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-auth.detached-input input {
+  margin: .5em 0 !important;
+  border-radius: 0.25rem !important;
 }

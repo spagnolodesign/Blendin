@@ -7,8 +7,8 @@ class Blend < ActiveRecord::Base
   validates_uniqueness_of :recipient_id, scope: :sender_id
   validate :blended_already
 
-  after_create :sms_and_email_notification
-  after_update :send_status_update_email
+  # after_create :sms_and_email_notification
+  # after_update :send_status_update_email
 
 
   STATES = [

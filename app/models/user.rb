@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
   # after_create :send_welcome_email
 
   acts_as_taggable
-
   acts_as_messageable
 
   validates :terms_and_conditions, acceptance: true
@@ -21,7 +20,6 @@ class User < ActiveRecord::Base
 
   validates :username, length: { maximum: 26 }, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, length: { maximum: 35 }
-
 
   scope :for_age_range, -> min, max {
     where("date_part('year', age(birthday)) >= ? AND date_part('year', age(birthday)) <= ?", min, max)
@@ -36,7 +34,6 @@ class User < ActiveRecord::Base
   }
 
   scope :near_address, ->(address) { all.near(address, 20) }
-
 
   def name
     username.split.map(&:capitalize).join(' ')
@@ -54,7 +51,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def age
     if (birthday.blank?)
       return ""
@@ -62,6 +58,11 @@ class User < ActiveRecord::Base
     dob = self.birthday
     now = Time.now.utc.to_date
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
+
+
+  def is_profile_complete
+    !self.local.nil? && !self.avatar.file.nil? && !self.latitude.nil?
   end
 
   def blended?(user)

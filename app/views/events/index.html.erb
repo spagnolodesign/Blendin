@@ -22,7 +22,7 @@
 
 <div class="container">
   <h3 class="mt-4"><%= t('events.index.community') %></h3>
-  <p><%= t('events.index.small_description') %></p>
+  <p><%= t('events.index.community_description') %></p>
   <div class="row">
     <% @community_events.each do |event|  %>
       <%= render "card_community", event: event %>
@@ -35,7 +35,6 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button id="close-modal" type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

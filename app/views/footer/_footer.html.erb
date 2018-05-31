@@ -3,9 +3,10 @@
     <div class="row">
       <div class="col-12 col-md">
         <div class="social-links mb-3">
-          <a href=""><i class="fab fa-lg fa-facebook-square"></i></a>
-          <a href=""><i class="fab fa-lg fa-facebook-messenger"></i></a>
-          <a href=""><i class="fab fa-lg fa-instagram"></i></a>
+          <a target="_blank" href="http://www.facebook.com/blendinnow"><i class="fab fa-lg fa-facebook-square"></i></a>
+          <a target="_blank" href=""><i class="fab fa-lg fa-facebook-messenger"></i></a>
+          <a target="_blank" href="http://www.instagram.com/blendinnow"><i class="fab fa-lg fa-instagram"></i></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UCjOWtafXTWtkOduKom-yN5w"><i class="fab fa-lg fa-youtube"></i></a>
         </div>
 
         <h6 class="mb-1"><%= t('footer.languages') %></h6>
@@ -16,28 +17,28 @@
       <div class="col-6 col-md">
         <h5 class="mb-3"><%= t('footer.about') %></h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#"><%= t('footer.team') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.mission') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.news') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.gallery') %></a></li>
+          <li><a class="text-muted" target="_blank" href="https://www.blendinnow.nl/ons-team/"><%= t('footer.team') %></a></li>
+          <li><a class="text-muted" target="_blank" href="https://www.blendinnow.nl/"><%= t('footer.mission') %></a></li>
+          <li><a class="text-muted" target="_blank" href="https://www.blendinnow.nl/nieuws/"><%= t('footer.news') %></a></li>
+          <li><a class="text-muted" target="_blank" href="https://www.blendinnow.nl/galerij/"><%= t('footer.gallery') %></a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
         <h5 class="mb-3"><%= t('footer.support') %></h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#"><%= t('footer.contact') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.privacy') %></a></li>
+          <li><a class="text-muted" href="mailto:info@blendinnow.nl"><%= t('footer.contact') %></a></li>
+          <li><a class="text-muted" href="https://www.iubenda.com/privacy-policy/7951305"><%= t('footer.privacy') %></a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
         <h5 class="mb-3"><%= t('footer.involvement') %></h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#"><%= t('footer.meet') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.teach') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.learn') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.donate') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.share') %></a></li>
-          <li><a class="text-muted" href="#"><%= t('footer.become') %></a></li>
+          <li><%= link_to t('footer.meet'), events_path, class: "text-muted" %></li>
+          <li><%= link_to t('footer.teach'), talents_path, class: "text-muted" %></li>
+          <li><%= link_to t('footer.learn'), learn_talents_path, class: "text-muted" %></li>
+          <li><%= link_to t('footer.donate'), pages_path("donate"), class: "text-muted" %></li>
+          <li><%= link_to t('footer.share'), networks_path, class: "text-muted" %></li>
+          <li><%= link_to t('footer.become'), "/pages/partner", class: "text-muted" %></li>
         </ul>
       </div>
     </div>

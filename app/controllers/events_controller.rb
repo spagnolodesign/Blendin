@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @my_events = current_user.events.order("date DESC") if user_signed_in?

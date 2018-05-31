@@ -2,8 +2,8 @@
 
   <section class="jumbotron talent-jumbotron d-flex align-items-end" style="background: linear-gradient(rgba(37, 37, 37, 0), rgb(39, 39, 39)), url('/assets/talents/share-your-talent-blendin.jpg') no-repeat top center; background-size:cover; color:#FFF; padding: 6rem 0;">
     <div class="ml-5">
-      <h1 class="jumbotron-heading"><%= t('.title') %></h1>
-      <p class="lead"><%= t('.subtitle') %></p>
+      <h1 class="jumbotron-heading"><%= t('dashboard.index.talent_teach_card_title') %></h1>
+      <p class="lead"><%= t('dashboard.index.talent_teach_card_subtitle') %></p>
       <div>
         <%= link_to "Get started", new_talent_path, class: "btn btn-primary btn-lg" %>
         <a href="#learn-more-talent" class="btn btn-outline-light btn-lg">Learn more</a>
@@ -11,18 +11,16 @@
     </div>
   </section>
 
-
-
-
-  <section id="learn-more-talent">
+  <section id="learn-more-talent" class="mt-5">
     <div class="row">
       <div class="col-md-7 order-md-2 d-flex align-items-center">
         <div>
-          <h2>Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2><%= raw t('.info_headline') %></h2>
+          <p class="lead"><%= raw t('.info_content') %></p>
+          <%= link_to "Application for teaching", new_talent_path, class: "btn btn-outline-primary btn-md mb-5" %>
         </div>
       </div>
-      <div class="col-md-5 order-md-1">
+      <div class="col-md-5 order-md-1 mb-5">
         <%= image_tag "talents/meeting-talent-blendin.jpg", class: "img-fluid mx-auto" %>
       </div>
     </div>

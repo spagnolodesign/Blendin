@@ -13,14 +13,12 @@
     <%= f.email_field :email, autofocus: true, class:"form-control", id: "inputEmail", placeholder: t('.email_placeholder'), required: true %>
 
     <label for="inputPassword" class="sr-only"><%= t('.pass_placeholder') %></label>
-    <%= f.password_field :password, autocomplete: "off", class:"form-control", id:"inputPassword", placeholder: t('.pass_placeholder'), required: true%>
+    <%= f.password_field :password, autocomplete: "off", class:"form-control", id:"inputPassword", placeholder: t('.pass_placeholder'), required: true %>
 
     <% if devise_mapping.rememberable? -%>
-    <div class="checkbox mb-3">
-      <label>
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </label>
+    <div class="checkbox mb-3 text-muted">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
     </div>
     <% end -%>
 

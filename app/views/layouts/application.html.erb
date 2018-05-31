@@ -22,7 +22,7 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C600&#038;subset=latin-ext&#038;ver=1.0.0' type='text/css' media='all' />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
-  
+
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= yield(:header_script) %>
@@ -34,6 +34,7 @@
   <%= render 'layouts/flash' %>
   <%= yield %>
   <%= render 'footer/footer' %>
+  <%= render "shared/complete_profile_modal" %>
 </body>
 
 </html>

@@ -8,27 +8,17 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|nl/ do
 
     root 'dashboard#index'
-    get "/pages/:page" => "pages#show"
+    get "/dashboard", to: "dashboard#index"
+    get "/pages/:page", to: "pages#show", as: :pages
 
-    #EVENTS
     resources :events, only: [:index, :show] do
       resources :participants, only: [:create]
     end
 
     delete "/participants/:id", to: "participants#destroy"
 
-    # get '/all-blends', to: 'home#index', as: 'home'
-    # get '/wizard', to: 'wizard#index'
-    # get '/upload-photo', to: 'wizard#upload'
-    # get 'blends/create'
-
     devise_for :users, skip: :omniauth_callbacks
     resources :users, only: [:show, :update]
-
-    # resources :blends, only: [:create, :new, :index] do
-    #   get '/accept', to: 'blends#accept'
-    #   get '/reject', to: 'blends#reject'
-    # end
 
     get "/settings/profile" => "settings#profile"
     get "/settings/photo" => "settings#photo"

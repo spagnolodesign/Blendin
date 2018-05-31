@@ -11,3 +11,24 @@
   content: "Upload a file from your computer";
   cursor: pointer;
 }
+.navbar {
+  z-index: 2;
+}
+.sticky-top {
+    z-index: 1;
+}
+.card{
+  z-index:0;
+}
+.navbar-light .navbar-nav .btn.nav-link:hover, .navbar-light .navbar-nav .btn.nav-link:focus {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: #007bff;
+}
+
+
+.navbar-light .navbar-nav .btn.nav-link.active{
+    color: #fff;
+}

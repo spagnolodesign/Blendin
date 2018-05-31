@@ -24,7 +24,8 @@ class UsersController < ApplicationController
 				flash[:notice] = 'We updated your profile'
 				format.html { redirect_back fallback_location: root_path }
 			else
-        format.html { redirect_to wizard_path }
+				flash[:alert] = 'Something went wrong, please check!'
+        format.html { redirect_to settings_profile_path }
     	end
 		end
 	end
