@@ -6,7 +6,6 @@ CarrierWave.configure do |config|
       :aws_secret_access_key  => 'BZY6sBwfEtW0HMlJhvb8a33PwA2oTVMqt/qjsr7U',
       :region                 => 'eu-central-1'
   }
-
   config.fog_directory    = "berryhoop"
   config.fog_public       = false
 end
