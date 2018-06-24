@@ -18,7 +18,7 @@ export class Flash extends Component {
  render(){
    const {show, type} = this.state
    if (!show){
-    return;
+    return (<div></div>);
    }
    return(
      <div className={`alert alert-primary ${type} mt-3`} role="alert">
