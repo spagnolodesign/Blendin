@@ -1,4 +1,3 @@
-
 @import "bootstrap";
 
 body{
@@ -20,4 +19,25 @@ body{
 
 .main-color-bg{
   background-color: #73cbd1;
+}
+
+
+.striped-subtitle{
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  display: inline-block;
+  color: #5E5757;
+  font-weight: 700;
+  border-bottom: 3px solid #ffc107;
+  box-shadow: inset 0 -8px 0 #ffc107;
+}
+
+.small-text{
+  font-size: 0.8em;
+}
+.events-section{
+  background: #74CCD0;
+}
+.work-section{
+  background: #FF70A6;
 }

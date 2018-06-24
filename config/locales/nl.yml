@@ -11,10 +11,14 @@ nl:
       settings_link: "Instellingen"
   dashboard:
     index:
-      events_card_title: "Ontmoet Blenders"
+      main_title: "What would you like to do today?"
+      social_title: "Meet Blenders"
+      work_title: "Help a newcomer find a job"
+      donate_title: "Help the Blendin organization:"
+      events_card_title: "Events"
       events_card_subtitle: "Kom naar unieke evenementen en ontmoet Blenders die geïnteresseerd zijn in een hechte Blendin community."
-      talent_teach_card_title: "Deel mijn talent"
-      talent_teach_card_subtitle: "Biedt een skill, interesse of hobby aan, aan andere Blendin leden."
+      talent_teach_card_title: "Talent sharing"
+      talent_teach_card_subtitle: "Biedt een skill, interesse of hobby aan, aan andere Blendin leden of ontdek een leuke nieuwe skill die je kan leren."
       talent_learn_card_title: "Leer een nieuwe skill"
       talent_learn_card_subtitle: "Ontdek een leuke nieuwe skill die je kan leren van een andere Blender."
       donate_card_title: "Doneer"
@@ -46,12 +50,16 @@ nl:
       title: "Steun ons en maak een verschil!"
       lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
       cta: "Doneer nu!"
+    partner:
+      title: "Become a partner"
+      lead: "Wij waarderen jouw interesse een samenwerkingspartner te worden. Samen kunnen we nieuwkomers welkom heten in onze samenleving, en met hen de aspecten delen die dit land een schatrijke thuisbasis maken. Doe mee, en creëer een vereende wereld."
   talents:
     index:
       title: "Share your talent on Blendin"
       subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
-      info_headline: "The request of learning is <span class='text-muted'>neverending...</span>"
-      info_content: "that’s why we want to give you an opportunity to teach <br> your <b>talents</b> and <b>interests</b> to other Blendin users.<br><br>Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
+      info_headline: "De zoektocht van leren is <span class='text-muted'>oneindig...</span>"
+      info_content: "daarom willen jou de kans geven om je talenten en <b>interesses</b> te delen met andere Blendin gebruikers.<br><br>Kan jij veel liedjes spelen op de gitaar?<br>Of een passie voor fotografie?<br>Wat dacht je van leuke en interessante feitjes van de stad waar je in woont?<br><br>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen met onze Blendin community!"
+      discover_cta: "Discover new talents - coming soon!"
   networks:
     new:
       title: "Share your network"
@@ -68,24 +76,26 @@ nl:
     form:
         fullname: "Naam en achternaam"
         fullname_placeholder: ""
-        sector: "Beschrijf jouw sector en functie 💼"
+        sector: "Beschrijf jouw sector en functie"
         sector_placeholder: ""
-        network: "In welke andere sectoren heb je nog meer een breed netwerk? 👔"
+        network: "In welke andere sectoren heb je nog meer een breed netwerk?"
         network_placeholder: ""
-        email: "Email ✉️"
-        email_placeholder: "lorem@gmail.com"
-        city: "Plaats / regio van jouw werk 🏢"
+        email: "Email"
+        email_placeholder: "email@gmail.com"
+        city: "Plaats / regio van jouw werk"
         city_placeholder: "Bijv. Den Haag"
-        residence: "Waar woon je? 🌇"
+        residence: "Waar woon je?"
         residence_placeholder: "Bijv. Amsterdam"
+        experience: "Jaren werkervaring"
+        reference: "Hoe kom je bij DoneerJeNetwerk terecht?"
         gender_label: "Selecteer een optie"
-        gender_male: "Ik ben een man 👨"
-        gender_female: "Ik ben een vrouw 👩"
-        birthday_label: "Geboorte datum 🎂"
-        phone_label: "Telefoon nummer 📱"
+        gender_male: "Ik ben een man"
+        gender_female: "Ik ben een vrouw"
+        birthday_label: "Geboorte datum"
+        phone_label: "Telefoon nummer"
         phone_placeholder: "Bijv. 0612345678"
         phone_helper: "Dit nummer is pas zichtbaar voor andere gebruikers als je blend verzoek geaccepteerd wordt of jij je verzoek accepteerd."
-        about_label: "Vertel meer over jezelf 💬"
+        about_label: "Vertel meer over jezelf"
         about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
         submit_btn: "Bevestig"
     end_submit:
@@ -457,7 +467,7 @@ nl:
     pm: "'s middags"
   events:
     actions:
-      attend: "Attend the event"
+      attend: "Kom naar dit event"
       areyougoing: "Ben je erbij?"
     index:
       my_next_events: "Evenementen waar ik bij ben"

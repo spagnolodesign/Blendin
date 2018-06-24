@@ -1,4 +1,5 @@
 class NetworksController < ApplicationController
+  # before_action :authenticate_user!, except: [:show]
   before_action :set_network, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -33,6 +34,6 @@ class NetworksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def network_params
-      params.require(:network).permit(:name, :sector, :network, :city, :email, :residence, :phone, :gender, :birthday, :about)
+      params.require(:network).permit(:name, :sector, :network, :city, :email, :residence, :phone, :gender, :birthday, :about, :experience, :reference, :terms_of_service)
     end
 end

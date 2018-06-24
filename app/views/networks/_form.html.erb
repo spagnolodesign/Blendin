@@ -22,6 +22,23 @@
     </div>
 
     <div class="form-group">
+      <label><%= t('.gender_label') %></label>
+      <label class="Label CheckBoxRound">
+        <%= form.radio_button :gender, "m", class:"css-checkbox", required:true  %>
+        <%= t('.gender_male') %>
+      </label>
+      <label class="Label CheckBoxRound">
+        <%= form.radio_button :gender, "f", class:"css-checkbox", required:true  %>
+        <%= t('.gender_female') %>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label><%= t('.residence') %></label>
+      <%= form.text_field :residence, required: true, class: 'form-control', placeholder: t('.residence_placeholder') %>
+    </div>
+
+    <div class="form-group">
       <label><%= t('.sector') %></label>
       <%= form.text_area :sector, required: true, class: 'form-control', placeholder: t('.sector_placeholder'), rows: "5" %>
     </div>
@@ -37,31 +54,8 @@
     </div>
 
     <div class="form-group">
-      <label><%= t('.gender_label') %></label>
-      <label class="Label CheckBoxRound">
-        <%= form.radio_button :gender, "m", class:"css-checkbox", required:true  %>
-        <%= t('.gender_male') %>
-      </label>
-      <label class="Label CheckBoxRound">
-        <%= form.radio_button :gender, "f", class:"css-checkbox", required:true  %>
-        <%= t('.gender_female') %>
-      </label>
-    </div>
-
-    <div class="form-group">
-      <label><%= t('.birthday_label') %></label><br>
-      <%= form.date_select :birthday, {start_year: 1945, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class: 'custom-select custom-width-select' , required: true} %>
-    </div>
-
-    <div class="form-group">
-      <label><%= t('.about_label') %></label>
-      <%= form.text_area :about, class:"form-control" %>
-      <small class="form-text text-muted"><%= t('.about_helper') %></small>
-    </div>
-
-    <div class="form-group">
-      <label><%= t('.residence') %></label>
-      <%= form.text_field :residence, required: true, class: 'form-control', placeholder: t('.residence_placeholder') %>
+      <label><%= t('.experience') %></label>
+      <%= form.number_field :experience, required: true, class: 'form-control', placeholder: "5" %>
     </div>
 
     <div class="form-group">
@@ -72,6 +66,31 @@
     <div class="form-group">
       <label><%= t('.phone_label') %></label>
       <%= form.text_field :phone, required: 'true', class: "form-control", required: true, placeholder: t('.phone_placeholder'), 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
+      <small class="muted-text">Het Blendin-team neemt telefonisch contact met je op als we een relevante match hebben of als we meer informatie willen.</small>
+    </div>
+
+    <div class="form-group">
+      <label><%= t('.reference') %></label>
+      <%= form.text_field :reference, required: true, class: 'form-control', placeholder: "" %>
+    </div>
+
+
+    <!-- <div class="form-group">
+      <label><%= t('.birthday_label') %></label><br>
+      <%= form.date_select :birthday, {start_year: 1945, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class: 'custom-select custom-width-select' , required: true} %>
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label><%= t('.about_label') %></label>
+      <%= form.text_area :about, class:"form-control" %>
+      <small class="form-text text-muted"><%= t('.about_helper') %></small>
+    </div> -->
+
+
+    <div class="checkbox mb-3">
+      <label>
+        <%= form.check_box(:terms_of_service)%> <span class="text-muted"><%= t('.terms_and_conditions') %> <a href="//www.iubenda.com/privacy-policy/7951305" class="no-brand" title="Privacy Policy" target="_blank"><%= t('.privacy_policy') %></a></span>
+      </label>
     </div>
 
     <%= form.submit t('.submit_btn'), class: "btn btn-primary btn-lg" %>

@@ -1,6 +1,6 @@
 <div class="container">
   <% if user_signed_in? && @my_events.any? %>
-    <h3 class="my-4"><%= t('events.index.my_next_events') %></h3>
+    <h3 class="my-4 striped-subtitle"><%= t('events.index.my_next_events') %></h3>
     <div class="row">
       <% @my_events.each do |event|  %>
         <%= render "card_my_events", event: event %>
@@ -10,7 +10,7 @@
 </div>
 
 <div class="container">
-  <h3 class="mt-4"><%= t('events.index.small_group') %></h3>
+  <h3 class="my-4 striped-subtitle"><%= t('events.index.small_group') %></h3>
   <p><%= t('events.index.small_description') %></p>
   <div class="row">
     <% @normal_events.each do |event|  %>
@@ -21,7 +21,7 @@
 
 
 <div class="container">
-  <h3 class="mt-4"><%= t('events.index.community') %></h3>
+  <h3 class="my-4 striped-subtitle"><%= t('events.index.community') %></h3>
   <p><%= t('events.index.community_description') %></p>
   <div class="row">
     <% @community_events.each do |event|  %>

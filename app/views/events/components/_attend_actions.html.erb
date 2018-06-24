@@ -1,10 +1,17 @@
 <% if user_signed_in? && @event.is_available_for_user?(current_user) && !current_user.is_participant?(@event)  %>
   <p class="font-weight-bold mb-2"><%= t('events.actions.areyougoing') %><span class="font-weight-normal"><%= render "events/components/capacity", event: @event %></span></p>
-  <button class="btn btn-block btn-lg btn-primary confirm-button" type="button" name="button" data-toggle="modal" data-target="#manage_subscriptions" data-value ="<%= @event.id %>"><%=  t('events.actions.attend')%></button>
+  <!-- <button class="btn btn-block btn-lg btn-primary confirm-button" type="button" name="button" data-toggle="modal" data-target="#manage_subscriptions" data-value ="<%= @event.id %>"><%=  t('events.actions.attend')%></button> -->
+  <%= link_to "Attend the event", event_participants_path(@event), method: :post, class: "btn btn-block btn-lg btn-primary" %>
 <% elsif @event.community_events %>
-  <h5 class="mt-3 text-left">Event is open to anybody no need to attend.</h5>
+  <div class="alert alert-info" role="alert">
+    <p>These events are open to everyone.<br />A ticket may be required.</p>
+  </div>
 <% elsif current_user.is_participant?(@event) %>
-  <h3 class="mt-3 text-center">🎉🎉 You are in! 🎉🎉</h3>
+  <div class="alert alert-info" role="alert">
+    <h6 class="alert-heading">Top!</h6>
+    <p class="small-text">Thanks for your interest in this event, If your plans change, simply click the button “Cannot Attend” to change your RSVP and allow another Blender to participate.</p>
+    <a class="unsuscribe-button mt-3" href="#" data-toggle="modal" data-target="#manage_subscriptions" data-value="<%= current_user.partecipation_id(@event) %>"> <%=  t('events._card_my_event.cantattend')%></a>
+  </div>
 <% else %>
   <%= render "events/components/full_capacity" %>
 <% end %>

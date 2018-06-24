@@ -12,7 +12,7 @@ export class Flash extends Component {
  }
 
  componentDidMount(){
-   setTimeout(function() { this.setState({show: false}); }.bind(this), 335000);
+   setTimeout(function() { this.setState({show: false}); }.bind(this), 10000);
  }
 
  render(){

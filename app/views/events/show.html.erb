@@ -13,7 +13,7 @@ crossorigin=""/>
         <% if user_signed_in? %>
           <%= render "events/components/attend_actions" %>
         <% else %>
-          <%= link_to "Attend the event", event_participants_path(@event), method: :post %>
+          <%= link_to "Attend the event", event_participants_path(@event), method: :post, class: "btn btn-block btn-lg btn-primary" %>
         <% end %>
       </div>
     </div>
@@ -25,13 +25,18 @@ crossorigin=""/>
     <div class="col-lg-7">
       <figure class="figure">
         <%= image_tag @event.photo.event_detail, class: "figure-img img-fluid rounded", alt: @event.name %>
-        <figcaption class="figure-caption">Picture for the event</figcaption>
       </figure>
       <p><%= raw @event.description %></p>
     </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-4">
       <%= render 'events/components/participants', event: @event %>
+      <div class="alert alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>Ledereen die aanwezig wilt zijn zullen we toevoegen in een WhatsApp groep.</p>
+      </div>
       <%= render 'events/components/map' %>
     </div>
   </div>
@@ -40,9 +45,8 @@ crossorigin=""/>
 
 <div class="modal fade" id="manage_subscriptions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content text-center">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Attend</h5>
         <button id="close-modal" type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -59,7 +63,7 @@ crossorigin=""/>
 <% end %>
 
 <script type="text/javascript">
-  generateSubscriptionModal();
+  generateUnsubscriptionModal();
 </script>
 
 <script type="text/javascript">

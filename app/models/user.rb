@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
 
 
   def is_profile_complete
-    !self.local.nil? && !self.avatar.file.nil? && !self.latitude.nil?
+    !self.local.nil? && !self.phone.nil? && !self.birthday.nil? && !self.latitude.nil?
   end
 
   def blended?(user)
