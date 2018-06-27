@@ -6,14 +6,16 @@ crossorigin=""/>
   <div class="container py-3">
     <div class="row">
       <div class="col-lg-8">
-        <p class="font-weight-light mb-1"><%= @event.date.strftime("%A, %e %b %Y")%> - <%= @event.time.strftime("%H:%M")%></p>
+        <%= link_to '< Back', :back %>
         <h1><%= @event.name %></h1>
+        <p class="font-weight-light mb-1"><%= @event.date.strftime("%A, %e %b %Y")%> - <%= @event.time.strftime("%H:%M")%></p>
+
       </div>
       <div class="col-lg-4">
         <% if user_signed_in? %>
           <%= render "events/components/attend_actions" %>
         <% else %>
-          <%= link_to "Attend the event", event_participants_path(@event), method: :post, class: "btn btn-block btn-lg btn-primary" %>
+          <%= link_to t('.attend_btn'), event_participants_path(@event), method: :post, class: "btn btn-block btn-lg btn-primary" %>
         <% end %>
       </div>
     </div>
@@ -31,12 +33,14 @@ crossorigin=""/>
     <div class="col-lg-1"></div>
     <div class="col-lg-4">
       <%= render 'events/components/participants', event: @event %>
-      <div class="alert alert-success" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p>Ledereen die aanwezig wilt zijn zullen we toevoegen in een WhatsApp groep.</p>
-      </div>
+      <% if !@event.community_events %>
+        <div class="alert alert-success" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <p><%= t('.whatsapp_message') %></p>
+        </div>
+      <% end %>
       <%= render 'events/components/map' %>
     </div>
   </div>

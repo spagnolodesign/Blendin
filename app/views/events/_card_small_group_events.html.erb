@@ -7,7 +7,7 @@
     <h2 class="b-title"><%= event.name %></h2>
     <div class="tagline tagline-promo-40"><%= event.date.strftime("%A, %e %b %Y")%> - <%= event.time.strftime("%H:%M")%></div>
     <div>
-      <%= link_to "See more", event_path(event.id) %>
+      <%= link_to t('events._card_small_group_event.see_more'), event_path(event.id) %>
       <% if user_signed_in? && event.is_available_for_user?(current_user) %> |
         <a class="confirm-button" href="#" data-toggle="modal" data-target="#manage_subscriptions" data-value="<%= event.id %>"><%= t('events._card_small_group_event.subscribe')%>
           <%= render "events/components/capacity", event: event %>

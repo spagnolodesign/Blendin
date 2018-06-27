@@ -1,5 +1,5 @@
 <% if current_user.local %>
-  <%= event.max_local_capacity %> <%= t('events._card_small_group_event.spaces_available')%>
+  <br><%= event.max_local_capacity %> <%= t('events._card_small_group_event.spaces_available')%>
 <% else %>
-  <%= event.max_refugee_capacity %> <%= t('events._card_small_group_event.spaces_available')%>
+  <br><%= event.max_refugee_capacity %> <%= t('events._card_small_group_event.spaces_available')%>
 <% end %>

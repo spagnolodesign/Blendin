@@ -13,8 +13,8 @@ nl:
     index:
       main_title: "What would you like to do today?"
       social_title: "Meet Blenders"
-      work_title: "Help a newcomer find a job"
-      donate_title: "Help the Blendin organization:"
+      work_title: "Help a Newcomer Find a Job"
+      donate_title: "Help the Blendin Organization:"
       events_card_title: "Events"
       events_card_subtitle: "Kom naar unieke evenementen en ontmoet Blenders die geïnteresseerd zijn in een hechte Blendin community."
       talent_teach_card_title: "Talent sharing"
@@ -39,12 +39,12 @@ nl:
     contact: "Contact Us"
     privacy: "Privacy Policy & Terms of Use"
     involvement: "Involvement"
-    meet: "Meet Blenders"
-    teach: "Teach A Talent"
-    learn: "Learn A Talent"
-    share: "Share Your Network"
+    meet: "Events"
+    teach: "Talent Sharing"
+    share: "DoneerJeNetwerk"
     partner: "Become A Partner"
     languages: "Select a language"
+    become: "Wordt Partner"
   pages:
     donate:
       title: "Steun ons en maak een verschil!"
@@ -58,8 +58,10 @@ nl:
       title: "Share your talent on Blendin"
       subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
       info_headline: "De zoektocht van leren is <span class='text-muted'>oneindig...</span>"
-      info_content: "daarom willen jou de kans geven om je talenten en <b>interesses</b> te delen met andere Blendin gebruikers.<br><br>Kan jij veel liedjes spelen op de gitaar?<br>Of een passie voor fotografie?<br>Wat dacht je van leuke en interessante feitjes van de stad waar je in woont?<br><br>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen met onze Blendin community!"
+      info_content: "daarom willen jou de kans geven om je talenten en <b>interesses</b> te delen met andere Blendin gebruikers.<br><br>Kan jij met nieuwkomers Nederlands oefenen?<br>Kan jij veel liedjes spelen op de gitaar?<br>Of een passie voor fotografie?<br>Wat dacht je van leuke en interessante feitjes van de stad waar je in woont?<br><br>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen met onze Blendin community!"
       discover_cta: "Discover new talents - coming soon!"
+      application_cta: "Deel een Skill"
+      learn_cta: "Leer een Nieuwe Skill"
   networks:
     new:
       title: "Share your network"
@@ -480,9 +482,14 @@ nl:
       unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5> <p></p>"
       unsubscribe_button: "Unsubscribe"
     _card_small_group_event:
-      subscribe: "Attend"
-      see_more: "See More"
+      subscribe: "Aanwezig"
+      see_more: "Bekijk Meer"
       spaces_available: "plaatsen beschibaar"
       event_full: "This event is full!"
     _card_my_event:
-      cantattend: "Cannot attend"
+      cantattend: "Afwezig"
+    show:
+      attend_btn: "Aanwezig dit Event"
+      open_event_message: "Deze evenementen zijn voor iedereen.<br> Een kaartje kan in sommige gevallen nodig zijn."
+      attend_small_group_message: "Bedankt voor je interesse in dit evenement, Als je toch niet meer kan, klik dan op de knop “Afwezig” om je RSVP te veranderen, zodat een andere Blender kan deelnemen."
+      whatsapp_message: "Ledereen die aanwezig wilt zijn zullen we toevoegen in een WhatsApp groep."

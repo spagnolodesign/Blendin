@@ -13,8 +13,8 @@ en:
     index:
       main_title: "What would you like to do today?"
       social_title: "Meet Blenders"
-      work_title: "Help a newcomer find a job"
-      donate_title: "Help the Blendin organization:"
+      work_title: "Help a Newcomer Find a Job"
+      donate_title: "Help the Blendin Organization:"
       events_card_title: "Events"
       events_card_subtitle: "Attend unique events and meet Blenders who share your interests and are interested in developing the Blendin community.."
       talent_teach_card_title: "Talent sharing"
@@ -24,7 +24,7 @@ en:
       donate_card_title: "Donate"
       donate_card_subtitle: "Your contributions directly impact Blendin's community outreach and our ability to create opportunities for newcomers and locals alike."
       network_card_title: "Share Your  Network:"
-      network_card_subtitle: "Is your company hiring? Blendin's special matching process has allowed us to help place 50 (?)  newcomers into career opportunities throughout the Netherlands."
+      network_card_subtitle: "Many Newcomers want to get started, but often don’t have the network to find work. Your professional network can be the step towards a suitable job or internship for a Newcomer."
       partner_card_title: "Become a Partner:"
       partner_card_subtitle: "Does your company want to do more to help support the Blendin community? We are open to accepting new collaborations now."
   footer:
@@ -45,6 +45,7 @@ en:
     share: "Share Your Network"
     partner: "Become A Partner"
     languages: "Select a language"
+    become: "Become a partner"
   pages:
     donate:
       title: "Steun ons en maak een verschil!"
@@ -54,9 +55,11 @@ en:
     index:
       title: "Share your talent on Blendin"
       subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
-      info_headline: "The request of learning is <span class='text-muted'>neverending...</span>"
-      info_content: "that’s why we want to give you an opportunity to share <br> your <b>talents</b> and <b>interests</b> to other Blendin users.<br><br>Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
+      info_headline: "The quest of learning is <span class='text-muted'>neverending...</span>"
+      info_content: "that’s why we want to give you an opportunity to share <br> your <b>talents</b> and <b>interests</b> with other Blendin users.<br><br>Can you practice speaking Dutch with Newcomers?<br> Do you know an impressive amount of guitar chords? <br> Or have a love of photography? <br> What about knowing some interesting facts about the city you live in?<br><br>All of these are wonderful talents, and you can share them with our Blendin community!"
       discover_cta: "Discover new talents - coming soon!"
+      application_cta: "Application to teach"
+      learn_cta: "Discover new talents"
   networks:
     new:
       title: "Share your network"
@@ -266,3 +269,8 @@ en:
       event_full: "This event is full!"
     _card_my_event:
       cantattend: "Cannot attend"
+    show:
+      attend_btn: "Attend the event"
+      open_event_message: "These events are open to everyone.<br />A ticket may be required."
+      attend_small_group_message: "Thanks for your interest in this event, If your plans change, simply click the button “Cannot Attend” to change your RSVP and allow another Blender to participate."
+      whatsapp_message: "We will add everyone who wants to be present in a WhatsApp group."

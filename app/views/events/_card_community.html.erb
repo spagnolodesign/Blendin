@@ -6,6 +6,6 @@
     <div class="b-topic-label"><%= event.topic %></div>
     <h2 class="b-title"><%= event.name %></h2>
     <div class="tagline tagline-promo-40"><%= event.date.strftime("%A, %e %b %Y")%> - <%= event.time.strftime("%H:%M")%></div>
-    <div><%= link_to "See more", event_path(event.id) %></div>
+    <div><%= link_to t('events._card_small_group_event.see_more'), event_path(event.id) %></div>
   </div>
 </div>
