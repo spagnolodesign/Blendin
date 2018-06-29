@@ -41,3 +41,13 @@ body{
 .work-section{
   background: #FF70A6;
 }
+.card{
+  border: 0;
+}
+.event-cover-card {
+  height: 100%;
+  background: image-url("talents/share-your-talent-blendin.jpg") center no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
