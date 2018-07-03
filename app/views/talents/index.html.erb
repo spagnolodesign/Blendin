@@ -2,7 +2,9 @@
 
   <section class="jumbotron talent-jumbotron d-flex align-items-end" style="background: linear-gradient(rgba(37, 37, 37, 0), rgb(39, 39, 39)), url(<%= asset_path 'talents/share-your-talent-blendin.jpg' %>) no-repeat top center; background-size:cover; color:#FFF; padding: 6rem 0;">
     <div class="ml-5">
-      <h1 class="jumbotron-heading"><%= t('dashboard.index.talent_teach_card_title') %></h1>
+      <h1 class="jumbotron-heading">
+        <%= t('dashboard.index.talent_teach_card_title') %>
+      </h1>
       <p class="lead"><%= t('dashboard.index.talent_teach_card_subtitle') %></p>
       <div>
         <%= link_to "Get started", new_talent_path, class: "btn btn-primary btn-lg" %>
@@ -16,9 +18,15 @@
       <div class="col-md-7 order-md-2 d-flex align-items-center">
         <div>
           <h2><%= raw t('.info_headline') %></h2>
-          <p class="lead"><%= raw t('.info_content') %></p>
-          <%= link_to t('.application_cta'), new_talent_path, class: "btn btn-outline-primary btn-md mb-5" %>
-          <a href="#" class="btn btn-outline-primary btn-md ml-2 mb-5"><%= t('.learn_cta') %></a>
+          <% if current_user.local? %>
+            <p class="lead"><%= raw t('.info_content_local') %></p>
+            <p class="lead"><%= raw t('.teach_talent_cta_text_local') %> <%= link_to t('.click_here_cta'), new_talent_path, class: "btn btn-outline-primary btn-md" %></p>
+            <p class="lead"><%= raw t('.learn_talent_cta_text_local') %> <a href="#" class="btn btn-outline-primary btn-md"><%= t('.click_here_cta') %></a></p>
+          <% else %>
+            <p class="lead"><%= raw t('.info_content_newcomer') %></p>
+            <p class="lead"><%= raw t('.teach_talent_cta_text_newcomer') %> <%= link_to t('.click_here_cta'), new_talent_path, class: "btn btn-outline-primary btn-md" %></p>
+            <p class="lead"><%= raw t('.learn_talent_cta_text_newcomer') %> <a href="#" class="btn btn-outline-primary btn-md"><%= t('.click_here_cta') %></a></p>
+          <% end %>
         </div>
       </div>
       <div class="col-md-5 order-md-1 mb-5">
