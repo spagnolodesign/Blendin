@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :talents, only: [:index, :new] do
       collection do
         get "learn", to: 'talents#learn'
+        get "all", to: 'talents#all'
       end
     end
 

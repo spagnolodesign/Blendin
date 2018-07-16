@@ -30,7 +30,6 @@ gem 'sidekiq-failures'
 gem 'twilio-ruby'
 gem "figaro"
 gem 'bootstrap', '~> 4.1.1'
-gem 'mailboxer'
 gem 'activeadmin_quill_editor'
 
 group :development, :test do

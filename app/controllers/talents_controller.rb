@@ -9,4 +9,7 @@ class TalentsController < ApplicationController
 
   def learn
   end
+
+  def all
+  end
 end
