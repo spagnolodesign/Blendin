@@ -1,1 +1,18 @@
-<h1></h1>
+<div class="container">
+  <h3 class="my-4 striped-subtitle"><%= t('talents.all.title') %></h3>
+  <div class="row">
+    <% @talents.each do |talent| %>
+      <div class="col-sm-3">
+        <div class="b-card card-talent">
+          <%= link_to talent_path(talent.id) do %>
+            <div class="b-image-cover" style="background-image: url(<%= talent.picture %>)">
+              <%= image_tag talent.user.avatar, class: "talent-avatar"  %>
+            </div>
+          <% end %>
+          <div class="b-topic-label"><%= talent.category %></div>
+          <h2 class="b-title"><%= talent.title %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

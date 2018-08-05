@@ -141,6 +141,8 @@ en:
       username_label: "First and last name"
       greetings_html: "Hi %{username},<br> Before you can meet people through Blendin we need some information. The more you complete your profile the better matches you will find."
       local_label: "Please select an option"
+      im_local: "I'm a local"
+      im_newcomer: "I'm not a local (newcomer)"
       local_true: "I'm a local"
       local_false: "I'm not a local (newcomer)"
       gender_label: "I'am"
@@ -244,7 +246,7 @@ en:
       new:
         email_placeholder: "Email"
         pass_placeholder: "Password"
-        btn_submit: "Sign in"
+        btn_submit: "Log In"
     shared:
       links:
         already_have_an_account: "I already have an account"

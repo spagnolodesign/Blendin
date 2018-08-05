@@ -1,0 +1,28 @@
+<!-- BULLETPROOF BUTTON -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+    <tr>
+        <td align="center" style="padding: 25px 0 0 0;" class="padding-copy">
+            <table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
+                <tr>
+                    <td align="center">
+
+                      Hello <%= @talent.user.name  %>,
+
+                      <%= @user.name %> sent you a message for a talent request:
+                      <br /><br />
+                      <%= @message  %>
+                      <br /><br />
+
+                      <cite>
+                        Please reply direclty to this email to get in touch with <%= @user.name %>
+                      </cite>
+                      <br /><br />
+                      <br /><br />
+                      Blendin Team.
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

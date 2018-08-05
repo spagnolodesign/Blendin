@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
     I18n.locale = :en
   end
 
+  def after_sign_out_path_for(resource_or_scope)
+    'https://www.blendinnow.nl/'
+  end
+
   protected
 
   def configure_permitted_parameters

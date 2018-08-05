@@ -30,9 +30,10 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :talents, only: [:index, :new] do
+    resources :talents, only: [:index, :new, :show] do
       collection do
         get "learn", to: 'talents#learn'
+        post "contact", to: 'talents#contact'
         get "all", to: 'talents#all'
       end
     end

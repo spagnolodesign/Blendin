@@ -1,0 +1,54 @@
+<section class="bg-white position-sticky sticky-top">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-lg-8 talent-header">
+        <%= link_to '< Back', :back %>
+        <h1><%= @talent.title %></h1>
+        <img src="<%= @talent.user.avatar.medium_avatar.url %>" class="avatar talent-avatar-host" width="100" />
+        <p class="font-weight-light mb-1"><%= @talent.category %></p>
+      </div>
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">
+          <%= t('.contact') %> <%= @talent.user.name %>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-lg-7">
+      <p><%= raw @talent.description %></p>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4">
+      <div class="card card-talent-picture">
+        <%= image_tag @talent.picture, class: "rounded", alt: @talent.title %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact <%= @talent.user.name %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= form_for :talents, :url => contact_talents_path, :method => :post do |f| %>
+      <%= hidden_field_tag(:talent_id, @talent.id) %>
+      <div class="modal-body">
+          <%= f.text_area :message, placeholder: "Ask for information and start a conversation over email with the talent host.", required:true, class:"form-control text-area-contact" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= f.submit "Send message", class:"btn btn-primary" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
