@@ -10422,6 +10422,20 @@ body {
 .work-section {
   background: #FF70A6;
 }
+
+/* line 44, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/main.scss */
+.card {
+  border: 0;
+}
+
+/* line 47, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/main.scss */
+.event-cover-card {
+  height: 100%;
+  background: url(/assets/talents/share-your-talent-blendin-7bca7be9d664806ac050e278adfde591925cb88ffd36b430f5c407601bfd2754.jpg) center no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
 /* line 1, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/custom-bootstrap.scss */
 .custom-width-select {
   width: auto;
@@ -10437,7 +10451,7 @@ body {
 /* line 9, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/custom-bootstrap.scss */
 .custom-file-label::after {
   width: 100%;
-  content: "Upload a file from your computer";
+  content: "Upload een foto van jouw computer of telefoon";
   cursor: pointer;
 }
 
@@ -10592,12 +10606,12 @@ body {
     min-height: auto;
   }
 }
-/* line 1, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/footer.scss */
+/* line 1, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/Footer.scss */
 .social-links a {
   text-decoration: none;
   color: #000;
 }
-/* line 4, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/footer.scss */
+/* line 4, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/Footer.scss */
 .social-links a:hover {
   color: #007bff;
 }
@@ -10611,10 +10625,12 @@ body {
 /* line 1, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-card {
   margin-bottom: 25px;
+  position: relative;
 }
 
-/* line 5, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 6, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-image-cover {
+  position: relative;
   margin-top: 0px;
   margin-bottom: 15px;
   padding: 0;
@@ -10629,19 +10645,19 @@ body {
   cursor: pointer;
 }
 
-/* line 20, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 22, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-image-cover:hover {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
   -webkit-transform: translate(0px, -6px) scale(1.01);
   transform: translate(0px, -6px) scale(1.01);
 }
 
-/* line 26, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 28, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-small-image-cover {
   height: 170px;
 }
 
-/* line 30, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 32, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-card-divider {
   height: 1px;
   margin-top: 20px;
@@ -10649,7 +10665,7 @@ body {
   background-color: #eee;
 }
 
-/* line 36, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 38, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-topic-label {
   font-size: 13px;
   font-weight: 500;
@@ -10657,14 +10673,14 @@ body {
   text-transform: uppercase;
 }
 
-/* line 43, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 45, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .b-title {
   margin-top: 0px;
   margin-bottom: 3px;
   font-size: 23px;
 }
 
-/* line 49, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 51, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .event-card {
   border: 1px solid #c7c7c7;
   border-radius: 6px;
@@ -10672,7 +10688,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* line 56, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
+/* line 58, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/components/event_cards.scss */
 .event-normal-card-img {
   width: auto;
   height: 160px;
@@ -10685,6 +10701,46 @@ body {
 /* line 1, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
 .talent-jumbotron {
   height: 75vh;
+}
+
+/* line 5, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
+.talent-avatar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+  right: 15px;
+  border-radius: 50%;
+}
+
+/* line 11, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
+.card-talent .b-image-cover {
+  height: 200px !important;
+}
+
+/* line 14, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
+.card-talent-picture img {
+  width: 100%;
+}
+
+/* line 18, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
+.talent-header {
+  position: relative;
+}
+
+/* line 22, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
+.text-area-contact {
+  min-height: 250px;
+}
+
+/* line 25, /Users/lucaspagnolo/code/lucaspagnolo/Blendin/app/assets/stylesheets/talents.scss */
+.talent-avatar-host {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
