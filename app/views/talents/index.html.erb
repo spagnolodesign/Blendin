@@ -21,11 +21,11 @@
           <% if current_user.local? %>
             <p class="lead"><%= raw t('.info_content_local') %></p>
             <p class="lead"><%= raw t('.teach_talent_cta_text_local') %> <%= link_to t('.click_here_cta'), new_talent_path, class: "btn btn-outline-primary btn-md" %></p>
-            <p class="lead"><%= raw t('.learn_talent_cta_text_local') %> <a href="#" class="btn btn-outline-primary btn-md"><%= t('.click_here_cta') %></a></p>
+            <p class="lead"><%= raw t('.learn_talent_cta_text_local') %> <%= link_to t('.click_here_cta'), all_talents_path, class: "btn btn-outline-primary btn-md" %></p>
           <% else %>
             <p class="lead"><%= raw t('.info_content_newcomer') %></p>
             <p class="lead"><%= raw t('.teach_talent_cta_text_newcomer') %> <%= link_to t('.click_here_cta'), new_talent_path, class: "btn btn-outline-primary btn-md" %></p>
-            <p class="lead"><%= raw t('.learn_talent_cta_text_newcomer') %> <a href="#" class="btn btn-outline-primary btn-md"><%= t('.click_here_cta') %></a></p>
+            <p class="lead"><%= raw t('.learn_talent_cta_text_newcomer') %> <%= link_to t('.click_here_cta'), all_talents_path, class: "btn btn-outline-primary btn-md" %></p>
           <% end %>
         </div>
       </div>
