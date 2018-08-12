@@ -17,7 +17,7 @@
         <div class="d-flex  mb-4">
           <% if current_user.local? %>
             <p class="lead text-center"><b><%= raw t('.teach_talent_cta_text_local') %></b> <br><%= link_to t('.click_here_cta'), new_talent_path, class: "btn btn-outline-primary btn-lg mt-3" %></p><br>
-            <p class="lead text-center"><b><%= raw t('.learn_talent_cta_text_local') %></b> <br><%= link_to t('.click_here_cta'), all_talents_path, class: "btn btn-outline-primary btn-lgmt-3" %></p>
+            <p class="lead text-center"><b><%= raw t('.learn_talent_cta_text_local') %></b> <br><%= link_to t('.click_here_cta'), all_talents_path, class: "btn btn-outline-primary btn-lg mt-3" %></p>
           <% else %>
             <p class="lead text-center"><b><%= raw t('.teach_talent_cta_text_newcomer') %></b> <br><%= link_to t('.click_here_cta'), new_talent_path, class: "btn btn-outline-primary btn-lg mt-3" %></p><br>
             <p class="lead text-center"><b><%= raw t('.learn_talent_cta_text_newcomer') %></b> <br><%= link_to t('.click_here_cta'), all_talents_path, class: "btn btn-outline-primary btn-lg mt-3" %></p>
