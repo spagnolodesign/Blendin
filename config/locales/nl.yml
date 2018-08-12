@@ -24,10 +24,10 @@ nl:
       talent_learn_card_subtitle: "Ontdek een leuke nieuwe skill die je kan leren van een andere Blender."
       donate_card_title: "Doneer"
       donate_card_subtitle: "Elke donatie helpt direct om Blendin’s impact te vergroten en onze community uit te bouwen. Op deze manier kunnen we veel meer kansen creëren voor zowel nieuwkomers als locals."
-      network_card_title: "Doneer Je Netwerk"
+      network_card_title: "DoneerJeNetwerk"
       network_card_subtitle: "Veel nieuwkomers willen graag aan de slag, maar missen vaak het netwerk om werk te vinden. Jouw professionele netwerk kan voor een nieuwkomer het verschil maken richting een passende baan of stage."
-      network_newcomer_card_title: "Request Je Netwerk"
-      network_newcomer_card_subtitle: "Request a network"
+      network_newcomer_card_title: "DoneerJeNetwerk"
+      network_newcomer_card_subtitle: "Ben jij opzoek naar een baan of stage, maar mis je een passend netwerk? Meld je dan nu aan!"
       partner_card_title: "Wordt Partner"
       partner_card_subtitle: "Wil jouw bedrijf meer doen om de Blendin-community te ondersteunen? Wij staan altijd open voor nieuwe samenwerkingen."
       coffe_card_title: "Bakkie doen"
@@ -68,14 +68,15 @@ nl:
     all:
       title: "Page title"
     index:
+      learn_more: "Hoe het werkt"
       title: "Share your talent on Blendin"
       subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
       info_headline: "De zoektocht van leren is <span class='text-muted'>oneindig...</span>"
-      info_content_local: "Wij willen jou de kans geven om jouw talenten en verhalen te delen met nieuwkomers.<br/><br/>Wil jij Nederlands oefenen met een nieuwkomer?<br/>Wil je graag Arabisch leren?<br/>Heb je een passie voor fotografie of koken?<br/>Wat dacht je van leuke en interessante feitjes van de stad waar je in woont?<br/><br/>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen of vragen metaan onze Blendin community!"
+      info_content_local: "Wij willen jou de kans geven om jouw talenten en verhalen te delen met nieuwkomers.<br/><br/>Wil jij Nederlands oefenen met een nieuwkomer?<br/>Wil je graag Arabisch leren?<br/>Heb je een passie voor fotografie of koken?<br/>Wat dacht je van leuke en interessante feitjes van de stad waar je in woont?<br/><br/>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen of vragen met/aan onze Blendin community!"
       info_content_newcomer: "Wij willen jou de kans geven om jouw talenten en verhalen te delen met Nederlandse locals.<br/><br/>Wil jij met iemand Nederlands oefenen?<br/>Kan jij veel liedjes spelen op de gitaar?<br/>Heb je een passie voor fotografie of koken?<br/>Wil je de stad waar je woont beter leren kennen?<br/><br/>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen of vragen met/aan onze Blendin community!"
-      teach_talent_cta_text_local: "Wil jij een nieuwkomer ontmoeten en een talent aanbieden?"
-      learn_talent_cta_text_local: "Wil jij een nieuwkomers ontmoeten en iets van hem/haar leren?"
-      teach_talent_cta_text_newcomer: "Wil jij een nieuwkomer ontmoeten en een talent aanbieden?"
+      teach_talent_cta_text_local: "Wil je een local ontmoeten en een talent aanbieden?"
+      learn_talent_cta_text_local: "Wil jij een nieuwkomer ontmoeten en iets van hem/haar leren?"
+      teach_talent_cta_text_newcomer: "Wil je een local ontmoeten en een talent aanbieden?"
       learn_talent_cta_text_newcomer: "Wil jij een local ontmoeten en iets van hem/haar leren?"
       discover_cta: "Discover new talents - coming soon!"
       application_cta: "Deel een Skill"
@@ -84,7 +85,7 @@ nl:
     new:
       title: "Share your network"
     index:
-      title: "Doneer je Netwerk"
+      title: "DoneerJeNetwerk"
       body: "Wil jij jouw netwerk doneren aan een nieuwkomer, en zo het essentiële duwtje in de rug geven om een leven in Nederland op te bouwen? Doneer dan nu je netwerk via Blendin! Als wij een match vinden nemen we contact met je op."
       step_title: "HOE DOE JE MEE?"
       step_one: "<strong>Stap 1:</strong> Meld je aan als Netwerk Donateur, beschrijf jouw sector, functie en netwerk."
@@ -119,7 +120,7 @@ nl:
         about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
         submit_btn: "Bevestig"
     end_submit:
-      thank_you_message: "Hartelijk bedankt voor je aanmelding! Onze pilot gaat nu van start. <br /><br /> We nemen binnen 5 werkdagen contact met je op om te laten weten of je binnen de pilotfase valt.<br /><br /> Hou je mail daarom goed in de gaten! "
+      thank_you_message: "Heel erg bedankt voor je aanmelding als Netwerk Donateur! <br><br> We gaan je gegevens verwerken. We maken matches met werkzoekende nieuwkomers op basis van sector en locatie. Als we een match hebben gevonden nemen we contact met je op.<br><br>Voor vragen kun je ons bereiken via <a href='mailto:work@blendinnow.nl'>work@blendinnow.nl<a/>.<br><br><br>"
   home:
     index:
       no_match_msg_htm: "We hebben geen passende match gevonden voor jou<br>We zijn momenteel slechts actief in Nederland. Ben je geintereseerd om Blendin te beginnen in jouw land? Stuur ons dan een bericht."
@@ -228,7 +229,7 @@ nl:
       click_here: "Klik dan hier!"
   network_mailer:
     thank_you_email:
-      message: "Heel erg bedankt voor je aanmelding! Onze pilot gaat nu van start. <br /><br /> We nemen binnen 5 werkdagen contact met je op om te laten weten of je binnen de pilotfase valt.<br /><br /> Hou je mail daarom goed in de gaten!"
+      message: "Heel erg bedankt voor je aanmelding als Netwerk Donateur! <br><br> We gaan je gegevens verwerken. We maken matches met werkzoekende nieuwkomers op basis van sector en locatie. Als we een match hebben gevonden nemen we contact met je op.<br><br>Voor vragen kun je ons bereiken via <a href='mailto:work@blendinnow.nl'>work@blendinnow.nl<a/>.<br><br><br>"
   devise:
     confirmations:
       new:
@@ -247,7 +248,7 @@ nl:
       new:
         email_placeholder: "Email"
         pass_placeholder: "Wachtwoord (min 6)"
-        terms_and_conditions: "Ik accepteer bij deze de algemene voorwaarde en privacy policy"
+        terms_and_conditions: "Ik accepteer bij deze de algemene voorwaarde en"
         privacy_policy: "Privacy Policy"
         btn_submit: "Meld aan"
         name_placeholder: "Naam"

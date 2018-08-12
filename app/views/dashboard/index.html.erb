@@ -4,6 +4,14 @@
   <h4 class="mt-5 striped-subtitle"><%= t('.social_title') %></h4>
   <div class="row my-md-4">
     <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= link_to pages_path("coffe"), class:"card shadow-sm dashboard-card-lnk" do %>
+        <div class="card-body">
+          <h4 class="card-title"><i class="fas fa-coffee"></i> <%= t('.coffe_card_title') %></h4>
+          <p class="card-text"><%= t('.coffe_card_subtitle') %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
       <%= link_to talents_path, class:"card shadow-sm dashboard-card-lnk" do %>
         <div class="card-body">
           <h4 class="card-title"><i class="fas fa-diagnoses"></i> <%= t('.talent_teach_card_title') %></h4>
@@ -18,14 +26,6 @@
           <p class="card-text"><%= t('.events_card_subtitle') %></p>
         </div>
       <% end  %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= link_to pages_path("coffe"), class:"card shadow-sm dashboard-card-lnk" do %>
-        <div class="card-body">
-          <h4 class="card-title"><i class="fas fa-coffee"></i> <%= t('.coffe_card_title') %></h4>
-          <p class="card-text"><%= t('.coffe_card_subtitle') %></p>
-        </div>
-      <% end %>
     </div>
   </div>
 
@@ -66,6 +66,7 @@
         </div>
       <% end %>
     </div>
+    <% if current_user.local? %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <%= link_to pages_path("partner"), class:"card shadow-sm dashboard-card-lnk" do %>
         <div class="card-body">
@@ -74,6 +75,7 @@
         </div>
       <% end %>
     </div>
+    <% end %>
   </div>
 
 </div>

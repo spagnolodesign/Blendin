@@ -53,6 +53,7 @@ en:
       cta: "Doneer nu!"
   talents:
     index:
+      learn_more: "Learn more"
       title: "Share your talent on Blendin"
       subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
       info_headline: "The quest of learning is <span class='text-muted'>neverending...</span>"

@@ -3,46 +3,50 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">😄 Welcome on Blendin</h5>
+          <h5 class="modal-title">Welkom bij Blendin</h5>
         </div>
-
           <%= form_for(current_user) do |f| %>
             <div class="modal-body">
-              <p>Before you start we need the following information to join in the Blendin community:</p>
+              <p>Voordat je kan beginnen hebben we de volgende informatie nodig:</p>
               <div class="form-group">
                 <label><%= t('settings.profile_form.address_label') %> <sup>*</sup></label>
                 <%= f.text_field :full_street_address, class:"form-control location-input-form", required: true, placeholder: t('settings.profile_form.address_placeholder') %>
-                <small class="form-text text-muted">We'll never share your address with anyone else.</small>
+                <small class="form-text text-muted">Deze informatie zullen wij niet delen met andere partijen</small>
               </div>
               <div class="form-group">
                 <label><%= t('settings.profile_form.birthday_label') %> <sup>*</sup></label><br />
-                <%= f.date_select :birthday, {start_year: 1960, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class:"form-control custom-select custom-width-select" , required: true } %>
+                <%= f.date_select :birthday, {start_year: 1920, end_year: 2000, :order => [:year], prompt: true}, { class:"form-control custom-select custom-width-select" , required: true } %>
               </div>
               <div class="form-group">
-                <label><%= t('settings.community_form.local_label') %></label>
-                <%= f.select :local, {}, { prompt: "Please select an option" }, { class:"form-control", required: true } do %>
-                  <%= options_for_select([[t('settings.community_form.im_local'), true], [t('settings.community_form.im_newcomer'), false]]) %>
+                <label>Local of nieuwkomer</label><br />
+                <%= f.select :local, {}, { prompt: "Kies een optie" }, { class:"form-control", required: true } do %>
+                  <%= options_for_select([[t('settings.profile_form.im_local'), true], [t('settings.profile_form.im_newcomer'), false]]) %>
                 <% end %>
                 <small class="form-text text-muted"></small>
               </div>
               <div class="form-group">
-                <label>WhatsApp nummer</label>
+                <label>Telefoonnummer</label>
                 <%= f.text_field :phone, required: 'true', class: "form-control", required: true, placeholder: t('settings.profile_form.phone_placeholder') %>
-                <small class="form-text text-muted">Ledereen die aanwezig wilt zijn zullen we toevoegen in een WhatsApp groep.</small>
+                <small class="form-text text-muted">Deze informatie zullen wij niet delen met andere organisaties.</small>
               </div>
               <% if current_user.avatar.file.nil? %>
               <div class="form-group">
-                <label>Your avatar:</label>
+                <label>Upload een foto</label>
                 <p><small><%= t('settings.photo_form.info') %></small></p>
                 <div class="custom-file">
-                  <%= f.file_field :avatar, class: "custom-file-input file-input-js", id: "inputGroupFile01" %>
-                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                  <%= f.file_field :avatar, class: "custom-file-input", id: "inputGroupFile02" %>
+                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                 </div>
               </div>
               <% end %>
+              <div class="checkbox mb-3">
+                <label>
+                  <%= f.check_box :terms_and_conditions, required: true %> <span class="text-muted"><%= t('devise.registrations.new.terms_and_conditions') %> <a href="//www.iubenda.com/privacy-policy/7951305" class="no-brand" title="Privacy Policy" target="_blank"><%= t('devise.registrations.new.privacy_policy') %></a></span>
+                </label>
+              </div>
             </div>
             <div class="modal-footer">
-              <%= f.submit 'Confirm and continue', class: "btn btn-primary"  %>
+              <%= f.submit 'Bevestig', class: "btn btn-primary"  %>
             </div>
           <% end %>
       </div>

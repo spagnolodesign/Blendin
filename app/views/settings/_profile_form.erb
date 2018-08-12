@@ -30,7 +30,7 @@
       <%= t('.birthday_label') %> <sup>*</sup>
     </label>
     <div class="col-lg-9">
-      <%= f.date_select :birthday, {start_year: 1960, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class:"custom-select custom-width-select" , required: true } %>
+      <%= f.date_select :birthday, {start_year: 1920, end_year: 2000, :order => [:year], prompt: true}, { class:"custom-select custom-width-select" , required: true } %>
     </div>
   </div>
 
