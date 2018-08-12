@@ -17,6 +17,8 @@ class TalentsController < ApplicationController
   def contact
     @message = params[:talents][:message]
     @talent = Talent.find(params[:talent_id])
+    @talent.contacted_times += 1
+    @talent.save
     TalentMailer.contact_talent(current_user, @talent, @message).deliver
     redirect_to talent_path(@talent), notice: "We've sent your request the host will contact you directly."
   end

@@ -61,6 +61,12 @@ nl:
     coffe:
       title: "Bakkie doen"
       lead: "Ontmoet een nieuwkomer/local met dezelfde interesses in een café gedurende ongeveer 1 uur. Leer elkaar kennen en spreek Nederlands met elkaar. Dat is wat wij “Bakkie doen” noemen."
+      title-step: "Zo werkt het:"
+      step-1: "1. Beantwoord een paar korte vragen. Klik op de knop “Bakkie doen” en vul het formulier in. Je ontvangt een bevestigingsmail zodra wij het formulier hebben ontvangen."
+      step-2: "2. Matching. Zodra wij een ‘Blend’ hebben gevonden sturen we een e-mail met contactgegevens naar jou en je vriend."
+      step-3: "3. Eerste contact. U neemt binnen 7 dagen contact op met uw vriend en bevestigt de datum, het tijdstip en de plaats van jullie bakkie."
+      step-4: "4. Bakkie. Je spreekt met elkaar af voor ongeveer een uur in een cafe en oefent samen om Nederlands te spreken. Stuur alsjeblieft een foto van jullie afspraak en vertel ons hoe het was!"
+      step-5: "5. Wat gebeurt er dan? We nemen contact met je op om te weten hoe jullie het hebben gehad. Als je het leuk vond, voel je alsjeblieft vrij om elkaar te blijven zien. Je kunt ook inloggen en een nieuwe melding maken om een ​​nieuwe persoon te ontmoeten!"
     request_network:
       title: "Request network"
       lead: "Request network Lead"

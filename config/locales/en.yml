@@ -27,6 +27,8 @@ en:
       network_card_subtitle: "Many Newcomers want to get started, but often don’t have the network to find work. Your professional network can be the step towards a suitable job or internship for a Newcomer."
       partner_card_title: "Become a Partner:"
       partner_card_subtitle: "Does your company want to do more to help support the Blendin community? We are open to accepting new collaborations now."
+      coffe_card_title: "1-hour coffee"
+      coffe_card_subtitle: "Meet a newcomer/local with similar interest in a café for one hour no strings attached"
   footer:
     about: "About Blendin"
     team: "Our team"
@@ -51,6 +53,15 @@ en:
       title: "Steun ons en maak een verschil!"
       lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
       cta: "Doneer nu!"
+    coffe:
+      title: "1-hour coffee"
+      lead: "Meet a newcomer or local with the same interests in a café for about 1 hour. Get to know each other and speak Dutch to each other."
+      title-step: "How it works:"
+      step-1: "1. Answer a few short questions. Click on the 'Submit' button after filling out the form. You will receive a confirmation email as soon as we have received the form."
+      step-2: "2. Matching. As soon as we have found a 'Blend', we will send an email with contact details to you and your friend."
+      step-3: "3. First contact. You contact your friend within 7 days and confirm the date, time and place of your coffee meeting."
+      step-4: "4. Coffee. You meet for about an hour in a cafe and practice speaking Dutch together. Please send a picture of your appointment and tell us what it was like!"
+      step-5: "5. What happens then? We will contact you to hear about your experience. If you liked it, please feel free to keep seeing each other. You can also log in and make a new report to meet a new person!"
   talents:
     index:
       learn_more: "Learn more"
