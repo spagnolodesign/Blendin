@@ -1,0 +1,32 @@
+<% @blend = @blend[:data] %>
+
+
+  <% if @blend.status != "declined" %>
+
+    <% if @blend.status === "pending" %>
+
+      <% if @blend.sender === current_user %>
+          <%= t('.blend_pending_msg_html')%>
+      <% end %>
+
+      <% if @blend.recipient === current_user %>
+        <h3 class="title-message">Personal message from <%= @blend.sender.name %> </h3>
+        <q><%= @blend.message %></q>
+        <div class="clearfix blend-actions center">
+          <%= link_to(t('.blend_accept_btn'), blend_accept_path(@blend.id), class:"Button accept") %>
+          <%= link_to(t('.blend_refuse_btn'), blend_reject_path(@blend.id), class:"Button refuse") %>
+        </div>
+      <% end %>
+
+      <% elsif @blend.status === "accepted" %>
+          <%= t('.blend_accept_msg_html')%>
+          <% if !@user.phone.blank? %>
+            <a href="tel:<%= @user.phone %>"><%= @user.phone %></a>
+          <% else %>
+            <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
+          <% end %>
+      <% end %>
+
+    <% else %>
+        <%= t('.blend_refuse_msg')%><br />
+    <% end %>

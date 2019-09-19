@@ -1,0 +1,91 @@
+<section class="jumbotron main-color-bg" style="">
+  <div class="container">
+    <h1 class="jumbotron-heading"><%= t('.title') %></h1>
+    <p class="lead"><%= t('.lead') %></p>
+    <a class="btn btn-outline-dark btn" href="#form-to-donate" role="button"><%= t('.cta') %></a>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+
+    <!-- <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          What we've done so far with your contribution
+        </div>
+        <img class="card-img-top" src="https://assets.crowdaboutnow.nl/images/campinfo/1022/cover_broodjeintegratie-2560px.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Broodje Integratie</h5>
+          <h6 class="card-subtitle mb-2 text-muted">€25.000 - 100% behaald</h6>
+          <p class="card-text">Verwezenlijk de droom van Alaa Rishan uit Damascus, vul de buiken van duizenden hongerige studenten en festivalgangers en draag bij aan een betere integratie van nieuwkomers in Nederland! Stichting Blendin ...</p>
+          <a target="_blank" href="https://crowdaboutnow.nl/campagnes/broodjeintegratie?_sp=8e59f11e-9284-46bc-aafe-76576a984eb5.1526270528220" class="card-link">See more</a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="col-lg-6" id="form-to-donate">
+      <h2 class="mt-3">Doneren</h2>
+      <form action="https://www.blendinnow.nl/doneren/" class="" method="post">
+        <input type="hidden" name="dmm_recurring_interval" value="one">
+
+        <div class="form-group">
+          <label>Naam</label>
+          <input type="text" name="dmm_name" class="form-control" value="" placeholder="Enter name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Emailadres</label>
+          <input type="text" name="dmm_email" class="form-control" value="" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We zullen nooit uw gegevens delen met.</small>
+        </div>
+
+
+        <div class="form-group">
+          <label>Bedrag</label>
+            <div class="form-row">
+              <div class="col-9">
+                <select id="dmm_dd" class="form-control" onchange="if(this.value!='--'){document.getElementById('dmm_amount').value=this.value;document.getElementById('dmm_amount').style.display = 'none';}else{document.getElementById('dmm_amount').style.display = 'block';}" style="min-width:100%;">
+                  <option value="--">Eigen bedrag invoeren</option>
+                  <option value="5,00">&euro; 5,00</option>
+                  <option value="10,00">&euro; 10,00</option>
+                  <option value="25,00">&euro; 25,00</option>
+                  <option value="50,00">&euro; 50,00</option>
+                  <option value="100,00">&euro; 100,00</option>
+                  <option value="150,00">&euro; 150,00</option>
+                  <option value="200,00">&euro; 200,00</option>
+                </select>
+              </div>
+              <div class="col-3">
+                <input type="text" id="dmm_amount" name="dmm_amount" class="form-control" value="" required>
+              </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <label class="dmm_dd">
+            <input type="radio" name="dmm_method" value="ideal" checked>
+            <img src="https://www.mollie.com/images/payscreen/methods/ideal.png"> iDEAL<br>
+          </label>
+        </div>
+
+        <label id="dmm_permission" style="display:none">
+          <input type="checkbox" name="dmm_permission"> Hierbij machtig ik  om het bovenstaande bedrag periodiek van mijn rekeningnummer af te schrijven.
+        </label>
+
+        <input type="submit" name="dmm_submitted" class="btn btn-block btn-primary btn-lg" value="Doneren">
+
+      </form>
+
+      <script>
+        window.onload=function(){
+            var dmm_dd = document.getElementById('dmm_dd');
+            if(typeof dmm_dd !== "undefined" && dmm_dd.value != '--'){
+                document.getElementById('dmm_amount').value=document.getElementById('dmm_dd').value;
+                document.getElementById('dmm_amount').style.display = 'none';
+            }
+       }
+      </script>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<section class="EditProfile clearfix">
+  <div class="sm-col-6 lg-col-6 mx-auto">
+    <% if @user.full_street_address.nil? %>
+      <h3><%= t('.greetings_html', username: @user.name) %></h3>
+    <% else %>
+      <%= render 'top_nav' %>
+    <% end %>
+
+    <%= form_for(@user, html: {id:'wizard-form-js'}) do |f| %>
+
+      <label class="Label"><%= t('.local_label') %></label>
+
+      <label class="Label CheckBoxRound" data-step="1" <%= t('.introjs_step_1_html') %> >
+        <%= f.radio_button :local, true, class:"css-checkbox", required:true  %>
+        <%= t('.local_true') %>
+      </label>
+
+      <label class="Label CheckBoxRound" data-step="2" <%= t('.introjs_step_2_html') %>>
+        <%= f.radio_button :local, false, class:"css-checkbox", required:true  %>
+        <%= t('.local_false') %>
+      </label>
+
+      <label class="Label"><%= t('.gender_label') %></label>
+
+      <label class="Label CheckBoxRound">
+        <%= f.radio_button :gender, "m", class:"css-checkbox", required:true  %>
+        <%= t('.gender_male') %>
+      </label>
+
+      <label class="Label CheckBoxRound">
+        <%= f.radio_button :gender, "f", class:"css-checkbox", required:true  %>
+        <%= t('.gender_female') %>
+      </label>
+
+      <label class="Label"><%= t('.birthday_label') %></label>
+      <%= f.date_select :birthday, {start_year: 1960, end_year: 2000, :order => [:day, :month, :year], prompt: true}, { class: 'Input Select' , required: true} %>
+
+      <label class="Label"><%= t('.address_label') %></label>
+      <%= f.text_field :full_street_address, class:"Input AddressField", required: true, placeholder: t('.address_placeholder') %>
+
+      <label class="Label"><%= t('.country_label') %></label>
+      <%= f.text_field :country, id:"country-js", class:"Input AddressField", placeholder: t('.country_placeholder') %>
+
+      <label class="Label" data-step="3" <%= t('.introjs_step_3_html')%>><%= t('.interest_label') %></label>
+      <select name="user[tag_list][]" id="taglist-js"  multiple required>
+        <% @user.tag_list.each do |tag| %>
+          <option value="<%= tag %>" selected><%= tag %></option>
+        <% end %>
+      </select>
+      <i><%= t('.interest_helper') %></i>
+
+      <label class="Label"><%= t('.job_label') %></label>
+      <%= f.text_field :job, class: "Input", placeholder:t('.job_placeholder') %>
+      <i><%= t('.job_helper') %> </i>
+
+
+      <label class="Label"><%= t('.phone_label') %></label>
+      <%= f.text_field :phone, required: 'true', class: "Input", required: true, placeholder: t('.phone_placeholder'), 'data-parsley-trigger' => "change",  'data-parsley-type' => "number", 'data-parsley-maxlength' =>"10" %>
+      <i><%= t('.phone_helper') %></i>
+
+      <label class="Label"><%= t('.about_label') %> </label>
+      <%= f.text_area :about, class:"Input" %>
+      <i><%= t('.about_helper') %></i>
+
+      <br>
+
+      <%= f.submit t('.submit_btn'), class:"Button full center", 'data-step'=>'4', 'data-intro'=> t('.introjs_step_4')  %>
+
+    <% end %>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+  <script>
+  $(function () {
+
+    var placesAutocomplete = places({
+      container: document.querySelector('.AddressField'),
+      type: 'city',
+      aroundLatLngViaIP: false,
+      templates: {
+        value: function(suggestion) {
+          return suggestion.name;
+        }
+      }
+    });
+
+    var placesAutocomplete = places({
+      container: document.querySelector('#country-js'),
+      type: 'country',
+      aroundLatLngViaIP: false,
+      templates: {
+        value: function(suggestion) {
+          return suggestion.name;
+        }
+      }
+    });
+
+    $('#wizard-form-js').parsley().on('field:validated', function() {
+    })
+    .on('form:submit', function() {
+      return true;
+    });
+
+    var inputTags = $('#taglist-js');
+    var userTags = '<%= current_user.tag_list %>';
+    var possibleTags = [{value:"Animals"},{value:"Art"},{value:"Basketball"},{value:"Board Games"},{value:"Books"},{value:"Camping"},{value:"Cars"},{value:"Concerts"},{value:"Cooking"},{value:"Cultures"},{value:"Cycling"},{value:"Dancing"},{value:"Drawing"},{value:"Family"},{value:"Finance"},{value:"Football"},{value:"Gardening"},{value:"Geography"},{value:"Guitar"},{value:"Gymnastics"},{value:"Hiking"},{value:"History"},{value:"Ice Skating"},{value:"International relations"},{value:"Languages"},{value:"Law"},{value:"Making music"},{value:"Medicine"},{value:"Movies"},{value:"Music"},{value:"Nature"},{value:"Philosophy"},{value:"Photography"},{value:"Rap"},{value:"Science"},{value:"Shopping"},{value:"Singing"},{value:"Social Science"},{value:"Sports"},{value:"Swimming"},{value:"Theatre"},{value:"Travel"},{value:"Video Games"},{value:"Writing"}];
+
+    var tagChoises = new Choices(inputTags[0],{
+      choices: possibleTags,
+      duplicateItems: false,
+    });
+
+
+  });
+</script>
+
+<% content_for(:after_js) do %>
+  <script>
+    $(function () {
+      // window.initIntroJs('wizard');
+    });
+  </script>
+<% end %>

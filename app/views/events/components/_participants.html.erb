@@ -1,0 +1,30 @@
+<% if !@event.community_events %>
+  <div class="card mb-3">
+    <div class="card-header">
+      Participants
+    </div>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">Locals group:</h6>
+
+      <div class="d-flex justify-content-start">
+        <% event.local_participants.each do |user| %>
+          <span data-toggle="tooltip" data-placement="top" title="<%= user.name %>">
+            <%= image_tag user.avatar.small_avatar, width: 50, height: 50, class: "rounded-circle mr-2" %>
+          </span>
+        <% end %>
+      </div>
+
+      <hr />
+
+      <h6 class="card-subtitle mb-2 text-muted">Newcomers group:</h6>
+
+      <div class="d-flex justify-content-start">
+        <% event.refugee_participants.each do |user| %>
+          <span data-toggle="tooltip" data-placement="top" title="<%= user.name %>">
+            <%= image_tag user.avatar.small_avatar, width: 50, height: 50, class: "rounded-circle mr-2" %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<% if user_signed_in? && @event.is_available_for_user?(current_user) && !current_user.is_participant?(@event)  %>
+  <p class="font-weight-bold mb-2"><%= t('events.actions.areyougoing') %><span class="font-weight-normal"><%= render "events/components/capacity", event: @event %></span></p>
+  <!-- <button class="btn btn-block btn-lg btn-primary confirm-button" type="button" name="button" data-toggle="modal" data-target="#manage_subscriptions" data-value ="<%= @event.id %>"><%=  t('events.actions.attend')%></button> -->
+  <%= link_to t('events.show.attend_btn'), event_participants_path(@event), method: :post, class: "btn btn-block btn-lg btn-primary" %>
+<% elsif @event.community_events %>
+  <div class="alert alert-info" role="alert">
+    <%= raw t('events.show.open_event_message') %>
+  </div>
+<% elsif current_user.is_participant?(@event) %>
+  <div class="alert alert-info" role="alert">
+    <h6 class="alert-heading">Top!</h6>
+    <p class="small-text"><%= t('events.show.attend_small_group_message')  %></p>
+    <a class="unsuscribe-button mt-3" href="#" data-toggle="modal" data-target="#manage_subscriptions" data-value="<%= current_user.partecipation_id(@event) %>"> <%=  t('events._card_my_event.cantattend')%></a>
+  </div>
+<% else %>
+  <%= render "events/components/full_capacity" %>
+<% end %>

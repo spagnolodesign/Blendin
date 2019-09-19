@@ -1,0 +1,40 @@
+.Auth{
+  margin: 1em;
+  min-height: 100vh;
+}
+
+.Auth .Logo{
+  display: block;
+  width: 242px;
+  margin: 0 auto;
+}
+
+.Auth .headline{
+  width: 250px;
+}
+.Auth .actions{
+  margin: 1em 0;
+
+}
+.Auth .Link{
+  font-family:  'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1em;
+  text-align: center;
+  display: block;
+}
+
+.Auth .Link:hover{
+    color: #74ccd1;
+}
+
+.divider{
+  text-align: center;
+  margin: 0.4em 0;
+}
+
+@media only screen and (min-width: 40em) {
+  .Auth{
+    margin: 0;
+  }
+}

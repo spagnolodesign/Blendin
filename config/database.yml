@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: blendin_development
+  pool: 5
+  username: 
+  password:
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: blendin_test
+  pool: 5
+  username: 
+  password:
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: blendin_production
+  pool: 5
+  username: 
+  password:

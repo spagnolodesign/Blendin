@@ -1,0 +1,85 @@
+.DashBoardMainContainer{
+  padding-left: 16px;
+  padding-right: 10px
+}
+
+.DashCardsContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.DashCard{
+  width: 290px;
+}
+
+.DashCardImgContainer{
+  height: 214px;
+  width: 290px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;}
+
+.DashCardImg{
+  border-radius: 6px
+}
+
+.DashCardInfo{
+  text-align: left
+}
+
+.DashCardInfo > h1 {
+  text-decoration-line: none !important;
+  color: black;
+  font-weight: 300;
+  margin-top: 3px;
+  margin-bottom:2px;
+}
+
+.DashUserTag{
+  margin-bottom: 0px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.DashUserJob{
+  margin-top: 2px;
+  font-size: 22px;
+  font-weight: 200;
+  color: #6d6d6d;
+}
+
+
+.DashCardsContainer > a {
+  text-decoration-line: none !important;
+}
+
+.DashCardContainer-title{
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom:3em;
+}
+
+.DashCardContainer-title h1 {
+  font-size: 20px;
+}
+
+.DashCardContainer-title  a {
+  font-size: 20px;
+  text-decoration-line: none;
+  float: right;
+  border-bottom: solid 8px transparent;
+  color: black;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+.DashCardContainer-title  a:hover{
+  border-bottom: solid 8px #77CCCF;
+}
+
+@media only screen and (min-width: 40em) {
+  .DashCardContainer-title h1 {
+    font-size:2em;
+  }
+}

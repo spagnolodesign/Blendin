@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= t('seo.title') %></title>
+
+  <meta name="description" content="<%= t('seo.description') %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:title" content="<%= t('seo.title') %>" />
+  <meta property="og:description" content="<%= t('seo.og_description') %>" />
+  <meta property="og:url" content="https://community.blendinnow.nl" />
+
+  <%= csrf_meta_tags %>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C600&#038;subset=latin-ext&#038;ver=1.0.0' type='text/css' media='all' />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= yield(:header_script) %>
+  <%= yield(:after_js) %>
+</head>
+
+<body>
+  <%= render 'navbar/nav' %>
+  <%= render 'layouts/flash' %>
+  <%= yield %>
+  <%= render 'footer/footer' %>
+  <%= render "shared/complete_profile_modal" %>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<section class="Cards CardsContainer">
+  <div class="sm-col-8 lg-col-8 mx-auto">
+    <% @my_blends.each do |blend| %>
+    <% @link = (blend.sender === current_user) ? blend.recipient : blend.sender %>
+      <%= link_to(user_path(@link), html_options = {class: "link-to-blend-card"}) do %>
+        <div class="flex justify-center items-center flex-wrap">
+            <div class="col-5 lg-col-3">
+              <div class="CardBlend">
+                <%= image_tag blend.sender.avatar.medium_avatar, class: "avatar-card-blend" %>
+                <p><%=  blend.sender.name %></p>
+              </div>
+            </div>
+            <div class="col-2 lg-col-2 center">
+              <%= image_tag("handshake.svg", class: "shake-card-blend") %>
+              <%=  blend.status %>
+            </div>
+            <div class="col-5 lg-col-3">
+              <div class="CardBlend">
+                <%=  image_tag blend.recipient.avatar.medium_avatar, class: "avatar-card-blend" %>
+                <p><%=  blend.recipient.name %></p>
+              </div>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @my_blends.empty? %>
+      <p><%=t('.no_blend_msg') %><%= link_to t('.no_blend_msg_link'), root_url %></p>
+    <% end %>
+  </div>
+</section>

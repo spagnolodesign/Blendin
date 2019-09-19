@@ -1,0 +1,19 @@
+.Wizard{
+  margin:1em 0;
+}
+
+.intro-txt{
+  font-size: 1.2em;
+  margin: 2em 1em;
+}
+
+.Wizard .Button{
+    margin-top: 2em;
+}
+
+@media only screen and (min-width: 40em) {
+  .intro-txt{
+    font-size: 1.5em;
+    margin: 1em 0 2em 0;
+  }
+}

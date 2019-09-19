@@ -1,0 +1,42 @@
+.Header {
+  background: #FFF;
+}
+
+.Header .Logo{
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  background: #FFF url('/assets/blendin-logo-footer.png') no-repeat top left;
+  background-size: 100%;
+  width: 75px;
+  height:75px;
+  margin-left: 40px;
+}
+
+.Header .Logo img{
+  width: 100%;
+}
+
+.lngs{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+@media only screen and (min-width: 64em) {
+  .Blendin-logo{
+    width: 300px;
+  }
+  .Header {
+    margin-bottom: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .Header .Logo{
+    float: left;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 50px;
+    height:50px;
+  }
+}

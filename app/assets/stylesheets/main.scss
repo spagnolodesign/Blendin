@@ -1,0 +1,53 @@
+@import "bootstrap";
+
+body{
+  font-family:  'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.fb-btn{
+  background-color: #3B5998;
+  font-size: 1.2em;
+}
+
+.navbar {
+  background-color: #FFF;
+  .fa-user-circle{
+    font-size: 1.5em;
+  }
+}
+
+.main-color-bg{
+  background-color: #73cbd1;
+}
+
+
+.striped-subtitle{
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  display: inline-block;
+  color: #5E5757;
+  font-weight: 700;
+  border-bottom: 3px solid #ffc107;
+  box-shadow: inset 0 -8px 0 #ffc107;
+}
+
+.small-text{
+  font-size: 0.8em;
+}
+.events-section{
+  background: #74CCD0;
+}
+.work-section{
+  background: #FF70A6;
+}
+.card{
+  border: 0;
+}
+.event-cover-card {
+  height: 100%;
+  background: image-url("talents/share-your-talent-blendin.jpg") center no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}

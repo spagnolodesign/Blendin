@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-05-17 11:07:57
+  name: MyString
+  description: MyText
+  location: MyString
+  latitude: 1.5
+  longitude: 1.5
+  max_refugee_capacity: 1
+  max_local_capacity: 1
+  photo: MyString
+
+two:
+  date: 2018-05-17 11:07:57
+  name: MyString
+  description: MyText
+  location: MyString
+  latitude: 1.5
+  longitude: 1.5
+  max_refugee_capacity: 1
+  max_local_capacity: 1
+  photo: MyString

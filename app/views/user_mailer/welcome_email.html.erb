@@ -1,0 +1,56 @@
+<!-- ONE COLUMN SECTION -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 10px 15px 40px 15px;" class="section-padding">
+            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                  <h2><%= t('.greetings', username: @user.name) %></h2>
+                                  <p><%= t('.msg_html') %></p>
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <p style="margin: 0;padding:10px 20px;font-size: 5rem;position: relative;/* top: 21px; */margin-bottom: 0px;color: #71c3c7;">
+                                          <%= image_tag "smile_emoji.png", style: 'max-width: unset'%>
+                                        </p>
+                                      </td>
+                                      <td align="left">
+                                        <strong style="color: #333333;">
+                                          <%= t('.match_msg_html') %>
+                                        <%= link_to t('.match_link'), root_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p style="margin: 0;padding:10px 20px;font-size: 5rem;position: relative;/* top: 21px; */margin-bottom: 0px;color: #71c3c7;">
+                                          <%= image_tag "camera_emoji.png", style: 'max-width: unset' %>
+                                        </p>
+                                      </td>
+                                      <td align="left">
+                                        <strong style="color: #333333;">
+                                          <%= t('.upload_msg_html') %>
+                                        <%= link_to t('.upload_link'), upload_photo_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p style="margin: 0;padding:10px 20px;font-size: 5rem;position: relative;/* top: 21px; */margin-bottom: 0px;color: #71c3c7;">
+                                          <%= image_tag "check_emoji.png", style: 'max-width: unset' %>
+                                        </p>
+                                      </td>
+                                      <td align="left">
+                                        <strong style="color: #333333;">
+                                          <%= t('.profile_msg_html') %>
+                                        <%= link_to t('.profile_link'), wizard_url, {style: 'color: #74CCD1; text-decoration: none;'} %>
+                                      </td>
+                                    </tr>
+                                  </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>

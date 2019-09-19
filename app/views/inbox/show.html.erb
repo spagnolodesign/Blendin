@@ -1,0 +1,12 @@
+<%= form_for :message, :url => reply_inbox_url(@conversation) do |f| %>
+  <%= f.label :body %>:
+  <%= f.text_field :body %>
+  <%= f.submit "Reply" %>
+<% end %>
+
+<br />
+
+
+<% @receipts.order(updated_at: :desc).each_with_index do |receipt, i| %>
+  <p><%= receipt.message.sender.name %>: <%= receipt.message.body %></p>
+<% end %>

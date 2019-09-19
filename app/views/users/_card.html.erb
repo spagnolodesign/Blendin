@@ -1,0 +1,10 @@
+<%= link_to user do %>
+  <div  class="CardWrap">
+    <div class="Card">
+      <div class="CardBg" style="background-image:url(<%= user.avatar.medium_avatar  %>)"></div>
+      <div class="CardInfo flex items-end">
+        <h1><%= user.name %></h1>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,519 @@
+nl:
+  headline: "Where people and cultures meet"
+  seo:
+    title: "Blendin | where people and cultures meet "
+    description: "Something"
+    og_description: "Blendin is an online platform that connects newcomers (refugees) to Dutch locals. We see a gap between newcomers and locals and we have one mission, closing this gap by arranging meet ups between newcomers and locals. Join in the community now!"
+  navbar:
+    nav:
+      community_link: "Community"
+      my_blends_link: "Mijn blends"
+      settings_link: "Instellingen"
+  dashboard:
+    index:
+      main_title: "Wat wil je vandaag doen?"
+      social_title: "Ontmoet andere Blenders"
+      work_title: "Ondersteun een nieuwkomer richting werk"
+      work_title_newcomer: "Vraag een Netwerkverbinding aan"
+      donate_title: "Support Stichting Blendin"
+      events_card_title: "Agenda"
+      events_card_subtitle: "Kom naar unieke evenementen en ontmoet Blenders die geïnteresseerd zijn in een hechte Blendin community."
+      talent_teach_card_title: "Deel Talenten"
+      talent_teach_card_subtitle: "Ontmoet andere Blenders en deel verhalen en talenten."
+      talent_learn_card_title: "Leer een nieuwe skill"
+      talent_learn_card_subtitle: "Ontdek een leuke nieuwe skill die je kan leren van een andere Blender."
+      donate_card_title: "Doneer"
+      donate_card_subtitle: "Elke donatie helpt direct om Blendin’s impact te vergroten en onze community uit te bouwen. Op deze manier kunnen we veel meer kansen creëren voor zowel nieuwkomers als locals."
+      network_card_title: "DoneerJeNetwerk"
+      network_card_subtitle: "Veel nieuwkomers willen graag aan de slag, maar missen vaak het netwerk om werk te vinden. Jouw professionele netwerk kan voor een nieuwkomer het verschil maken richting een passende baan of stage."
+      network_newcomer_card_title: "DoneerJeNetwerk"
+      network_newcomer_card_subtitle: "Ben jij opzoek naar een baan of stage, maar mis je een passend netwerk? Meld je dan nu aan!"
+      partner_card_title: "Wordt Partner"
+      partner_card_subtitle: "Wil jouw bedrijf meer doen om de Blendin-community te ondersteunen? Wij staan altijd open voor nieuwe samenwerkingen."
+      coffe_card_title: "Bakkie doen"
+      coffe_card_subtitle: "Ontmoet een nieuwkomer/local met dezelfde interesses in een café gedurende ongeveer 1 uur."
+  footer:
+    about: "Over Blendin"
+    team: "Ons team"
+    mission: "Mission Statement"
+    news: "Nieuws"
+    gallery: "Gallerij"
+    work: "Hoe het werkt"
+    donate: "Doneren"
+    support: "Support"
+    contact: "Contact"
+    privacy: "Privacy Policy & Terms of Use"
+    involvement: "Doe mee"
+    meet: "Agenda"
+    teach: "Deel Talenten"
+    share: "DoneerJeNetwerk"
+    partner: "Become A Partner"
+    languages: "Select a language"
+    become: "Wordt Partner"
+  pages:
+    donate:
+      title: "Steun ons en maak een verschil!"
+      lead: "Voor zowel nieuwkomers als Nederlanders is het van groot belang dat de kloof tussen deze twee groepen gedicht gaat worden. Met hulp van een grote groep mensen zijn we al druk bezig om onze doelen te verwezenlijken. Dank is groot!"
+      cta: "Doneer nu!"
+    partner:
+      title: "Become a partner"
+      lead: "Wij waarderen jouw interesse om een samenwerkingspartner te worden. Samen kunnen we nieuwkomers welkom heten in onze samenleving, en met hen de aspecten delen die dit land een schatrijke thuisbasis maken. Doe mee, en creëer een vereende wereld."
+    coffe:
+      title: "Bakkie doen"
+      lead: "Ontmoet een nieuwkomer/local met dezelfde interesses in een café gedurende ongeveer 1 uur. Leer elkaar kennen en spreek Nederlands met elkaar. Dat is wat wij “Bakkie doen” noemen."
+      title-step: "Zo werkt het:"
+      step-1: "1. Beantwoord een paar korte vragen. Klik op de knop “Bakkie doen” en vul het formulier in. Je ontvangt een bevestigingsmail zodra wij het formulier hebben ontvangen."
+      step-2: "2. Matching. Zodra wij een ‘Blend’ hebben gevonden sturen we een e-mail met contactgegevens naar jou en je vriend."
+      step-3: "3. Eerste contact. U neemt binnen 7 dagen contact op met uw vriend en bevestigt de datum, het tijdstip en de plaats van jullie bakkie."
+      step-4: "4. Bakkie. Je spreekt met elkaar af voor ongeveer een uur in een cafe en oefent samen om Nederlands te spreken. Stuur alsjeblieft een foto van jullie afspraak en vertel ons hoe het was!"
+      step-5: "5. Wat gebeurt er dan? We nemen contact met je op om te weten hoe jullie het hebben gehad. Als je het leuk vond, voel je alsjeblieft vrij om elkaar te blijven zien. Je kunt ook inloggen en een nieuwe melding maken om een ​​nieuwe persoon te ontmoeten!"
+    request_network:
+      title: "Request network"
+      lead: "Request network Lead"
+  talents:
+    all:
+      title: "Page title"
+    index:
+      learn_more: "Hoe het werkt"
+      title: "Share your talent on Blendin"
+      subtitle: "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+      info_headline: "De zoektocht van leren is <span class='text-muted'>oneindig...</span>"
+      info_content_local: "Wij willen jou de kans geven om jouw talenten en verhalen te delen met nieuwkomers.<br/><br/>Wil jij Nederlands oefenen met een nieuwkomer?<br/>Wil je graag Arabisch leren?<br/>Heb je een passie voor fotografie of koken?<br/>Wat dacht je van leuke en interessante feitjes van de stad waar je in woont?<br/><br/>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen of vragen met/aan onze Blendin community!"
+      info_content_newcomer: "Wij willen jou de kans geven om jouw talenten en verhalen te delen met Nederlandse locals.<br/><br/>Wil jij met iemand Nederlands oefenen?<br/>Kan jij veel liedjes spelen op de gitaar?<br/>Heb je een passie voor fotografie of koken?<br/>Wil je de stad waar je woont beter leren kennen?<br/><br/>Deze simpele dingen zijn allemaal bijzondere talenten voor iemand anders en je kan ze delen of vragen met/aan onze Blendin community!"
+      teach_talent_cta_text_local: "Wil je een local ontmoeten en een talent aanbieden?"
+      learn_talent_cta_text_local: "Wil jij een nieuwkomer ontmoeten en iets van hem/haar leren?"
+      teach_talent_cta_text_newcomer: "Wil je een local ontmoeten en een talent aanbieden?"
+      learn_talent_cta_text_newcomer: "Wil jij een local ontmoeten en iets van hem/haar leren?"
+      discover_cta: "Discover new talents - coming soon!"
+      application_cta: "Deel een Skill"
+      click_here_cta: "Klik hier"
+  networks:
+    new:
+      title: "Share your network"
+    index:
+      title: "DoneerJeNetwerk"
+      body: "Wil jij jouw netwerk doneren aan een nieuwkomer, en zo het essentiële duwtje in de rug geven om een leven in Nederland op te bouwen? Doneer dan nu je netwerk via Blendin! Als wij een match vinden nemen we contact met je op."
+      step_title: "HOE DOE JE MEE?"
+      step_one: "<strong>Stap 1:</strong> Meld je aan als Netwerk Donateur, beschrijf jouw sector, functie en netwerk."
+      step_two: "<strong>Stap 2:</strong> Als een nieuwkomer zich aanmeldt die op zoek is naar een baan die aansluit op jouw netwerk, dan nemen we contact met je op en matchen we jullie."
+      step_three: "<strong>Stap 3:</strong> Spreek af en ga samen in gesprek over ambities, ervaringen en toekomstdromen."
+      step_four: "<strong>Stap 4:</strong> Ga binnen je netwerk op zoek naar nuttige contacten voor de nieuwkomer, regel koffie afspraken, werkbezoeken en sollicitaties."
+      step_five: "<strong>Stap 5:</strong> De nieuwkomer gaat vervolgens koffie drinken met jouw contacten, op werkbezoek of sollicitatie. Zo vergroten we diens netwerk en daarmee de kans op werk!"
+      action: "Doe mee & doneer je netwerk!"
+    form:
+        fullname: "Naam en achternaam"
+        fullname_placeholder: ""
+        sector: "Beschrijf jouw sector en functie"
+        sector_placeholder: ""
+        network: "In welke andere sectoren heb je nog meer een breed netwerk?"
+        network_placeholder: ""
+        email: "Email"
+        email_placeholder: "email@gmail.com"
+        city: "Plaats / regio van jouw werk"
+        city_placeholder: "Bijv. Den Haag"
+        residence: "Waar woon je?"
+        residence_placeholder: "Bijv. Amsterdam"
+        experience: "Jaren werkervaring"
+        reference: "Hoe kom je bij DoneerJeNetwerk terecht?"
+        gender_label: "Selecteer een optie"
+        gender_male: "Ik ben een man"
+        gender_female: "Ik ben een vrouw"
+        birthday_label: "Geboorte datum"
+        phone_label: "Telefoon nummer"
+        phone_placeholder: "Bijv. 0612345678"
+        phone_helper: "Dit nummer is pas zichtbaar voor andere gebruikers als je blend verzoek geaccepteerd wordt of jij je verzoek accepteerd."
+        about_label: "Vertel meer over jezelf"
+        about_helper: "(Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten.)"
+        submit_btn: "Bevestig"
+    end_submit:
+      thank_you_message: "Heel erg bedankt voor je aanmelding als Netwerk Donateur! <br><br> We gaan je gegevens verwerken. We maken matches met werkzoekende nieuwkomers op basis van sector en locatie. Als we een match hebben gevonden nemen we contact met je op.<br><br>Voor vragen kun je ons bereiken via <a href='mailto:work@blendinnow.nl'>work@blendinnow.nl<a/>.<br><br><br>"
+  home:
+    index:
+      no_match_msg_htm: "We hebben geen passende match gevonden voor jou<br>We zijn momenteel slechts actief in Nederland. Ben je geintereseerd om Blendin te beginnen in jouw land? Stuur ons dan een bericht."
+      prev_link: "< 🚶 Prev'"
+      next_link: "Next 🤔 >"
+      introjs_step_1_html: data-intro="De bovenste profielen komen het meest overeen met jouw profiel op basis van gelijke interesses, woonplaats en leeftijd. Klik op een foto om meer informatie over iemand te zien!"
+  blends:
+    index:
+      no_blend_msg: "Je hebt nog geen Blends. Nodig mensen uit om te ontmoeten!"
+      no_blend_msg_link: "Hier"
+    actions:
+      blend_pending_msg_html: "Je Blend verzoek is gestuurd. Nu is het wachten op een reactie 🕒.<br />In de tussentijd willen we je bedanken voor het samen mooier maken van onze wereld."
+      blend_accept_btn: "Accepteer"
+      blend_refuse_btn: "Weigeren"
+      blend_accept_msg_html: "Super🎉! Dat is een goede instelling. <br> Stuur me een bericht op dit nummer zodat we een afspraak kunnen maken:</br>"
+      blend_refuse_msg: "Blend geweigerd😞. Maak je geen zorgen we hebben meer dan genoeg andere Blenders op het platform!"
+  users:
+    show:
+      profile_username: "Hey, mijn naam is %{username}!"
+      profile_age: "%{age} jaar oud."
+      profile_education: "Mijn studie:"
+      profile_address: "Stad/ dorp:"
+      profile_interest: "Mijn interesses:"
+      profile_study: "Studie/ werk ervaring:"
+      profile_about: "Wat meer over mij:"
+      blend_txt: "Zullen we afspreken?"
+      blend_btn: "Blend met %{username}"
+      blend_message_html: "`Stel jezelf voor aan <b>%{username}</b> en vraag om een keer te Blenden."
+      blend_message_placeholder: "😉 Hallo, mijn naam is ..."
+      blend_message_btn: "Stuur bericht"
+      introjs_step_1_html: data-intro="Wil je met hem/haar afspreken? Klik dan hier en stuur een Blend verzoek. Als je verzoek wordt geaccepteerd krijgen jullie elkaars telefoon nummers en kunnen jullie elkaar ontmoeten."
+  settings:
+    profile_form:
+      username_label: "First and last name"
+      greetings_html: "Hoi %{username},<br> Voordat je mensen kunt ontmoeten op Blendin hebben we wat informatie nodig. Een uitgebreid profiel helpt je bij het vinden van goede matches."
+      local_label: "Selecteer een optie"
+      gender_label: "Selecteer een optie"
+      gender_male: "Ik ben een man"
+      gender_female: "Ik ben een vrouw"
+      birthday_label: "Geboortedatum"
+      address_label: "Waar woon je?"
+      address_placeholder: "Bijv. Amsterdam"
+      country_label: "Land van herkomst"
+      country_placeholder: "Bijv. Syrie"
+      interest_label: "Kies jouw interesses uit deze lijst"
+      interest_helper: "(Kies minstens 3 interesses. Hoe meer hoe beter! )"
+      job_label: "Studie- en/of werkervaring"
+      job_placeholder: "Bijv. auto monteur of advocaat"
+      job_helper: "(Dit kan dus ook een baan van vroeger zijn.)"
+      phone_label: "Telefoonnummer"
+      phone_placeholder: "Bijv. 0612345678"
+      about_label: "Vertel meer over jezelf 💬"
+      about_helper: "Dit is niet verplicht, maar helpt je bij het vinden van nieuwe contacten."
+      phone_helper: "We zullen nooit uw gegevens delen met andere."
+      submit_btn: "Bevestig en ga door"
+      introjs_step_1_html: data-intro="Kies op ‘Local’ als je je thuis voelt in Nederland en op zoek bent naar contact met mensen die nieuw zijn in Nederland."
+      introjs_step_2_html: data-intro="Kies hier ‘nieuwkomer’ als je niet opgegroeid bent in Nederland en op zoek ben naar contact met Nederlanders."
+      introjs_step_3_html: data-intro="Geef hier zo veel mogelijk interesses aan! Ons systeem zal daarop matches selecteren."
+      introjs_step_4: "Bevestigen"
+      info: "Lorem ipsum dolorem sit amet."
+      local_label: "Selecteer een optie"
+      im_local: "Ik ben een local"
+      im_newcomer: "Ik ben een nieuwkomer"
+    navigation:
+      profile: "Profiel"
+      photo: "Foto"
+      settings: "Instellingen"
+    photo_form:
+      label: "Upload een foto van jouw computer of telefoon"
+      btn_upload: "Next"
+      error: "Bestand niet ondersteund! Upload een van de volgende bestandformaties: png, jpeg, jpg."
+      info: ""
+  layouts:
+    mailer:
+      footer: "Verstuurd door"
+  user_mailer:
+    welcome_email:
+      greetings: "Welkom %{username},"
+      msg_html: "Jouw account is aangemaakt - in contact komen met locals/ nieukomers is nog nooit zo makkelijk geweest.</p>
+      <p><strong>Hier zijn drie stappen die de kans op het vinden van een passende Blend het grootst maakt:</strong>"
+      match_msg_html: "Vind jouw match </strong><br> Blend met nieuwkomers/ locals van dezelfde leeftijd en met dezelfde intersses."
+      match_link: "Nu gaat het beginnen!"
+      upload_msg_html: "Upload een profiel</strong><br> Maak je profiel zo persoonlijk mogelijk zodat mensen je herkennen."
+      upload_link: "Upload foto"
+      profile_msg_html: "Pas je profiel aan </strong><br> Beschrijf jouw persoonlijke interesses, werk ervaring en contact informatie."
+      profile_link: "Maak het compleet!"
+  blend_mailer:
+    blend_accepted_email:
+      main_msg: "%{sender}, jouw Blend verzoek is geaccepteerd!"
+      secundary_msg: "Kom in contact met %{recipient} and start 'Blending'."
+      phone_msg: "Super! Dat is een goede instelling. Stuur me een bericht op dit nummer zodat we een afspraak kunnen maken:"
+      email_msg: "Super! Dat is een goede instelling. Stuur me een bericht op dit nummer zodat we een afspraak kunnen maken:"
+      btn: "Zie volledig profiel"
+    blend_rejected_email:
+      main_msg: "%{sender}, sorry..."
+      secundary_msg: "Helaas is jouw Blend verzoek geweigerd, maar maak je niet druk. We hebben genoeg andere die wachten op jouw verzoek!"
+      btn: "Zie meer nieuwkomers/ locals"
+    blend_request_email:
+      main_msg: "Hi %{recipient}"
+      secundary_msg: "je hebt een nieuw Blend verzoek! Ben je benieuwd wie dit is?"
+      profile_msg_start: "Kijk naar mijn "
+      profile_link: "Go to profiel"
+      profile_msg_end: "voor meer informatie."
+      btn_accept: "Accepteer"
+      btn_refuse: "Weigeren"
+      click_here: "Klik dan hier!"
+  network_mailer:
+    thank_you_email:
+      message: "Heel erg bedankt voor je aanmelding als Netwerk Donateur! <br><br> We gaan je gegevens verwerken. We maken matches met werkzoekende nieuwkomers op basis van sector en locatie. Als we een match hebben gevonden nemen we contact met je op.<br><br>Voor vragen kun je ons bereiken via <a href='mailto:work@blendinnow.nl'>work@blendinnow.nl<a/>.<br><br><br>"
+  devise:
+    confirmations:
+      new:
+        header: "Stuur confirmatie instructies nogmaals"
+    passwords:
+      new:
+        header: "Wachtwoord vergeten?"
+        btn_submit: "Stuur reset link"
+        email_placeholder: "Vul je email adres in"
+      edit:
+        header: "Wijzig je wachtwoord"
+        pass_placeholder: "Vul je nieuwe wachtwoord in"
+        pass_conf_placeholder: "Bevestig het nieuwe wachtwoord"
+        btn_submit: "Verander mijn wachtwoord"
+    registrations:
+      new:
+        email_placeholder: "Email"
+        pass_placeholder: "Wachtwoord (min 6)"
+        terms_and_conditions: "Ik accepteer bij deze de algemene voorwaarde en"
+        privacy_policy: "Privacy Policy"
+        btn_submit: "Meld aan"
+        name_placeholder: "Naam"
+      edit:
+        form_email: "Email"
+        confirmation_msg: "Currently waiting confirmation for: %{email}."
+        form_fulln_name: "Volledige naam"
+        form_current_pass_html: "Huidig wachtwoord </label> <i>(we hebben je huidige wachtwoord nodig om de verandering te bevestigen)</i>"
+        btn_submit: "Update"
+        cancel_account_msg: "Unhappy? Verwijder mijn account."
+        cancel_account_btn: "Verwijder mijn account"
+        cancel_account_confirmation: "Weet je het zeker?"
+    sessions:
+      new:
+        email_placeholder: "Email"
+        pass_placeholder: "Wachtwoord"
+        btn_submit: "Meld aan"
+    shared:
+      links:
+        already_have_an_account: "Ik heb al een account"
+        register: "Registreer"
+        forgot_pass: "Wachtwoord vergeten?"
+        didnt_receive_confirmation: "Heb je geen bevestigingsinstructies ontvangen?"
+        didnt_receive_unlock_confirmation: "Heb je geen unlock instructies ontvangen?"
+        sign_in_with_provider: " Meld je aan met %{provider}"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Validatie mislukt: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Kan item niet verwijderen omdat %{record} afhankelijk is
+          has_many: Kan item niet verwijderen omdat afhankelijke %{record} bestaan
+  date:
+    abbr_day_names:
+    - zo
+    - ma
+    - di
+    - wo
+    - do
+    - vr
+    - za
+    abbr_month_names:
+    -
+    - jan
+    - feb
+    - mrt
+    - apr
+    - mei
+    - jun
+    - jul
+    - aug
+    - sep
+    - okt
+    - nov
+    - dec
+    day_names:
+    - zondag
+    - maandag
+    - dinsdag
+    - woensdag
+    - donderdag
+    - vrijdag
+    - zaterdag
+    formats:
+      default: "%d-%m-%Y"
+      long: "%e %B %Y"
+      short: "%e %b"
+    month_names:
+    -
+    - januari
+    - februari
+    - maart
+    - april
+    - mei
+    - juni
+    - juli
+    - augustus
+    - september
+    - oktober
+    - november
+    - december
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: ongeveer een uur
+        other: ongeveer %{count} uur
+      about_x_months:
+        one: ongeveer een maand
+        other: ongeveer %{count} maanden
+      about_x_years:
+        one: ongeveer een jaar
+        other: ongeveer %{count} jaar
+      almost_x_years:
+        one: bijna een jaar
+        other: bijna %{count} jaar
+      half_a_minute: een halve minuut
+      less_than_x_minutes:
+        one: minder dan een minuut
+        other: minder dan %{count} minuten
+      less_than_x_seconds:
+        one: minder dan een seconde
+        other: minder dan %{count} seconden
+      over_x_years:
+        one: meer dan een jaar
+        other: meer dan %{count} jaar
+      x_days:
+        one: 1 dag
+        other: "%{count} dagen"
+      x_minutes:
+        one: 1 minuut
+        other: "%{count} minuten"
+      x_months:
+        one: 1 maand
+        other: "%{count} maanden"
+      x_years:
+        one: 1 jaar
+        other: "%{count} jaar"
+      x_seconds:
+        one: 1 seconde
+        other: "%{count} seconden"
+    prompts:
+      day: dag
+      hour: uur
+      minute: minuut
+      month: maand
+      second: seconde
+      year: jaar
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: moet worden geaccepteerd
+      blank: moet opgegeven zijn
+      present: moet leeg zijn
+      confirmation: komt niet overeen met %{attribute}
+      empty: moet opgegeven zijn
+      equal_to: moet gelijk zijn aan %{count}
+      even: moet even zijn
+      exclusion: is gereserveerd
+      greater_than: moet groter zijn dan %{count}
+      greater_than_or_equal_to: moet groter dan of gelijk zijn aan %{count}
+      inclusion: is niet in de lijst opgenomen
+      invalid: is ongeldig
+      less_than: moet minder zijn dan %{count}
+      less_than_or_equal_to: moet minder dan of gelijk zijn aan %{count}
+      model_invalid: "Validatie mislukt: %{errors}"
+      not_a_number: is geen getal
+      not_an_integer: moet een geheel getal zijn
+      odd: moet oneven zijn
+      required: moet bestaan
+      taken: is al in gebruik
+      too_long:
+        one: is te lang (maximaal %{count} teken)
+        other: is te lang (maximaal %{count} tekens)
+      too_short:
+        one: is te kort (minimaal %{count} teken)
+        other: is te kort (minimaal %{count} tekens)
+      wrong_length:
+        one: heeft onjuiste lengte (moet 1 teken lang zijn)
+        other: heeft onjuiste lengte (moet %{count} tekens lang zijn)
+      other_than: moet anders zijn dan %{count}
+    template:
+      body: 'Er zijn problemen met de volgende velden:'
+      header:
+        one: "%{model} niet opgeslagen: 1 fout gevonden"
+        other: "%{model} niet opgeslagen: %{count} fouten gevonden"
+  helpers:
+    select:
+      prompt: Maak een keuze
+    submit:
+      create: "%{model} toevoegen"
+      submit: "%{model} opslaan"
+      update: "%{model} bijwerken"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 2
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: miljard
+          million: miljoen
+          quadrillion: biljard
+          thousand: duizend
+          trillion: biljoen
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: byte
+            other: bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " en "
+      two_words_connector: " en "
+      words_connector: ", "
+  time:
+    am: "'s ochtends"
+    formats:
+      default: "%a %d %b %Y %H:%M:%S %Z"
+      long: "%d %B %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: "'s middags"
+  events:
+    actions:
+      attend: "Kom naar dit event"
+      areyougoing: "Ben je erbij?"
+    index:
+      my_next_events: "Evenementen waar ik bij ben"
+      small_group: "Kleine groepsevenementen"
+      small_description: "Deze events zijn gelimiteerd tot 10 Blenders. Klik op “Aanwezig” om een plekje te reserveren."
+      community: "Community evenementen"
+      community_description: "Deze evenementen zijn voor iedereen. Een kaartje kan in sommige gevallen nodig zijn."
+      subscribe_modal: "<h5>Top! Thanks for your interest in this event. </h5><br/><p>By click on partecipate you will reserve a place for this event! <br/>If your plans change, simply click the button 'Cannot Attend' to change your RSVP and allow another Blender to partecipate.</p>"
+      subscribe_button: "Subscribe"
+      unsubscribe_modal: "<h5>Are you sure you want unsubscribe?</h5> <p></p>"
+      unsubscribe_button: "Unsubscribe"
+    _card_small_group_event:
+      subscribe: "Aanwezig"
+      see_more: "Bekijk Meer"
+      spaces_available: "plaatsen beschibaar"
+      event_full: "This event is full!"
+    _card_my_event:
+      cantattend: "Afwezig"
+    show:
+      attend_btn: "Aanwezig dit Event"
+      open_event_message: "Deze evenementen zijn voor iedereen.<br> Een kaartje kan in sommige gevallen nodig zijn."
+      attend_small_group_message: "Bedankt voor je interesse in dit evenement, Als je toch niet meer kan, klik dan op de knop “Afwezig” om je RSVP te veranderen, zodat een andere Blender kan deelnemen."
+      whatsapp_message: "ledereen die aanwezig wilt zijn zullen we toevoegen in een WhatsApp groep."

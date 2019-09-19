@@ -1,0 +1,78 @@
+<!-- ONE COLUMN SECTION -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 70px 15px 70px 15px;" class="section-padding">
+            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <!-- HERO IMAGE -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                             <tr>
+                                                  <td class="padding-copy">
+                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                          <tr>
+                                                              <td>
+                                                                 <%= image_tag(@recipient.avatar, size: "200x200", class:"img-max", border:0, style:"display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 200px; height: 200px; margin:0 auto;")%>
+                                                              </td>
+                                                            </tr>
+                                                        </table>
+                                                  </td>
+                                              </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- COPY -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy"><%= t('.main_msg', sender: @sender.username) %></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy"><%= t('.secundary_msg', recipient: @recipient.username) %></td>
+                                        </tr>
+                                        <tr>
+                                          <% if !@recipient.phone.nil? %>
+                                            <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">
+                                              <%= t('.phone_msg') %> <%= @recipient.phone %>
+                                            </td>
+                                          <% else %>
+                                            <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">
+                                              <%= t('.email_msg') %>
+                                              <a href="mailto:&lt;%= @recipient.email %&gt;"><%= @recipient.email %>
+                                            </td>
+                                          <% end %>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- BULLETPROOF BUTTON -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+                                        <tr>
+                                            <td align="center" style="padding: 25px 0 0 0;" class="padding-copy">
+                                                <table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
+                                                    <tr>
+                                                        <td align="center">
+                                                          <%= link_to t('.btn'), user_url(@recipient, :locale => :en), class: 'button', style:"font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #5dec9e; border-top: 15px solid #5dec9e; border-bottom: 15px solid #5dec9e; border-left: 25px solid #5dec9e; border-right: 25px solid #5dec9e; border-left: 25px solid #5dec9e; border-right: 25px solid #5dec9e; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; margin-right:10px;", class:"mobile-button" %>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

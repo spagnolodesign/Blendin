@@ -1,0 +1,142 @@
+$hoverEasing: cubic-bezier(0.4, 1, 0.32, 1);
+$returnEasing: cubic-bezier(0.4, 0.58, 0.57, 1);
+
+
+.CardsContainer {
+  padding:0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+
+
+.CardWrap {
+  margin: 10px;
+  transform: perspective(800px);
+  -webkit-transform: perspective(800px);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  cursor: pointer;
+
+  &:hover {
+    .CardBg {
+      opacity: 0.9;
+    }
+    // .CardInfo {
+    //   transform: translateY(0);
+    // }
+    // .CardInfo p {
+    //   opacity: 1;
+    // }
+    // .CardInfo, .CardInfo p {
+    //   transition: 0.6s $hoverEasing;
+    // }
+    .CardInfo:after {
+      transition: 1s $hoverEasing;
+      opacity: .4;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+.Card {
+  position: relative;
+  flex: 0 0 240px;
+  width: 280px;
+  height: 330px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:rgba(black, 0.42) 0 30px 60px 0,inset #333 0 0 0 5px,inset rgba(white, 0.5) 0 0 0 6px;
+  transition:1s $hoverEasing, box-shadow 1s $hoverEasing;
+}
+
+.CardBg {
+  opacity: 0.9;
+  position: absolute;
+  top: -20px; left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s $returnEasing, opacity .4s $returnEasing;
+  -webkit-transition:1s $returnEasing, opacity .4s $returnEasing;
+  pointer-events: none;
+}
+.CardInfo {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(#000, 0.6) 100%);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 5s 1s $returnEasing;
+  }
+}
+
+.CardInfo h1 {
+  width: 85%;
+  font-family:  'Montserrat', sans-serif;
+  font-size: 2em;
+  margin: 0;
+  font-weight: normal;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  line-height: 1.1em;
+}
+
+
+.CardBlend{
+  margin: 1em;
+  .avatar-card-blend{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0 7px 29px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  }
+}
+.shake-card-blend{
+  width: 60%;
+  display: inline-block;
+}
+
+.link-to-blend-card{
+  text-decoration: none;
+  color: #333333;
+  transition: 0.1s;
+  border: 3px solid #fff;
+  display: block;
+  border-radius: 10px;
+  margin: 0 ;
+}
+.link-to-blend-card:hover{
+  border: 3px solid #c0c0c052;
+  border-style: dashed;
+}
+@media only screen and (min-width: 64em) {
+  .Card {
+    width: 240px;
+    height: 320px;
+  }
+  .CardBg {
+    opacity: 0.6;
+  }
+  .link-to-blend-card{
+    margin: 0 10%;
+  }
+}

@@ -1,0 +1,41 @@
+<section class="EditProfile clearfix">
+    <div class="sm-col-6 lg-col-6 mx-auto">
+      <%= render 'wizard/top_nav' %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+
+          <label class="Label"><%= t('.form_email') %></label>
+          <%= f.email_field :email, autofocus: true, class:"Input", 'data-parsley-trigger' => "change" %>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p><%= t('.form_email', email: resource.unconfirmed_email) %></p>
+          <% end %>
+
+          <label class="Label"><%= t('.form_fulln_name') %></label>
+          <%= f.text_field :username, class:"Input" , required: true %>
+
+          <label class="Label"><%= t('.form_current_pass_html') %>
+          <%= f.password_field :current_password, autocomplete: "off", class:"Input", required: true %>
+
+          <%= f.submit t('.btn_submit'), class:"Button" %>
+      <% end %>
+
+      <h3><%= t('.cancel_account_msg') %></h3>
+
+      <%= button_to t('.cancel_account_btn'), registration_path(resource_name), data: { confirm: t('.cancel_account_confirmation') }, method: :delete, class:"Button" %>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+  <script>
+  $(function () {
+
+    $('#edit_user').parsley().on('field:validated', function() {
+    })
+    .on('form:submit', function() {
+      return true;
+    });
+
+  });
+</script>
