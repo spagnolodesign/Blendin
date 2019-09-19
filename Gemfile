@@ -29,7 +29,7 @@ gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'twilio-ruby'
 gem "figaro"
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'activeadmin_quill_editor'
 
 group :development, :test do
